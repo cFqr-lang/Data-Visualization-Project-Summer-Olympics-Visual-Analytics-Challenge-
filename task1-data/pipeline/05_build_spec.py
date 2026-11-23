@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """生成《数据质量与口径说明书》Word 文档
-数据来源：task1-data/output、contracts、shared/metrics 下的检查结果与映射表，保证文档数字与代码产物一致
+数据来源：task1-data/output、task1-data/contracts、task1-data/metrics 下的检查结果与映射表，保证文档数字与代码产物一致
 """
 from pathlib import Path
 
@@ -171,8 +171,8 @@ info = pd.DataFrame({
         "任务一（必做）：数据体检与口径定义",
         "olympics_dataset.csv（UTF-8，未修改原始文件）",
         "252,565 行 × 11 列，约 26 MB",
-        "src/01_audit.py、src/01b_extra.py、src/02_clean.py",
-        "task1-data/output 中间产物 + contracts 契约 + shared/metrics 共享指标",
+        "task1-data/pipeline/01_audit.py、01b_extra.py、02_clean.py",
+        "task1-data/output 中间产物 + task1-data/contracts 契约 + task1-data/metrics 共享指标",
         "2026-11-23",
     ],
 })
@@ -256,7 +256,7 @@ para(
     "对 2024 年每个小项检查奖牌色集合，发现有 3 个小项只有银/铜而无金牌行：女子公路自行车赛（仅银牌正确，金牌 Kristen Faulkner（USA）、"
     "铜牌 Lotte Kopecky（BEL）在数据中均为 No medal）、男子山地自行车越野（缺金牌，官方为英国选手）、男子 800 米自由泳（缺金牌与铜牌）。"
     "这不是口径问题，而是源数据缺行，直接导致美国 2024 金牌少于官方、相关国家金牌榜的细微偏差（见附录 A）。"
-    "完整的 4 项缺口（含铁人三项混合接力整项缺失）已整理为 contracts/known_gaps.csv，任务二、三可直接引用。"
+    "完整的 4 项缺口（含铁人三项混合接力整项缺失）已整理为 task1-data/contracts/known_gaps.csv，任务二、三可直接引用。"
 )
 para("N2 · 姓名被系统性剥离变音符号。", bold=True, space_after=2)
 para(
@@ -326,7 +326,7 @@ pick = [1896, 1900, 1904, 1908, 1920, 1952, 1980, 1996, 2008, 2016, 2020, 2024]
 show = cal[cal["Year"].isin(pick)].copy()
 show.columns = ["届次", "运动员行口径", "小项口径", "差异", "膨胀率"]
 add_table(show, [2.2, 3.6, 3.2, 2.6, 2.8],
-          cap="表 5  双口径分年差异（膨胀率 =（行口径−小项口径）/ 小项口径；完整 31 届见 shared/metrics/caliber_by_year.csv）")
+          cap="表 5  双口径分年差异（膨胀率 =（行口径−小项口径）/ 小项口径；完整 31 届见 task1-data/metrics/caliber_by_year.csv）")
 para(
     "膨胀率不是常数：1896 年只有 23.3%（几乎没有团体项目），1900 年达到 136.9%，2020 年 141.0%，2024 年 135.4%。"
     "这意味着“用运动员行口径画历史总奖牌榜”会把近几届放大 2.3–2.4 倍，且越晚近放大越严重，属于典型的口径陷阱。"
@@ -357,14 +357,14 @@ bullet("同类合并：Baseball + Softball + Baseball/Softball→Baseball/Softba
 bullet("逗号拆分：89 行逗号拼接按逗号拆开，逐个映射后用 sport_all 保存完整项目串，主项目取第一个。")
 
 para(
-    "归一后有 57 个大类，共 20 个原始取值发生变更。未列出的取值保持原样，所有规则都可在 contracts/sport_map.csv 中逐行核查。"
+    "归一后有 57 个大类，共 20 个原始取值发生变更。未列出的取值保持原样，所有规则都可在 task1-data/contracts/sport_map.csv 中逐行核查。"
 )
 
 smap = pd.read_csv(OUT / "sport_mapping.csv")
 changed = smap[smap["rule"] != "保持不变"][["sport_raw", "sport_norm", "rows", "rule", "note"]].copy()
 changed.columns = ["原始 Sport", "归一后", "行数", "规则", "说明"]
 changed["说明"] = changed["说明"].fillna("")
-add_table(changed, [5.6, 3.2, 1.6, 2.6, 3.4], font=8, cap="表 7  Sport 归一变更明细（20 项；完整 76 项见 contracts/sport_map.csv）", align_left_cols=(0, 4))
+add_table(changed, [5.6, 3.2, 1.6, 2.6, 3.4], font=8, cap="表 7  Sport 归一变更明细（20 项；完整 76 项见 task1-data/contracts/sport_map.csv）", align_left_cols=(0, 4))
 
 doc.add_heading("5.2 逗号拼接与跨项记录", level=2)
 para(
@@ -437,7 +437,7 @@ special = pd.DataFrame({
     ],
     "代码字段": ["is_1906", "is_1956_stockholm", "noc_modern", "noc_modern", "noc_modern", "noc_modern", "noc_modern", "noc_modern"],
 })
-add_table(special, [4.4, 3.2, 6.6, 2.4], font=8, cap="表 10  特殊记录处理规则（完整 234 条 NOC 规则见 contracts/noc_map.csv）", align_left_cols=(0, 2))
+add_table(special, [4.4, 3.2, 6.6, 2.4], font=8, cap="表 10  特殊记录处理规则（完整 234 条 NOC 规则见 task1-data/contracts/noc_map.csv）", align_left_cols=(0, 2))
 para(
     "关于 1906：主口径剔除，是因为 IOC 现行口径不承认该届；但纳入与否并不改变任何前十名国家的排序（458 枚奖牌分散在 18 个 NOC），"
     "因此敏感性分析只影响总量，不影响结构性结论。"
@@ -451,7 +451,7 @@ para(
 doc.add_heading("八、数据质量检查清单（11 项）", level=1)
 para(
     "下表 11 项检查全部可复现：Q1–Q9 的取数代码在 task1-data/pipeline/01_audit.py 与 02_clean.py（国家清单等补充在 01b_extra.py），"
-    "Q10–Q11 在 02_clean.py，结果汇总在 contracts/quality_checks.csv。每项都给出检查思路、结果与处理决定。"
+    "Q10–Q11 在 02_clean.py，结果汇总在 task1-data/contracts/quality_checks.csv。每项都给出检查思路、结果与处理决定。"
 )
 qc = pd.read_csv(OUT / "quality_checks.csv")[["编号", "检查项", "方法", "结果", "处理决定"]]
 add_table(qc, [1.1, 3.0, 3.6, 5.6, 3.3], font=7.5, header_font=8, cap="表 11  数据质量检查清单（逐项可复现）", align_left_cols=(1, 2, 3, 4))
@@ -460,7 +460,7 @@ add_table(qc, [1.1, 3.0, 3.6, 5.6, 3.3], font=7.5, header_font=8, cap="表 11  �
 doc.add_heading("九、清洗后数据集说明", level=1)
 doc.add_heading("9.1 输出文件", level=2)
 files = pd.DataFrame({
-    "文件": ["data/processed/olympics_clean.parquet", "task1-data/output/medals_athlete_row.csv", "task1-data/output/medals_event_level.csv", "shared/metrics/medal_table_athlete_noc.csv", "shared/metrics/medal_table_event_noc.csv", "shared/metrics/caliber_by_year.csv、caliber_2024_compare.csv", "contracts/sport_map.csv", "contracts/noc_map.csv", "task1-data/output/athlete_entities.csv、athlete_top_medals.csv", "contracts/known_gaps.csv", "contracts/quality_checks.csv"],
+    "文件": ["data/processed/olympics_clean.parquet", "task1-data/output/medals_athlete_row.csv", "task1-data/output/medals_event_level.csv", "task1-data/metrics/medal_table_athlete_noc.csv", "task1-data/metrics/medal_table_event_noc.csv", "task1-data/metrics/caliber_by_year.csv、caliber_2024_compare.csv", "task1-data/contracts/sport_map.csv", "task1-data/contracts/noc_map.csv", "task1-data/output/athlete_entities.csv、athlete_top_medals.csv", "task1-data/contracts/known_gaps.csv", "task1-data/contracts/quality_checks.csv"],
     "内容": ["全量清洗数据（252,565 行，31 列）", "奖牌行口径明细（38,818 行）", "小项口径明细（17,452 行，含 has_gold / 粒度标记）", "行口径奖牌榜（剔除 1906）", "小项口径奖牌榜（剔除 1906，推荐）", "双口径分年差异与 2024 对比", "76 项 Sport 归一映射", "234 个 NOC 全量映射（20 个特殊规则）", "近似运动员实体（Name+Sex+NOC）与奖牌 Top30", "2024 年 4 项已知记录缺失清单", "11 项检查结果"],
     "用途": ["后续所有分析的基础表", "运动员/团体层面的分析", "奖牌榜、跨届对比", "历史总榜（口径 A）", "历史总榜（口径 B，推荐）", "口径敏感性说明", "复现归一过程", "复现国家谱系/决定是否合并", "个体探索的近似方案（需声明）", "2024 图表必须标注的缺口", "质量结论索引"],
 })
@@ -499,8 +499,8 @@ for cmd in ["python task1-data/pipeline/01_audit.py", "python task1-data/pipelin
     p.paragraph_format.left_indent = Cm(0.8)
     p.paragraph_format.space_after = Pt(2)
     set_run(p.add_run(cmd), 9.5, font="Consolas")
-para("原始数据放在 data/raw/olympics_dataset.csv，只读不改；清洗产物写 data/processed/，中间表写 task1-data/output/，契约写 contracts/，共享指标写 shared/metrics/。")
-para("文件结构：task1-data/ 为任务一代码与文档，contracts/ 为跨任务契约，shared/metrics/ 为报告统一底表。")
+para("原始数据放在 data/raw/olympics_dataset.csv，只读不改；清洗产物写 data/processed/，中间表写 task1-data/output/，契约写 task1-data/contracts/，共享指标写 task1-data/metrics/。")
+para("文件结构：task1-data/ 为任务一代码与文档，task1-data/contracts/ 为跨任务契约，task1-data/metrics/ 为报告统一底表。")
 
 # ---------------------------------------------------------------- 十一、参考
 doc.add_heading("十一、参考资料", level=1)

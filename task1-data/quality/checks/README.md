@@ -1,6 +1,6 @@
 # 数据质量检查（quality/checks）
 
-任务一提供 11 项可复现检查；本目录提供一个最小复现脚本，完整结果在 `contracts/quality_checks.csv`。
+任务一提供 11 项可复现检查；本目录提供一个最小复现脚本，完整结果在 `task1-data/contracts/quality_checks.csv`。
 
 ## 运行
 
@@ -24,6 +24,6 @@ python task1-data/quality/checks/run_checks.py
 | Q8 | NOC/Team | `pipeline/01_audit.py` | 234 NOC / 1,193 Team；2,795 行分队后缀 |
 | Q9 | 特殊届次/政体 | `pipeline/01b_extra.py`、`02_clean.py` | 1906 / 1956 / EOR / ROC / AIN 规则 |
 | Q10 | 2024 小项数 | `pipeline/02_clean.py` | 328 个有奖牌记录、325 个有金牌 |
-| Q11 | 2024 记录完整性 | `pipeline/02_clean.py` | 4 项缺失，见 `contracts/known_gaps.csv` |
+| Q11 | 2024 记录完整性 | `pipeline/02_clean.py` | 4 项缺失，见 `task1-data/contracts/known_gaps.csv` |
 
 交付前断言：`python task1-data/pipeline/04_validate.py`（18 项，全部 PASS）。

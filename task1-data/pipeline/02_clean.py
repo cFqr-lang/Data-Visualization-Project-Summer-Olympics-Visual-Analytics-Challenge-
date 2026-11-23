@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw" / "olympics_dataset.csv"
 OUT = ROOT / "task1-data" / "output"
 PROC = ROOT / "data" / "processed"
-CONTRACTS = ROOT / "contracts"
-SHARED = ROOT / "shared" / "metrics"
+CONTRACTS = ROOT / "task1-data" / "contracts"
+SHARED = ROOT / "task1-data" / "metrics"
 for d in (OUT, PROC, CONTRACTS, SHARED):
     d.mkdir(parents=True, exist_ok=True)
 

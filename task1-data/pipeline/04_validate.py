@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw" / "olympics_dataset.csv"
 OUT = ROOT / "task1-data" / "output"
 PROC = ROOT / "data" / "processed"
-CONTRACTS = ROOT / "contracts"
+CONTRACTS = ROOT / "task1-data" / "contracts"
 
 results = []
 

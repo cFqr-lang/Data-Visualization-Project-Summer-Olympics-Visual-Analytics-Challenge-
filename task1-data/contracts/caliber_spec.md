@@ -92,7 +92,7 @@
 
 ## 4. 体育大类归一
 
-映射文件：`contracts/sport_map.csv`（76 行）。
+映射文件：`task1-data/contracts/sport_map.csv`（76 行）。
 
 | 规则 | 示例 |
 | --- | --- |
@@ -123,11 +123,11 @@
 | TCH / YUG / SCG | 3,369 / 2,046 / 300 行 | 保留历史 NOC（继承国会低估其他共和国） | 可选 `CZE` / `SRB` |
 | AIN / EOR / IOA | 46 / 79 / 93 行 | 保留独立，EOR 单列 | 不并入任何国家 |
 
-规则文件：`contracts/noc_map.csv`（234 行全量，含 `merge_type` 与 `note`）。
+规则文件：`task1-data/contracts/noc_map.csv`（234 行全量，含 `merge_type` 与 `note`）。
 
 ## 7. 2024 年已知记录缺失
 
-`contracts/known_gaps.csv`：
+`task1-data/contracts/known_gaps.csv`：
 
 | 小项 | 缺失 | 官方获得者 |
 | --- | --- | --- |
@@ -140,7 +140,7 @@
 
 ## 8. 质量检查摘要
 
-完整 11 项见 `contracts/quality_checks.csv`；可复现代码见 `task1-data/pipeline/`，交付前断言见 `05_validate.py`。
+完整 11 项见 `task1-data/contracts/quality_checks.csv`；可复现代码见 `task1-data/pipeline/`，交付前断言见 `04_validate.py`。
 
 | 编号 | 检查 | 结果 | 处理 |
 | --- | --- | --- | --- |
@@ -156,7 +156,7 @@
 | Q10 | 2024 小项数 | 328 个有奖牌记录、325 个有金牌 | 差异清单 |
 | Q11 | 2024 记录完整性 | 4 项缺失 | `known_gaps.csv` |
 
-## 9. 共享指标（`shared/metrics/`）
+## 9. 共享指标（`task1-data/metrics/`）
 
 | 文件 | 内容 | 口径 |
 | --- | --- | --- |

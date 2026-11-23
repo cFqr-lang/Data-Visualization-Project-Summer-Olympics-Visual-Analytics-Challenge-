@@ -7,12 +7,12 @@
 | 仓库位置 | 内容 |
 | --- | --- |
 | `data/processed/olympics_clean.parquet` | 清洗后全量数据（252,565 行 × 31 列，不入库） |
-| `contracts/caliber_spec.md` | 口径说明书 v1.1（冻结） |
-| `contracts/sport_map.csv` | 76 项 Sport 归一映射 |
-| `contracts/noc_map.csv` | 234 个 NOC 全量映射（20 条特殊规则） |
-| `contracts/known_gaps.csv` | 2024 年 4 项已知记录缺失 |
-| `contracts/quality_checks.csv` | 11 项质量检查结果 |
-| `shared/metrics/*.csv` | 报告统一底表（奖牌榜、逐届、参与度、项目覆盖） |
+| `task1-data/contracts/caliber_spec.md` | 口径说明书 v1.1（冻结） |
+| `task1-data/contracts/sport_map.csv` | 76 项 Sport 归一映射 |
+| `task1-data/contracts/noc_map.csv` | 234 个 NOC 全量映射（20 条特殊规则） |
+| `task1-data/contracts/known_gaps.csv` | 2024 年 4 项已知记录缺失 |
+| `task1-data/contracts/quality_checks.csv` | 11 项质量检查结果 |
+| `task1-data/metrics/*.csv` | 报告统一底表（奖牌榜、逐届、参与度、项目覆盖） |
 | `task1-data/output/` | 中间产物（CSV、日志，不入库） |
 | `task1-data/figures/` | 5 张诊断图（说明书用） |
 | `task1-data/docs/数据质量与口径说明书.docx` | 任务一说明书（16 表 + 5 图） |
@@ -31,7 +31,7 @@
 | `is_1906` | 是否 1906 届间奥运会 |
 | `include_flag` | 是否纳入默认分析（`is_1906 == 0`） |
 
-其余字段见 `contracts/caliber_spec.md` 第 2 节。
+其余字段见 `task1-data/contracts/caliber_spec.md` 第 2 节。
 
 ## 运行
 
@@ -55,4 +55,4 @@ python task1-data/pipeline/06_build_answer.py
 
 ## 变更
 
-口径变更必须更新 `contracts/caliber_spec.md`，并在 `contracts/` 中说明受影响图表，再通知任务二、三、四。
+口径变更必须更新 `task1-data/contracts/caliber_spec.md`，并评估受影响的图表，再通知任务二、三、四。

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """任务一质量检查的最小复现脚本（6 项核心检查）
-完整 11 项见 contracts/quality_checks.csv 与 pipeline/02_clean.py；交付断言见 pipeline/04_validate.py。
+完整 11 项见 task1-data/contracts/quality_checks.csv 与 pipeline/02_clean.py；交付断言见 pipeline/04_validate.py。
 """
 import sys
 from pathlib import Path

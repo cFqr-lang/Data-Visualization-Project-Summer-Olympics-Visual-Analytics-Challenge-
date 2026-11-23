@@ -8,7 +8,7 @@
 
 | 任务 | 内容 | 负责人 | 主要目录 |
 | --- | --- | --- | --- |
-| 任务一 | 数据体检与口径定义 | 待填 | `task1-data/`、`contracts/` |
+| 任务一 | 数据体检与口径定义 | 待填 | `task1-data/` |
 | 任务二 | 百年奥运全景 | 待填 | `task2-visual/` |
 | 任务三 | 专题深挖 | 待填 | `task3-insights/` |
 | 任务四 | 开放创作（加分） | 待填 | `task4-bonus/` |
@@ -57,18 +57,12 @@ data/raw/olympics_dataset.csv
 
 ### 1.1 任务一：体检与口径（已交付）
 
-```bash
-pip install -r task1-data/requirements.txt
-python task1-data/pipeline/02_clean.py
-python task1-data/pipeline/03_figures.py
-python task1-data/pipeline/04_validate.py
-python task1-data/pipeline/05_build_spec.py
-```
+任务一是自包含目录：代码、契约、指标底表、说明书与答卷都在 `task1-data/`。运行方式、产物清单与口径速览见 [task1-data/README.md](task1-data/README.md)。
 
-- 口径说明书：`contracts/caliber_spec.md`（v1.1，冻结）
-- 清洗数据：`data/processed/olympics_clean.parquet`（不入库）
-- 共享指标：`shared/metrics/`
-- 2024 缺口清单：`contracts/known_gaps.csv`
+- 清洗数据：`data/processed/olympics_clean.parquet`（不入库，走 Release/网盘）
+- 口径说明书：`task1-data/contracts/caliber_spec.md`（v1.1，冻结）
+- 共享指标：`task1-data/metrics/`
+- 2024 缺口清单：`task1-data/contracts/known_gaps.csv`
 
 ### 2. Python 环境
 
@@ -102,7 +96,7 @@ npm run --prefix task2-visual/site export:figures
 
 - `main` 为保护分支，禁止直接推送；所有改动走 Pull Request，至少 1 人审批。
 - 分支命名：`feat/t1-*`、`feat/t2-*`、`feat/t3-*`、`feat/t4-*`、`fix/*`、`docs/*`。
-- 口径变更必须由任务一确认，并在 `contracts/` 更新说明与受影响图表清单。
+- 口径变更必须由任务一确认，并在 `task1-data/contracts/` 更新说明与受影响图表清单。
 - 图表冻结后，任何人不得擅自改口径；如需变更，回到任务一走变更流程。
 - 原始数据、清洗后大文件、视频原片、`.env` 和密钥不得提交。
 - 提交前检查 `git status`，确认没有把 `data/raw/olympics_dataset.csv` 加入暂存区。
