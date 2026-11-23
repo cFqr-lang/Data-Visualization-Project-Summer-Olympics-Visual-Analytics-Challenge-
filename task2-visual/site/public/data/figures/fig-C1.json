@@ -1,0 +1,377 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-4",
+  "chart_id": "C1",
+  "title": "女性从 0 走到 49.1%，但走的是三次跃迁而非直线",
+  "caliber": "athlete_row",
+  "caliber_label": "运动员行口径（团体项目按人计行）",
+  "denominator": "全部参赛记录",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-23T22:40:32+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "分母为运动员行；团体项目会抬高人数，代表层面女性参与见 delegations_with_women",
+   "女子/混合小项 2020+ 为 Sport×Sex 估计值"
+  ]
+ },
+ "series": [
+  {
+   "year": 1896,
+   "male_rows": 380,
+   "female_rows": 0,
+   "female_share": 0.0,
+   "delegations": 12,
+   "delegations_with_women": 0,
+   "women_events": 0,
+   "men_events": 43,
+   "mixed_events": 0
+  },
+  {
+   "year": 1900,
+   "male_rows": 1903,
+   "female_rows": 33,
+   "female_share": 0.017,
+   "delegations": 31,
+   "delegations_with_women": 6,
+   "women_events": 2,
+   "men_events": 71,
+   "mixed_events": 17
+  },
+  {
+   "year": 1904,
+   "male_rows": 1285,
+   "female_rows": 16,
+   "female_share": 0.0123,
+   "delegations": 15,
+   "delegations_with_women": 1,
+   "women_events": 3,
+   "men_events": 92,
+   "mixed_events": 0
+  },
+  {
+   "year": 1908,
+   "male_rows": 3054,
+   "female_rows": 47,
+   "female_share": 0.0152,
+   "delegations": 22,
+   "delegations_with_women": 3,
+   "women_events": 4,
+   "men_events": 97,
+   "mixed_events": 8
+  },
+  {
+   "year": 1912,
+   "male_rows": 3953,
+   "female_rows": 87,
+   "female_share": 0.0215,
+   "delegations": 29,
+   "delegations_with_women": 10,
+   "women_events": 5,
+   "men_events": 91,
+   "mixed_events": 11
+  },
+  {
+   "year": 1920,
+   "male_rows": 4158,
+   "female_rows": 134,
+   "female_share": 0.0312,
+   "delegations": 29,
+   "delegations_with_women": 14,
+   "women_events": 8,
+   "men_events": 133,
+   "mixed_events": 17
+  },
+  {
+   "year": 1924,
+   "male_rows": 4989,
+   "female_rows": 244,
+   "female_share": 0.0466,
+   "delegations": 45,
+   "delegations_with_women": 22,
+   "women_events": 10,
+   "men_events": 112,
+   "mixed_events": 9
+  },
+  {
+   "year": 1928,
+   "male_rows": 4588,
+   "female_rows": 404,
+   "female_share": 0.0809,
+   "delegations": 46,
+   "delegations_with_women": 25,
+   "women_events": 14,
+   "men_events": 92,
+   "mixed_events": 16
+  },
+  {
+   "year": 1932,
+   "male_rows": 2622,
+   "female_rows": 347,
+   "female_share": 0.1169,
+   "delegations": 47,
+   "delegations_with_women": 21,
+   "women_events": 14,
+   "men_events": 99,
+   "mixed_events": 18
+  },
+  {
+   "year": 1936,
+   "male_rows": 6038,
+   "female_rows": 468,
+   "female_share": 0.0719,
+   "delegations": 49,
+   "delegations_with_women": 29,
+   "women_events": 15,
+   "men_events": 110,
+   "mixed_events": 25
+  },
+  {
+   "year": 1948,
+   "male_rows": 5777,
+   "female_rows": 628,
+   "female_share": 0.098,
+   "delegations": 59,
+   "delegations_with_women": 34,
+   "women_events": 19,
+   "men_events": 112,
+   "mixed_events": 22
+  },
+  {
+   "year": 1952,
+   "male_rows": 6773,
+   "female_rows": 1497,
+   "female_share": 0.181,
+   "delegations": 69,
+   "delegations_with_women": 41,
+   "women_events": 25,
+   "men_events": 117,
+   "mixed_events": 7
+  },
+  {
+   "year": 1956,
+   "male_rows": 4234,
+   "female_rows": 893,
+   "female_share": 0.1742,
+   "delegations": 72,
+   "delegations_with_women": 38,
+   "women_events": 26,
+   "men_events": 116,
+   "mixed_events": 9
+  },
+  {
+   "year": 1960,
+   "male_rows": 6684,
+   "female_rows": 1435,
+   "female_share": 0.1767,
+   "delegations": 84,
+   "delegations_with_women": 47,
+   "women_events": 29,
+   "men_events": 113,
+   "mixed_events": 8
+  },
+  {
+   "year": 1964,
+   "male_rows": 6354,
+   "female_rows": 1348,
+   "female_share": 0.175,
+   "delegations": 93,
+   "delegations_with_women": 53,
+   "women_events": 33,
+   "men_events": 119,
+   "mixed_events": 11
+  },
+  {
+   "year": 1968,
+   "male_rows": 6811,
+   "female_rows": 1777,
+   "female_share": 0.2069,
+   "delegations": 112,
+   "delegations_with_women": 54,
+   "women_events": 39,
+   "men_events": 115,
+   "mixed_events": 18
+  },
+  {
+   "year": 1972,
+   "male_rows": 8111,
+   "female_rows": 2193,
+   "female_share": 0.2128,
+   "delegations": 121,
+   "delegations_with_women": 67,
+   "women_events": 43,
+   "men_events": 132,
+   "mixed_events": 18
+  },
+  {
+   "year": 1976,
+   "male_rows": 6469,
+   "female_rows": 2172,
+   "female_share": 0.2514,
+   "delegations": 92,
+   "delegations_with_women": 65,
+   "women_events": 49,
+   "men_events": 130,
+   "mixed_events": 19
+  },
+  {
+   "year": 1980,
+   "male_rows": 5435,
+   "female_rows": 1756,
+   "female_share": 0.2442,
+   "delegations": 80,
+   "delegations_with_women": 56,
+   "women_events": 50,
+   "men_events": 134,
+   "mixed_events": 19
+  },
+  {
+   "year": 1984,
+   "male_rows": 7007,
+   "female_rows": 2447,
+   "female_share": 0.2588,
+   "delegations": 140,
+   "delegations_with_women": 95,
+   "women_events": 62,
+   "men_events": 145,
+   "mixed_events": 14
+  },
+  {
+   "year": 1988,
+   "male_rows": 8494,
+   "female_rows": 3543,
+   "female_share": 0.2943,
+   "delegations": 159,
+   "delegations_with_women": 118,
+   "women_events": 72,
+   "men_events": 151,
+   "mixed_events": 14
+  },
+  {
+   "year": 1992,
+   "male_rows": 8853,
+   "female_rows": 4124,
+   "female_share": 0.3178,
+   "delegations": 169,
+   "delegations_with_women": 134,
+   "women_events": 86,
+   "men_events": 159,
+   "mixed_events": 12
+  },
+  {
+   "year": 1996,
+   "male_rows": 8772,
+   "female_rows": 5008,
+   "female_share": 0.3634,
+   "delegations": 197,
+   "delegations_with_women": 168,
+   "women_events": 97,
+   "men_events": 163,
+   "mixed_events": 11
+  },
+  {
+   "year": 2000,
+   "male_rows": 8390,
+   "female_rows": 5431,
+   "female_share": 0.393,
+   "delegations": 200,
+   "delegations_with_women": 191,
+   "women_events": 120,
+   "men_events": 168,
+   "mixed_events": 12
+  },
+  {
+   "year": 2004,
+   "male_rows": 7897,
+   "female_rows": 5546,
+   "female_share": 0.4126,
+   "delegations": 201,
+   "delegations_with_women": 192,
+   "women_events": 125,
+   "men_events": 166,
+   "mixed_events": 10
+  },
+  {
+   "year": 2008,
+   "male_rows": 7786,
+   "female_rows": 5816,
+   "female_share": 0.4276,
+   "delegations": 204,
+   "delegations_with_women": 195,
+   "women_events": 127,
+   "men_events": 165,
+   "mixed_events": 10
+  },
+  {
+   "year": 2012,
+   "male_rows": 7105,
+   "female_rows": 5815,
+   "female_share": 0.4501,
+   "delegations": 205,
+   "delegations_with_women": 201,
+   "women_events": 132,
+   "men_events": 162,
+   "mixed_events": 8
+  },
+  {
+   "year": 2016,
+   "male_rows": 7465,
+   "female_rows": 6223,
+   "female_share": 0.4546,
+   "delegations": 207,
+   "delegations_with_women": 201,
+   "women_events": 136,
+   "men_events": 161,
+   "mixed_events": 9
+  },
+  {
+   "year": 2020,
+   "male_rows": 7855,
+   "female_rows": 7266,
+   "female_share": 0.4805,
+   "delegations": 206,
+   "delegations_with_women": 202,
+   "women_events": 166,
+   "men_events": 173,
+   "mixed_events": 15
+  },
+  {
+   "year": 2024,
+   "male_rows": 7580,
+   "female_rows": 7312,
+   "female_share": 0.491,
+   "delegations": 206,
+   "delegations_with_women": 200,
+   "women_events": 162,
+   "men_events": 165,
+   "mixed_events": 16
+  }
+ ],
+ "milestones": [
+  {
+   "year": 1900,
+   "text": "首批女性参赛"
+  },
+  {
+   "year": 1928,
+   "text": "田径/体操向女子开放"
+  },
+  {
+   "year": 1960,
+   "text": "罗马：女性规模扩张"
+  },
+  {
+   "year": 1984,
+   "text": "洛杉矶：女子项目扩容"
+  },
+  {
+   "year": 2012,
+   "text": "伦敦：所有项目设女子小项"
+  },
+  {
+   "year": 2024,
+   "text": "巴黎：女性占比 49.1%"
+  }
+ ]
+}

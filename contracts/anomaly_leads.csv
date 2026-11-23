@@ -1,4 +1,4 @@
-claim_id,chart_id,perspective,hypothesis,evidence_query,effect_size,status,handoff_to_task3,owner
-T2-A1-H1,A1,A,奖牌榜排名会随奖牌口径改变,pipeline/sensitivity.py,待填,open,S2,task2
-T2-C2-H1,C2,C,女性参赛占比与女性奖牌占比不同步,pipeline/metrics.py#female_share,待填,open,S4,task2
-T2-D1-H1,D1,D,小项增长主要来自新增项目与女子项目,pipeline/metrics.py#event_growth,待填,open,S5,task2
+﻿claim_id,chart_id,perspective,hypothesis,evidence_query,effect_size,status,handoff_to_task3,owner
+T2-A1-H1,A1,A,奖牌榜排名会随奖牌口径改变,pipeline/build.py#build_a1,"行口径 vs 保守小项：USA 2,757→5,597（+2,840，+103%）；CHN 排名 7→4；FRA 宽松口径升至第 3",done,S2,task2
+T2-C2-H1,C2,C,女性参赛占比与女性奖牌占比不同步,pipeline/build.py#build_c2,2024 偏离对角线：IND -39.2pp、JAM -38.9pp；USA +3.6pp、CHN +7.2pp；NED +1.2pp,done,S4,task2
+T2-D1-H1,D1,D,小项增长主要来自新增项目与女子项目,pipeline/build.py#build_d1,代理小项 1896 年 43→2024 年 336（+681%），官方 329；2020 年代新增 3×3、攀岩、冲浪、霹雳舞,done,S5,task2

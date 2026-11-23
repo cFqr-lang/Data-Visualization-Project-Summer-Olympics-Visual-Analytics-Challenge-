@@ -1,0 +1,702 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-1",
+  "chart_id": "A1",
+  "title": "奖牌榜是口径的函数",
+  "caliber": "conservative_event+athlete_row",
+  "caliber_label": "conservative_event+athlete_row",
+  "denominator": "NOC×届（历史累计）",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-23T22:40:32+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "主榜为保守小项口径；差额 = 运动员行奖牌 - 去重后奖牌，反映团体项目膨胀",
+   "1906 届默认排除，仅在敏感性面板第一种定义中出现",
+   "排名依据：金牌 > 银牌 > 铜牌"
+  ]
+ },
+ "totals_top20": [
+  {
+   "noc": "USA",
+   "gold": 1101,
+   "silver": 880,
+   "bronze": 776,
+   "total": 2757,
+   "rank": 1,
+   "athlete_medal_rows": 5597,
+   "diff": 2840
+  },
+  {
+   "noc": "URS",
+   "gold": 394,
+   "silver": 317,
+   "bronze": 294,
+   "total": 1005,
+   "rank": 2,
+   "athlete_medal_rows": 2063,
+   "diff": 1058
+  },
+  {
+   "noc": "GBR",
+   "gold": 305,
+   "silver": 347,
+   "bronze": 343,
+   "total": 995,
+   "rank": 3,
+   "athlete_medal_rows": 2243,
+   "diff": 1248
+  },
+  {
+   "noc": "CHN",
+   "gold": 305,
+   "silver": 221,
+   "bronze": 195,
+   "total": 721,
+   "rank": 4,
+   "athlete_medal_rows": 1218,
+   "diff": 497
+  },
+  {
+   "noc": "GER",
+   "gold": 250,
+   "silver": 279,
+   "bronze": 303,
+   "total": 832,
+   "rank": 5,
+   "athlete_medal_rows": 1938,
+   "diff": 1106
+  },
+  {
+   "noc": "FRA",
+   "gold": 246,
+   "silver": 283,
+   "bronze": 299,
+   "total": 828,
+   "rank": 6,
+   "athlete_medal_rows": 1891,
+   "diff": 1063
+  },
+  {
+   "noc": "ITA",
+   "gold": 234,
+   "silver": 206,
+   "bronze": 228,
+   "total": 668,
+   "rank": 7,
+   "athlete_medal_rows": 1548,
+   "diff": 880
+  },
+  {
+   "noc": "JPN",
+   "gold": 189,
+   "silver": 162,
+   "bronze": 191,
+   "total": 542,
+   "rank": 8,
+   "athlete_medal_rows": 1063,
+   "diff": 521
+  },
+  {
+   "noc": "HUN",
+   "gold": 188,
+   "silver": 163,
+   "bronze": 181,
+   "total": 532,
+   "rank": 9,
+   "athlete_medal_rows": 1191,
+   "diff": 659
+  },
+  {
+   "noc": "AUS",
+   "gold": 182,
+   "silver": 192,
+   "bronze": 227,
+   "total": 601,
+   "rank": 10,
+   "athlete_medal_rows": 1553,
+   "diff": 952
+  },
+  {
+   "noc": "SWE",
+   "gold": 155,
+   "silver": 180,
+   "bronze": 184,
+   "total": 519,
+   "rank": 11,
+   "athlete_medal_rows": 1137,
+   "diff": 618
+  },
+  {
+   "noc": "RUS",
+   "gold": 153,
+   "silver": 143,
+   "bronze": 164,
+   "total": 460,
+   "rank": 12,
+   "athlete_medal_rows": 905,
+   "diff": 445
+  },
+  {
+   "noc": "GDR",
+   "gold": 153,
+   "silver": 129,
+   "bronze": 127,
+   "total": 409,
+   "rank": 13,
+   "athlete_medal_rows": 843,
+   "diff": 434
+  },
+  {
+   "noc": "NED",
+   "gold": 113,
+   "silver": 114,
+   "bronze": 138,
+   "total": 365,
+   "rank": 14,
+   "athlete_medal_rows": 1102,
+   "diff": 737
+  },
+  {
+   "noc": "KOR",
+   "gold": 111,
+   "silver": 98,
+   "bronze": 109,
+   "total": 318,
+   "rank": 15,
+   "athlete_medal_rows": 648,
+   "diff": 330
+  },
+  {
+   "noc": "FIN",
+   "gold": 102,
+   "silver": 85,
+   "bronze": 121,
+   "total": 308,
+   "rank": 16,
+   "athlete_medal_rows": 472,
+   "diff": 164
+  },
+  {
+   "noc": "ROU",
+   "gold": 92,
+   "silver": 102,
+   "bronze": 122,
+   "total": 316,
+   "rank": 17,
+   "athlete_medal_rows": 681,
+   "diff": 365
+  },
+  {
+   "noc": "CUB",
+   "gold": 86,
+   "silver": 71,
+   "bronze": 81,
+   "total": 238,
+   "rank": 18,
+   "athlete_medal_rows": 434,
+   "diff": 196
+  },
+  {
+   "noc": "CAN",
+   "gold": 79,
+   "silver": 116,
+   "bronze": 159,
+   "total": 354,
+   "rank": 19,
+   "athlete_medal_rows": 881,
+   "diff": 527
+  },
+  {
+   "noc": "POL",
+   "gold": 74,
+   "silver": 96,
+   "bronze": 144,
+   "total": 314,
+   "rank": 20,
+   "athlete_medal_rows": 602,
+   "diff": 288
+  }
+ ],
+ "definitions": [
+  {
+   "id": "athlete_row_1906",
+   "label": "运动员行口径 · 含 1906",
+   "caliber": "athlete_row",
+   "includes_1906": true,
+   "ranking": [
+    {
+     "noc": "USA",
+     "gold": 2716,
+     "silver": 1539,
+     "bronze": 1366,
+     "total": 5621,
+     "rank": 1
+    },
+    {
+     "noc": "URS",
+     "gold": 832,
+     "silver": 635,
+     "bronze": 596,
+     "total": 2063,
+     "rank": 2
+    },
+    {
+     "noc": "GBR",
+     "gold": 716,
+     "silver": 813,
+     "bronze": 753,
+     "total": 2282,
+     "rank": 3
+    },
+    {
+     "noc": "GER",
+     "gold": 634,
+     "silver": 613,
+     "bronze": 721,
+     "total": 1968,
+     "rank": 4
+    },
+    {
+     "noc": "FRA",
+     "gold": 583,
+     "silver": 712,
+     "bronze": 660,
+     "total": 1955,
+     "rank": 5
+    },
+    {
+     "noc": "ITA",
+     "gold": 571,
+     "silver": 517,
+     "bronze": 516,
+     "total": 1604,
+     "rank": 6
+    },
+    {
+     "noc": "CHN",
+     "gold": 464,
+     "silver": 423,
+     "bronze": 331,
+     "total": 1218,
+     "rank": 7
+    },
+    {
+     "noc": "HUN",
+     "gold": 450,
+     "silver": 347,
+     "bronze": 407,
+     "total": 1204,
+     "rank": 8
+    },
+    {
+     "noc": "AUS",
+     "gold": 411,
+     "silver": 524,
+     "bronze": 621,
+     "total": 1556,
+     "rank": 9
+    },
+    {
+     "noc": "SWE",
+     "gold": 365,
+     "silver": 431,
+     "bronze": 362,
+     "total": 1158,
+     "rank": 10
+    },
+    {
+     "noc": "NED",
+     "gold": 345,
+     "silver": 349,
+     "bronze": 414,
+     "total": 1108,
+     "rank": 11
+    },
+    {
+     "noc": "GDR",
+     "gold": 339,
+     "silver": 277,
+     "bronze": 227,
+     "total": 843,
+     "rank": 12
+    }
+   ]
+  },
+  {
+   "id": "athlete_row",
+   "label": "运动员行口径 · 不含 1906",
+   "caliber": "athlete_row",
+   "includes_1906": false,
+   "ranking": [
+    {
+     "noc": "USA",
+     "gold": 2704,
+     "silver": 1533,
+     "bronze": 1360,
+     "total": 5597,
+     "rank": 1
+    },
+    {
+     "noc": "URS",
+     "gold": 832,
+     "silver": 635,
+     "bronze": 596,
+     "total": 2063,
+     "rank": 2
+    },
+    {
+     "noc": "GBR",
+     "gold": 707,
+     "silver": 791,
+     "bronze": 745,
+     "total": 2243,
+     "rank": 3
+    },
+    {
+     "noc": "GER",
+     "gold": 620,
+     "silver": 603,
+     "bronze": 715,
+     "total": 1938,
+     "rank": 4
+    },
+    {
+     "noc": "FRA",
+     "gold": 563,
+     "silver": 696,
+     "bronze": 632,
+     "total": 1891,
+     "rank": 5
+    },
+    {
+     "noc": "ITA",
+     "gold": 550,
+     "silver": 509,
+     "bronze": 489,
+     "total": 1548,
+     "rank": 6
+    },
+    {
+     "noc": "CHN",
+     "gold": 464,
+     "silver": 423,
+     "bronze": 331,
+     "total": 1218,
+     "rank": 7
+    },
+    {
+     "noc": "HUN",
+     "gold": 445,
+     "silver": 342,
+     "bronze": 404,
+     "total": 1191,
+     "rank": 8
+    },
+    {
+     "noc": "AUS",
+     "gold": 411,
+     "silver": 524,
+     "bronze": 618,
+     "total": 1553,
+     "rank": 9
+    },
+    {
+     "noc": "SWE",
+     "gold": 363,
+     "silver": 426,
+     "bronze": 348,
+     "total": 1137,
+     "rank": 10
+    },
+    {
+     "noc": "NED",
+     "gold": 345,
+     "silver": 348,
+     "bronze": 409,
+     "total": 1102,
+     "rank": 11
+    },
+    {
+     "noc": "GDR",
+     "gold": 339,
+     "silver": 277,
+     "bronze": 227,
+     "total": 843,
+     "rank": 12
+    }
+   ]
+  },
+  {
+   "id": "conservative_event",
+   "label": "保守小项口径 · 不含 1906",
+   "caliber": "conservative_event",
+   "includes_1906": false,
+   "ranking": [
+    {
+     "noc": "USA",
+     "gold": 1101,
+     "silver": 880,
+     "bronze": 776,
+     "total": 2757,
+     "rank": 1
+    },
+    {
+     "noc": "URS",
+     "gold": 394,
+     "silver": 317,
+     "bronze": 294,
+     "total": 1005,
+     "rank": 2
+    },
+    {
+     "noc": "GBR",
+     "gold": 305,
+     "silver": 347,
+     "bronze": 343,
+     "total": 995,
+     "rank": 3
+    },
+    {
+     "noc": "CHN",
+     "gold": 305,
+     "silver": 221,
+     "bronze": 195,
+     "total": 721,
+     "rank": 4
+    },
+    {
+     "noc": "GER",
+     "gold": 250,
+     "silver": 279,
+     "bronze": 303,
+     "total": 832,
+     "rank": 5
+    },
+    {
+     "noc": "FRA",
+     "gold": 246,
+     "silver": 283,
+     "bronze": 299,
+     "total": 828,
+     "rank": 6
+    },
+    {
+     "noc": "ITA",
+     "gold": 234,
+     "silver": 206,
+     "bronze": 228,
+     "total": 668,
+     "rank": 7
+    },
+    {
+     "noc": "JPN",
+     "gold": 189,
+     "silver": 162,
+     "bronze": 191,
+     "total": 542,
+     "rank": 8
+    },
+    {
+     "noc": "HUN",
+     "gold": 188,
+     "silver": 163,
+     "bronze": 181,
+     "total": 532,
+     "rank": 9
+    },
+    {
+     "noc": "AUS",
+     "gold": 182,
+     "silver": 192,
+     "bronze": 227,
+     "total": 601,
+     "rank": 10
+    },
+    {
+     "noc": "SWE",
+     "gold": 155,
+     "silver": 180,
+     "bronze": 184,
+     "total": 519,
+     "rank": 11
+    },
+    {
+     "noc": "RUS",
+     "gold": 153,
+     "silver": 143,
+     "bronze": 164,
+     "total": 460,
+     "rank": 12
+    }
+   ]
+  },
+  {
+   "id": "loose_event",
+   "label": "宽松小项口径 · 不含 1906",
+   "caliber": "loose_event",
+   "includes_1906": false,
+   "ranking": [
+    {
+     "noc": "USA",
+     "gold": 1191,
+     "silver": 900,
+     "bronze": 835,
+     "total": 2926,
+     "rank": 1
+    },
+    {
+     "noc": "URS",
+     "gold": 394,
+     "silver": 317,
+     "bronze": 294,
+     "total": 1005,
+     "rank": 2
+    },
+    {
+     "noc": "FRA",
+     "gold": 332,
+     "silver": 367,
+     "bronze": 310,
+     "total": 1009,
+     "rank": 3
+    },
+    {
+     "noc": "CHN",
+     "gold": 313,
+     "silver": 244,
+     "bronze": 198,
+     "total": 755,
+     "rank": 4
+    },
+    {
+     "noc": "GBR",
+     "gold": 305,
+     "silver": 347,
+     "bronze": 360,
+     "total": 1012,
+     "rank": 5
+    },
+    {
+     "noc": "GER",
+     "gold": 253,
+     "silver": 312,
+     "bronze": 332,
+     "total": 897,
+     "rank": 6
+    },
+    {
+     "noc": "ITA",
+     "gold": 246,
+     "silver": 206,
+     "bronze": 228,
+     "total": 680,
+     "rank": 7
+    },
+    {
+     "noc": "JPN",
+     "gold": 189,
+     "silver": 195,
+     "bronze": 191,
+     "total": 575,
+     "rank": 8
+    },
+    {
+     "noc": "HUN",
+     "gold": 188,
+     "silver": 163,
+     "bronze": 205,
+     "total": 556,
+     "rank": 9
+    },
+    {
+     "noc": "AUS",
+     "gold": 182,
+     "silver": 222,
+     "bronze": 248,
+     "total": 652,
+     "rank": 10
+    },
+    {
+     "noc": "NED",
+     "gold": 166,
+     "silver": 114,
+     "bronze": 150,
+     "total": 430,
+     "rank": 11
+    },
+    {
+     "noc": "SWE",
+     "gold": 156,
+     "silver": 201,
+     "bronze": 184,
+     "total": 541,
+     "rank": 12
+    }
+   ]
+  }
+ ],
+ "rank_changes": [
+  {
+   "noc": "CHN",
+   "athlete_row_rank": 7,
+   "conservative_rank": 4,
+   "delta": 3
+  },
+  {
+   "noc": "GER",
+   "athlete_row_rank": 4,
+   "conservative_rank": 5,
+   "delta": -1
+  },
+  {
+   "noc": "FRA",
+   "athlete_row_rank": 5,
+   "conservative_rank": 6,
+   "delta": -1
+  },
+  {
+   "noc": "ITA",
+   "athlete_row_rank": 6,
+   "conservative_rank": 7,
+   "delta": -1
+  },
+  {
+   "noc": "HUN",
+   "athlete_row_rank": 8,
+   "conservative_rank": 9,
+   "delta": -1
+  },
+  {
+   "noc": "AUS",
+   "athlete_row_rank": 9,
+   "conservative_rank": 10,
+   "delta": -1
+  },
+  {
+   "noc": "SWE",
+   "athlete_row_rank": 10,
+   "conservative_rank": 11,
+   "delta": -1
+  },
+  {
+   "noc": "USA",
+   "athlete_row_rank": 1,
+   "conservative_rank": 1,
+   "delta": 0
+  },
+  {
+   "noc": "URS",
+   "athlete_row_rank": 2,
+   "conservative_rank": 2,
+   "delta": 0
+  },
+  {
+   "noc": "GBR",
+   "athlete_row_rank": 3,
+   "conservative_rank": 3,
+   "delta": 0
+  }
+ ]
+}

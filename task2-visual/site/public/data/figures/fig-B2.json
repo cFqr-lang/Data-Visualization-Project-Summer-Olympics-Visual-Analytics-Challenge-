@@ -1,0 +1,796 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-7",
+  "chart_id": "B2",
+  "title": "参赛规模与奖牌非线性，小国站在效率前沿",
+  "caliber": "conservative_event",
+  "caliber_label": "保守小项口径（团体项目每国每小项每色计 1 枚，2020+ 取下界）",
+  "denominator": "场均参赛人数（去重运动员）",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-23T22:40:32+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "X 为该国每届平均去重运动员数，Y 为每届平均保守小项奖牌数，均为 log 轴",
+   "点大小为参赛届数；仅保留参赛 ≥ 5 届且累计奖牌 ≥ 10 枚的 NOC",
+   "不引入 GDP / 人口等外部数据，效率仅指奖牌 / 参赛人数"
+  ]
+ },
+ "points": [
+  {
+   "noc": "URS",
+   "editions": 9,
+   "total_medals": 1005,
+   "avg_athletes": 513.56,
+   "avg_medals": 111.67,
+   "efficiency": 0.2174,
+   "rank": 1
+  },
+  {
+   "noc": "USA",
+   "editions": 29,
+   "total_medals": 2757,
+   "avg_athletes": 567.52,
+   "avg_medals": 95.07,
+   "efficiency": 0.1675,
+   "rank": 2
+  },
+  {
+   "noc": "GDR",
+   "editions": 5,
+   "total_medals": 409,
+   "avg_athletes": 420.8,
+   "avg_medals": 81.8,
+   "efficiency": 0.1944,
+   "rank": 3
+  },
+  {
+   "noc": "CHN",
+   "editions": 15,
+   "total_medals": 721,
+   "avg_athletes": 353.0,
+   "avg_medals": 48.07,
+   "efficiency": 0.1362,
+   "rank": 4
+  },
+  {
+   "noc": "RUS",
+   "editions": 10,
+   "total_medals": 460,
+   "avg_athletes": 358.3,
+   "avg_medals": 46.0,
+   "efficiency": 0.1284,
+   "rank": 5
+  },
+  {
+   "noc": "FRG",
+   "editions": 5,
+   "total_medals": 204,
+   "avg_athletes": 511.6,
+   "avg_medals": 40.8,
+   "efficiency": 0.0797,
+   "rank": 6
+  },
+  {
+   "noc": "GER",
+   "editions": 21,
+   "total_medals": 832,
+   "avg_athletes": 405.67,
+   "avg_medals": 39.62,
+   "efficiency": 0.0977,
+   "rank": 7
+  },
+  {
+   "noc": "GBR",
+   "editions": 30,
+   "total_medals": 995,
+   "avg_athletes": 389.83,
+   "avg_medals": 33.17,
+   "efficiency": 0.0851,
+   "rank": 8
+  },
+  {
+   "noc": "FRA",
+   "editions": 30,
+   "total_medals": 828,
+   "avg_athletes": 386.6,
+   "avg_medals": 27.6,
+   "efficiency": 0.0714,
+   "rank": 9
+  },
+  {
+   "noc": "JPN",
+   "editions": 24,
+   "total_medals": 542,
+   "avg_athletes": 314.75,
+   "avg_medals": 22.58,
+   "efficiency": 0.0718,
+   "rank": 10
+  },
+  {
+   "noc": "ITA",
+   "editions": 30,
+   "total_medals": 668,
+   "avg_athletes": 301.17,
+   "avg_medals": 22.27,
+   "efficiency": 0.0739,
+   "rank": 11
+  },
+  {
+   "noc": "AUS",
+   "editions": 28,
+   "total_medals": 601,
+   "avg_athletes": 292.68,
+   "avg_medals": 21.46,
+   "efficiency": 0.0733,
+   "rank": 12
+  },
+  {
+   "noc": "UKR",
+   "editions": 8,
+   "total_medals": 157,
+   "avg_athletes": 293.12,
+   "avg_medals": 19.62,
+   "efficiency": 0.067,
+   "rank": 13
+  },
+  {
+   "noc": "HUN",
+   "editions": 28,
+   "total_medals": 532,
+   "avg_athletes": 230.14,
+   "avg_medals": 19.0,
+   "efficiency": 0.0826,
+   "rank": 14
+  },
+  {
+   "noc": "SWE",
+   "editions": 29,
+   "total_medals": 519,
+   "avg_athletes": 216.52,
+   "avg_medals": 17.9,
+   "efficiency": 0.0827,
+   "rank": 15
+  },
+  {
+   "noc": "KOR",
+   "editions": 19,
+   "total_medals": 318,
+   "avg_athletes": 219.84,
+   "avg_medals": 16.74,
+   "efficiency": 0.0761,
+   "rank": 16
+  },
+  {
+   "noc": "ROU",
+   "editions": 24,
+   "total_medals": 316,
+   "avg_athletes": 164.42,
+   "avg_medals": 13.17,
+   "efficiency": 0.0801,
+   "rank": 17
+  },
+  {
+   "noc": "POL",
+   "editions": 24,
+   "total_medals": 314,
+   "avg_athletes": 223.88,
+   "avg_medals": 13.08,
+   "efficiency": 0.0584,
+   "rank": 18
+  },
+  {
+   "noc": "NED",
+   "editions": 28,
+   "total_medals": 365,
+   "avg_athletes": 207.0,
+   "avg_medals": 13.04,
+   "efficiency": 0.063,
+   "rank": 19
+  },
+  {
+   "noc": "BLR",
+   "editions": 7,
+   "total_medals": 91,
+   "avg_athletes": 197.57,
+   "avg_medals": 13.0,
+   "efficiency": 0.0658,
+   "rank": 20
+  },
+  {
+   "noc": "CAN",
+   "editions": 28,
+   "total_medals": 354,
+   "avg_athletes": 274.89,
+   "avg_medals": 12.64,
+   "efficiency": 0.046,
+   "rank": 21
+  },
+  {
+   "noc": "FIN",
+   "editions": 27,
+   "total_medals": 308,
+   "avg_athletes": 135.04,
+   "avg_medals": 11.41,
+   "efficiency": 0.0845,
+   "rank": 22
+  },
+  {
+   "noc": "KAZ",
+   "editions": 8,
+   "total_medals": 85,
+   "avg_athletes": 128.25,
+   "avg_medals": 10.62,
+   "efficiency": 0.0828,
+   "rank": 23
+  },
+  {
+   "noc": "BUL",
+   "editions": 22,
+   "total_medals": 230,
+   "avg_athletes": 138.32,
+   "avg_medals": 10.45,
+   "efficiency": 0.0756,
+   "rank": 24
+  },
+  {
+   "noc": "CUB",
+   "editions": 23,
+   "total_medals": 238,
+   "avg_athletes": 114.0,
+   "avg_medals": 10.35,
+   "efficiency": 0.0908,
+   "rank": 25
+  },
+  {
+   "noc": "TCH",
+   "editions": 16,
+   "total_medals": 146,
+   "avg_athletes": 210.56,
+   "avg_medals": 9.12,
+   "efficiency": 0.0433,
+   "rank": 26
+  },
+  {
+   "noc": "CZE",
+   "editions": 8,
+   "total_medals": 70,
+   "avg_athletes": 152.0,
+   "avg_medals": 8.75,
+   "efficiency": 0.0576,
+   "rank": 27
+  },
+  {
+   "noc": "DEN",
+   "editions": 29,
+   "total_medals": 224,
+   "avg_athletes": 126.17,
+   "avg_medals": 7.72,
+   "efficiency": 0.0612,
+   "rank": 28
+  },
+  {
+   "noc": "KEN",
+   "editions": 16,
+   "total_medals": 121,
+   "avg_athletes": 58.19,
+   "avg_medals": 7.56,
+   "efficiency": 0.13,
+   "rank": 29
+  },
+  {
+   "noc": "SUI",
+   "editions": 30,
+   "total_medals": 222,
+   "avg_athletes": 143.03,
+   "avg_medals": 7.4,
+   "efficiency": 0.0517,
+   "rank": 30
+  },
+  {
+   "noc": "ESP",
+   "editions": 25,
+   "total_medals": 183,
+   "avg_athletes": 229.48,
+   "avg_medals": 7.32,
+   "efficiency": 0.0319,
+   "rank": 31
+  },
+  {
+   "noc": "AZE",
+   "editions": 8,
+   "total_medals": 58,
+   "avg_athletes": 46.0,
+   "avg_medals": 7.25,
+   "efficiency": 0.1576,
+   "rank": 32
+  },
+  {
+   "noc": "BRA",
+   "editions": 25,
+   "total_medals": 170,
+   "avg_athletes": 179.6,
+   "avg_medals": 6.8,
+   "efficiency": 0.0379,
+   "rank": 33
+  },
+  {
+   "noc": "UZB",
+   "editions": 8,
+   "total_medals": 51,
+   "avg_athletes": 79.62,
+   "avg_medals": 6.38,
+   "efficiency": 0.0801,
+   "rank": 34
+  },
+  {
+   "noc": "BEL",
+   "editions": 28,
+   "total_medals": 175,
+   "avg_athletes": 140.96,
+   "avg_medals": 6.25,
+   "efficiency": 0.0443,
+   "rank": 35
+  },
+  {
+   "noc": "NZL",
+   "editions": 26,
+   "total_medals": 158,
+   "avg_athletes": 101.12,
+   "avg_medals": 6.08,
+   "efficiency": 0.0601,
+   "rank": 36
+  },
+  {
+   "noc": "NOR",
+   "editions": 28,
+   "total_medals": 169,
+   "avg_athletes": 98.71,
+   "avg_medals": 6.04,
+   "efficiency": 0.0611,
+   "rank": 37
+  },
+  {
+   "noc": "GEO",
+   "editions": 8,
+   "total_medals": 47,
+   "avg_athletes": 38.88,
+   "avg_medals": 5.88,
+   "efficiency": 0.1511,
+   "rank": 38
+  },
+  {
+   "noc": "PRK",
+   "editions": 11,
+   "total_medals": 60,
+   "avg_athletes": 63.27,
+   "avg_medals": 5.45,
+   "efficiency": 0.0862,
+   "rank": 39
+  },
+  {
+   "noc": "CRO",
+   "editions": 9,
+   "total_medals": 48,
+   "avg_athletes": 94.89,
+   "avg_medals": 5.33,
+   "efficiency": 0.0562,
+   "rank": 40
+  },
+  {
+   "noc": "YUG",
+   "editions": 16,
+   "total_medals": 83,
+   "avg_athletes": 127.88,
+   "avg_medals": 5.19,
+   "efficiency": 0.0406,
+   "rank": 41
+  },
+  {
+   "noc": "SRB",
+   "editions": 6,
+   "total_medals": 29,
+   "avg_athletes": 97.33,
+   "avg_medals": 4.83,
+   "efficiency": 0.0497,
+   "rank": 42
+  },
+  {
+   "noc": "TUR",
+   "editions": 24,
+   "total_medals": 116,
+   "avg_athletes": 59.0,
+   "avg_medals": 4.83,
+   "efficiency": 0.0819,
+   "rank": 43
+  },
+  {
+   "noc": "JAM",
+   "editions": 19,
+   "total_medals": 91,
+   "avg_athletes": 51.0,
+   "avg_medals": 4.79,
+   "efficiency": 0.0939,
+   "rank": 44
+  },
+  {
+   "noc": "RSA",
+   "editions": 21,
+   "total_medals": 97,
+   "avg_athletes": 97.05,
+   "avg_medals": 4.62,
+   "efficiency": 0.0476,
+   "rank": 45
+  },
+  {
+   "noc": "IRI",
+   "editions": 19,
+   "total_medals": 87,
+   "avg_athletes": 43.63,
+   "avg_medals": 4.58,
+   "efficiency": 0.1049,
+   "rank": 46
+  },
+  {
+   "noc": "GRE",
+   "editions": 30,
+   "total_medals": 128,
+   "avg_athletes": 90.3,
+   "avg_medals": 4.27,
+   "efficiency": 0.0472,
+   "rank": 47
+  },
+  {
+   "noc": "SVK",
+   "editions": 8,
+   "total_medals": 33,
+   "avg_athletes": 74.12,
+   "avg_medals": 4.12,
+   "efficiency": 0.0556,
+   "rank": 48
+  },
+  {
+   "noc": "ETH",
+   "editions": 15,
+   "total_medals": 61,
+   "avg_athletes": 29.8,
+   "avg_medals": 4.07,
+   "efficiency": 0.1365,
+   "rank": 49
+  },
+  {
+   "noc": "AUT",
+   "editions": 29,
+   "total_medals": 111,
+   "avg_athletes": 104.76,
+   "avg_medals": 3.83,
+   "efficiency": 0.0365,
+   "rank": 50
+  },
+  {
+   "noc": "SLO",
+   "editions": 9,
+   "total_medals": 31,
+   "avg_athletes": 74.0,
+   "avg_medals": 3.44,
+   "efficiency": 0.0465,
+   "rank": 51
+  },
+  {
+   "noc": "ARG",
+   "editions": 26,
+   "total_medals": 80,
+   "avg_athletes": 125.54,
+   "avg_medals": 3.08,
+   "efficiency": 0.0245,
+   "rank": 52
+  },
+  {
+   "noc": "MEX",
+   "editions": 25,
+   "total_medals": 77,
+   "avg_athletes": 124.56,
+   "avg_medals": 3.08,
+   "efficiency": 0.0247,
+   "rank": 53
+  },
+  {
+   "noc": "ARM",
+   "editions": 8,
+   "total_medals": 24,
+   "avg_athletes": 26.0,
+   "avg_medals": 3.0,
+   "efficiency": 0.1154,
+   "rank": 54
+  },
+  {
+   "noc": "LTU",
+   "editions": 11,
+   "total_medals": 30,
+   "avg_athletes": 58.91,
+   "avg_medals": 2.73,
+   "efficiency": 0.0463,
+   "rank": 55
+  },
+  {
+   "noc": "TPE",
+   "editions": 16,
+   "total_medals": 43,
+   "avg_athletes": 73.56,
+   "avg_medals": 2.69,
+   "efficiency": 0.0365,
+   "rank": 56
+  },
+  {
+   "noc": "EST",
+   "editions": 14,
+   "total_medals": 36,
+   "avg_athletes": 36.93,
+   "avg_medals": 2.57,
+   "efficiency": 0.0696,
+   "rank": 57
+  },
+  {
+   "noc": "INA",
+   "editions": 17,
+   "total_medals": 38,
+   "avg_athletes": 28.0,
+   "avg_medals": 2.24,
+   "efficiency": 0.0798,
+   "rank": 58
+  },
+  {
+   "noc": "THA",
+   "editions": 18,
+   "total_medals": 38,
+   "avg_athletes": 46.72,
+   "avg_medals": 2.11,
+   "efficiency": 0.0452,
+   "rank": 59
+  },
+  {
+   "noc": "MGL",
+   "editions": 15,
+   "total_medals": 31,
+   "avg_athletes": 36.4,
+   "avg_medals": 2.07,
+   "efficiency": 0.0568,
+   "rank": 60
+  },
+  {
+   "noc": "IRL",
+   "editions": 23,
+   "total_medals": 42,
+   "avg_athletes": 68.48,
+   "avg_medals": 1.83,
+   "efficiency": 0.0267,
+   "rank": 61
+  },
+  {
+   "noc": "COL",
+   "editions": 22,
+   "total_medals": 37,
+   "avg_athletes": 56.0,
+   "avg_medals": 1.68,
+   "efficiency": 0.03,
+   "rank": 62
+  },
+  {
+   "noc": "EGY",
+   "editions": 22,
+   "total_medals": 36,
+   "avg_athletes": 89.36,
+   "avg_medals": 1.64,
+   "efficiency": 0.0183,
+   "rank": 63
+  },
+  {
+   "noc": "MAR",
+   "editions": 16,
+   "total_medals": 26,
+   "avg_athletes": 46.5,
+   "avg_medals": 1.62,
+   "efficiency": 0.0349,
+   "rank": 64
+  },
+  {
+   "noc": "LAT",
+   "editions": 13,
+   "total_medals": 21,
+   "avg_athletes": 40.0,
+   "avg_medals": 1.62,
+   "efficiency": 0.0404,
+   "rank": 65
+  },
+  {
+   "noc": "IND",
+   "editions": 26,
+   "total_medals": 41,
+   "avg_athletes": 63.12,
+   "avg_medals": 1.58,
+   "efficiency": 0.025,
+   "rank": 66
+  },
+  {
+   "noc": "KGZ",
+   "editions": 8,
+   "total_medals": 12,
+   "avg_athletes": 30.62,
+   "avg_medals": 1.5,
+   "efficiency": 0.049,
+   "rank": 67
+  },
+  {
+   "noc": "MDA",
+   "editions": 8,
+   "total_medals": 12,
+   "avg_athletes": 30.38,
+   "avg_medals": 1.5,
+   "efficiency": 0.0494,
+   "rank": 68
+  },
+  {
+   "noc": "NGR",
+   "editions": 18,
+   "total_medals": 26,
+   "avg_athletes": 57.56,
+   "avg_medals": 1.44,
+   "efficiency": 0.0251,
+   "rank": 69
+  },
+  {
+   "noc": "ALG",
+   "editions": 15,
+   "total_medals": 20,
+   "avg_athletes": 42.0,
+   "avg_medals": 1.33,
+   "efficiency": 0.0317,
+   "rank": 70
+  },
+  {
+   "noc": "POR",
+   "editions": 26,
+   "total_medals": 32,
+   "avg_athletes": 64.96,
+   "avg_medals": 1.23,
+   "efficiency": 0.0189,
+   "rank": 71
+  },
+  {
+   "noc": "ISR",
+   "editions": 18,
+   "total_medals": 21,
+   "avg_athletes": 47.5,
+   "avg_medals": 1.17,
+   "efficiency": 0.0246,
+   "rank": 72
+  },
+  {
+   "noc": "TUN",
+   "editions": 16,
+   "total_medals": 18,
+   "avg_athletes": 41.25,
+   "avg_medals": 1.12,
+   "efficiency": 0.0273,
+   "rank": 73
+  },
+  {
+   "noc": "MAS",
+   "editions": 15,
+   "total_medals": 15,
+   "avg_athletes": 40.2,
+   "avg_medals": 1.0,
+   "efficiency": 0.0249,
+   "rank": 74
+  },
+  {
+   "noc": "TTO",
+   "editions": 19,
+   "total_medals": 19,
+   "avg_athletes": 22.58,
+   "avg_medals": 1.0,
+   "efficiency": 0.0443,
+   "rank": 75
+  },
+  {
+   "noc": "DOM",
+   "editions": 16,
+   "total_medals": 15,
+   "avg_athletes": 25.31,
+   "avg_medals": 0.94,
+   "efficiency": 0.037,
+   "rank": 76
+  },
+  {
+   "noc": "VEN",
+   "editions": 21,
+   "total_medals": 19,
+   "avg_athletes": 47.43,
+   "avg_medals": 0.9,
+   "efficiency": 0.0191,
+   "rank": 77
+  },
+  {
+   "noc": "BAH",
+   "editions": 18,
+   "total_medals": 16,
+   "avg_athletes": 23.06,
+   "avg_medals": 0.89,
+   "efficiency": 0.0386,
+   "rank": 78
+  },
+  {
+   "noc": "PHI",
+   "editions": 23,
+   "total_medals": 18,
+   "avg_athletes": 31.96,
+   "avg_medals": 0.78,
+   "efficiency": 0.0245,
+   "rank": 79
+  },
+  {
+   "noc": "UGA",
+   "editions": 17,
+   "total_medals": 13,
+   "avg_athletes": 18.41,
+   "avg_medals": 0.76,
+   "efficiency": 0.0415,
+   "rank": 80
+  },
+  {
+   "noc": "HKG",
+   "editions": 18,
+   "total_medals": 13,
+   "avg_athletes": 42.89,
+   "avg_medals": 0.72,
+   "efficiency": 0.0168,
+   "rank": 81
+  },
+  {
+   "noc": "CHI",
+   "editions": 24,
+   "total_medals": 15,
+   "avg_athletes": 35.96,
+   "avg_medals": 0.62,
+   "efficiency": 0.0174,
+   "rank": 82
+  },
+  {
+   "noc": "ECU",
+   "editions": 16,
+   "total_medals": 10,
+   "avg_athletes": 23.06,
+   "avg_medals": 0.62,
+   "efficiency": 0.0271,
+   "rank": 83
+  },
+  {
+   "noc": "PUR",
+   "editions": 20,
+   "total_medals": 12,
+   "avg_athletes": 49.0,
+   "avg_medals": 0.6,
+   "efficiency": 0.0122,
+   "rank": 84
+  },
+  {
+   "noc": "PAK",
+   "editions": 19,
+   "total_medals": 11,
+   "avg_athletes": 30.37,
+   "avg_medals": 0.58,
+   "efficiency": 0.0191,
+   "rank": 85
+  },
+  {
+   "noc": "URU",
+   "editions": 23,
+   "total_medals": 10,
+   "avg_athletes": 26.65,
+   "avg_medals": 0.43,
+   "efficiency": 0.0163,
+   "rank": 86
+  }
+ ]
+}

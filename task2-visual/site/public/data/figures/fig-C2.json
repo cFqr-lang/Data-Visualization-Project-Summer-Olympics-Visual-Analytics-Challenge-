@@ -1,0 +1,1405 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-5",
+  "chart_id": "C2",
+  "title": "女性参赛占比高，不等于女性奖牌占比高",
+  "caliber": "athlete_row",
+  "caliber_label": "运动员行口径（团体项目按人计行）",
+  "denominator": "该国该届全部记录",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-23T22:40:32+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "混合项目单列，不并入男女奖牌占比",
+   "female_medal_share 为 None 表示该国无男女分项奖牌",
+   "仅保留记录数 ≥ 20 且奖牌行 ≥ 3 的国家（否则占比无统计意义）"
+  ]
+ },
+ "views": [
+  {
+   "id": "2024",
+   "label": "2024 单届",
+   "years": [
+    2024
+   ],
+   "min_rows": 20,
+   "min_medals": 3,
+   "points": [
+    {
+     "noc": "COL",
+     "rows": 105,
+     "female_share": 0.5714,
+     "female_medals": 2,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "JAM",
+     "rows": 81,
+     "female_share": 0.5556,
+     "female_medals": 1,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1667
+    },
+    {
+     "noc": "MEX",
+     "rows": 155,
+     "female_share": 0.6258,
+     "female_medals": 4,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "IRI",
+     "rows": 46,
+     "female_share": 0.2609,
+     "female_medals": 2,
+     "male_medals": 10,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1667
+    },
+    {
+     "noc": "ARG",
+     "rows": 154,
+     "female_share": 0.2532,
+     "female_medals": 16,
+     "male_medals": 1,
+     "mixed_medals": 2,
+     "female_medal_share": 0.9412
+    },
+    {
+     "noc": "MAS",
+     "rows": 32,
+     "female_share": 0.5312,
+     "female_medals": 0,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "IND",
+     "rows": 138,
+     "female_share": 0.442,
+     "female_medals": 1,
+     "male_medals": 19,
+     "mixed_medals": 2,
+     "female_medal_share": 0.05
+    },
+    {
+     "noc": "ETH",
+     "rows": 35,
+     "female_share": 0.5429,
+     "female_medals": 2,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "ALG",
+     "rows": 55,
+     "female_share": 0.5091,
+     "female_medals": 2,
+     "male_medals": 1,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6667
+    },
+    {
+     "noc": "AIN",
+     "rows": 46,
+     "female_share": 0.5435,
+     "female_medals": 3,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "ROU",
+     "rows": 144,
+     "female_share": 0.6181,
+     "female_medals": 17,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.8095
+    },
+    {
+     "noc": "UZB",
+     "rows": 119,
+     "female_share": 0.3193,
+     "female_medals": 2,
+     "male_medals": 11,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1538
+    },
+    {
+     "noc": "MAR",
+     "rows": 63,
+     "female_share": 0.2857,
+     "female_medals": 0,
+     "male_medals": 20,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "IRL",
+     "rows": 185,
+     "female_share": 0.5243,
+     "female_medals": 2,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2857
+    },
+    {
+     "noc": "CRO",
+     "rows": 85,
+     "female_share": 0.2,
+     "female_medals": 4,
+     "male_medals": 16,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2
+    },
+    {
+     "noc": "FRA",
+     "rows": 801,
+     "female_share": 0.5031,
+     "female_medals": 54,
+     "male_medals": 119,
+     "mixed_medals": 14,
+     "female_medal_share": 0.3121
+    },
+    {
+     "noc": "CUB",
+     "rows": 69,
+     "female_share": 0.5072,
+     "female_medals": 3,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3333
+    },
+    {
+     "noc": "JPN",
+     "rows": 598,
+     "female_share": 0.4465,
+     "female_medals": 27,
+     "male_medals": 37,
+     "mixed_medals": 18,
+     "female_medal_share": 0.4219
+    },
+    {
+     "noc": "GER",
+     "rows": 647,
+     "female_share": 0.4699,
+     "female_medals": 55,
+     "male_medals": 51,
+     "mixed_medals": 2,
+     "female_medal_share": 0.5189
+    },
+    {
+     "noc": "ISR",
+     "rows": 138,
+     "female_share": 0.4203,
+     "female_medals": 8,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.7273
+    },
+    {
+     "noc": "GBR",
+     "rows": 533,
+     "female_share": 0.5047,
+     "female_medals": 74,
+     "male_medals": 73,
+     "mixed_medals": 9,
+     "female_medal_share": 0.5034
+    },
+    {
+     "noc": "SWE",
+     "rows": 173,
+     "female_share": 0.5376,
+     "female_medals": 6,
+     "male_medals": 8,
+     "mixed_medals": 2,
+     "female_medal_share": 0.4286
+    },
+    {
+     "noc": "UKR",
+     "rows": 212,
+     "female_share": 0.4387,
+     "female_medals": 10,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.625
+    },
+    {
+     "noc": "TPE",
+     "rows": 78,
+     "female_share": 0.5513,
+     "female_medals": 4,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "ITA",
+     "rows": 610,
+     "female_share": 0.477,
+     "female_medals": 42,
+     "male_medals": 36,
+     "mixed_medals": 4,
+     "female_medal_share": 0.5385
+    },
+    {
+     "noc": "GEO",
+     "rows": 38,
+     "female_share": 0.2895,
+     "female_medals": 0,
+     "male_medals": 7,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "ESP",
+     "rows": 526,
+     "female_share": 0.4696,
+     "female_medals": 29,
+     "male_medals": 52,
+     "mixed_medals": 2,
+     "female_medal_share": 0.358
+    },
+    {
+     "noc": "FIJ",
+     "rows": 36,
+     "female_share": 0.4722,
+     "female_medals": 0,
+     "male_medals": 14,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "BUL",
+     "rows": 61,
+     "female_share": 0.5082,
+     "female_medals": 2,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2857
+    },
+    {
+     "noc": "MDA",
+     "rows": 30,
+     "female_share": 0.5,
+     "female_medals": 1,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.25
+    },
+    {
+     "noc": "KAZ",
+     "rows": 123,
+     "female_share": 0.2927,
+     "female_medals": 1,
+     "male_medals": 5,
+     "mixed_medals": 2,
+     "female_medal_share": 0.1667
+    },
+    {
+     "noc": "AUT",
+     "rows": 121,
+     "female_share": 0.4463,
+     "female_medals": 2,
+     "male_medals": 2,
+     "mixed_medals": 2,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "BRA",
+     "rows": 401,
+     "female_share": 0.5486,
+     "female_medals": 50,
+     "male_medals": 7,
+     "mixed_medals": 10,
+     "female_medal_share": 0.8772
+    },
+    {
+     "noc": "EGY",
+     "rows": 207,
+     "female_share": 0.3913,
+     "female_medals": 1,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3333
+    },
+    {
+     "noc": "TUR",
+     "rows": 165,
+     "female_share": 0.4,
+     "female_medals": 5,
+     "male_medals": 4,
+     "mixed_medals": 2,
+     "female_medal_share": 0.5556
+    },
+    {
+     "noc": "POL",
+     "rows": 312,
+     "female_share": 0.5705,
+     "female_medals": 11,
+     "male_medals": 17,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3929
+    },
+    {
+     "noc": "CZE",
+     "rows": 149,
+     "female_share": 0.4698,
+     "female_medals": 1,
+     "male_medals": 6,
+     "mixed_medals": 2,
+     "female_medal_share": 0.1429
+    },
+    {
+     "noc": "KOR",
+     "rows": 248,
+     "female_share": 0.5444,
+     "female_medals": 24,
+     "male_medals": 15,
+     "mixed_medals": 19,
+     "female_medal_share": 0.6154
+    },
+    {
+     "noc": "HUN",
+     "rows": 255,
+     "female_share": 0.4784,
+     "female_medals": 13,
+     "male_medals": 17,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4333
+    },
+    {
+     "noc": "THA",
+     "rows": 58,
+     "female_share": 0.569,
+     "female_medals": 3,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "RSA",
+     "rows": 161,
+     "female_share": 0.441,
+     "female_medals": 3,
+     "male_medals": 18,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1429
+    },
+    {
+     "noc": "NOR",
+     "rows": 128,
+     "female_share": 0.4844,
+     "female_medals": 18,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.7826
+    },
+    {
+     "noc": "INA",
+     "rows": 36,
+     "female_share": 0.5,
+     "female_medals": 1,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3333
+    },
+    {
+     "noc": "KEN",
+     "rows": 77,
+     "female_share": 0.4805,
+     "female_medals": 7,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6364
+    },
+    {
+     "noc": "DEN",
+     "rows": 161,
+     "female_share": 0.5714,
+     "female_medals": 20,
+     "male_medals": 21,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4878
+    },
+    {
+     "noc": "LTU",
+     "rows": 63,
+     "female_share": 0.3968,
+     "female_medals": 2,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2857
+    },
+    {
+     "noc": "NZL",
+     "rows": 253,
+     "female_share": 0.5138,
+     "female_medals": 40,
+     "male_medals": 9,
+     "mixed_medals": 2,
+     "female_medal_share": 0.8163
+    },
+    {
+     "noc": "CHN",
+     "rows": 587,
+     "female_share": 0.6116,
+     "female_medals": 104,
+     "male_medals": 48,
+     "mixed_medals": 16,
+     "female_medal_share": 0.6842
+    },
+    {
+     "noc": "BEL",
+     "rows": 240,
+     "female_share": 0.4958,
+     "female_medals": 4,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4444
+    },
+    {
+     "noc": "AUS",
+     "rows": 649,
+     "female_share": 0.5624,
+     "female_medals": 69,
+     "male_medals": 42,
+     "mixed_medals": 10,
+     "female_medal_share": 0.6216
+    },
+    {
+     "noc": "DOM",
+     "rows": 64,
+     "female_share": 0.3906,
+     "female_medals": 1,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3333
+    },
+    {
+     "noc": "USA",
+     "rows": 854,
+     "female_share": 0.5281,
+     "female_medals": 171,
+     "male_medals": 132,
+     "mixed_medals": 18,
+     "female_medal_share": 0.5644
+    },
+    {
+     "noc": "TUN",
+     "rows": 31,
+     "female_share": 0.4516,
+     "female_medals": 0,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "POR",
+     "rows": 95,
+     "female_share": 0.4737,
+     "female_medals": 1,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2
+    },
+    {
+     "noc": "HKG",
+     "rows": 51,
+     "female_share": 0.6275,
+     "female_medals": 3,
+     "male_medals": 1,
+     "mixed_medals": 0,
+     "female_medal_share": 0.75
+    },
+    {
+     "noc": "AZE",
+     "rows": 49,
+     "female_share": 0.4082,
+     "female_medals": 0,
+     "male_medals": 7,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "ECU",
+     "rows": 47,
+     "female_share": 0.617,
+     "female_medals": 3,
+     "male_medals": 1,
+     "mixed_medals": 2,
+     "female_medal_share": 0.75
+    },
+    {
+     "noc": "NED",
+     "rows": 449,
+     "female_share": 0.5768,
+     "female_medals": 66,
+     "male_medals": 46,
+     "mixed_medals": 6,
+     "female_medal_share": 0.5893
+    },
+    {
+     "noc": "CAN",
+     "rows": 538,
+     "female_share": 0.5669,
+     "female_medals": 40,
+     "male_medals": 15,
+     "mixed_medals": 2,
+     "female_medal_share": 0.7273
+    },
+    {
+     "noc": "SRB",
+     "rows": 135,
+     "female_share": 0.3704,
+     "female_medals": 1,
+     "male_medals": 26,
+     "mixed_medals": 2,
+     "female_medal_share": 0.037
+    },
+    {
+     "noc": "GRE",
+     "rows": 126,
+     "female_share": 0.3889,
+     "female_medals": 2,
+     "male_medals": 8,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2
+    },
+    {
+     "noc": "PHI",
+     "rows": 44,
+     "female_share": 0.6818,
+     "female_medals": 2,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "SUI",
+     "rows": 218,
+     "female_share": 0.4037,
+     "female_medals": 6,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6
+    },
+    {
+     "noc": "SLO",
+     "rows": 117,
+     "female_share": 0.5385,
+     "female_medals": 2,
+     "male_medals": 1,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6667
+    }
+   ]
+  },
+  {
+   "id": "last3",
+   "label": "2016–2024 三届合并",
+   "years": [
+    2016,
+    2020,
+    2024
+   ],
+   "min_rows": 20,
+   "min_medals": 3,
+   "points": [
+    {
+     "noc": "ROU",
+     "rows": 384,
+     "female_share": 0.5651,
+     "female_medals": 33,
+     "male_medals": 13,
+     "mixed_medals": 0,
+     "female_medal_share": 0.7174
+    },
+    {
+     "noc": "ESP",
+     "rows": 1318,
+     "female_share": 0.459,
+     "female_medals": 71,
+     "male_medals": 123,
+     "mixed_medals": 4,
+     "female_medal_share": 0.366
+    },
+    {
+     "noc": "ITA",
+     "rows": 1533,
+     "female_share": 0.4821,
+     "female_medals": 91,
+     "male_medals": 133,
+     "mixed_medals": 6,
+     "female_medal_share": 0.4062
+    },
+    {
+     "noc": "AZE",
+     "rows": 173,
+     "female_share": 0.3237,
+     "female_medals": 7,
+     "male_medals": 25,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2188
+    },
+    {
+     "noc": "FRA",
+     "rows": 1851,
+     "female_share": 0.4684,
+     "female_medals": 142,
+     "male_medals": 243,
+     "mixed_medals": 39,
+     "female_medal_share": 0.3688
+    },
+    {
+     "noc": "ALG",
+     "rows": 174,
+     "female_share": 0.3218,
+     "female_medals": 2,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4
+    },
+    {
+     "noc": "BRN",
+     "rows": 81,
+     "female_share": 0.3457,
+     "female_medals": 5,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.7143
+    },
+    {
+     "noc": "NED",
+     "rows": 1169,
+     "female_share": 0.5723,
+     "female_medals": 141,
+     "male_medals": 88,
+     "mixed_medals": 8,
+     "female_medal_share": 0.6157
+    },
+    {
+     "noc": "IRL",
+     "rows": 428,
+     "female_share": 0.465,
+     "female_medals": 8,
+     "male_medals": 10,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4444
+    },
+    {
+     "noc": "USA",
+     "rows": 2429,
+     "female_share": 0.5253,
+     "female_medals": 495,
+     "male_medals": 340,
+     "mixed_medals": 48,
+     "female_medal_share": 0.5928
+    },
+    {
+     "noc": "EGY",
+     "rows": 539,
+     "female_share": 0.3729,
+     "female_medals": 6,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "IRI",
+     "rows": 189,
+     "female_share": 0.1958,
+     "female_medals": 3,
+     "male_medals": 24,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1111
+    },
+    {
+     "noc": "BEL",
+     "rows": 563,
+     "female_share": 0.4778,
+     "female_medals": 8,
+     "male_medals": 49,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1404
+    },
+    {
+     "noc": "KAZ",
+     "rows": 362,
+     "female_share": 0.3564,
+     "female_medals": 11,
+     "male_medals": 21,
+     "mixed_medals": 2,
+     "female_medal_share": 0.3438
+    },
+    {
+     "noc": "UZB",
+     "rows": 284,
+     "female_share": 0.3556,
+     "female_medals": 2,
+     "male_medals": 29,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0645
+    },
+    {
+     "noc": "TJK",
+     "rows": 31,
+     "female_share": 0.1935,
+     "female_medals": 0,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "RUS",
+     "rows": 406,
+     "female_share": 0.5,
+     "female_medals": 82,
+     "male_medals": 33,
+     "mixed_medals": 0,
+     "female_medal_share": 0.713
+    },
+    {
+     "noc": "CAN",
+     "rows": 1452,
+     "female_share": 0.6019,
+     "female_medals": 172,
+     "male_medals": 36,
+     "mixed_medals": 3,
+     "female_medal_share": 0.8269
+    },
+    {
+     "noc": "GER",
+     "rows": 1780,
+     "female_share": 0.4528,
+     "female_medals": 144,
+     "male_medals": 173,
+     "mixed_medals": 31,
+     "female_medal_share": 0.4543
+    },
+    {
+     "noc": "MEX",
+     "rows": 490,
+     "female_share": 0.4857,
+     "female_medals": 9,
+     "male_medals": 29,
+     "mixed_medals": 2,
+     "female_medal_share": 0.2368
+    },
+    {
+     "noc": "ETH",
+     "rows": 111,
+     "female_share": 0.5405,
+     "female_medals": 9,
+     "male_medals": 7,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5625
+    },
+    {
+     "noc": "ARM",
+     "rows": 70,
+     "female_share": 0.2143,
+     "female_medals": 0,
+     "male_medals": 12,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "KEN",
+     "rows": 246,
+     "female_share": 0.4919,
+     "female_medals": 19,
+     "male_medals": 15,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5588
+    },
+    {
+     "noc": "NGR",
+     "rows": 248,
+     "female_share": 0.5524,
+     "female_medals": 2,
+     "male_medals": 18,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1
+    },
+    {
+     "noc": "BRA",
+     "rows": 1400,
+     "female_share": 0.4693,
+     "female_medals": 79,
+     "male_medals": 83,
+     "mixed_medals": 10,
+     "female_medal_share": 0.4877
+    },
+    {
+     "noc": "AUS",
+     "rows": 1805,
+     "female_share": 0.5374,
+     "female_medals": 154,
+     "male_medals": 155,
+     "mixed_medals": 25,
+     "female_medal_share": 0.4984
+    },
+    {
+     "noc": "SUI",
+     "rows": 566,
+     "female_share": 0.4046,
+     "female_medals": 23,
+     "male_medals": 13,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6389
+    },
+    {
+     "noc": "BLR",
+     "rows": 279,
+     "female_share": 0.5663,
+     "female_medals": 14,
+     "male_medals": 8,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6364
+    },
+    {
+     "noc": "GEO",
+     "rows": 119,
+     "female_share": 0.2689,
+     "female_medals": 0,
+     "male_medals": 22,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "POR",
+     "rows": 314,
+     "female_share": 0.3949,
+     "female_medals": 3,
+     "male_medals": 7,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3
+    },
+    {
+     "noc": "COL",
+     "rows": 339,
+     "female_share": 0.472,
+     "female_medals": 8,
+     "male_medals": 9,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4706
+    },
+    {
+     "noc": "JOR",
+     "rows": 36,
+     "female_share": 0.2222,
+     "female_medals": 0,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "IND",
+     "rows": 419,
+     "female_share": 0.4558,
+     "female_medals": 6,
+     "male_medals": 40,
+     "mixed_medals": 2,
+     "female_medal_share": 0.1304
+    },
+    {
+     "noc": "VEN",
+     "rows": 189,
+     "female_share": 0.3069,
+     "female_medals": 3,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4286
+    },
+    {
+     "noc": "ARG",
+     "rows": 594,
+     "female_share": 0.3165,
+     "female_medals": 35,
+     "male_medals": 45,
+     "mixed_medals": 4,
+     "female_medal_share": 0.4375
+    },
+    {
+     "noc": "JPN",
+     "rows": 1821,
+     "female_share": 0.4635,
+     "female_medals": 113,
+     "male_medals": 130,
+     "mixed_medals": 34,
+     "female_medal_share": 0.465
+    },
+    {
+     "noc": "GBR",
+     "rows": 1559,
+     "female_share": 0.4869,
+     "female_medals": 192,
+     "male_medals": 223,
+     "mixed_medals": 27,
+     "female_medal_share": 0.4627
+    },
+    {
+     "noc": "NZL",
+     "rows": 764,
+     "female_share": 0.4974,
+     "female_medals": 98,
+     "male_medals": 52,
+     "mixed_medals": 2,
+     "female_medal_share": 0.6533
+    },
+    {
+     "noc": "TUR",
+     "rows": 423,
+     "female_share": 0.4326,
+     "female_medals": 11,
+     "male_medals": 19,
+     "mixed_medals": 2,
+     "female_medal_share": 0.3667
+    },
+    {
+     "noc": "UGA",
+     "rows": 78,
+     "female_share": 0.4487,
+     "female_medals": 2,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3333
+    },
+    {
+     "noc": "MGL",
+     "rows": 155,
+     "female_share": 0.5097,
+     "female_medals": 4,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5714
+    },
+    {
+     "noc": "LTU",
+     "rows": 202,
+     "female_share": 0.3267,
+     "female_medals": 5,
+     "male_medals": 10,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3333
+    },
+    {
+     "noc": "KGZ",
+     "rows": 53,
+     "female_share": 0.3208,
+     "female_medals": 4,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.4444
+    },
+    {
+     "noc": "PUR",
+     "rows": 133,
+     "female_share": 0.5865,
+     "female_medals": 3,
+     "male_medals": 1,
+     "mixed_medals": 0,
+     "female_medal_share": 0.75
+    },
+    {
+     "noc": "MAS",
+     "rows": 121,
+     "female_share": 0.5041,
+     "female_medals": 2,
+     "male_medals": 10,
+     "mixed_medals": 2,
+     "female_medal_share": 0.1667
+    },
+    {
+     "noc": "RSA",
+     "rows": 527,
+     "female_share": 0.3738,
+     "female_medals": 8,
+     "male_medals": 39,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1702
+    },
+    {
+     "noc": "GRE",
+     "rows": 330,
+     "female_share": 0.3879,
+     "female_medals": 5,
+     "male_medals": 28,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1515
+    },
+    {
+     "noc": "NOR",
+     "rows": 317,
+     "female_share": 0.4416,
+     "female_medals": 47,
+     "male_medals": 18,
+     "mixed_medals": 0,
+     "female_medal_share": 0.7231
+    },
+    {
+     "noc": "CUB",
+     "rows": 294,
+     "female_share": 0.4116,
+     "female_medals": 7,
+     "male_medals": 29,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1944
+    },
+    {
+     "noc": "INA",
+     "rows": 102,
+     "female_share": 0.4216,
+     "female_medals": 5,
+     "male_medals": 6,
+     "mixed_medals": 2,
+     "female_medal_share": 0.4545
+    },
+    {
+     "noc": "CIV",
+     "rows": 65,
+     "female_share": 0.4615,
+     "female_medals": 2,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "CHN",
+     "rows": 1660,
+     "female_share": 0.6157,
+     "female_medals": 259,
+     "male_medals": 131,
+     "mixed_medals": 32,
+     "female_medal_share": 0.6641
+    },
+    {
+     "noc": "MAR",
+     "rows": 166,
+     "female_share": 0.3253,
+     "female_medals": 0,
+     "male_medals": 22,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "SWE",
+     "rows": 532,
+     "female_share": 0.5752,
+     "female_medals": 56,
+     "male_medals": 19,
+     "mixed_medals": 3,
+     "female_medal_share": 0.7467
+    },
+    {
+     "noc": "UKR",
+     "rows": 709,
+     "female_share": 0.5049,
+     "female_medals": 36,
+     "male_medals": 22,
+     "mixed_medals": 2,
+     "female_medal_share": 0.6207
+    },
+    {
+     "noc": "TUN",
+     "rows": 169,
+     "female_share": 0.4201,
+     "female_medals": 2,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.25
+    },
+    {
+     "noc": "QAT",
+     "rows": 72,
+     "female_share": 0.0833,
+     "female_medals": 0,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "MDA",
+     "rows": 79,
+     "female_share": 0.4937,
+     "female_medals": 1,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2
+    },
+    {
+     "noc": "BUL",
+     "rows": 175,
+     "female_share": 0.5029,
+     "female_medals": 19,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.7917
+    },
+    {
+     "noc": "SRB",
+     "rows": 372,
+     "female_share": 0.4355,
+     "female_medals": 42,
+     "male_medals": 74,
+     "mixed_medals": 2,
+     "female_medal_share": 0.3621
+    },
+    {
+     "noc": "AUT",
+     "rows": 309,
+     "female_share": 0.4822,
+     "female_medals": 6,
+     "male_medals": 5,
+     "mixed_medals": 4,
+     "female_medal_share": 0.5455
+    },
+    {
+     "noc": "PHI",
+     "rows": 84,
+     "female_share": 0.5595,
+     "female_medals": 5,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5556
+    },
+    {
+     "noc": "JAM",
+     "rows": 245,
+     "female_share": 0.5469,
+     "female_medals": 36,
+     "male_medals": 21,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6316
+    },
+    {
+     "noc": "EST",
+     "rows": 117,
+     "female_share": 0.4103,
+     "female_medals": 5,
+     "male_medals": 4,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5556
+    },
+    {
+     "noc": "ECU",
+     "rows": 139,
+     "female_share": 0.5683,
+     "female_medals": 5,
+     "male_medals": 2,
+     "mixed_medals": 2,
+     "female_medal_share": 0.7143
+    },
+    {
+     "noc": "BAH",
+     "rows": 81,
+     "female_share": 0.5062,
+     "female_medals": 2,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.25
+    },
+    {
+     "noc": "ISR",
+     "rows": 325,
+     "female_share": 0.4431,
+     "female_medals": 11,
+     "male_medals": 5,
+     "mixed_medals": 11,
+     "female_medal_share": 0.6875
+    },
+    {
+     "noc": "THA",
+     "rows": 164,
+     "female_share": 0.5671,
+     "female_medals": 9,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6429
+    },
+    {
+     "noc": "BOT",
+     "rows": 49,
+     "female_share": 0.2041,
+     "female_medals": 0,
+     "male_medals": 13,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "KOR",
+     "rows": 849,
+     "female_share": 0.4676,
+     "female_medals": 53,
+     "male_medals": 48,
+     "mixed_medals": 21,
+     "female_medal_share": 0.5248
+    },
+    {
+     "noc": "DEN",
+     "rows": 442,
+     "female_share": 0.509,
+     "female_medals": 40,
+     "male_medals": 75,
+     "mixed_medals": 0,
+     "female_medal_share": 0.3478
+    },
+    {
+     "noc": "POL",
+     "rows": 883,
+     "female_share": 0.5017,
+     "female_medals": 44,
+     "male_medals": 25,
+     "mixed_medals": 11,
+     "female_medal_share": 0.6377
+    },
+    {
+     "noc": "DOM",
+     "rows": 163,
+     "female_share": 0.362,
+     "female_medals": 3,
+     "male_medals": 28,
+     "mixed_medals": 5,
+     "female_medal_share": 0.0968
+    },
+    {
+     "noc": "HUN",
+     "rows": 696,
+     "female_share": 0.4856,
+     "female_medals": 48,
+     "male_medals": 55,
+     "mixed_medals": 0,
+     "female_medal_share": 0.466
+    },
+    {
+     "noc": "CZE",
+     "rows": 435,
+     "female_share": 0.4207,
+     "female_medals": 8,
+     "male_medals": 25,
+     "mixed_medals": 4,
+     "female_medal_share": 0.2424
+    },
+    {
+     "noc": "LAT",
+     "rows": 103,
+     "female_share": 0.4369,
+     "female_medals": 0,
+     "male_medals": 5,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0
+    },
+    {
+     "noc": "HKG",
+     "rows": 163,
+     "female_share": 0.6319,
+     "female_medals": 10,
+     "male_medals": 2,
+     "mixed_medals": 0,
+     "female_medal_share": 0.8333
+    },
+    {
+     "noc": "CRO",
+     "rows": 252,
+     "female_share": 0.2619,
+     "female_medals": 8,
+     "male_medals": 47,
+     "mixed_medals": 0,
+     "female_medal_share": 0.1455
+    },
+    {
+     "noc": "SVK",
+     "rows": 157,
+     "female_share": 0.414,
+     "female_medals": 1,
+     "male_medals": 15,
+     "mixed_medals": 0,
+     "female_medal_share": 0.0625
+    },
+    {
+     "noc": "FIJ",
+     "rows": 121,
+     "female_share": 0.4132,
+     "female_medals": 13,
+     "male_medals": 40,
+     "mixed_medals": 0,
+     "female_medal_share": 0.2453
+    },
+    {
+     "noc": "SLO",
+     "rows": 251,
+     "female_share": 0.494,
+     "female_medals": 6,
+     "male_medals": 6,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    },
+    {
+     "noc": "FIN",
+     "rows": 178,
+     "female_share": 0.5337,
+     "female_medals": 2,
+     "male_medals": 1,
+     "mixed_medals": 0,
+     "female_medal_share": 0.6667
+    },
+    {
+     "noc": "TPE",
+     "rows": 262,
+     "female_share": 0.4771,
+     "female_medals": 15,
+     "male_medals": 12,
+     "mixed_medals": 2,
+     "female_medal_share": 0.5556
+    },
+    {
+     "noc": "PRK",
+     "rows": 56,
+     "female_share": 0.6964,
+     "female_medals": 9,
+     "male_medals": 4,
+     "mixed_medals": 2,
+     "female_medal_share": 0.6923
+    },
+    {
+     "noc": "KOS",
+     "rows": 28,
+     "female_share": 0.6429,
+     "female_medals": 5,
+     "male_medals": 0,
+     "mixed_medals": 0,
+     "female_medal_share": 1.0
+    },
+    {
+     "noc": "ROC",
+     "rows": 561,
+     "female_share": 0.5258,
+     "female_medals": 76,
+     "male_medals": 65,
+     "mixed_medals": 8,
+     "female_medal_share": 0.539
+    },
+    {
+     "noc": "AIN",
+     "rows": 46,
+     "female_share": 0.5435,
+     "female_medals": 3,
+     "male_medals": 3,
+     "mixed_medals": 0,
+     "female_medal_share": 0.5
+    }
+   ]
+  }
+ ]
+}

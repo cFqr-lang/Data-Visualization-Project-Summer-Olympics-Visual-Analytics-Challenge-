@@ -1,0 +1,22 @@
+{
+  "name": "olympics-task2-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "任务二：百年奥运全景（Vite + TypeScript + Apache ECharts）",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "export:figures": "node --max-old-space-size=4096 scripts/export-figures.mjs",
+    "build:offline": "vite build && node scripts/build-offline.mjs"
+  },
+  "dependencies": {
+    "echarts": "^5.5.1"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,844 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-6",
+  "chart_id": "D1",
+  "title": "核心项目稳定，边缘项目不断轮换",
+  "caliber": "conservative_event",
+  "caliber_label": "保守小项口径（团体项目每国每小项每色计 1 枚，2020+ 取下界）",
+  "denominator": "每届",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-23T22:40:32+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "项目归属按 Sport 归类，少量改名项目已归并",
+   "1908/1920 夏奥中的花样滑冰、冰球按数据原样保留",
+   "小项数为估计值，最后一届 2024；官方 2020=339、2024=329 仅作校准点"
+  ]
+ },
+ "sports": [
+  {
+   "sport": "Athletics",
+   "first": 1896,
+   "last": 2024,
+   "editions": 30,
+   "medals": 3228,
+   "status": "active"
+  },
+  {
+   "sport": "Cycling",
+   "first": 1896,
+   "last": 2024,
+   "editions": 30,
+   "medals": 849,
+   "status": "active"
+  },
+  {
+   "sport": "Fencing",
+   "first": 1896,
+   "last": 2024,
+   "editions": 30,
+   "medals": 704,
+   "status": "active"
+  },
+  {
+   "sport": "Gymnastics",
+   "first": 1896,
+   "last": 2024,
+   "editions": 30,
+   "medals": 1048,
+   "status": "active"
+  },
+  {
+   "sport": "Shooting",
+   "first": 1896,
+   "last": 2024,
+   "editions": 28,
+   "medals": 907,
+   "status": "active"
+  },
+  {
+   "sport": "Swimming",
+   "first": 1896,
+   "last": 2024,
+   "editions": 30,
+   "medals": 1886,
+   "status": "active"
+  },
+  {
+   "sport": "Tennis",
+   "first": 1896,
+   "last": 2024,
+   "editions": 17,
+   "medals": 245,
+   "status": "active"
+  },
+  {
+   "sport": "Weightlifting",
+   "first": 1896,
+   "last": 2024,
+   "editions": 27,
+   "medals": 710,
+   "status": "active"
+  },
+  {
+   "sport": "Wrestling",
+   "first": 1896,
+   "last": 2024,
+   "editions": 29,
+   "medals": 1428,
+   "status": "active"
+  },
+  {
+   "sport": "Archery",
+   "first": 1900,
+   "last": 2024,
+   "editions": 18,
+   "medals": 222,
+   "status": "active"
+  },
+  {
+   "sport": "Basque Pelota",
+   "first": 1900,
+   "last": 1900,
+   "editions": 1,
+   "medals": 1,
+   "status": "retired"
+  },
+  {
+   "sport": "Cricket",
+   "first": 1900,
+   "last": 1900,
+   "editions": 1,
+   "medals": 3,
+   "status": "retired"
+  },
+  {
+   "sport": "Croquet",
+   "first": 1900,
+   "last": 1900,
+   "editions": 1,
+   "medals": 7,
+   "status": "retired"
+  },
+  {
+   "sport": "Equestrian",
+   "first": 1900,
+   "last": 2024,
+   "editions": 27,
+   "medals": 473,
+   "status": "active"
+  },
+  {
+   "sport": "Football",
+   "first": 1900,
+   "last": 2024,
+   "editions": 28,
+   "medals": 111,
+   "status": "active"
+  },
+  {
+   "sport": "Golf",
+   "first": 1900,
+   "last": 2024,
+   "editions": 5,
+   "medals": 30,
+   "status": "active"
+  },
+  {
+   "sport": "Polo",
+   "first": 1900,
+   "last": 1936,
+   "editions": 5,
+   "medals": 20,
+   "status": "retired"
+  },
+  {
+   "sport": "Rowing",
+   "first": 1900,
+   "last": 2024,
+   "editions": 29,
+   "medals": 849,
+   "status": "active"
+  },
+  {
+   "sport": "Rugby",
+   "first": 1900,
+   "last": 1924,
+   "editions": 4,
+   "medals": 12,
+   "status": "retired"
+  },
+  {
+   "sport": "Sailing",
+   "first": 1900,
+   "last": 2024,
+   "editions": 28,
+   "medals": 580,
+   "status": "active"
+  },
+  {
+   "sport": "Tug-Of-War",
+   "first": 1900,
+   "last": 1920,
+   "editions": 5,
+   "medals": 16,
+   "status": "retired"
+  },
+  {
+   "sport": "Water Polo",
+   "first": 1900,
+   "last": 2024,
+   "editions": 29,
+   "medals": 110,
+   "status": "active"
+  },
+  {
+   "sport": "Boxing",
+   "first": 1904,
+   "last": 2024,
+   "editions": 27,
+   "medals": 1048,
+   "status": "active"
+  },
+  {
+   "sport": "Diving",
+   "first": 1904,
+   "last": 2024,
+   "editions": 28,
+   "medals": 412,
+   "status": "active"
+  },
+  {
+   "sport": "Lacrosse",
+   "first": 1904,
+   "last": 1908,
+   "editions": 2,
+   "medals": 5,
+   "status": "retired"
+  },
+  {
+   "sport": "Roque",
+   "first": 1904,
+   "last": 1904,
+   "editions": 1,
+   "medals": 3,
+   "status": "retired"
+  },
+  {
+   "sport": "Figure Skating",
+   "first": 1908,
+   "last": 1920,
+   "editions": 2,
+   "medals": 21,
+   "status": "retired"
+  },
+  {
+   "sport": "Hockey",
+   "first": 1908,
+   "last": 2024,
+   "editions": 25,
+   "medals": 111,
+   "status": "active"
+  },
+  {
+   "sport": "Jeu De Paume",
+   "first": 1908,
+   "last": 1908,
+   "editions": 1,
+   "medals": 3,
+   "status": "retired"
+  },
+  {
+   "sport": "Motorboating",
+   "first": 1908,
+   "last": 1908,
+   "editions": 1,
+   "medals": 3,
+   "status": "retired"
+  },
+  {
+   "sport": "Racquets",
+   "first": 1908,
+   "last": 1908,
+   "editions": 1,
+   "medals": 6,
+   "status": "retired"
+  },
+  {
+   "sport": "Art Competitions",
+   "first": 1912,
+   "last": 1948,
+   "editions": 7,
+   "medals": 147,
+   "status": "retired"
+  },
+  {
+   "sport": "Modern Pentathlon",
+   "first": 1912,
+   "last": 2024,
+   "editions": 26,
+   "medals": 132,
+   "status": "active"
+  },
+  {
+   "sport": "Ice Hockey",
+   "first": 1920,
+   "last": 1920,
+   "editions": 1,
+   "medals": 3,
+   "status": "retired"
+  },
+  {
+   "sport": "Alpinism",
+   "first": 1932,
+   "last": 1936,
+   "editions": 2,
+   "medals": 2,
+   "status": "retired"
+  },
+  {
+   "sport": "Aeronautics",
+   "first": 1936,
+   "last": 1936,
+   "editions": 1,
+   "medals": 1,
+   "status": "retired"
+  },
+  {
+   "sport": "Basketball",
+   "first": 1936,
+   "last": 2024,
+   "editions": 21,
+   "medals": 102,
+   "status": "active"
+  },
+  {
+   "sport": "Canoeing",
+   "first": 1936,
+   "last": 2024,
+   "editions": 21,
+   "medals": 776,
+   "status": "active"
+  },
+  {
+   "sport": "Handball",
+   "first": 1936,
+   "last": 2024,
+   "editions": 15,
+   "medals": 84,
+   "status": "active"
+  },
+  {
+   "sport": "Judo",
+   "first": 1964,
+   "last": 2024,
+   "editions": 15,
+   "medals": 673,
+   "status": "active"
+  },
+  {
+   "sport": "Volleyball",
+   "first": 1964,
+   "last": 2024,
+   "editions": 16,
+   "medals": 96,
+   "status": "active"
+  },
+  {
+   "sport": "Artistic Swimming",
+   "first": 1984,
+   "last": 2024,
+   "editions": 11,
+   "medals": 63,
+   "status": "active"
+  },
+  {
+   "sport": "Rhythmic Gymnastics",
+   "first": 1984,
+   "last": 2024,
+   "editions": 11,
+   "medals": 57,
+   "status": "active"
+  },
+  {
+   "sport": "Table Tennis",
+   "first": 1988,
+   "last": 2024,
+   "editions": 10,
+   "medals": 129,
+   "status": "active"
+  },
+  {
+   "sport": "Badminton",
+   "first": 1992,
+   "last": 2024,
+   "editions": 9,
+   "medals": 135,
+   "status": "active"
+  },
+  {
+   "sport": "Baseball/Softball",
+   "first": 1992,
+   "last": 2020,
+   "editions": 6,
+   "medals": 33,
+   "status": "retired"
+  },
+  {
+   "sport": "Beach Volleyball",
+   "first": 1996,
+   "last": 2024,
+   "editions": 8,
+   "medals": 48,
+   "status": "active"
+  },
+  {
+   "sport": "Taekwondo",
+   "first": 2000,
+   "last": 2024,
+   "editions": 7,
+   "medals": 208,
+   "status": "active"
+  },
+  {
+   "sport": "Trampoline Gymnastics",
+   "first": 2000,
+   "last": 2024,
+   "editions": 7,
+   "medals": 42,
+   "status": "active"
+  },
+  {
+   "sport": "Triathlon",
+   "first": 2000,
+   "last": 2024,
+   "editions": 7,
+   "medals": 45,
+   "status": "active"
+  },
+  {
+   "sport": "Rugby Sevens",
+   "first": 2016,
+   "last": 2024,
+   "editions": 3,
+   "medals": 18,
+   "status": "active"
+  },
+  {
+   "sport": "3x3 Basketball",
+   "first": 2020,
+   "last": 2024,
+   "editions": 2,
+   "medals": 12,
+   "status": "active"
+  },
+  {
+   "sport": "Karate",
+   "first": 2020,
+   "last": 2020,
+   "editions": 1,
+   "medals": 32,
+   "status": "retired"
+  },
+  {
+   "sport": "Skateboarding",
+   "first": 2020,
+   "last": 2024,
+   "editions": 2,
+   "medals": 24,
+   "status": "active"
+  },
+  {
+   "sport": "Sport Climbing",
+   "first": 2020,
+   "last": 2024,
+   "editions": 2,
+   "medals": 18,
+   "status": "active"
+  },
+  {
+   "sport": "Surfing",
+   "first": 2020,
+   "last": 2024,
+   "editions": 2,
+   "medals": 12,
+   "status": "active"
+  },
+  {
+   "sport": "Breaking",
+   "first": 2024,
+   "last": 2024,
+   "editions": 1,
+   "medals": 6,
+   "status": "active"
+  }
+ ],
+ "event_counts": [
+  {
+   "year": 1896,
+   "proxy": 43,
+   "official": null
+  },
+  {
+   "year": 1900,
+   "proxy": 90,
+   "official": null
+  },
+  {
+   "year": 1904,
+   "proxy": 95,
+   "official": null
+  },
+  {
+   "year": 1908,
+   "proxy": 109,
+   "official": null
+  },
+  {
+   "year": 1912,
+   "proxy": 107,
+   "official": null
+  },
+  {
+   "year": 1920,
+   "proxy": 158,
+   "official": null
+  },
+  {
+   "year": 1924,
+   "proxy": 131,
+   "official": null
+  },
+  {
+   "year": 1928,
+   "proxy": 122,
+   "official": null
+  },
+  {
+   "year": 1932,
+   "proxy": 131,
+   "official": null
+  },
+  {
+   "year": 1936,
+   "proxy": 150,
+   "official": null
+  },
+  {
+   "year": 1948,
+   "proxy": 153,
+   "official": null
+  },
+  {
+   "year": 1952,
+   "proxy": 149,
+   "official": null
+  },
+  {
+   "year": 1956,
+   "proxy": 151,
+   "official": null
+  },
+  {
+   "year": 1960,
+   "proxy": 150,
+   "official": null
+  },
+  {
+   "year": 1964,
+   "proxy": 163,
+   "official": null
+  },
+  {
+   "year": 1968,
+   "proxy": 172,
+   "official": null
+  },
+  {
+   "year": 1972,
+   "proxy": 193,
+   "official": null
+  },
+  {
+   "year": 1976,
+   "proxy": 198,
+   "official": null
+  },
+  {
+   "year": 1980,
+   "proxy": 203,
+   "official": null
+  },
+  {
+   "year": 1984,
+   "proxy": 221,
+   "official": null
+  },
+  {
+   "year": 1988,
+   "proxy": 237,
+   "official": null
+  },
+  {
+   "year": 1992,
+   "proxy": 257,
+   "official": null
+  },
+  {
+   "year": 1996,
+   "proxy": 271,
+   "official": null
+  },
+  {
+   "year": 2000,
+   "proxy": 300,
+   "official": null
+  },
+  {
+   "year": 2004,
+   "proxy": 301,
+   "official": null
+  },
+  {
+   "year": 2008,
+   "proxy": 302,
+   "official": null
+  },
+  {
+   "year": 2012,
+   "proxy": 302,
+   "official": null
+  },
+  {
+   "year": 2016,
+   "proxy": 306,
+   "official": null
+  },
+  {
+   "year": 2020,
+   "proxy": 347,
+   "official": 339
+  },
+  {
+   "year": 2024,
+   "proxy": 336,
+   "official": 329
+  }
+ ],
+ "highlights": {
+  "retired": [
+   {
+    "sport": "Baseball/Softball",
+    "first": 1992,
+    "last": 2020,
+    "editions": 6,
+    "medals": 33,
+    "status": "retired"
+   },
+   {
+    "sport": "Karate",
+    "first": 2020,
+    "last": 2020,
+    "editions": 1,
+    "medals": 32,
+    "status": "retired"
+   },
+   {
+    "sport": "Art Competitions",
+    "first": 1912,
+    "last": 1948,
+    "editions": 7,
+    "medals": 147,
+    "status": "retired"
+   },
+   {
+    "sport": "Polo",
+    "first": 1900,
+    "last": 1936,
+    "editions": 5,
+    "medals": 20,
+    "status": "retired"
+   },
+   {
+    "sport": "Alpinism",
+    "first": 1932,
+    "last": 1936,
+    "editions": 2,
+    "medals": 2,
+    "status": "retired"
+   },
+   {
+    "sport": "Rugby",
+    "first": 1900,
+    "last": 1924,
+    "editions": 4,
+    "medals": 12,
+    "status": "retired"
+   },
+   {
+    "sport": "Figure Skating",
+    "first": 1908,
+    "last": 1920,
+    "editions": 2,
+    "medals": 21,
+    "status": "retired"
+   },
+   {
+    "sport": "Tug-Of-War",
+    "first": 1900,
+    "last": 1920,
+    "editions": 5,
+    "medals": 16,
+    "status": "retired"
+   },
+   {
+    "sport": "Ice Hockey",
+    "first": 1920,
+    "last": 1920,
+    "editions": 1,
+    "medals": 3,
+    "status": "retired"
+   },
+   {
+    "sport": "Racquets",
+    "first": 1908,
+    "last": 1908,
+    "editions": 1,
+    "medals": 6,
+    "status": "retired"
+   },
+   {
+    "sport": "Lacrosse",
+    "first": 1904,
+    "last": 1908,
+    "editions": 2,
+    "medals": 5,
+    "status": "retired"
+   },
+   {
+    "sport": "Jeu De Paume",
+    "first": 1908,
+    "last": 1908,
+    "editions": 1,
+    "medals": 3,
+    "status": "retired"
+   }
+  ],
+  "added": [
+   {
+    "sport": "Table Tennis",
+    "first": 1988,
+    "last": 2024,
+    "editions": 10,
+    "medals": 129,
+    "status": "active"
+   },
+   {
+    "sport": "Badminton",
+    "first": 1992,
+    "last": 2024,
+    "editions": 9,
+    "medals": 135,
+    "status": "active"
+   },
+   {
+    "sport": "Baseball/Softball",
+    "first": 1992,
+    "last": 2020,
+    "editions": 6,
+    "medals": 33,
+    "status": "retired"
+   },
+   {
+    "sport": "Beach Volleyball",
+    "first": 1996,
+    "last": 2024,
+    "editions": 8,
+    "medals": 48,
+    "status": "active"
+   },
+   {
+    "sport": "Taekwondo",
+    "first": 2000,
+    "last": 2024,
+    "editions": 7,
+    "medals": 208,
+    "status": "active"
+   },
+   {
+    "sport": "Trampoline Gymnastics",
+    "first": 2000,
+    "last": 2024,
+    "editions": 7,
+    "medals": 42,
+    "status": "active"
+   },
+   {
+    "sport": "Triathlon",
+    "first": 2000,
+    "last": 2024,
+    "editions": 7,
+    "medals": 45,
+    "status": "active"
+   },
+   {
+    "sport": "Rugby Sevens",
+    "first": 2016,
+    "last": 2024,
+    "editions": 3,
+    "medals": 18,
+    "status": "active"
+   },
+   {
+    "sport": "3x3 Basketball",
+    "first": 2020,
+    "last": 2024,
+    "editions": 2,
+    "medals": 12,
+    "status": "active"
+   },
+   {
+    "sport": "Karate",
+    "first": 2020,
+    "last": 2020,
+    "editions": 1,
+    "medals": 32,
+    "status": "retired"
+   },
+   {
+    "sport": "Skateboarding",
+    "first": 2020,
+    "last": 2024,
+    "editions": 2,
+    "medals": 24,
+    "status": "active"
+   },
+   {
+    "sport": "Sport Climbing",
+    "first": 2020,
+    "last": 2024,
+    "editions": 2,
+    "medals": 18,
+    "status": "active"
+   },
+   {
+    "sport": "Surfing",
+    "first": 2020,
+    "last": 2024,
+    "editions": 2,
+    "medals": 12,
+    "status": "active"
+   },
+   {
+    "sport": "Breaking",
+    "first": 2024,
+    "last": 2024,
+    "editions": 1,
+    "medals": 6,
+    "status": "active"
+   }
+  ]
+ }
+}

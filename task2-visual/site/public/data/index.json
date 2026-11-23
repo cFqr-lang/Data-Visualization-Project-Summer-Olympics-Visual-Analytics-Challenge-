@@ -1,0 +1,63 @@
+{
+ "schema": "task2-figure-v1",
+ "data_version": "v1.0-fallback",
+ "generated_at": "2026-11-23T22:40:32+08:00",
+ "figures": [
+  {
+   "figure_id": "Fig.2-1",
+   "chart_id": "A1",
+   "title": "奖牌榜是口径的函数",
+   "path": "figures/fig-A1.json",
+   "caliber": "conservative_event+athlete_row"
+  },
+  {
+   "figure_id": "Fig.2-2",
+   "chart_id": "A2",
+   "title": "奖牌在膨胀，榜单头部却长期稳定",
+   "path": "figures/fig-A2.json",
+   "caliber": "conservative_event"
+  },
+  {
+   "figure_id": "Fig.2-3",
+   "chart_id": "B1",
+   "title": "四种国家模式并存：长盛、骤起骤落、分立统一、后发崛起",
+   "path": "figures/fig-B1.json",
+   "caliber": "conservative_event"
+  },
+  {
+   "figure_id": "Fig.2-4",
+   "chart_id": "C1",
+   "title": "女性从 0 走到 49.1%，但走的是三次跃迁而非直线",
+   "path": "figures/fig-C1.json",
+   "caliber": "athlete_row"
+  },
+  {
+   "figure_id": "Fig.2-5",
+   "chart_id": "C2",
+   "title": "女性参赛占比高，不等于女性奖牌占比高",
+   "path": "figures/fig-C2.json",
+   "caliber": "athlete_row"
+  },
+  {
+   "figure_id": "Fig.2-6",
+   "chart_id": "D1",
+   "title": "核心项目稳定，边缘项目不断轮换",
+   "path": "figures/fig-D1.json",
+   "caliber": "conservative_event"
+  },
+  {
+   "figure_id": "Fig.2-7",
+   "chart_id": "B2",
+   "title": "参赛规模与奖牌非线性，小国站在效率前沿",
+   "path": "figures/fig-B2.json",
+   "caliber": "conservative_event"
+  },
+  {
+   "figure_id": "Fig.2-8",
+   "chart_id": "D2",
+   "title": "核心大类份额稳定，新兴类在边缘上升",
+   "path": "figures/fig-D2.json",
+   "caliber": "conservative_event"
+  }
+ ]
+}

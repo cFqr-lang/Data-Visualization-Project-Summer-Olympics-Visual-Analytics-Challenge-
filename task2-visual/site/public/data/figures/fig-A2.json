@@ -1,0 +1,3307 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-2",
+  "chart_id": "A2",
+  "title": "奖牌在膨胀，榜单头部却长期稳定",
+  "caliber": "conservative_event",
+  "caliber_label": "保守小项口径（团体项目每国每小项每色计 1 枚，2020+ 取下界）",
+  "denominator": "每届",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-23T22:40:32+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "1916/1940/1944 停办，曲线上直接缺届而非 0",
+   "1980/1984 抵制届不补零，留白",
+   "2020+ 小项数为 Sport×Sex 代理值，另附官方 339/329 校准点"
+  ]
+ },
+ "series": [
+  {
+   "year": 1896,
+   "medal_events": 120,
+   "medal_rows": 143,
+   "delegations": 12,
+   "athletes": 380,
+   "events_proxy": 43,
+   "events_official": null,
+   "index": {
+    "medals": 100.0,
+    "delegations": 100.0,
+    "athletes": 100.0,
+    "events": 100.0
+   }
+  },
+  {
+   "year": 1900,
+   "medal_events": 291,
+   "medal_rows": 604,
+   "delegations": 31,
+   "athletes": 1936,
+   "events_proxy": 90,
+   "events_official": null,
+   "index": {
+    "medals": 242.5,
+    "delegations": 258.3,
+    "athletes": 509.5,
+    "events": 209.3
+   }
+  },
+  {
+   "year": 1904,
+   "medal_events": 279,
+   "medal_rows": 486,
+   "delegations": 15,
+   "athletes": 1301,
+   "events_proxy": 95,
+   "events_official": null,
+   "index": {
+    "medals": 232.5,
+    "delegations": 125.0,
+    "athletes": 342.4,
+    "events": 220.9
+   }
+  },
+  {
+   "year": 1908,
+   "medal_events": 320,
+   "medal_rows": 831,
+   "delegations": 22,
+   "athletes": 3101,
+   "events_proxy": 109,
+   "events_official": null,
+   "index": {
+    "medals": 266.7,
+    "delegations": 183.3,
+    "athletes": 816.1,
+    "events": 253.5
+   }
+  },
+  {
+   "year": 1912,
+   "medal_events": 316,
+   "medal_rows": 941,
+   "delegations": 29,
+   "athletes": 4040,
+   "events_proxy": 107,
+   "events_official": null,
+   "index": {
+    "medals": 263.3,
+    "delegations": 241.7,
+    "athletes": 1063.2,
+    "events": 248.8
+   }
+  },
+  {
+   "year": 1920,
+   "medal_events": 446,
+   "medal_rows": 1308,
+   "delegations": 29,
+   "athletes": 4292,
+   "events_proxy": 158,
+   "events_official": null,
+   "index": {
+    "medals": 371.7,
+    "delegations": 241.7,
+    "athletes": 1129.5,
+    "events": 367.4
+   }
+  },
+  {
+   "year": 1924,
+   "medal_events": 391,
+   "medal_rows": 832,
+   "delegations": 45,
+   "athletes": 5233,
+   "events_proxy": 131,
+   "events_official": null,
+   "index": {
+    "medals": 325.8,
+    "delegations": 375.0,
+    "athletes": 1377.1,
+    "events": 304.7
+   }
+  },
+  {
+   "year": 1928,
+   "medal_events": 356,
+   "medal_rows": 734,
+   "delegations": 46,
+   "athletes": 4992,
+   "events_proxy": 122,
+   "events_official": null,
+   "index": {
+    "medals": 296.7,
+    "delegations": 383.3,
+    "athletes": 1313.7,
+    "events": 283.7
+   }
+  },
+  {
+   "year": 1932,
+   "medal_events": 370,
+   "medal_rows": 647,
+   "delegations": 47,
+   "athletes": 2969,
+   "events_proxy": 131,
+   "events_official": null,
+   "index": {
+    "medals": 308.3,
+    "delegations": 391.7,
+    "athletes": 781.3,
+    "events": 304.7
+   }
+  },
+  {
+   "year": 1936,
+   "medal_events": 422,
+   "medal_rows": 917,
+   "delegations": 49,
+   "athletes": 6506,
+   "events_proxy": 150,
+   "events_official": null,
+   "index": {
+    "medals": 351.7,
+    "delegations": 408.3,
+    "athletes": 1712.1,
+    "events": 348.8
+   }
+  },
+  {
+   "year": 1948,
+   "medal_events": 439,
+   "medal_rows": 852,
+   "delegations": 59,
+   "athletes": 6405,
+   "events_proxy": 153,
+   "events_official": null,
+   "index": {
+    "medals": 365.8,
+    "delegations": 491.7,
+    "athletes": 1685.5,
+    "events": 355.8
+   }
+  },
+  {
+   "year": 1952,
+   "medal_events": 457,
+   "medal_rows": 897,
+   "delegations": 69,
+   "athletes": 8270,
+   "events_proxy": 149,
+   "events_official": null,
+   "index": {
+    "medals": 380.8,
+    "delegations": 575.0,
+    "athletes": 2176.3,
+    "events": 346.5
+   }
+  },
+  {
+   "year": 1956,
+   "medal_events": 467,
+   "medal_rows": 893,
+   "delegations": 72,
+   "athletes": 5127,
+   "events_proxy": 151,
+   "events_official": null,
+   "index": {
+    "medals": 389.2,
+    "delegations": 600.0,
+    "athletes": 1349.2,
+    "events": 351.2
+   }
+  },
+  {
+   "year": 1960,
+   "medal_events": 461,
+   "medal_rows": 911,
+   "delegations": 84,
+   "athletes": 8119,
+   "events_proxy": 150,
+   "events_official": null,
+   "index": {
+    "medals": 384.2,
+    "delegations": 700.0,
+    "athletes": 2136.6,
+    "events": 348.8
+   }
+  },
+  {
+   "year": 1964,
+   "medal_events": 501,
+   "medal_rows": 1029,
+   "delegations": 93,
+   "athletes": 7702,
+   "events_proxy": 163,
+   "events_official": null,
+   "index": {
+    "medals": 417.5,
+    "delegations": 775.0,
+    "athletes": 2026.8,
+    "events": 379.1
+   }
+  },
+  {
+   "year": 1968,
+   "medal_events": 527,
+   "medal_rows": 1057,
+   "delegations": 112,
+   "athletes": 8588,
+   "events_proxy": 172,
+   "events_official": null,
+   "index": {
+    "medals": 439.2,
+    "delegations": 933.3,
+    "athletes": 2260.0,
+    "events": 400.0
+   }
+  },
+  {
+   "year": 1972,
+   "medal_events": 600,
+   "medal_rows": 1215,
+   "delegations": 121,
+   "athletes": 10304,
+   "events_proxy": 193,
+   "events_official": null,
+   "index": {
+    "medals": 500.0,
+    "delegations": 1008.3,
+    "athletes": 2711.6,
+    "events": 448.8
+   }
+  },
+  {
+   "year": 1976,
+   "medal_events": 613,
+   "medal_rows": 1320,
+   "delegations": 92,
+   "athletes": 8641,
+   "events_proxy": 198,
+   "events_official": null,
+   "index": {
+    "medals": 510.8,
+    "delegations": 766.7,
+    "athletes": 2273.9,
+    "events": 460.5
+   }
+  },
+  {
+   "year": 1980,
+   "medal_events": 631,
+   "medal_rows": 1384,
+   "delegations": 80,
+   "athletes": 7191,
+   "events_proxy": 203,
+   "events_official": null,
+   "index": {
+    "medals": 525.8,
+    "delegations": 666.7,
+    "athletes": 1892.4,
+    "events": 472.1
+   }
+  },
+  {
+   "year": 1984,
+   "medal_events": 685,
+   "medal_rows": 1476,
+   "delegations": 140,
+   "athletes": 9454,
+   "events_proxy": 221,
+   "events_official": null,
+   "index": {
+    "medals": 570.8,
+    "delegations": 1166.7,
+    "athletes": 2487.9,
+    "events": 514.0
+   }
+  },
+  {
+   "year": 1988,
+   "medal_events": 738,
+   "medal_rows": 1582,
+   "delegations": 159,
+   "athletes": 12037,
+   "events_proxy": 237,
+   "events_official": null,
+   "index": {
+    "medals": 615.0,
+    "delegations": 1325.0,
+    "athletes": 3167.6,
+    "events": 551.2
+   }
+  },
+  {
+   "year": 1992,
+   "medal_events": 813,
+   "medal_rows": 1712,
+   "delegations": 169,
+   "athletes": 12977,
+   "events_proxy": 257,
+   "events_official": null,
+   "index": {
+    "medals": 677.5,
+    "delegations": 1408.3,
+    "athletes": 3415.0,
+    "events": 597.7
+   }
+  },
+  {
+   "year": 1996,
+   "medal_events": 841,
+   "medal_rows": 1842,
+   "delegations": 197,
+   "athletes": 13780,
+   "events_proxy": 271,
+   "events_official": null,
+   "index": {
+    "medals": 700.8,
+    "delegations": 1641.7,
+    "athletes": 3626.3,
+    "events": 630.2
+   }
+  },
+  {
+   "year": 2000,
+   "medal_events": 925,
+   "medal_rows": 2004,
+   "delegations": 200,
+   "athletes": 13821,
+   "events_proxy": 300,
+   "events_official": null,
+   "index": {
+    "medals": 770.8,
+    "delegations": 1666.7,
+    "athletes": 3637.1,
+    "events": 697.7
+   }
+  },
+  {
+   "year": 2004,
+   "medal_events": 927,
+   "medal_rows": 2001,
+   "delegations": 201,
+   "athletes": 13443,
+   "events_proxy": 301,
+   "events_official": null,
+   "index": {
+    "medals": 772.5,
+    "delegations": 1675.0,
+    "athletes": 3537.6,
+    "events": 700.0
+   }
+  },
+  {
+   "year": 2008,
+   "medal_events": 957,
+   "medal_rows": 2048,
+   "delegations": 204,
+   "athletes": 13602,
+   "events_proxy": 302,
+   "events_official": null,
+   "index": {
+    "medals": 797.5,
+    "delegations": 1700.0,
+    "athletes": 3579.5,
+    "events": 702.3
+   }
+  },
+  {
+   "year": 2012,
+   "medal_events": 962,
+   "medal_rows": 1941,
+   "delegations": 205,
+   "athletes": 12920,
+   "events_proxy": 302,
+   "events_official": null,
+   "index": {
+    "medals": 801.7,
+    "delegations": 1708.3,
+    "athletes": 3400.0,
+    "events": 702.3
+   }
+  },
+  {
+   "year": 2016,
+   "medal_events": 973,
+   "medal_rows": 2023,
+   "delegations": 207,
+   "athletes": 13688,
+   "events_proxy": 306,
+   "events_official": null,
+   "index": {
+    "medals": 810.8,
+    "delegations": 1725.0,
+    "athletes": 3602.1,
+    "events": 711.6
+   }
+  },
+  {
+   "year": 2020,
+   "medal_events": 1087,
+   "medal_rows": 2449,
+   "delegations": 206,
+   "athletes": 15121,
+   "events_proxy": 347,
+   "events_official": 339,
+   "index": {
+    "medals": 905.8,
+    "delegations": 1716.7,
+    "athletes": 3979.2,
+    "events": 807.0
+   }
+  },
+  {
+   "year": 2024,
+   "medal_events": 1034,
+   "medal_rows": 2281,
+   "delegations": 206,
+   "athletes": 11113,
+   "events_proxy": 336,
+   "events_official": 329,
+   "index": {
+    "medals": 861.7,
+    "delegations": 1716.7,
+    "athletes": 2924.5,
+    "events": 781.4
+   }
+  }
+ ],
+ "bar_race": [
+  {
+   "year": 1896,
+   "top": [
+    {
+     "year": 1896,
+     "noc": "USA",
+     "gold": 11,
+     "silver": 6,
+     "bronze": 2,
+     "total": 19
+    },
+    {
+     "year": 1896,
+     "noc": "GRE",
+     "gold": 10,
+     "silver": 17,
+     "bronze": 17,
+     "total": 44
+    },
+    {
+     "year": 1896,
+     "noc": "GER",
+     "gold": 7,
+     "silver": 5,
+     "bronze": 2,
+     "total": 14
+    },
+    {
+     "year": 1896,
+     "noc": "FRA",
+     "gold": 5,
+     "silver": 4,
+     "bronze": 2,
+     "total": 11
+    },
+    {
+     "year": 1896,
+     "noc": "GBR",
+     "gold": 3,
+     "silver": 3,
+     "bronze": 3,
+     "total": 9
+    },
+    {
+     "year": 1896,
+     "noc": "HUN",
+     "gold": 2,
+     "silver": 1,
+     "bronze": 3,
+     "total": 6
+    },
+    {
+     "year": 1896,
+     "noc": "AUT",
+     "gold": 2,
+     "silver": 1,
+     "bronze": 2,
+     "total": 5
+    },
+    {
+     "year": 1896,
+     "noc": "AUS",
+     "gold": 2,
+     "silver": 0,
+     "bronze": 1,
+     "total": 3
+    },
+    {
+     "year": 1896,
+     "noc": "DEN",
+     "gold": 1,
+     "silver": 2,
+     "bronze": 3,
+     "total": 6
+    },
+    {
+     "year": 1896,
+     "noc": "SUI",
+     "gold": 1,
+     "silver": 2,
+     "bronze": 0,
+     "total": 3
+    }
+   ]
+  },
+  {
+   "year": 1900,
+   "top": [
+    {
+     "year": 1900,
+     "noc": "FRA",
+     "gold": 28,
+     "silver": 40,
+     "bronze": 34,
+     "total": 102
+    },
+    {
+     "year": 1900,
+     "noc": "USA",
+     "gold": 21,
+     "silver": 16,
+     "bronze": 17,
+     "total": 54
+    },
+    {
+     "year": 1900,
+     "noc": "GBR",
+     "gold": 19,
+     "silver": 11,
+     "bronze": 12,
+     "total": 42
+    },
+    {
+     "year": 1900,
+     "noc": "BEL",
+     "gold": 6,
+     "silver": 7,
+     "bronze": 5,
+     "total": 18
+    },
+    {
+     "year": 1900,
+     "noc": "SUI",
+     "gold": 6,
+     "silver": 2,
+     "bronze": 1,
+     "total": 9
+    },
+    {
+     "year": 1900,
+     "noc": "GER",
+     "gold": 4,
+     "silver": 3,
+     "bronze": 1,
+     "total": 8
+    },
+    {
+     "year": 1900,
+     "noc": "ITA",
+     "gold": 3,
+     "silver": 2,
+     "bronze": 0,
+     "total": 5
+    },
+    {
+     "year": 1900,
+     "noc": "AUS",
+     "gold": 3,
+     "silver": 0,
+     "bronze": 3,
+     "total": 6
+    },
+    {
+     "year": 1900,
+     "noc": "DEN",
+     "gold": 2,
+     "silver": 3,
+     "bronze": 2,
+     "total": 7
+    },
+    {
+     "year": 1900,
+     "noc": "NED",
+     "gold": 1,
+     "silver": 2,
+     "bronze": 4,
+     "total": 7
+    }
+   ]
+  },
+  {
+   "year": 1904,
+   "top": [
+    {
+     "year": 1904,
+     "noc": "USA",
+     "gold": 76,
+     "silver": 79,
+     "bronze": 75,
+     "total": 230
+    },
+    {
+     "year": 1904,
+     "noc": "GER",
+     "gold": 4,
+     "silver": 5,
+     "bronze": 7,
+     "total": 16
+    },
+    {
+     "year": 1904,
+     "noc": "CAN",
+     "gold": 4,
+     "silver": 1,
+     "bronze": 1,
+     "total": 6
+    },
+    {
+     "year": 1904,
+     "noc": "CUB",
+     "gold": 4,
+     "silver": 0,
+     "bronze": 0,
+     "total": 4
+    },
+    {
+     "year": 1904,
+     "noc": "HUN",
+     "gold": 2,
+     "silver": 1,
+     "bronze": 1,
+     "total": 4
+    },
+    {
+     "year": 1904,
+     "noc": "AUT",
+     "gold": 2,
+     "silver": 1,
+     "bronze": 1,
+     "total": 4
+    },
+    {
+     "year": 1904,
+     "noc": "NOR",
+     "gold": 2,
+     "silver": 0,
+     "bronze": 0,
+     "total": 2
+    },
+    {
+     "year": 1904,
+     "noc": "GBR",
+     "gold": 1,
+     "silver": 1,
+     "bronze": 0,
+     "total": 2
+    },
+    {
+     "year": 1904,
+     "noc": "SUI",
+     "gold": 1,
+     "silver": 0,
+     "bronze": 2,
+     "total": 3
+    },
+    {
+     "year": 1904,
+     "noc": "GRE",
+     "gold": 1,
+     "silver": 0,
+     "bronze": 1,
+     "total": 2
+    }
+   ]
+  },
+  {
+   "year": 1908,
+   "top": [
+    {
+     "year": 1908,
+     "noc": "GBR",
+     "gold": 56,
+     "silver": 50,
+     "bronze": 37,
+     "total": 143
+    },
+    {
+     "year": 1908,
+     "noc": "USA",
+     "gold": 22,
+     "silver": 12,
+     "bronze": 12,
+     "total": 46
+    },
+    {
+     "year": 1908,
+     "noc": "SWE",
+     "gold": 8,
+     "silver": 6,
+     "bronze": 11,
+     "total": 25
+    },
+    {
+     "year": 1908,
+     "noc": "FRA",
+     "gold": 5,
+     "silver": 5,
+     "bronze": 9,
+     "total": 19
+    },
+    {
+     "year": 1908,
+     "noc": "GER",
+     "gold": 3,
+     "silver": 5,
+     "bronze": 5,
+     "total": 13
+    },
+    {
+     "year": 1908,
+     "noc": "HUN",
+     "gold": 3,
+     "silver": 4,
+     "bronze": 2,
+     "total": 9
+    },
+    {
+     "year": 1908,
+     "noc": "CAN",
+     "gold": 3,
+     "silver": 3,
+     "bronze": 10,
+     "total": 16
+    },
+    {
+     "year": 1908,
+     "noc": "NOR",
+     "gold": 2,
+     "silver": 3,
+     "bronze": 3,
+     "total": 8
+    },
+    {
+     "year": 1908,
+     "noc": "ITA",
+     "gold": 2,
+     "silver": 2,
+     "bronze": 0,
+     "total": 4
+    },
+    {
+     "year": 1908,
+     "noc": "BEL",
+     "gold": 1,
+     "silver": 5,
+     "bronze": 2,
+     "total": 8
+    }
+   ]
+  },
+  {
+   "year": 1912,
+   "top": [
+    {
+     "year": 1912,
+     "noc": "USA",
+     "gold": 26,
+     "silver": 18,
+     "bronze": 19,
+     "total": 63
+    },
+    {
+     "year": 1912,
+     "noc": "SWE",
+     "gold": 24,
+     "silver": 24,
+     "bronze": 17,
+     "total": 65
+    },
+    {
+     "year": 1912,
+     "noc": "GBR",
+     "gold": 10,
+     "silver": 15,
+     "bronze": 16,
+     "total": 41
+    },
+    {
+     "year": 1912,
+     "noc": "FIN",
+     "gold": 9,
+     "silver": 8,
+     "bronze": 9,
+     "total": 26
+    },
+    {
+     "year": 1912,
+     "noc": "FRA",
+     "gold": 7,
+     "silver": 5,
+     "bronze": 3,
+     "total": 15
+    },
+    {
+     "year": 1912,
+     "noc": "GER",
+     "gold": 6,
+     "silver": 13,
+     "bronze": 7,
+     "total": 26
+    },
+    {
+     "year": 1912,
+     "noc": "ITA",
+     "gold": 5,
+     "silver": 1,
+     "bronze": 2,
+     "total": 8
+    },
+    {
+     "year": 1912,
+     "noc": "RSA",
+     "gold": 4,
+     "silver": 2,
+     "bronze": 0,
+     "total": 6
+    },
+    {
+     "year": 1912,
+     "noc": "NOR",
+     "gold": 4,
+     "silver": 1,
+     "bronze": 5,
+     "total": 10
+    },
+    {
+     "year": 1912,
+     "noc": "HUN",
+     "gold": 3,
+     "silver": 2,
+     "bronze": 3,
+     "total": 8
+    }
+   ]
+  },
+  {
+   "year": 1920,
+   "top": [
+    {
+     "year": 1920,
+     "noc": "USA",
+     "gold": 41,
+     "silver": 27,
+     "bronze": 27,
+     "total": 95
+    },
+    {
+     "year": 1920,
+     "noc": "SWE",
+     "gold": 19,
+     "silver": 20,
+     "bronze": 25,
+     "total": 64
+    },
+    {
+     "year": 1920,
+     "noc": "BEL",
+     "gold": 16,
+     "silver": 12,
+     "bronze": 14,
+     "total": 42
+    },
+    {
+     "year": 1920,
+     "noc": "FIN",
+     "gold": 15,
+     "silver": 10,
+     "bronze": 9,
+     "total": 34
+    },
+    {
+     "year": 1920,
+     "noc": "GBR",
+     "gold": 14,
+     "silver": 16,
+     "bronze": 13,
+     "total": 43
+    },
+    {
+     "year": 1920,
+     "noc": "ITA",
+     "gold": 14,
+     "silver": 6,
+     "bronze": 5,
+     "total": 25
+    },
+    {
+     "year": 1920,
+     "noc": "NOR",
+     "gold": 10,
+     "silver": 10,
+     "bronze": 9,
+     "total": 29
+    },
+    {
+     "year": 1920,
+     "noc": "FRA",
+     "gold": 9,
+     "silver": 20,
+     "bronze": 13,
+     "total": 42
+    },
+    {
+     "year": 1920,
+     "noc": "NED",
+     "gold": 4,
+     "silver": 2,
+     "bronze": 5,
+     "total": 11
+    },
+    {
+     "year": 1920,
+     "noc": "DEN",
+     "gold": 3,
+     "silver": 9,
+     "bronze": 1,
+     "total": 13
+    }
+   ]
+  },
+  {
+   "year": 1924,
+   "top": [
+    {
+     "year": 1924,
+     "noc": "USA",
+     "gold": 45,
+     "silver": 27,
+     "bronze": 27,
+     "total": 99
+    },
+    {
+     "year": 1924,
+     "noc": "FRA",
+     "gold": 14,
+     "silver": 14,
+     "bronze": 12,
+     "total": 40
+    },
+    {
+     "year": 1924,
+     "noc": "FIN",
+     "gold": 14,
+     "silver": 13,
+     "bronze": 10,
+     "total": 37
+    },
+    {
+     "year": 1924,
+     "noc": "GBR",
+     "gold": 9,
+     "silver": 14,
+     "bronze": 12,
+     "total": 35
+    },
+    {
+     "year": 1924,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 3,
+     "bronze": 5,
+     "total": 16
+    },
+    {
+     "year": 1924,
+     "noc": "SUI",
+     "gold": 7,
+     "silver": 8,
+     "bronze": 10,
+     "total": 25
+    },
+    {
+     "year": 1924,
+     "noc": "NOR",
+     "gold": 5,
+     "silver": 2,
+     "bronze": 3,
+     "total": 10
+    },
+    {
+     "year": 1924,
+     "noc": "SWE",
+     "gold": 4,
+     "silver": 13,
+     "bronze": 12,
+     "total": 29
+    },
+    {
+     "year": 1924,
+     "noc": "NED",
+     "gold": 4,
+     "silver": 1,
+     "bronze": 6,
+     "total": 11
+    },
+    {
+     "year": 1924,
+     "noc": "BEL",
+     "gold": 3,
+     "silver": 7,
+     "bronze": 3,
+     "total": 13
+    }
+   ]
+  },
+  {
+   "year": 1928,
+   "top": [
+    {
+     "year": 1928,
+     "noc": "USA",
+     "gold": 22,
+     "silver": 18,
+     "bronze": 16,
+     "total": 56
+    },
+    {
+     "year": 1928,
+     "noc": "GER",
+     "gold": 11,
+     "silver": 9,
+     "bronze": 19,
+     "total": 39
+    },
+    {
+     "year": 1928,
+     "noc": "NED",
+     "gold": 8,
+     "silver": 10,
+     "bronze": 5,
+     "total": 23
+    },
+    {
+     "year": 1928,
+     "noc": "FIN",
+     "gold": 8,
+     "silver": 8,
+     "bronze": 9,
+     "total": 25
+    },
+    {
+     "year": 1928,
+     "noc": "FRA",
+     "gold": 7,
+     "silver": 12,
+     "bronze": 6,
+     "total": 25
+    },
+    {
+     "year": 1928,
+     "noc": "SWE",
+     "gold": 7,
+     "silver": 6,
+     "bronze": 12,
+     "total": 25
+    },
+    {
+     "year": 1928,
+     "noc": "ITA",
+     "gold": 7,
+     "silver": 6,
+     "bronze": 7,
+     "total": 20
+    },
+    {
+     "year": 1928,
+     "noc": "SUI",
+     "gold": 7,
+     "silver": 6,
+     "bronze": 4,
+     "total": 17
+    },
+    {
+     "year": 1928,
+     "noc": "HUN",
+     "gold": 5,
+     "silver": 5,
+     "bronze": 0,
+     "total": 10
+    },
+    {
+     "year": 1928,
+     "noc": "GBR",
+     "gold": 4,
+     "silver": 11,
+     "bronze": 7,
+     "total": 22
+    }
+   ]
+  },
+  {
+   "year": 1932,
+   "top": [
+    {
+     "year": 1932,
+     "noc": "USA",
+     "gold": 44,
+     "silver": 36,
+     "bronze": 30,
+     "total": 110
+    },
+    {
+     "year": 1932,
+     "noc": "ITA",
+     "gold": 12,
+     "silver": 12,
+     "bronze": 12,
+     "total": 36
+    },
+    {
+     "year": 1932,
+     "noc": "FRA",
+     "gold": 11,
+     "silver": 5,
+     "bronze": 4,
+     "total": 20
+    },
+    {
+     "year": 1932,
+     "noc": "SWE",
+     "gold": 10,
+     "silver": 5,
+     "bronze": 9,
+     "total": 24
+    },
+    {
+     "year": 1932,
+     "noc": "JPN",
+     "gold": 7,
+     "silver": 7,
+     "bronze": 4,
+     "total": 18
+    },
+    {
+     "year": 1932,
+     "noc": "HUN",
+     "gold": 6,
+     "silver": 5,
+     "bronze": 5,
+     "total": 16
+    },
+    {
+     "year": 1932,
+     "noc": "GER",
+     "gold": 5,
+     "silver": 12,
+     "bronze": 7,
+     "total": 24
+    },
+    {
+     "year": 1932,
+     "noc": "FIN",
+     "gold": 5,
+     "silver": 8,
+     "bronze": 12,
+     "total": 25
+    },
+    {
+     "year": 1932,
+     "noc": "GBR",
+     "gold": 5,
+     "silver": 7,
+     "bronze": 5,
+     "total": 17
+    },
+    {
+     "year": 1932,
+     "noc": "POL",
+     "gold": 3,
+     "silver": 2,
+     "bronze": 4,
+     "total": 9
+    }
+   ]
+  },
+  {
+   "year": 1936,
+   "top": [
+    {
+     "year": 1936,
+     "noc": "GER",
+     "gold": 38,
+     "silver": 31,
+     "bronze": 32,
+     "total": 101
+    },
+    {
+     "year": 1936,
+     "noc": "USA",
+     "gold": 24,
+     "silver": 21,
+     "bronze": 12,
+     "total": 57
+    },
+    {
+     "year": 1936,
+     "noc": "HUN",
+     "gold": 10,
+     "silver": 1,
+     "bronze": 5,
+     "total": 16
+    },
+    {
+     "year": 1936,
+     "noc": "ITA",
+     "gold": 9,
+     "silver": 13,
+     "bronze": 5,
+     "total": 27
+    },
+    {
+     "year": 1936,
+     "noc": "FIN",
+     "gold": 8,
+     "silver": 6,
+     "bronze": 6,
+     "total": 20
+    },
+    {
+     "year": 1936,
+     "noc": "FRA",
+     "gold": 7,
+     "silver": 6,
+     "bronze": 6,
+     "total": 19
+    },
+    {
+     "year": 1936,
+     "noc": "SWE",
+     "gold": 6,
+     "silver": 5,
+     "bronze": 10,
+     "total": 21
+    },
+    {
+     "year": 1936,
+     "noc": "JPN",
+     "gold": 6,
+     "silver": 4,
+     "bronze": 10,
+     "total": 20
+    },
+    {
+     "year": 1936,
+     "noc": "NED",
+     "gold": 6,
+     "silver": 4,
+     "bronze": 7,
+     "total": 17
+    },
+    {
+     "year": 1936,
+     "noc": "AUT",
+     "gold": 5,
+     "silver": 7,
+     "bronze": 5,
+     "total": 17
+    }
+   ]
+  },
+  {
+   "year": 1948,
+   "top": [
+    {
+     "year": 1948,
+     "noc": "USA",
+     "gold": 38,
+     "silver": 27,
+     "bronze": 19,
+     "total": 84
+    },
+    {
+     "year": 1948,
+     "noc": "SWE",
+     "gold": 17,
+     "silver": 11,
+     "bronze": 18,
+     "total": 46
+    },
+    {
+     "year": 1948,
+     "noc": "FRA",
+     "gold": 11,
+     "silver": 6,
+     "bronze": 15,
+     "total": 32
+    },
+    {
+     "year": 1948,
+     "noc": "HUN",
+     "gold": 10,
+     "silver": 5,
+     "bronze": 12,
+     "total": 27
+    },
+    {
+     "year": 1948,
+     "noc": "ITA",
+     "gold": 9,
+     "silver": 12,
+     "bronze": 10,
+     "total": 31
+    },
+    {
+     "year": 1948,
+     "noc": "FIN",
+     "gold": 8,
+     "silver": 8,
+     "bronze": 6,
+     "total": 22
+    },
+    {
+     "year": 1948,
+     "noc": "TUR",
+     "gold": 6,
+     "silver": 4,
+     "bronze": 2,
+     "total": 12
+    },
+    {
+     "year": 1948,
+     "noc": "TCH",
+     "gold": 6,
+     "silver": 2,
+     "bronze": 3,
+     "total": 11
+    },
+    {
+     "year": 1948,
+     "noc": "SUI",
+     "gold": 5,
+     "silver": 12,
+     "bronze": 5,
+     "total": 22
+    },
+    {
+     "year": 1948,
+     "noc": "DEN",
+     "gold": 5,
+     "silver": 8,
+     "bronze": 9,
+     "total": 22
+    }
+   ]
+  },
+  {
+   "year": 1952,
+   "top": [
+    {
+     "year": 1952,
+     "noc": "USA",
+     "gold": 40,
+     "silver": 19,
+     "bronze": 17,
+     "total": 76
+    },
+    {
+     "year": 1952,
+     "noc": "URS",
+     "gold": 22,
+     "silver": 29,
+     "bronze": 19,
+     "total": 70
+    },
+    {
+     "year": 1952,
+     "noc": "HUN",
+     "gold": 16,
+     "silver": 10,
+     "bronze": 16,
+     "total": 42
+    },
+    {
+     "year": 1952,
+     "noc": "SWE",
+     "gold": 12,
+     "silver": 13,
+     "bronze": 10,
+     "total": 35
+    },
+    {
+     "year": 1952,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 9,
+     "bronze": 4,
+     "total": 21
+    },
+    {
+     "year": 1952,
+     "noc": "TCH",
+     "gold": 7,
+     "silver": 3,
+     "bronze": 3,
+     "total": 13
+    },
+    {
+     "year": 1952,
+     "noc": "FRA",
+     "gold": 6,
+     "silver": 6,
+     "bronze": 6,
+     "total": 18
+    },
+    {
+     "year": 1952,
+     "noc": "FIN",
+     "gold": 6,
+     "silver": 3,
+     "bronze": 13,
+     "total": 22
+    },
+    {
+     "year": 1952,
+     "noc": "AUS",
+     "gold": 6,
+     "silver": 2,
+     "bronze": 3,
+     "total": 11
+    },
+    {
+     "year": 1952,
+     "noc": "NOR",
+     "gold": 3,
+     "silver": 2,
+     "bronze": 0,
+     "total": 5
+    }
+   ]
+  },
+  {
+   "year": 1956,
+   "top": [
+    {
+     "year": 1956,
+     "noc": "URS",
+     "gold": 37,
+     "silver": 29,
+     "bronze": 32,
+     "total": 98
+    },
+    {
+     "year": 1956,
+     "noc": "USA",
+     "gold": 32,
+     "silver": 25,
+     "bronze": 17,
+     "total": 74
+    },
+    {
+     "year": 1956,
+     "noc": "AUS",
+     "gold": 13,
+     "silver": 8,
+     "bronze": 14,
+     "total": 35
+    },
+    {
+     "year": 1956,
+     "noc": "HUN",
+     "gold": 9,
+     "silver": 10,
+     "bronze": 7,
+     "total": 26
+    },
+    {
+     "year": 1956,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 8,
+     "bronze": 9,
+     "total": 25
+    },
+    {
+     "year": 1956,
+     "noc": "SWE",
+     "gold": 8,
+     "silver": 5,
+     "bronze": 6,
+     "total": 19
+    },
+    {
+     "year": 1956,
+     "noc": "GER",
+     "gold": 6,
+     "silver": 13,
+     "bronze": 7,
+     "total": 26
+    },
+    {
+     "year": 1956,
+     "noc": "GBR",
+     "gold": 6,
+     "silver": 7,
+     "bronze": 11,
+     "total": 24
+    },
+    {
+     "year": 1956,
+     "noc": "ROU",
+     "gold": 5,
+     "silver": 3,
+     "bronze": 5,
+     "total": 13
+    },
+    {
+     "year": 1956,
+     "noc": "JPN",
+     "gold": 4,
+     "silver": 10,
+     "bronze": 3,
+     "total": 17
+    }
+   ]
+  },
+  {
+   "year": 1960,
+   "top": [
+    {
+     "year": 1960,
+     "noc": "URS",
+     "gold": 43,
+     "silver": 29,
+     "bronze": 31,
+     "total": 103
+    },
+    {
+     "year": 1960,
+     "noc": "USA",
+     "gold": 34,
+     "silver": 21,
+     "bronze": 16,
+     "total": 71
+    },
+    {
+     "year": 1960,
+     "noc": "ITA",
+     "gold": 13,
+     "silver": 10,
+     "bronze": 13,
+     "total": 36
+    },
+    {
+     "year": 1960,
+     "noc": "GER",
+     "gold": 12,
+     "silver": 19,
+     "bronze": 11,
+     "total": 42
+    },
+    {
+     "year": 1960,
+     "noc": "AUS",
+     "gold": 8,
+     "silver": 8,
+     "bronze": 6,
+     "total": 22
+    },
+    {
+     "year": 1960,
+     "noc": "TUR",
+     "gold": 7,
+     "silver": 2,
+     "bronze": 0,
+     "total": 9
+    },
+    {
+     "year": 1960,
+     "noc": "HUN",
+     "gold": 6,
+     "silver": 8,
+     "bronze": 7,
+     "total": 21
+    },
+    {
+     "year": 1960,
+     "noc": "JPN",
+     "gold": 4,
+     "silver": 7,
+     "bronze": 7,
+     "total": 18
+    },
+    {
+     "year": 1960,
+     "noc": "POL",
+     "gold": 4,
+     "silver": 6,
+     "bronze": 11,
+     "total": 21
+    },
+    {
+     "year": 1960,
+     "noc": "TCH",
+     "gold": 3,
+     "silver": 2,
+     "bronze": 3,
+     "total": 8
+    }
+   ]
+  },
+  {
+   "year": 1964,
+   "top": [
+    {
+     "year": 1964,
+     "noc": "USA",
+     "gold": 36,
+     "silver": 26,
+     "bronze": 28,
+     "total": 90
+    },
+    {
+     "year": 1964,
+     "noc": "URS",
+     "gold": 30,
+     "silver": 30,
+     "bronze": 33,
+     "total": 93
+    },
+    {
+     "year": 1964,
+     "noc": "JPN",
+     "gold": 16,
+     "silver": 5,
+     "bronze": 8,
+     "total": 29
+    },
+    {
+     "year": 1964,
+     "noc": "GER",
+     "gold": 10,
+     "silver": 22,
+     "bronze": 18,
+     "total": 50
+    },
+    {
+     "year": 1964,
+     "noc": "ITA",
+     "gold": 10,
+     "silver": 10,
+     "bronze": 7,
+     "total": 27
+    },
+    {
+     "year": 1964,
+     "noc": "HUN",
+     "gold": 10,
+     "silver": 7,
+     "bronze": 5,
+     "total": 22
+    },
+    {
+     "year": 1964,
+     "noc": "POL",
+     "gold": 7,
+     "silver": 6,
+     "bronze": 10,
+     "total": 23
+    },
+    {
+     "year": 1964,
+     "noc": "AUS",
+     "gold": 6,
+     "silver": 2,
+     "bronze": 10,
+     "total": 18
+    },
+    {
+     "year": 1964,
+     "noc": "TCH",
+     "gold": 5,
+     "silver": 6,
+     "bronze": 3,
+     "total": 14
+    },
+    {
+     "year": 1964,
+     "noc": "GBR",
+     "gold": 4,
+     "silver": 12,
+     "bronze": 2,
+     "total": 18
+    }
+   ]
+  },
+  {
+   "year": 1968,
+   "top": [
+    {
+     "year": 1968,
+     "noc": "USA",
+     "gold": 45,
+     "silver": 28,
+     "bronze": 34,
+     "total": 107
+    },
+    {
+     "year": 1968,
+     "noc": "URS",
+     "gold": 29,
+     "silver": 32,
+     "bronze": 30,
+     "total": 91
+    },
+    {
+     "year": 1968,
+     "noc": "JPN",
+     "gold": 11,
+     "silver": 7,
+     "bronze": 7,
+     "total": 25
+    },
+    {
+     "year": 1968,
+     "noc": "HUN",
+     "gold": 10,
+     "silver": 10,
+     "bronze": 12,
+     "total": 32
+    },
+    {
+     "year": 1968,
+     "noc": "GDR",
+     "gold": 9,
+     "silver": 9,
+     "bronze": 7,
+     "total": 25
+    },
+    {
+     "year": 1968,
+     "noc": "FRA",
+     "gold": 7,
+     "silver": 3,
+     "bronze": 5,
+     "total": 15
+    },
+    {
+     "year": 1968,
+     "noc": "TCH",
+     "gold": 7,
+     "silver": 2,
+     "bronze": 4,
+     "total": 13
+    },
+    {
+     "year": 1968,
+     "noc": "FRG",
+     "gold": 5,
+     "silver": 11,
+     "bronze": 10,
+     "total": 26
+    },
+    {
+     "year": 1968,
+     "noc": "AUS",
+     "gold": 5,
+     "silver": 7,
+     "bronze": 5,
+     "total": 17
+    },
+    {
+     "year": 1968,
+     "noc": "GBR",
+     "gold": 5,
+     "silver": 5,
+     "bronze": 3,
+     "total": 13
+    }
+   ]
+  },
+  {
+   "year": 1972,
+   "top": [
+    {
+     "year": 1972,
+     "noc": "URS",
+     "gold": 50,
+     "silver": 27,
+     "bronze": 22,
+     "total": 99
+    },
+    {
+     "year": 1972,
+     "noc": "USA",
+     "gold": 33,
+     "silver": 31,
+     "bronze": 30,
+     "total": 94
+    },
+    {
+     "year": 1972,
+     "noc": "GDR",
+     "gold": 20,
+     "silver": 23,
+     "bronze": 23,
+     "total": 66
+    },
+    {
+     "year": 1972,
+     "noc": "FRG",
+     "gold": 13,
+     "silver": 11,
+     "bronze": 16,
+     "total": 40
+    },
+    {
+     "year": 1972,
+     "noc": "JPN",
+     "gold": 13,
+     "silver": 8,
+     "bronze": 8,
+     "total": 29
+    },
+    {
+     "year": 1972,
+     "noc": "AUS",
+     "gold": 8,
+     "silver": 7,
+     "bronze": 2,
+     "total": 17
+    },
+    {
+     "year": 1972,
+     "noc": "POL",
+     "gold": 7,
+     "silver": 5,
+     "bronze": 9,
+     "total": 21
+    },
+    {
+     "year": 1972,
+     "noc": "HUN",
+     "gold": 6,
+     "silver": 13,
+     "bronze": 16,
+     "total": 35
+    },
+    {
+     "year": 1972,
+     "noc": "BUL",
+     "gold": 6,
+     "silver": 10,
+     "bronze": 5,
+     "total": 21
+    },
+    {
+     "year": 1972,
+     "noc": "ITA",
+     "gold": 5,
+     "silver": 3,
+     "bronze": 10,
+     "total": 18
+    }
+   ]
+  },
+  {
+   "year": 1976,
+   "top": [
+    {
+     "year": 1976,
+     "noc": "URS",
+     "gold": 49,
+     "silver": 41,
+     "bronze": 35,
+     "total": 125
+    },
+    {
+     "year": 1976,
+     "noc": "GDR",
+     "gold": 40,
+     "silver": 25,
+     "bronze": 25,
+     "total": 90
+    },
+    {
+     "year": 1976,
+     "noc": "USA",
+     "gold": 34,
+     "silver": 35,
+     "bronze": 25,
+     "total": 94
+    },
+    {
+     "year": 1976,
+     "noc": "FRG",
+     "gold": 10,
+     "silver": 12,
+     "bronze": 17,
+     "total": 39
+    },
+    {
+     "year": 1976,
+     "noc": "JPN",
+     "gold": 9,
+     "silver": 6,
+     "bronze": 10,
+     "total": 25
+    },
+    {
+     "year": 1976,
+     "noc": "POL",
+     "gold": 7,
+     "silver": 6,
+     "bronze": 13,
+     "total": 26
+    },
+    {
+     "year": 1976,
+     "noc": "BUL",
+     "gold": 6,
+     "silver": 9,
+     "bronze": 7,
+     "total": 22
+    },
+    {
+     "year": 1976,
+     "noc": "CUB",
+     "gold": 6,
+     "silver": 4,
+     "bronze": 3,
+     "total": 13
+    },
+    {
+     "year": 1976,
+     "noc": "ROU",
+     "gold": 4,
+     "silver": 9,
+     "bronze": 14,
+     "total": 27
+    },
+    {
+     "year": 1976,
+     "noc": "HUN",
+     "gold": 4,
+     "silver": 5,
+     "bronze": 13,
+     "total": 22
+    }
+   ]
+  },
+  {
+   "year": 1980,
+   "top": [
+    {
+     "year": 1980,
+     "noc": "URS",
+     "gold": 80,
+     "silver": 69,
+     "bronze": 46,
+     "total": 195
+    },
+    {
+     "year": 1980,
+     "noc": "GDR",
+     "gold": 47,
+     "silver": 37,
+     "bronze": 42,
+     "total": 126
+    },
+    {
+     "year": 1980,
+     "noc": "BUL",
+     "gold": 8,
+     "silver": 16,
+     "bronze": 17,
+     "total": 41
+    },
+    {
+     "year": 1980,
+     "noc": "CUB",
+     "gold": 8,
+     "silver": 7,
+     "bronze": 5,
+     "total": 20
+    },
+    {
+     "year": 1980,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 3,
+     "bronze": 4,
+     "total": 15
+    },
+    {
+     "year": 1980,
+     "noc": "HUN",
+     "gold": 7,
+     "silver": 10,
+     "bronze": 15,
+     "total": 32
+    },
+    {
+     "year": 1980,
+     "noc": "ROU",
+     "gold": 6,
+     "silver": 6,
+     "bronze": 13,
+     "total": 25
+    },
+    {
+     "year": 1980,
+     "noc": "FRA",
+     "gold": 6,
+     "silver": 5,
+     "bronze": 3,
+     "total": 14
+    },
+    {
+     "year": 1980,
+     "noc": "GBR",
+     "gold": 5,
+     "silver": 7,
+     "bronze": 9,
+     "total": 21
+    },
+    {
+     "year": 1980,
+     "noc": "POL",
+     "gold": 3,
+     "silver": 14,
+     "bronze": 15,
+     "total": 32
+    }
+   ]
+  },
+  {
+   "year": 1984,
+   "top": [
+    {
+     "year": 1984,
+     "noc": "USA",
+     "gold": 82,
+     "silver": 61,
+     "bronze": 30,
+     "total": 173
+    },
+    {
+     "year": 1984,
+     "noc": "ROU",
+     "gold": 19,
+     "silver": 16,
+     "bronze": 17,
+     "total": 52
+    },
+    {
+     "year": 1984,
+     "noc": "FRG",
+     "gold": 17,
+     "silver": 19,
+     "bronze": 23,
+     "total": 59
+    },
+    {
+     "year": 1984,
+     "noc": "CHN",
+     "gold": 15,
+     "silver": 8,
+     "bronze": 9,
+     "total": 32
+    },
+    {
+     "year": 1984,
+     "noc": "ITA",
+     "gold": 14,
+     "silver": 6,
+     "bronze": 12,
+     "total": 32
+    },
+    {
+     "year": 1984,
+     "noc": "CAN",
+     "gold": 10,
+     "silver": 18,
+     "bronze": 16,
+     "total": 44
+    },
+    {
+     "year": 1984,
+     "noc": "JPN",
+     "gold": 10,
+     "silver": 7,
+     "bronze": 14,
+     "total": 31
+    },
+    {
+     "year": 1984,
+     "noc": "NZL",
+     "gold": 8,
+     "silver": 1,
+     "bronze": 2,
+     "total": 11
+    },
+    {
+     "year": 1984,
+     "noc": "YUG",
+     "gold": 7,
+     "silver": 4,
+     "bronze": 7,
+     "total": 18
+    },
+    {
+     "year": 1984,
+     "noc": "KOR",
+     "gold": 6,
+     "silver": 6,
+     "bronze": 7,
+     "total": 19
+    }
+   ]
+  },
+  {
+   "year": 1988,
+   "top": [
+    {
+     "year": 1988,
+     "noc": "URS",
+     "gold": 54,
+     "silver": 31,
+     "bronze": 46,
+     "total": 131
+    },
+    {
+     "year": 1988,
+     "noc": "GDR",
+     "gold": 37,
+     "silver": 35,
+     "bronze": 30,
+     "total": 102
+    },
+    {
+     "year": 1988,
+     "noc": "USA",
+     "gold": 36,
+     "silver": 31,
+     "bronze": 27,
+     "total": 94
+    },
+    {
+     "year": 1988,
+     "noc": "KOR",
+     "gold": 12,
+     "silver": 10,
+     "bronze": 11,
+     "total": 33
+    },
+    {
+     "year": 1988,
+     "noc": "FRG",
+     "gold": 11,
+     "silver": 14,
+     "bronze": 15,
+     "total": 40
+    },
+    {
+     "year": 1988,
+     "noc": "HUN",
+     "gold": 11,
+     "silver": 6,
+     "bronze": 6,
+     "total": 23
+    },
+    {
+     "year": 1988,
+     "noc": "BUL",
+     "gold": 10,
+     "silver": 12,
+     "bronze": 13,
+     "total": 35
+    },
+    {
+     "year": 1988,
+     "noc": "ROU",
+     "gold": 7,
+     "silver": 11,
+     "bronze": 6,
+     "total": 24
+    },
+    {
+     "year": 1988,
+     "noc": "FRA",
+     "gold": 6,
+     "silver": 4,
+     "bronze": 6,
+     "total": 16
+    },
+    {
+     "year": 1988,
+     "noc": "ITA",
+     "gold": 6,
+     "silver": 4,
+     "bronze": 4,
+     "total": 14
+    }
+   ]
+  },
+  {
+   "year": 1992,
+   "top": [
+    {
+     "year": 1992,
+     "noc": "EUN",
+     "gold": 45,
+     "silver": 38,
+     "bronze": 29,
+     "total": 112
+    },
+    {
+     "year": 1992,
+     "noc": "USA",
+     "gold": 37,
+     "silver": 34,
+     "bronze": 37,
+     "total": 108
+    },
+    {
+     "year": 1992,
+     "noc": "GER",
+     "gold": 33,
+     "silver": 21,
+     "bronze": 28,
+     "total": 82
+    },
+    {
+     "year": 1992,
+     "noc": "CHN",
+     "gold": 16,
+     "silver": 22,
+     "bronze": 15,
+     "total": 53
+    },
+    {
+     "year": 1992,
+     "noc": "CUB",
+     "gold": 14,
+     "silver": 6,
+     "bronze": 11,
+     "total": 31
+    },
+    {
+     "year": 1992,
+     "noc": "ESP",
+     "gold": 13,
+     "silver": 7,
+     "bronze": 2,
+     "total": 22
+    },
+    {
+     "year": 1992,
+     "noc": "KOR",
+     "gold": 12,
+     "silver": 5,
+     "bronze": 11,
+     "total": 28
+    },
+    {
+     "year": 1992,
+     "noc": "HUN",
+     "gold": 11,
+     "silver": 12,
+     "bronze": 7,
+     "total": 30
+    },
+    {
+     "year": 1992,
+     "noc": "FRA",
+     "gold": 8,
+     "silver": 5,
+     "bronze": 16,
+     "total": 29
+    },
+    {
+     "year": 1992,
+     "noc": "AUS",
+     "gold": 7,
+     "silver": 9,
+     "bronze": 11,
+     "total": 27
+    }
+   ]
+  },
+  {
+   "year": 1996,
+   "top": [
+    {
+     "year": 1996,
+     "noc": "USA",
+     "gold": 44,
+     "silver": 32,
+     "bronze": 25,
+     "total": 101
+    },
+    {
+     "year": 1996,
+     "noc": "RUS",
+     "gold": 26,
+     "silver": 21,
+     "bronze": 16,
+     "total": 63
+    },
+    {
+     "year": 1996,
+     "noc": "GER",
+     "gold": 20,
+     "silver": 18,
+     "bronze": 27,
+     "total": 65
+    },
+    {
+     "year": 1996,
+     "noc": "CHN",
+     "gold": 16,
+     "silver": 22,
+     "bronze": 12,
+     "total": 50
+    },
+    {
+     "year": 1996,
+     "noc": "FRA",
+     "gold": 15,
+     "silver": 7,
+     "bronze": 15,
+     "total": 37
+    },
+    {
+     "year": 1996,
+     "noc": "ITA",
+     "gold": 13,
+     "silver": 10,
+     "bronze": 12,
+     "total": 35
+    },
+    {
+     "year": 1996,
+     "noc": "AUS",
+     "gold": 9,
+     "silver": 9,
+     "bronze": 23,
+     "total": 41
+    },
+    {
+     "year": 1996,
+     "noc": "CUB",
+     "gold": 9,
+     "silver": 8,
+     "bronze": 8,
+     "total": 25
+    },
+    {
+     "year": 1996,
+     "noc": "UKR",
+     "gold": 9,
+     "silver": 2,
+     "bronze": 12,
+     "total": 23
+    },
+    {
+     "year": 1996,
+     "noc": "KOR",
+     "gold": 7,
+     "silver": 15,
+     "bronze": 5,
+     "total": 27
+    }
+   ]
+  },
+  {
+   "year": 2000,
+   "top": [
+    {
+     "year": 2000,
+     "noc": "USA",
+     "gold": 36,
+     "silver": 24,
+     "bronze": 31,
+     "total": 91
+    },
+    {
+     "year": 2000,
+     "noc": "RUS",
+     "gold": 32,
+     "silver": 28,
+     "bronze": 29,
+     "total": 89
+    },
+    {
+     "year": 2000,
+     "noc": "CHN",
+     "gold": 28,
+     "silver": 16,
+     "bronze": 14,
+     "total": 58
+    },
+    {
+     "year": 2000,
+     "noc": "AUS",
+     "gold": 16,
+     "silver": 25,
+     "bronze": 17,
+     "total": 58
+    },
+    {
+     "year": 2000,
+     "noc": "GER",
+     "gold": 13,
+     "silver": 17,
+     "bronze": 26,
+     "total": 56
+    },
+    {
+     "year": 2000,
+     "noc": "FRA",
+     "gold": 13,
+     "silver": 14,
+     "bronze": 11,
+     "total": 38
+    },
+    {
+     "year": 2000,
+     "noc": "ITA",
+     "gold": 13,
+     "silver": 8,
+     "bronze": 13,
+     "total": 34
+    },
+    {
+     "year": 2000,
+     "noc": "NED",
+     "gold": 12,
+     "silver": 9,
+     "bronze": 4,
+     "total": 25
+    },
+    {
+     "year": 2000,
+     "noc": "CUB",
+     "gold": 11,
+     "silver": 11,
+     "bronze": 7,
+     "total": 29
+    },
+    {
+     "year": 2000,
+     "noc": "GBR",
+     "gold": 11,
+     "silver": 10,
+     "bronze": 7,
+     "total": 28
+    }
+   ]
+  },
+  {
+   "year": 2004,
+   "top": [
+    {
+     "year": 2004,
+     "noc": "USA",
+     "gold": 36,
+     "silver": 39,
+     "bronze": 26,
+     "total": 101
+    },
+    {
+     "year": 2004,
+     "noc": "CHN",
+     "gold": 32,
+     "silver": 17,
+     "bronze": 14,
+     "total": 63
+    },
+    {
+     "year": 2004,
+     "noc": "RUS",
+     "gold": 28,
+     "silver": 26,
+     "bronze": 36,
+     "total": 90
+    },
+    {
+     "year": 2004,
+     "noc": "AUS",
+     "gold": 17,
+     "silver": 16,
+     "bronze": 17,
+     "total": 50
+    },
+    {
+     "year": 2004,
+     "noc": "JPN",
+     "gold": 16,
+     "silver": 9,
+     "bronze": 12,
+     "total": 37
+    },
+    {
+     "year": 2004,
+     "noc": "GER",
+     "gold": 13,
+     "silver": 16,
+     "bronze": 20,
+     "total": 49
+    },
+    {
+     "year": 2004,
+     "noc": "FRA",
+     "gold": 11,
+     "silver": 9,
+     "bronze": 13,
+     "total": 33
+    },
+    {
+     "year": 2004,
+     "noc": "ITA",
+     "gold": 10,
+     "silver": 11,
+     "bronze": 11,
+     "total": 32
+    },
+    {
+     "year": 2004,
+     "noc": "KOR",
+     "gold": 9,
+     "silver": 12,
+     "bronze": 9,
+     "total": 30
+    },
+    {
+     "year": 2004,
+     "noc": "GBR",
+     "gold": 9,
+     "silver": 9,
+     "bronze": 12,
+     "total": 30
+    }
+   ]
+  },
+  {
+   "year": 2008,
+   "top": [
+    {
+     "year": 2008,
+     "noc": "CHN",
+     "gold": 51,
+     "silver": 21,
+     "bronze": 28,
+     "total": 100
+    },
+    {
+     "year": 2008,
+     "noc": "USA",
+     "gold": 36,
+     "silver": 39,
+     "bronze": 35,
+     "total": 110
+    },
+    {
+     "year": 2008,
+     "noc": "RUS",
+     "gold": 23,
+     "silver": 21,
+     "bronze": 28,
+     "total": 72
+    },
+    {
+     "year": 2008,
+     "noc": "GBR",
+     "gold": 19,
+     "silver": 13,
+     "bronze": 16,
+     "total": 48
+    },
+    {
+     "year": 2008,
+     "noc": "GER",
+     "gold": 16,
+     "silver": 10,
+     "bronze": 15,
+     "total": 41
+    },
+    {
+     "year": 2008,
+     "noc": "AUS",
+     "gold": 14,
+     "silver": 15,
+     "bronze": 17,
+     "total": 46
+    },
+    {
+     "year": 2008,
+     "noc": "KOR",
+     "gold": 13,
+     "silver": 10,
+     "bronze": 8,
+     "total": 31
+    },
+    {
+     "year": 2008,
+     "noc": "JPN",
+     "gold": 9,
+     "silver": 7,
+     "bronze": 9,
+     "total": 25
+    },
+    {
+     "year": 2008,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 9,
+     "bronze": 10,
+     "total": 27
+    },
+    {
+     "year": 2008,
+     "noc": "FRA",
+     "gold": 7,
+     "silver": 16,
+     "bronze": 18,
+     "total": 41
+    }
+   ]
+  },
+  {
+   "year": 2012,
+   "top": [
+    {
+     "year": 2012,
+     "noc": "USA",
+     "gold": 46,
+     "silver": 28,
+     "bronze": 29,
+     "total": 103
+    },
+    {
+     "year": 2012,
+     "noc": "CHN",
+     "gold": 38,
+     "silver": 27,
+     "bronze": 23,
+     "total": 88
+    },
+    {
+     "year": 2012,
+     "noc": "GBR",
+     "gold": 29,
+     "silver": 17,
+     "bronze": 19,
+     "total": 65
+    },
+    {
+     "year": 2012,
+     "noc": "RUS",
+     "gold": 24,
+     "silver": 26,
+     "bronze": 32,
+     "total": 82
+    },
+    {
+     "year": 2012,
+     "noc": "KOR",
+     "gold": 13,
+     "silver": 8,
+     "bronze": 7,
+     "total": 28
+    },
+    {
+     "year": 2012,
+     "noc": "GER",
+     "gold": 11,
+     "silver": 19,
+     "bronze": 14,
+     "total": 44
+    },
+    {
+     "year": 2012,
+     "noc": "FRA",
+     "gold": 11,
+     "silver": 11,
+     "bronze": 13,
+     "total": 35
+    },
+    {
+     "year": 2012,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 9,
+     "bronze": 11,
+     "total": 28
+    },
+    {
+     "year": 2012,
+     "noc": "HUN",
+     "gold": 8,
+     "silver": 4,
+     "bronze": 6,
+     "total": 18
+    },
+    {
+     "year": 2012,
+     "noc": "AUS",
+     "gold": 7,
+     "silver": 16,
+     "bronze": 12,
+     "total": 35
+    }
+   ]
+  },
+  {
+   "year": 2016,
+   "top": [
+    {
+     "year": 2016,
+     "noc": "USA",
+     "gold": 46,
+     "silver": 37,
+     "bronze": 38,
+     "total": 121
+    },
+    {
+     "year": 2016,
+     "noc": "GBR",
+     "gold": 27,
+     "silver": 23,
+     "bronze": 17,
+     "total": 67
+    },
+    {
+     "year": 2016,
+     "noc": "CHN",
+     "gold": 26,
+     "silver": 18,
+     "bronze": 26,
+     "total": 70
+    },
+    {
+     "year": 2016,
+     "noc": "RUS",
+     "gold": 19,
+     "silver": 17,
+     "bronze": 20,
+     "total": 56
+    },
+    {
+     "year": 2016,
+     "noc": "GER",
+     "gold": 17,
+     "silver": 10,
+     "bronze": 15,
+     "total": 42
+    },
+    {
+     "year": 2016,
+     "noc": "JPN",
+     "gold": 12,
+     "silver": 8,
+     "bronze": 21,
+     "total": 41
+    },
+    {
+     "year": 2016,
+     "noc": "FRA",
+     "gold": 10,
+     "silver": 18,
+     "bronze": 14,
+     "total": 42
+    },
+    {
+     "year": 2016,
+     "noc": "KOR",
+     "gold": 9,
+     "silver": 3,
+     "bronze": 9,
+     "total": 21
+    },
+    {
+     "year": 2016,
+     "noc": "ITA",
+     "gold": 8,
+     "silver": 12,
+     "bronze": 8,
+     "total": 28
+    },
+    {
+     "year": 2016,
+     "noc": "AUS",
+     "gold": 8,
+     "silver": 11,
+     "bronze": 10,
+     "total": 29
+    }
+   ]
+  },
+  {
+   "year": 2020,
+   "top": [
+    {
+     "year": 2020,
+     "noc": "USA",
+     "gold": 39,
+     "silver": 41,
+     "bronze": 33,
+     "total": 113
+    },
+    {
+     "year": 2020,
+     "noc": "CHN",
+     "gold": 38,
+     "silver": 32,
+     "bronze": 18,
+     "total": 88
+    },
+    {
+     "year": 2020,
+     "noc": "JPN",
+     "gold": 27,
+     "silver": 15,
+     "bronze": 17,
+     "total": 59
+    },
+    {
+     "year": 2020,
+     "noc": "GBR",
+     "gold": 22,
+     "silver": 21,
+     "bronze": 22,
+     "total": 65
+    },
+    {
+     "year": 2020,
+     "noc": "ROC",
+     "gold": 20,
+     "silver": 28,
+     "bronze": 23,
+     "total": 71
+    },
+    {
+     "year": 2020,
+     "noc": "AUS",
+     "gold": 17,
+     "silver": 7,
+     "bronze": 22,
+     "total": 46
+    },
+    {
+     "year": 2020,
+     "noc": "FRA",
+     "gold": 11,
+     "silver": 12,
+     "bronze": 11,
+     "total": 34
+    },
+    {
+     "year": 2020,
+     "noc": "NED",
+     "gold": 10,
+     "silver": 13,
+     "bronze": 14,
+     "total": 37
+    },
+    {
+     "year": 2020,
+     "noc": "GER",
+     "gold": 10,
+     "silver": 11,
+     "bronze": 17,
+     "total": 38
+    },
+    {
+     "year": 2020,
+     "noc": "ITA",
+     "gold": 10,
+     "silver": 10,
+     "bronze": 20,
+     "total": 40
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "top": [
+    {
+     "year": 2024,
+     "noc": "CHN",
+     "gold": 40,
+     "silver": 27,
+     "bronze": 24,
+     "total": 91
+    },
+    {
+     "year": 2024,
+     "noc": "USA",
+     "gold": 39,
+     "silver": 42,
+     "bronze": 42,
+     "total": 123
+    },
+    {
+     "year": 2024,
+     "noc": "JPN",
+     "gold": 20,
+     "silver": 13,
+     "bronze": 13,
+     "total": 46
+    },
+    {
+     "year": 2024,
+     "noc": "AUS",
+     "gold": 18,
+     "silver": 18,
+     "bronze": 16,
+     "total": 52
+    },
+    {
+     "year": 2024,
+     "noc": "FRA",
+     "gold": 17,
+     "silver": 26,
+     "bronze": 22,
+     "total": 65
+    },
+    {
+     "year": 2024,
+     "noc": "NED",
+     "gold": 15,
+     "silver": 7,
+     "bronze": 12,
+     "total": 34
+    },
+    {
+     "year": 2024,
+     "noc": "KOR",
+     "gold": 14,
+     "silver": 9,
+     "bronze": 11,
+     "total": 34
+    },
+    {
+     "year": 2024,
+     "noc": "GBR",
+     "gold": 13,
+     "silver": 22,
+     "bronze": 28,
+     "total": 63
+    },
+    {
+     "year": 2024,
+     "noc": "ITA",
+     "gold": 12,
+     "silver": 11,
+     "bronze": 13,
+     "total": 36
+    },
+    {
+     "year": 2024,
+     "noc": "GER",
+     "gold": 11,
+     "silver": 13,
+     "bronze": 8,
+     "total": 32
+    }
+   ]
+  }
+ ],
+ "snapshots": [
+  {
+   "year": 1896,
+   "top": [
+    {
+     "year": 1896,
+     "noc": "USA",
+     "gold": 11,
+     "silver": 6,
+     "bronze": 2,
+     "total": 19
+    },
+    {
+     "year": 1896,
+     "noc": "GRE",
+     "gold": 10,
+     "silver": 17,
+     "bronze": 17,
+     "total": 44
+    },
+    {
+     "year": 1896,
+     "noc": "GER",
+     "gold": 7,
+     "silver": 5,
+     "bronze": 2,
+     "total": 14
+    },
+    {
+     "year": 1896,
+     "noc": "FRA",
+     "gold": 5,
+     "silver": 4,
+     "bronze": 2,
+     "total": 11
+    },
+    {
+     "year": 1896,
+     "noc": "GBR",
+     "gold": 3,
+     "silver": 3,
+     "bronze": 3,
+     "total": 9
+    },
+    {
+     "year": 1896,
+     "noc": "HUN",
+     "gold": 2,
+     "silver": 1,
+     "bronze": 3,
+     "total": 6
+    },
+    {
+     "year": 1896,
+     "noc": "AUT",
+     "gold": 2,
+     "silver": 1,
+     "bronze": 2,
+     "total": 5
+    },
+    {
+     "year": 1896,
+     "noc": "AUS",
+     "gold": 2,
+     "silver": 0,
+     "bronze": 1,
+     "total": 3
+    }
+   ]
+  },
+  {
+   "year": 1960,
+   "top": [
+    {
+     "year": 1960,
+     "noc": "URS",
+     "gold": 43,
+     "silver": 29,
+     "bronze": 31,
+     "total": 103
+    },
+    {
+     "year": 1960,
+     "noc": "USA",
+     "gold": 34,
+     "silver": 21,
+     "bronze": 16,
+     "total": 71
+    },
+    {
+     "year": 1960,
+     "noc": "ITA",
+     "gold": 13,
+     "silver": 10,
+     "bronze": 13,
+     "total": 36
+    },
+    {
+     "year": 1960,
+     "noc": "GER",
+     "gold": 12,
+     "silver": 19,
+     "bronze": 11,
+     "total": 42
+    },
+    {
+     "year": 1960,
+     "noc": "AUS",
+     "gold": 8,
+     "silver": 8,
+     "bronze": 6,
+     "total": 22
+    },
+    {
+     "year": 1960,
+     "noc": "TUR",
+     "gold": 7,
+     "silver": 2,
+     "bronze": 0,
+     "total": 9
+    },
+    {
+     "year": 1960,
+     "noc": "HUN",
+     "gold": 6,
+     "silver": 8,
+     "bronze": 7,
+     "total": 21
+    },
+    {
+     "year": 1960,
+     "noc": "JPN",
+     "gold": 4,
+     "silver": 7,
+     "bronze": 7,
+     "total": 18
+    }
+   ]
+  },
+  {
+   "year": 2000,
+   "top": [
+    {
+     "year": 2000,
+     "noc": "USA",
+     "gold": 36,
+     "silver": 24,
+     "bronze": 31,
+     "total": 91
+    },
+    {
+     "year": 2000,
+     "noc": "RUS",
+     "gold": 32,
+     "silver": 28,
+     "bronze": 29,
+     "total": 89
+    },
+    {
+     "year": 2000,
+     "noc": "CHN",
+     "gold": 28,
+     "silver": 16,
+     "bronze": 14,
+     "total": 58
+    },
+    {
+     "year": 2000,
+     "noc": "AUS",
+     "gold": 16,
+     "silver": 25,
+     "bronze": 17,
+     "total": 58
+    },
+    {
+     "year": 2000,
+     "noc": "GER",
+     "gold": 13,
+     "silver": 17,
+     "bronze": 26,
+     "total": 56
+    },
+    {
+     "year": 2000,
+     "noc": "FRA",
+     "gold": 13,
+     "silver": 14,
+     "bronze": 11,
+     "total": 38
+    },
+    {
+     "year": 2000,
+     "noc": "ITA",
+     "gold": 13,
+     "silver": 8,
+     "bronze": 13,
+     "total": 34
+    },
+    {
+     "year": 2000,
+     "noc": "NED",
+     "gold": 12,
+     "silver": 9,
+     "bronze": 4,
+     "total": 25
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "top": [
+    {
+     "year": 2024,
+     "noc": "CHN",
+     "gold": 40,
+     "silver": 27,
+     "bronze": 24,
+     "total": 91
+    },
+    {
+     "year": 2024,
+     "noc": "USA",
+     "gold": 39,
+     "silver": 42,
+     "bronze": 42,
+     "total": 123
+    },
+    {
+     "year": 2024,
+     "noc": "JPN",
+     "gold": 20,
+     "silver": 13,
+     "bronze": 13,
+     "total": 46
+    },
+    {
+     "year": 2024,
+     "noc": "AUS",
+     "gold": 18,
+     "silver": 18,
+     "bronze": 16,
+     "total": 52
+    },
+    {
+     "year": 2024,
+     "noc": "FRA",
+     "gold": 17,
+     "silver": 26,
+     "bronze": 22,
+     "total": 65
+    },
+    {
+     "year": 2024,
+     "noc": "NED",
+     "gold": 15,
+     "silver": 7,
+     "bronze": 12,
+     "total": 34
+    },
+    {
+     "year": 2024,
+     "noc": "KOR",
+     "gold": 14,
+     "silver": 9,
+     "bronze": 11,
+     "total": 34
+    },
+    {
+     "year": 2024,
+     "noc": "GBR",
+     "gold": 13,
+     "silver": 22,
+     "bronze": 28,
+     "total": 63
+    }
+   ]
+  }
+ ],
+ "missing_years": [
+  1916,
+  1940,
+  1944
+ ]
+}

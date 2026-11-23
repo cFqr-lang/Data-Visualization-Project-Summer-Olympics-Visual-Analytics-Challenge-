@@ -1,0 +1,659 @@
+metric,scope,year,noc,value,unit,caliber,includes_1906,data_version,notes
+rows,全数据（含 1906）,,,252565,count,-,False,v1.0-fallback,自检项
+medals,全数据（含 1906）,,,38818,count,-,False,v1.0-fallback,自检项
+noc_count,全数据（含 1906）,,,234,count,-,False,v1.0-fallback,自检项
+sport_count,全数据（含 1906）,,,57,count,-,False,v1.0-fallback,自检项
+gold_rows,全数据（含 1906）,,,13002,rows,athlete_row,False,v1.0-fallback,
+silver_rows,全数据（含 1906）,,,12746,rows,athlete_row,False,v1.0-fallback,
+bronze_rows,全数据（含 1906）,,,13070,rows,athlete_row,False,v1.0-fallback,
+conservative_medals,每届,1896,,120,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1896,,143,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1896,,12,count,-,False,v1.0-fallback,
+athletes,每届,1896,,380,count,-,False,v1.0-fallback,
+female_share,每届,1896,,0.0,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1896,,43,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1900,,291,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1900,,604,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1900,,31,count,-,False,v1.0-fallback,
+athletes,每届,1900,,1936,count,-,False,v1.0-fallback,
+female_share,每届,1900,,0.017,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1900,,90,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1904,,279,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1904,,486,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1904,,15,count,-,False,v1.0-fallback,
+athletes,每届,1904,,1301,count,-,False,v1.0-fallback,
+female_share,每届,1904,,0.0123,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1904,,95,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1908,,320,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1908,,831,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1908,,22,count,-,False,v1.0-fallback,
+athletes,每届,1908,,3101,count,-,False,v1.0-fallback,
+female_share,每届,1908,,0.0152,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1908,,109,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1912,,316,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1912,,941,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1912,,29,count,-,False,v1.0-fallback,
+athletes,每届,1912,,4040,count,-,False,v1.0-fallback,
+female_share,每届,1912,,0.0215,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1912,,107,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1920,,446,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1920,,1308,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1920,,29,count,-,False,v1.0-fallback,
+athletes,每届,1920,,4292,count,-,False,v1.0-fallback,
+female_share,每届,1920,,0.0312,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1920,,158,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1924,,391,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1924,,832,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1924,,45,count,-,False,v1.0-fallback,
+athletes,每届,1924,,5233,count,-,False,v1.0-fallback,
+female_share,每届,1924,,0.0466,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1924,,131,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1928,,356,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1928,,734,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1928,,46,count,-,False,v1.0-fallback,
+athletes,每届,1928,,4992,count,-,False,v1.0-fallback,
+female_share,每届,1928,,0.0809,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1928,,122,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1932,,370,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1932,,647,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1932,,47,count,-,False,v1.0-fallback,
+athletes,每届,1932,,2969,count,-,False,v1.0-fallback,
+female_share,每届,1932,,0.1169,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1932,,131,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1936,,422,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1936,,917,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1936,,49,count,-,False,v1.0-fallback,
+athletes,每届,1936,,6506,count,-,False,v1.0-fallback,
+female_share,每届,1936,,0.0719,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1936,,150,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1948,,439,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1948,,852,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1948,,59,count,-,False,v1.0-fallback,
+athletes,每届,1948,,6405,count,-,False,v1.0-fallback,
+female_share,每届,1948,,0.098,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1948,,153,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1952,,457,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1952,,897,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1952,,69,count,-,False,v1.0-fallback,
+athletes,每届,1952,,8270,count,-,False,v1.0-fallback,
+female_share,每届,1952,,0.181,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1952,,149,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1956,,467,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1956,,893,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1956,,72,count,-,False,v1.0-fallback,
+athletes,每届,1956,,5127,count,-,False,v1.0-fallback,
+female_share,每届,1956,,0.1742,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1956,,151,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1960,,461,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1960,,911,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1960,,84,count,-,False,v1.0-fallback,
+athletes,每届,1960,,8119,count,-,False,v1.0-fallback,
+female_share,每届,1960,,0.1767,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1960,,150,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1964,,501,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1964,,1029,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1964,,93,count,-,False,v1.0-fallback,
+athletes,每届,1964,,7702,count,-,False,v1.0-fallback,
+female_share,每届,1964,,0.175,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1964,,163,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1968,,527,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1968,,1057,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1968,,112,count,-,False,v1.0-fallback,
+athletes,每届,1968,,8588,count,-,False,v1.0-fallback,
+female_share,每届,1968,,0.2069,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1968,,172,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1972,,600,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1972,,1215,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1972,,121,count,-,False,v1.0-fallback,
+athletes,每届,1972,,10304,count,-,False,v1.0-fallback,
+female_share,每届,1972,,0.2128,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1972,,193,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1976,,613,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1976,,1320,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1976,,92,count,-,False,v1.0-fallback,
+athletes,每届,1976,,8641,count,-,False,v1.0-fallback,
+female_share,每届,1976,,0.2514,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1976,,198,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1980,,631,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1980,,1384,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1980,,80,count,-,False,v1.0-fallback,
+athletes,每届,1980,,7191,count,-,False,v1.0-fallback,
+female_share,每届,1980,,0.2442,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1980,,203,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1984,,685,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1984,,1476,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1984,,140,count,-,False,v1.0-fallback,
+athletes,每届,1984,,9454,count,-,False,v1.0-fallback,
+female_share,每届,1984,,0.2588,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1984,,221,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1988,,738,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1988,,1582,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1988,,159,count,-,False,v1.0-fallback,
+athletes,每届,1988,,12037,count,-,False,v1.0-fallback,
+female_share,每届,1988,,0.2943,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1988,,237,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1992,,813,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1992,,1712,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1992,,169,count,-,False,v1.0-fallback,
+athletes,每届,1992,,12977,count,-,False,v1.0-fallback,
+female_share,每届,1992,,0.3178,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1992,,257,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,1996,,841,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,1996,,1842,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,1996,,197,count,-,False,v1.0-fallback,
+athletes,每届,1996,,13780,count,-,False,v1.0-fallback,
+female_share,每届,1996,,0.3634,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,1996,,271,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2000,,925,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2000,,2004,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2000,,200,count,-,False,v1.0-fallback,
+athletes,每届,2000,,13821,count,-,False,v1.0-fallback,
+female_share,每届,2000,,0.393,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2000,,300,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2004,,927,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2004,,2001,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2004,,201,count,-,False,v1.0-fallback,
+athletes,每届,2004,,13443,count,-,False,v1.0-fallback,
+female_share,每届,2004,,0.4126,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2004,,301,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2008,,957,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2008,,2048,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2008,,204,count,-,False,v1.0-fallback,
+athletes,每届,2008,,13602,count,-,False,v1.0-fallback,
+female_share,每届,2008,,0.4276,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2008,,302,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2012,,962,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2012,,1941,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2012,,205,count,-,False,v1.0-fallback,
+athletes,每届,2012,,12920,count,-,False,v1.0-fallback,
+female_share,每届,2012,,0.4501,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2012,,302,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2016,,973,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2016,,2023,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2016,,207,count,-,False,v1.0-fallback,
+athletes,每届,2016,,13688,count,-,False,v1.0-fallback,
+female_share,每届,2016,,0.4546,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2016,,306,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2020,,1087,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2020,,2449,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2020,,206,count,-,False,v1.0-fallback,
+athletes,每届,2020,,15121,count,-,False,v1.0-fallback,
+female_share,每届,2020,,0.4805,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2020,,347,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals,每届,2024,,1034,medals,conservative_event,False,v1.0-fallback,
+medal_rows,每届,2024,,2281,rows,athlete_row,False,v1.0-fallback,
+delegations,每届,2024,,206,count,-,False,v1.0-fallback,
+athletes,每届,2024,,11113,count,-,False,v1.0-fallback,
+female_share,每届,2024,,0.491,ratio,athlete_row,False,v1.0-fallback,
+events_proxy,每届,2024,,336,count,conservative_event,False,v1.0-fallback,2020+ 为估计值
+conservative_medals_total,NOC 历史累计,,USA,2757,medals,conservative_event,False,v1.0-fallback,rank=1
+gold_total,NOC 历史累计,,USA,1101,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,USA,5597,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,URS,1005,medals,conservative_event,False,v1.0-fallback,rank=2
+gold_total,NOC 历史累计,,URS,394,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,URS,2063,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GBR,995,medals,conservative_event,False,v1.0-fallback,rank=3
+gold_total,NOC 历史累计,,GBR,305,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GBR,2243,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CHN,721,medals,conservative_event,False,v1.0-fallback,rank=4
+gold_total,NOC 历史累计,,CHN,305,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CHN,1218,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GER,832,medals,conservative_event,False,v1.0-fallback,rank=5
+gold_total,NOC 历史累计,,GER,250,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GER,1938,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,FRA,828,medals,conservative_event,False,v1.0-fallback,rank=6
+gold_total,NOC 历史累计,,FRA,246,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,FRA,1891,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ITA,668,medals,conservative_event,False,v1.0-fallback,rank=7
+gold_total,NOC 历史累计,,ITA,234,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ITA,1548,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,JPN,542,medals,conservative_event,False,v1.0-fallback,rank=8
+gold_total,NOC 历史累计,,JPN,189,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,JPN,1063,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,HUN,532,medals,conservative_event,False,v1.0-fallback,rank=9
+gold_total,NOC 历史累计,,HUN,188,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,HUN,1191,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,AUS,601,medals,conservative_event,False,v1.0-fallback,rank=10
+gold_total,NOC 历史累计,,AUS,182,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,AUS,1553,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SWE,519,medals,conservative_event,False,v1.0-fallback,rank=11
+gold_total,NOC 历史累计,,SWE,155,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SWE,1137,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,RUS,460,medals,conservative_event,False,v1.0-fallback,rank=12
+gold_total,NOC 历史累计,,RUS,153,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,RUS,905,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GDR,409,medals,conservative_event,False,v1.0-fallback,rank=13
+gold_total,NOC 历史累计,,GDR,153,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GDR,843,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,NED,365,medals,conservative_event,False,v1.0-fallback,rank=14
+gold_total,NOC 历史累计,,NED,113,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,NED,1102,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KOR,318,medals,conservative_event,False,v1.0-fallback,rank=15
+gold_total,NOC 历史累计,,KOR,111,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KOR,648,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,FIN,308,medals,conservative_event,False,v1.0-fallback,rank=16
+gold_total,NOC 历史累计,,FIN,102,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,FIN,472,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ROU,316,medals,conservative_event,False,v1.0-fallback,rank=17
+gold_total,NOC 历史累计,,ROU,92,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ROU,681,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CUB,238,medals,conservative_event,False,v1.0-fallback,rank=18
+gold_total,NOC 历史累计,,CUB,86,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CUB,434,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CAN,354,medals,conservative_event,False,v1.0-fallback,rank=19
+gold_total,NOC 历史累计,,CAN,79,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CAN,881,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,POL,314,medals,conservative_event,False,v1.0-fallback,rank=20
+gold_total,NOC 历史累计,,POL,74,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,POL,602,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,NZL,158,medals,conservative_event,False,v1.0-fallback,rank=21
+gold_total,NOC 历史累计,,NZL,64,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,NZL,343,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,NOR,169,medals,conservative_event,False,v1.0-fallback,rank=22
+gold_total,NOC 历史累计,,NOR,63,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,NOR,611,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SUI,222,medals,conservative_event,False,v1.0-fallback,rank=23
+gold_total,NOC 历史累计,,SUI,58,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SUI,429,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BUL,230,medals,conservative_event,False,v1.0-fallback,rank=24
+gold_total,NOC 历史累计,,BUL,57,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BUL,353,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,FRG,204,medals,conservative_event,False,v1.0-fallback,rank=25
+gold_total,NOC 历史累计,,FRG,56,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,FRG,504,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ESP,183,medals,conservative_event,False,v1.0-fallback,rank=26
+gold_total,NOC 历史累计,,ESP,52,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ESP,640,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,DEN,224,medals,conservative_event,False,v1.0-fallback,rank=27
+gold_total,NOC 历史累计,,DEN,51,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,DEN,632,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TCH,146,medals,conservative_event,False,v1.0-fallback,rank=28
+gold_total,NOC 历史累计,,TCH,49,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TCH,330,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BEL,175,medals,conservative_event,False,v1.0-fallback,rank=29
+gold_total,NOC 历史累计,,BEL,48,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BEL,480,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,EUN,112,medals,conservative_event,False,v1.0-fallback,rank=30
+gold_total,NOC 历史累计,,EUN,45,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,EUN,220,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TUR,116,medals,conservative_event,False,v1.0-fallback,rank=31
+gold_total,NOC 历史累计,,TUR,42,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TUR,119,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BRA,170,medals,conservative_event,False,v1.0-fallback,rank=32
+gold_total,NOC 历史累计,,BRA,40,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BRA,597,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KEN,121,medals,conservative_event,False,v1.0-fallback,rank=33
+gold_total,NOC 历史累计,,KEN,39,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KEN,127,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,UKR,157,medals,conservative_event,False,v1.0-fallback,rank=34
+gold_total,NOC 历史累计,,UKR,39,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,UKR,233,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GRE,128,medals,conservative_event,False,v1.0-fallback,rank=35
+gold_total,NOC 历史累计,,GRE,37,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GRE,179,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,RSA,97,medals,conservative_event,False,v1.0-fallback,rank=36
+gold_total,NOC 历史累计,,RSA,27,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,RSA,155,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,JAM,91,medals,conservative_event,False,v1.0-fallback,rank=37
+gold_total,NOC 历史累计,,JAM,27,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,JAM,184,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,AUT,111,medals,conservative_event,False,v1.0-fallback,rank=38
+gold_total,NOC 历史累计,,AUT,26,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,AUT,174,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,YUG,83,medals,conservative_event,False,v1.0-fallback,rank=39
+gold_total,NOC 历史累计,,YUG,26,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,YUG,383,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,IRI,87,medals,conservative_event,False,v1.0-fallback,rank=40
+gold_total,NOC 历史累计,,IRI,24,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,IRI,87,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ETH,61,medals,conservative_event,False,v1.0-fallback,rank=41
+gold_total,NOC 历史累计,,ETH,24,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ETH,61,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ARG,80,medals,conservative_event,False,v1.0-fallback,rank=42
+gold_total,NOC 历史累计,,ARG,22,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ARG,336,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CZE,70,medals,conservative_event,False,v1.0-fallback,rank=43
+gold_total,NOC 历史累计,,CZE,22,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CZE,93,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ROC,71,medals,conservative_event,False,v1.0-fallback,rank=44
+gold_total,NOC 历史累计,,ROC,20,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ROC,149,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KAZ,85,medals,conservative_event,False,v1.0-fallback,rank=45
+gold_total,NOC 历史累计,,KAZ,20,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KAZ,86,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,UZB,51,medals,conservative_event,False,v1.0-fallback,rank=46
+gold_total,NOC 历史累计,,UZB,20,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,UZB,51,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PRK,60,medals,conservative_event,False,v1.0-fallback,rank=47
+gold_total,NOC 历史累计,,PRK,16,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PRK,73,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CRO,48,medals,conservative_event,False,v1.0-fallback,rank=48
+gold_total,NOC 历史累计,,CRO,16,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CRO,169,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BLR,91,medals,conservative_event,False,v1.0-fallback,rank=49
+gold_total,NOC 历史累计,,BLR,14,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BLR,134,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,IRL,42,medals,conservative_event,False,v1.0-fallback,rank=50
+gold_total,NOC 历史累计,,IRL,14,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,IRL,50,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MEX,77,medals,conservative_event,False,v1.0-fallback,rank=51
+gold_total,NOC 历史累计,,MEX,13,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MEX,145,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GEO,47,medals,conservative_event,False,v1.0-fallback,rank=52
+gold_total,NOC 历史累计,,GEO,13,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GEO,47,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,THA,38,medals,conservative_event,False,v1.0-fallback,rank=53
+gold_total,NOC 历史累计,,THA,11,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,THA,38,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,INA,38,medals,conservative_event,False,v1.0-fallback,rank=54
+gold_total,NOC 历史累计,,INA,10,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,INA,50,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SVK,33,medals,conservative_event,False,v1.0-fallback,rank=55
+gold_total,NOC 历史累计,,SVK,10,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SVK,50,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,IND,41,medals,conservative_event,False,v1.0-fallback,rank=56
+gold_total,NOC 历史累计,,IND,10,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,IND,236,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SLO,31,medals,conservative_event,False,v1.0-fallback,rank=57
+gold_total,NOC 历史累计,,SLO,10,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SLO,38,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,EST,36,medals,conservative_event,False,v1.0-fallback,rank=58
+gold_total,NOC 历史累计,,EST,10,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,EST,48,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,AZE,58,medals,conservative_event,False,v1.0-fallback,rank=59
+gold_total,NOC 历史累计,,AZE,9,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,AZE,58,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,EGY,36,medals,conservative_event,False,v1.0-fallback,rank=60
+gold_total,NOC 历史累计,,EGY,9,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,EGY,36,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SRB,29,medals,conservative_event,False,v1.0-fallback,rank=61
+gold_total,NOC 历史累计,,SRB,9,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SRB,149,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MAR,26,medals,conservative_event,False,v1.0-fallback,rank=62
+gold_total,NOC 历史累计,,MAR,8,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MAR,44,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BAH,16,medals,conservative_event,False,v1.0-fallback,rank=63
+gold_total,NOC 历史累计,,BAH,8,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BAH,42,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TPE,43,medals,conservative_event,False,v1.0-fallback,rank=64
+gold_total,NOC 历史累计,,TPE,7,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TPE,73,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ALG,20,medals,conservative_event,False,v1.0-fallback,rank=65
+gold_total,NOC 历史累计,,ALG,7,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ALG,20,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,POR,32,medals,conservative_event,False,v1.0-fallback,rank=66
+gold_total,NOC 历史累计,,POR,6,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,POR,50,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,LTU,30,medals,conservative_event,False,v1.0-fallback,rank=67
+gold_total,NOC 历史累计,,LTU,6,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,LTU,69,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,COL,37,medals,conservative_event,False,v1.0-fallback,rank=68
+gold_total,NOC 历史累计,,COL,5,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,COL,37,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TUN,18,medals,conservative_event,False,v1.0-fallback,rank=69
+gold_total,NOC 历史累计,,TUN,5,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TUN,18,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,UGA,13,medals,conservative_event,False,v1.0-fallback,rank=70
+gold_total,NOC 历史累计,,UGA,5,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,UGA,13,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,LAT,21,medals,conservative_event,False,v1.0-fallback,rank=71
+gold_total,NOC 历史累计,,LAT,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,LAT,25,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ISR,21,medals,conservative_event,False,v1.0-fallback,rank=72
+gold_total,NOC 历史累计,,ISR,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ISR,34,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,DOM,15,medals,conservative_event,False,v1.0-fallback,rank=73
+gold_total,NOC 历史累计,,DOM,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,DOM,42,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ECU,10,medals,conservative_event,False,v1.0-fallback,rank=74
+gold_total,NOC 历史累计,,ECU,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ECU,11,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,HKG,13,medals,conservative_event,False,v1.0-fallback,rank=75
+gold_total,NOC 历史累计,,HKG,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,HKG,16,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PAK,11,medals,conservative_event,False,v1.0-fallback,rank=76
+gold_total,NOC 历史累计,,PAK,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PAK,122,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,LUX,6,medals,conservative_event,False,v1.0-fallback,rank=77
+gold_total,NOC 历史累计,,LUX,4,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,LUX,6,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,NGR,26,medals,conservative_event,False,v1.0-fallback,rank=78
+gold_total,NOC 历史累计,,NGR,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,NGR,101,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CHI,15,medals,conservative_event,False,v1.0-fallback,rank=79
+gold_total,NOC 历史累计,,CHI,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CHI,34,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,VEN,19,medals,conservative_event,False,v1.0-fallback,rank=80
+gold_total,NOC 历史累计,,VEN,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,VEN,19,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TTO,19,medals,conservative_event,False,v1.0-fallback,rank=81
+gold_total,NOC 历史累计,,TTO,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TTO,32,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PHI,18,medals,conservative_event,False,v1.0-fallback,rank=82
+gold_total,NOC 历史累计,,PHI,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PHI,18,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ANZ,12,medals,conservative_event,False,v1.0-fallback,rank=83
+gold_total,NOC 历史累计,,ANZ,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ANZ,29,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ZIM,8,medals,conservative_event,False,v1.0-fallback,rank=84
+gold_total,NOC 历史累计,,ZIM,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ZIM,22,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BRN,8,medals,conservative_event,False,v1.0-fallback,rank=85
+gold_total,NOC 历史累计,,BRN,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BRN,8,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CMR,5,medals,conservative_event,False,v1.0-fallback,rank=86
+gold_total,NOC 历史累计,,CMR,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CMR,22,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KOS,5,medals,conservative_event,False,v1.0-fallback,rank=87
+gold_total,NOC 历史累计,,KOS,3,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KOS,5,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MGL,31,medals,conservative_event,False,v1.0-fallback,rank=88
+gold_total,NOC 历史累计,,MGL,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MGL,31,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ARM,24,medals,conservative_event,False,v1.0-fallback,rank=89
+gold_total,NOC 历史累计,,ARM,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ARM,24,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SCG,9,medals,conservative_event,False,v1.0-fallback,rank=90
+gold_total,NOC 历史累计,,SCG,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SCG,64,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PUR,12,medals,conservative_event,False,v1.0-fallback,rank=91
+gold_total,NOC 历史累计,,PUR,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PUR,12,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,URU,10,medals,conservative_event,False,v1.0-fallback,rank=92
+gold_total,NOC 历史累计,,URU,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,URU,63,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,QAT,9,medals,conservative_event,False,v1.0-fallback,rank=93
+gold_total,NOC 历史累计,,QAT,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,QAT,10,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,FIJ,4,medals,conservative_event,False,v1.0-fallback,rank=94
+gold_total,NOC 历史累计,,FIJ,2,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,FIJ,53,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PER,5,medals,conservative_event,False,v1.0-fallback,rank=95
+gold_total,NOC 历史累计,,PER,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PER,16,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,AIN,5,medals,conservative_event,False,v1.0-fallback,rank=96
+gold_total,NOC 历史累计,,AIN,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,AIN,6,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,VIE,4,medals,conservative_event,False,v1.0-fallback,rank=97
+gold_total,NOC 历史累计,,VIE,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,VIE,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SGP,6,medals,conservative_event,False,v1.0-fallback,rank=98
+gold_total,NOC 历史累计,,SGP,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SGP,10,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,JOR,4,medals,conservative_event,False,v1.0-fallback,rank=99
+gold_total,NOC 历史累计,,JOR,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,JOR,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BOT,4,medals,conservative_event,False,v1.0-fallback,rank=100
+gold_total,NOC 历史累计,,BOT,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BOT,14,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TJK,7,medals,conservative_event,False,v1.0-fallback,rank=101
+gold_total,NOC 历史累计,,TJK,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TJK,7,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,IOA,5,medals,conservative_event,False,v1.0-fallback,rank=102
+gold_total,NOC 历史累计,,IOA,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,IOA,5,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CIV,5,medals,conservative_event,False,v1.0-fallback,rank=103
+gold_total,NOC 历史累计,,CIV,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CIV,5,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GRN,5,medals,conservative_event,False,v1.0-fallback,rank=104
+gold_total,NOC 历史累计,,GRN,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GRN,5,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SYR,4,medals,conservative_event,False,v1.0-fallback,rank=105
+gold_total,NOC 历史累计,,SYR,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SYR,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PAN,4,medals,conservative_event,False,v1.0-fallback,rank=106
+gold_total,NOC 历史累计,,PAN,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PAN,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CRC,4,medals,conservative_event,False,v1.0-fallback,rank=107
+gold_total,NOC 历史累计,,CRC,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CRC,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,HAI,3,medals,conservative_event,False,v1.0-fallback,rank=108
+gold_total,NOC 历史累计,,HAI,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,HAI,7,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GUA,3,medals,conservative_event,False,v1.0-fallback,rank=109
+gold_total,NOC 历史累计,,GUA,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GUA,3,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BDI,2,medals,conservative_event,False,v1.0-fallback,rank=110
+gold_total,NOC 历史累计,,BDI,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BDI,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,LCA,2,medals,conservative_event,False,v1.0-fallback,rank=111
+gold_total,NOC 历史累计,,LCA,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,LCA,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,UAE,2,medals,conservative_event,False,v1.0-fallback,rank=112
+gold_total,NOC 历史累计,,UAE,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,UAE,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BER,2,medals,conservative_event,False,v1.0-fallback,rank=113
+gold_total,NOC 历史累计,,BER,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BER,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MOZ,2,medals,conservative_event,False,v1.0-fallback,rank=114
+gold_total,NOC 历史累计,,MOZ,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MOZ,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SUR,2,medals,conservative_event,False,v1.0-fallback,rank=115
+gold_total,NOC 历史累计,,SUR,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SUR,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,DMA,1,medals,conservative_event,False,v1.0-fallback,rank=116
+gold_total,NOC 历史累计,,DMA,1,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,DMA,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MAS,15,medals,conservative_event,False,v1.0-fallback,rank=117
+gold_total,NOC 历史累计,,MAS,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MAS,22,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KGZ,12,medals,conservative_event,False,v1.0-fallback,rank=118
+gold_total,NOC 历史累计,,KGZ,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KGZ,12,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,NAM,5,medals,conservative_event,False,v1.0-fallback,rank=119
+gold_total,NOC 历史累计,,NAM,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,NAM,5,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MDA,12,medals,conservative_event,False,v1.0-fallback,rank=120
+gold_total,NOC 历史累计,,MDA,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MDA,13,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KSA,4,medals,conservative_event,False,v1.0-fallback,rank=121
+gold_total,NOC 历史累计,,KSA,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KSA,7,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ISL,4,medals,conservative_event,False,v1.0-fallback,rank=122
+gold_total,NOC 历史累计,,ISL,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ISL,17,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,LIB,4,medals,conservative_event,False,v1.0-fallback,rank=123
+gold_total,NOC 历史累计,,LIB,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,LIB,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TAN,2,medals,conservative_event,False,v1.0-fallback,rank=124
+gold_total,NOC 历史累计,,TAN,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TAN,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SRI,2,medals,conservative_event,False,v1.0-fallback,rank=125
+gold_total,NOC 历史累计,,SRI,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SRI,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CYP,2,medals,conservative_event,False,v1.0-fallback,rank=126
+gold_total,NOC 历史累计,,CYP,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CYP,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GHA,5,medals,conservative_event,False,v1.0-fallback,rank=127
+gold_total,NOC 历史累计,,GHA,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GHA,24,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BOH,5,medals,conservative_event,False,v1.0-fallback,rank=128
+gold_total,NOC 历史累计,,BOH,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BOH,9,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ZAM,3,medals,conservative_event,False,v1.0-fallback,rank=129
+gold_total,NOC 历史累计,,ZAM,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ZAM,3,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SMR,3,medals,conservative_event,False,v1.0-fallback,rank=130
+gold_total,NOC 历史累计,,SMR,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SMR,4,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,NIG,2,medals,conservative_event,False,v1.0-fallback,rank=131
+gold_total,NOC 历史累计,,NIG,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,NIG,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,UAR,2,medals,conservative_event,False,v1.0-fallback,rank=132
+gold_total,NOC 历史累计,,UAR,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,UAR,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MKD,2,medals,conservative_event,False,v1.0-fallback,rank=133
+gold_total,NOC 历史累计,,MKD,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MKD,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,PAR,1,medals,conservative_event,False,v1.0-fallback,rank=134
+gold_total,NOC 历史累计,,PAR,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,PAR,17,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MNE,1,medals,conservative_event,False,v1.0-fallback,rank=135
+gold_total,NOC 历史累计,,MNE,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MNE,14,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,AHO,1,medals,conservative_event,False,v1.0-fallback,rank=136
+gold_total,NOC 历史累计,,AHO,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,AHO,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SEN,1,medals,conservative_event,False,v1.0-fallback,rank=137
+gold_total,NOC 历史累计,,SEN,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SEN,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ISV,1,medals,conservative_event,False,v1.0-fallback,rank=138
+gold_total,NOC 历史累计,,ISV,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ISV,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,SUD,1,medals,conservative_event,False,v1.0-fallback,rank=139
+gold_total,NOC 历史累计,,SUD,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,SUD,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GAB,1,medals,conservative_event,False,v1.0-fallback,rank=140
+gold_total,NOC 历史累计,,GAB,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GAB,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TGA,1,medals,conservative_event,False,v1.0-fallback,rank=141
+gold_total,NOC 历史累计,,TGA,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TGA,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TKM,1,medals,conservative_event,False,v1.0-fallback,rank=142
+gold_total,NOC 历史累计,,TKM,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TKM,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,KUW,3,medals,conservative_event,False,v1.0-fallback,rank=143
+gold_total,NOC 历史累计,,KUW,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,KUW,3,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,WIF,2,medals,conservative_event,False,v1.0-fallback,rank=144
+gold_total,NOC 历史累计,,WIF,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,WIF,5,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,AFG,2,medals,conservative_event,False,v1.0-fallback,rank=145
+gold_total,NOC 历史累计,,AFG,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,AFG,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ALB,2,medals,conservative_event,False,v1.0-fallback,rank=146
+gold_total,NOC 历史累计,,ALB,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ALB,2,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,GUY,1,medals,conservative_event,False,v1.0-fallback,rank=147
+gold_total,NOC 历史累计,,GUY,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,GUY,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,IRQ,1,medals,conservative_event,False,v1.0-fallback,rank=148
+gold_total,NOC 历史累计,,IRQ,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,IRQ,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,TOG,1,medals,conservative_event,False,v1.0-fallback,rank=149
+gold_total,NOC 历史累计,,TOG,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,TOG,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MRI,1,medals,conservative_event,False,v1.0-fallback,rank=150
+gold_total,NOC 历史累计,,MRI,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MRI,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,MON,1,medals,conservative_event,False,v1.0-fallback,rank=151
+gold_total,NOC 历史累计,,MON,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,MON,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,DJI,1,medals,conservative_event,False,v1.0-fallback,rank=152
+gold_total,NOC 历史累计,,DJI,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,DJI,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,ERI,1,medals,conservative_event,False,v1.0-fallback,rank=153
+gold_total,NOC 历史累计,,ERI,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,ERI,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BAR,1,medals,conservative_event,False,v1.0-fallback,rank=154
+gold_total,NOC 历史累计,,BAR,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BAR,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,BUR,1,medals,conservative_event,False,v1.0-fallback,rank=155
+gold_total,NOC 历史累计,,BUR,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,BUR,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,CPV,1,medals,conservative_event,False,v1.0-fallback,rank=156
+gold_total,NOC 历史累计,,CPV,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,CPV,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+conservative_medals_total,NOC 历史累计,,EOR,1,medals,conservative_event,False,v1.0-fallback,rank=157
+gold_total,NOC 历史累计,,EOR,0,medals,conservative_event,False,v1.0-fallback,
+medal_rows_total,NOC 历史累计,,EOR,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
