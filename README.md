@@ -55,6 +55,21 @@ data/raw/olympics_dataset.csv
 
 该路径已被 `.gitignore` 忽略，不会被误提交。
 
+### 1.1 任务一：体检与口径（已交付）
+
+```bash
+pip install -r task1-data/requirements.txt
+python task1-data/pipeline/02_clean.py
+python task1-data/pipeline/03_figures.py
+python task1-data/pipeline/04_validate.py
+python task1-data/pipeline/05_build_spec.py
+```
+
+- 口径说明书：`contracts/caliber_spec.md`（v1.1，冻结）
+- 清洗数据：`data/processed/olympics_clean.parquet`（不入库）
+- 共享指标：`shared/metrics/`
+- 2024 缺口清单：`contracts/known_gaps.csv`
+
 ### 2. Python 环境
 
 ```bash
