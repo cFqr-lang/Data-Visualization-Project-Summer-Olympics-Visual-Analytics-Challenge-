@@ -100,6 +100,7 @@ data/processed/*
 !contracts/**/*.csv
 !shared/metrics/*.csv
 !task2-visual/exports/tables/*.csv
+!task3-insights/data/*.csv
 
 # ---------------------------------------------------------------------------
 # 媒体与导出中间产物
