@@ -1,0 +1,11 @@
+claim_id,topic,claim,figures,caliber,includes_1906,evidence,owner,status
+T3-S1-C1,S1 东道主效应,主办国在主办届获得显著但幅度不定的奖牌脉冲（1948 以来 19/20 正向，中位增量 +13.3 枚，约 3.7 个标准差）,Fig.3-1 / Fig.3-4,conservative_event,false,task3-insights/data/host_effect_summary.csv,task3,registered
+T3-S1-C2,S1 东道主效应,主场加成是脉冲而非台阶：主办届指数 163 → T+1 112 → T+2 116,Fig.3-2,conservative_event,false,task3-insights/pipeline/host_effect.py,task3,registered
+T3-S1-C3,S1 东道主效应,主场增量的主要机制是参赛规模扩张而非夺牌效率提升（中位规模 +60%、效率 -10%）,Fig.3-3,conservative_event,false,task3-insights/data/host_effect_summary.csv,task3,registered
+T3-S1-C4,S1 东道主效应,抵制届（1980/1984）的巨额加成主要来自竞争削弱，而非主场；巴西 2016 与加拿大 1976 是主场无红利或负向的反例,Fig.3-1 / Fig.3-4,conservative_event,false,task3-insights/data/host_effect_summary.csv,task3,registered
+T3-S3-C1,S3 地缘政治,抵制潮是奖牌榜的制造者：1980/1984 美苏主场峰值主要来自对手集体缺席（苏联 195 枚、美国 173 枚）,Fig.3-5,conservative_event,false,task3-insights/data/geopolitics_data.json,task3,registered
+T3-S3-C2,S3 地缘政治,政治实体解体直接改写奖牌版图：苏联一脉从 195 枚（1980）跌到 5 枚（AIN 2024）,Fig.3-6,conservative_event,false,task3-insights/data/geopolitics_data.json,task3,registered
+T3-S3-C3,S3 地缘政治,两德分立并互相缺席对方主场；东德 5 届 409 枚保守奖牌（843 行）是冷战效率奇迹,Fig.3-7,conservative_event,false,task3-insights/data/geopolitics_data.json,task3,registered
+T3-S5-C1,S5 奖牌通货膨胀,奖牌通胀是扩容型而非宽松型：总量 8.6 倍，但每千条参赛记录奖牌降到 22%、每代表团奖牌减半,Fig.3-8,conservative_event,false,task3-insights/data/inflation_data.json,task3,registered
+T3-S5-C2,S5 奖牌通货膨胀,通胀主引擎是女子项目（0→46.7%）与老项目内部扩容（1896 核心 120→549 枚），新项目仅占 13.5%,Fig.3-9,conservative_event,false,task3-insights/data/inflation_data.json,task3,registered
+T3-S5-C3,S5 奖牌通货膨胀,通胀稀释头部集中度：获奖国家 10→92，Top5 份额 80.8%→38.1%,Fig.3-10,conservative_event,false,task3-insights/data/inflation_data.json,task3,registered

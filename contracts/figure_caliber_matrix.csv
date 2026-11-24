@@ -1,4 +1,4 @@
-﻿figure_id,chart_id,title,perspective,priority,caliber,denominator,includes_1906,event_count_method,sensitivity,owner,status
+figure_id,chart_id,title,perspective,priority,caliber,denominator,includes_1906,event_count_method,sensitivity,owner,status
 Fig.2-1,A1,双口径总榜与排名敏感性,A,P0,conservative_event+athlete_row,NOC×届,false,lower/upper bound,4 definitions rank slope,task2,done
 Fig.2-2,A2,逐届演变与膨胀指数,A,P0,conservative_event,每届,false,lower bound + official calibration,include 1906 footnote,task2,done
 Fig.2-3,B1,九国命运矩阵,B,P0,conservative_event,每届,false,lower bound,athlete-row badge,task2,done
@@ -9,3 +9,13 @@ Fig.2-7,B2,国家效率前沿,B,P1,conservative_event,场均参赛人数,false,l
 Fig.2-8,D2,项目结构变迁,D,P1,event_level,份额,false,proxy,6-8 categories + Other,task2,done
 Fig.2-9,X1,国家项目优势矩阵,B,P2,conservative_event,国家×项目,false,lower bound,lift,task2,done
 Fig.2-10,X2,项目性别差哑铃,C,P2,athlete_row,2024 去重运动员,false,player_id dedupe,±4 pp outlier labels,task2,done
+Fig.3-1,S1,东道主效应脉冲,S1,P0,conservative_event+athlete_row,东道主届 vs 前后两届基准,false,lower bound,athlete_row 对照,task3,done
+Fig.3-2,S1,主场加成是脉冲而非台阶,S1,P0,conservative_event,东道主届奖牌指数（基准=100）,false,lower bound,n/a,task3,done
+Fig.3-3,S1,主场加成的来源分解,S1,P0,conservative_event,参赛规模比 × 夺牌效率比,false,lower bound,n/a,task3,done
+Fig.3-4,S1,主场加成的分布位置,S1,P0,conservative_event,对称窗口增量,false,lower bound,n/a,task3,done
+Fig.3-5,S3,抵制潮在数据里的塌陷,S3,P0,conservative_event,每届代表团数 / 美苏奖牌,false,lower bound,n/a,task3,done
+Fig.3-6,S3,苏联一脉的政治兴衰,S3,P0,conservative_event,苏联谱系各届奖牌,false,lower bound,n/a,task3,done
+Fig.3-7,S3,两德分立与统一,S3,P0,conservative_event,两德各届奖牌,false,lower bound,n/a,task3,done
+Fig.3-8,S5,奖牌总量涨而单位量跌,S5,P0,conservative_event,每届总量 / 单位量指数,false,lower bound,n/a,task3,done
+Fig.3-9,S5,增长的结构性来源,S5,P0,conservative_event,每届奖牌池结构,false,lower bound,n/a,task3,done
+Fig.3-10,S5,膨胀的受益者是更多国家,S5,P0,conservative_event,每届获奖 NOC 与头部份额,false,lower bound,n/a,task3,done
