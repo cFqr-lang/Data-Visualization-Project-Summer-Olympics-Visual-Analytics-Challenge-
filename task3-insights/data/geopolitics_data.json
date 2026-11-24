@@ -1,4 +1,18 @@
 {
+  "meta": {
+    "chartSet": "Fig3-5..3-7",
+    "topic": "S3 geopolitics",
+    "caliber": "conservative_event",
+    "caliber_label": "保守小项口径（团体项目每国每小项每色计 1 枚，2020+ 取下界）",
+    "includes_1906": false,
+    "data_version": "v1.0",
+    "source": {
+      "file": "data/raw/olympics_dataset.csv",
+      "bytes": 26988833,
+      "sha256": "3d3c716f8e2c082c"
+    },
+    "generated_at": "2026-11-24"
+  },
   "years": [
     1896,
     1900,

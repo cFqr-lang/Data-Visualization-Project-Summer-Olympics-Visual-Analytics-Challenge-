@@ -1,0 +1,13 @@
+{
+  "name": "olympics-task3-render",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "任务三：专题深挖 ECharts 渲染（SSR SVG + Edge PNG@4x）",
+  "scripts": {
+    "render": "node --max-old-space-size=4096 render.mjs"
+  },
+  "dependencies": {
+    "echarts": "^5.5.1"
+  }
+}

@@ -1,6 +1,7 @@
 # task3-insights · 任务三：专题深挖
 
 负责人：任务三成员。本期完成三个专题：**S1 东道主效应**、**S3 地缘政治的投影**、**S5 奖牌的通货膨胀**。
+图表统一使用 **Apache ECharts**（与任务二一致），数据管线只产出聚合 JSON，渲染与导出由 `site/render.mjs` 完成。
 
 ## 结论一句话
 
@@ -10,20 +11,25 @@
 
 ## 交付物
 
-- `pipeline/host_effect.py` / `geopolitics.py` / `inflation.py`：三个专题的可复现管线（复用任务二口径）；
+- `pipeline/host_effect.py` / `geopolitics.py` / `inflation.py`：三个专题的数据管线（复用任务二口径，只产出 JSON/CSV）；
 - `data/*.json` 与 `data/host_effect_summary.csv`：测算底表与 ECharts 可复用聚合数据；
-- `exports/Fig3-1 … Fig3-10.png`：报告用静态图（浅色印刷主题）；
+- `site/render.mjs`：ECharts 渲染脚本（SSR 出 SVG + Edge 出 PNG@4x）；
+- `exports/Fig3-1 … Fig3-10.png / .svg`：报告用图资产（浅色印刷主题）；
 - `report/findings.md`（S1）、`findings_s3.md`、`findings_s5.md`：摘要、口径方法、每图图注与 ≥100 字解读、结论与局限。
 
 ## 复现
 
 ```bash
-python task3-insights/pipeline/host_effect.py   # S1
-python task3-insights/pipeline/geopolitics.py   # S3
-python task3-insights/pipeline/inflation.py     # S5
+python task3-insights/pipeline/host_effect.py   # S1 → data/host_effect_data.json
+python task3-insights/pipeline/geopolitics.py   # S3 → data/geopolitics_data.json
+python task3-insights/pipeline/inflation.py     # S5 → data/inflation_data.json
+
+cd task3-insights/site
+pnpm install                                   # 或 npm install
+node render.mjs                                # 生成 exports/ 的 PNG@4x 与 SVG
 ```
 
-依赖：任务二的 `data/raw/olympics_dataset.csv` 已就位，`task2-visual/pipeline/common.py`、`metrics.py` 可导入；绘图仅需 matplotlib（微软雅黑）。
+依赖：任务二的 `data/raw/olympics_dataset.csv` 已就位，`task2-visual/pipeline/common.py`、`metrics.py` 可导入；渲染需要 Node ≥20 与本地 Edge（`render.mjs` 内 `EDGE` 路径可调）。
 
 ## 口径
 
@@ -34,4 +40,5 @@ python task3-insights/pipeline/inflation.py     # S5
 ## 契约登记
 
 - 主张：`contracts/claim_registry.csv`（T3-S1-C1…C4、T3-S3-C1…C3、T3-S5-C1…C3）；
-- 线索：`contracts/anomaly_leads.csv` 新增 S1/S3/S5 线索共 7 条，`status = verified`。
+- 线索：`contracts/anomaly_leads.csv` 新增 S1/S3/S5 线索共 7 条，`status = verified`；
+- 图资产：`contracts/figure_registry.csv` 与 `contracts/figure_caliber_matrix.csv` 已回填 Fig.3-1…Fig.3-10。
