@@ -7,12 +7,14 @@
 | 仓库位置 | 内容 |
 | --- | --- |
 | `data/processed/olympics_clean.parquet` | 清洗后全量数据（252,565 行 × 31 列，不入库） |
-| `task1-data/contracts/caliber_spec.md` | 口径说明书 v1.1（冻结） |
+| `task1-data/contracts/caliber_spec.md` | 口径说明书 v1.2（冻结） |
 | `task1-data/contracts/sport_map.csv` | 76 项 Sport 归一映射 |
 | `task1-data/contracts/noc_map.csv` | 234 个 NOC 全量映射（20 条特殊规则） |
 | `task1-data/contracts/known_gaps.csv` | 2024 年 4 项已知记录缺失 |
 | `task1-data/contracts/quality_checks.csv` | 11 项质量检查结果 |
-| `task1-data/metrics/*.csv` | 报告统一底表（奖牌榜、逐届、参与度、项目覆盖） |
+| `task1-data/metrics/medal_table_event_noc_aware.csv` | 历史总榜推荐底表（NOC-aware 小项口径，剔除 1906） |
+| `task1-data/metrics/medal_table_event_noc.csv` | strict 小项榜（每色计 1，仅做敏感性对比） |
+| `task1-data/metrics/*.csv` | 其余报告统一底表（逐届、参与度、项目覆盖） |
 | `task1-data/output/` | 中间产物（CSV、日志，不入库） |
 | `task1-data/figures/` | 5 张诊断图（说明书用） |
 | `task1-data/docs/数据质量与口径说明书.docx` | 任务一说明书（16 表 + 5 图） |
@@ -45,13 +47,15 @@ python task1-data/pipeline/05_build_spec.py
 python task1-data/pipeline/06_build_answer.py
 ```
 
-原始数据放 `data/raw/olympics_dataset.csv`，只读；重复运行结果一致。`04_validate.py` 共 18 项断言，全部 PASS 才退出 0。
+原始数据放 `data/raw/olympics_dataset.csv`，只读；重复运行结果一致。`04_validate.py` 共 21 项断言，全部 PASS 才退出 0。
 
 ## 口径速览
 
 - 运动员行口径：38,818 枚（金 13,002 / 银 12,746 / 铜 13,070），剔除 1906 为 38,360。
-- 小项口径：17,452 枚，剔除 1906 为 17,233；2024 年为 328 个有奖牌记录小项、325 个有金牌小项。
+- 小项口径 strict：17,452 枚，剔除 1906 为 17,233；2024 年 969 个奖牌单位，328 个有奖牌记录小项、325 个有金牌小项。
+- 小项口径 NOC-aware（推荐总榜）：18,159 枚，剔除 1906 为 17,935；2024 年 1,027 个奖牌单位，美国 2,756、英国 995、中国 721、德国 830。
 - 2024 官方锚点：美国 40、中国 40、荷兰 15；本数据小项口径为 39 / 40 / 15，美国差 1 由女子公路赛金牌行缺失解释。
+- 用哪张表：历史总榜/逐届榜用 `task1-data/metrics/medal_table_event_noc_aware.csv`；每色计 1 的敏感性用 `medal_table_event_noc.csv`；人数与团体贡献用 `medal_table_athlete_noc.csv`。
 
 ## 变更
 

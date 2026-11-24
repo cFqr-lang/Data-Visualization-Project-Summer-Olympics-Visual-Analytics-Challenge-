@@ -60,7 +60,7 @@ ax.set_xlabel("2024 巴黎奥运会金牌数", fontsize=9.5)
 ax.set_title("同一个国家，两套金牌数：2024 年双口径对比", fontsize=12.5, color=NAVY, pad=12, loc="left")
 ax.legend(frameon=False, fontsize=8.5, loc="lower right")
 style(ax)
-ax.text(0.99, 1.02, "官方锚点：美国 40、中国 40、荷兰 15（小项口径已能复原）",
+ax.text(0.99, 1.02, "官方锚点：美国 40、中国 40、荷兰 15（中国、荷兰已复原；美国 39，差 1）",
         transform=ax.transAxes, ha="right", fontsize=8, color="#666666")
 fig.tight_layout()
 fig.savefig(FIG / "fig1_caliber_2024.png", bbox_inches="tight")

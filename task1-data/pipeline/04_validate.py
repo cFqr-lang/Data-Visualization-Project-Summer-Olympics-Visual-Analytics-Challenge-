@@ -24,6 +24,7 @@ clean = pd.read_csv(OUT / "olympics_clean.csv", low_memory=False)
 rows = pd.read_csv(OUT / "medals_athlete_row.csv", low_memory=False)
 ev = pd.read_csv(OUT / "medals_event_level.csv", low_memory=False)
 ev_tbl = pd.read_csv(OUT / "medal_table_event_noc_ex1906.csv", index_col=0)
+ev_noc_tbl = pd.read_csv(OUT / "medal_table_event_noc_aware_ex1906.csv", index_col=0)
 noc_map = pd.read_csv(OUT / "noc_mapping.csv")
 ath = pd.read_csv(OUT / "athlete_top_medals.csv")
 
@@ -52,6 +53,19 @@ check("小项口径奖牌榜总数与明细一致",
 check("近似实体奖牌榜首为 Michael Ii（28 枚）",
       ath.iloc[0]["name"] == "Michael Ii" and int(ath.iloc[0]["medals"]) == 28,
       f"{ath.iloc[0]['name']} / {int(ath.iloc[0]['medals'])}")
+
+_dup = rows.groupby(["Year", "event_key", "Medal"]).size()
+check("Q3 重复组 5,188 组 / 26,554 行（含 1906）",
+      int((_dup > 1).sum()) == 5188 and int(_dup[_dup > 1].sum()) == 26554,
+      f"{int((_dup > 1).sum())} 组 / {int(_dup[_dup > 1].sum())} 行")
+_na24 = rows[rows["Year"] == 2024].drop_duplicates(["Year", "event_key", "Medal", "NOC"])
+check("NOC-aware 小项口径 17,935（剔除 1906）、2024 年 1,027 单位 / 325 金",
+      int(ev_noc_tbl["Total"].sum()) == 17935 and len(_na24) == 1027
+      and int((_na24["Medal"] == "Gold").sum()) == 325,
+      f"{int(ev_noc_tbl['Total'].sum())} / {len(_na24)} 单位 / {int((_na24['Medal'] == 'Gold').sum())} 金")
+_usa24 = int(((ev["Year"] == 2024) & (ev["Medal"] == "Gold") & (ev["noc"] == "USA")).sum())
+check("2024 美国小项口径金牌 39（官方 40，差 1 为女子公路赛金牌行缺失）",
+      _usa24 == 39, f"本数据 {_usa24} / 官方 40")
 
 failed = [r for r in results if not r[1]]
 print(f"\n{len(results) - len(failed)}/{len(results)} 项通过")

@@ -322,6 +322,19 @@ ev_tbl["Total"] = ev_tbl.sum(axis=1)
 ev_tbl = ev_tbl.sort_values("Total", ascending=False)
 ev_tbl.to_csv(OUT / "medal_table_event_noc.csv", encoding="utf-8-sig")
 
+# NOC-aware 小项口径：同届同小项同色，每个获奖 NOC 各计 1 枚（双铜牌/并列各计 1）
+# strict 表把双铜牌、并列奖牌压成 1 枚；本表与官方奖牌榜、任务二口径对齐，推荐用于历史总榜
+ev_noc = medal_rows.drop_duplicates(["Year", "event_key", "Medal", "NOC"])
+for name, frame in [
+    ("medal_table_event_noc_aware.csv", ev_noc),
+    ("medal_table_event_noc_aware_ex1906.csv", ev_noc[ev_noc["is_1906"] == 0]),
+]:
+    t = frame.groupby(["NOC", "Medal"]).size().unstack(fill_value=0).reindex(
+        columns=["Gold", "Silver", "Bronze"], fill_value=0)
+    t["Total"] = t.sum(axis=1)
+    t.sort_values("Total", ascending=False).to_csv(OUT / name, encoding="utf-8-sig")
+p("NOC-aware 小项口径:", len(ev_noc), " 剔除 1906:", int((ev_noc["is_1906"] == 0).sum()))
+
 # 主口径（剔除 1906 届间奥运会）的奖牌榜，供任务二直接使用
 for name, frame, noc_col in [
     ("medal_table_athlete_noc_ex1906.csv", medal_rows[medal_rows["is_1906"] == 0], "NOC"),
@@ -367,6 +380,8 @@ p("2024 奖牌小项:", n_event24, " 有金牌记录:", n_gold_event24)
 
 dup_groups = medal_rows.groupby(["Year", "event_key", "Medal"]).size()
 dup_groups = dup_groups[dup_groups > 1]
+dup_groups_x = medal_rows[medal_rows["is_1906"] == 0].groupby(["Year", "event_key", "Medal"]).size()
+dup_groups_x = dup_groups_x[dup_groups_x > 1]
 single_medal_events = medal_rows.groupby(["Year", "event_key"])["Medal"].nunique()
 span = df.groupby("Name")["Year"].agg(["min", "max"])
 span_max = int((span["max"] - span["min"]).max())
@@ -389,8 +404,8 @@ checks = [
     },
     {
         "编号": "Q3", "检查项": "奖牌行重复（团体项目/并列）",
-        "方法": "groupby(Year, event_key, Medal).size() > 1",
-        "结果": f"重复组 {len(dup_groups)} 个，涉及奖牌行 {int(dup_groups.sum())} 行，占奖牌行 {dup_groups.sum()/len(medal_rows)*100:.1f}%",
+        "方法": "groupby(Year, event_key, Medal).size() > 1（归一后事件键）",
+        "结果": f"重复组 {len(dup_groups)} 个，涉及奖牌行 {int(dup_groups.sum())} 行，占奖牌行 {dup_groups.sum()/len(medal_rows)*100:.1f}%（含 1906）；剔除 1906 为 {len(dup_groups_x)} 组 / {int(dup_groups_x.sum())} 行",
         "处理决定": "同时提供运动员行口径与小项口径；小项口径按(届次×小项×奖牌色)去重",
         "影响": "两套口径 2024 金牌榜差异显著（见对比表）",
     },
@@ -405,7 +420,7 @@ checks = [
         "编号": "Q5", "检查项": "Sport 口径漂移与逗号拼接",
         "方法": "按年份统计 Sport 取值；检测逗号；构建归一映射表",
         "结果": f"原始 {df['Sport'].nunique()} 个取值；2020 及以后新增/改写 24 个；Sport 含逗号 {cnt(clean['sport_raw'].str.contains(','))} 行（全部 2024、全部无奖牌），其中归一后仍为跨项的 {cnt(clean['is_multi_sport']==1)} 行；归一后 {clean['sport_norm'].nunique()} 个大类",
-        "处理决定": "按映射表统一到 2016 前口径；逗号行拆分为多项目，主项目取第一个",
+        "处理决定": "按映射表统一到 2016 前口径；逗号行仅主项目计入 sport_norm，完整项目列表保留在 sport_all；89 行全部无奖牌，不影响奖牌榜；按项目统计参赛人数时副项目未重复计入",
         "影响": "2020 前后项目统计可直接比较",
     },
     {
@@ -472,6 +487,7 @@ gaps.to_csv(CONTRACTS / "known_gaps.csv", index=False, encoding="utf-8-sig")
 base = clean[clean["include_flag"] == 1]
 mrows = base[base["is_medal"] == 1]
 mev = ev[ev["is_1906"] == 0]
+mev_noc = ev_noc[ev_noc["is_1906"] == 0]
 
 
 def _pivot(frame, key):
@@ -482,6 +498,7 @@ def _pivot(frame, key):
 
 
 _pivot(mev, "noc").to_csv(SHARED / "medal_table_event_noc.csv", encoding="utf-8-sig")
+_pivot(mev_noc, "NOC").to_csv(SHARED / "medal_table_event_noc_aware.csv", encoding="utf-8-sig")
 _pivot(mrows, "NOC").to_csv(SHARED / "medal_table_athlete_noc.csv", encoding="utf-8-sig")
 
 by_year_noc = (

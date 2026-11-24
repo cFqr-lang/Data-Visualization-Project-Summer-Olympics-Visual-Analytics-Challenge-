@@ -173,7 +173,7 @@ info = pd.DataFrame({
         "252,565 行 × 11 列，约 26 MB",
         "task1-data/pipeline/01_audit.py、01b_extra.py、02_clean.py",
         "task1-data/output 中间产物 + task1-data/contracts 契约 + task1-data/metrics 共享指标",
-        "2026-11-23",
+        "2026-11-24",
     ],
 })
 add_table(info, [3.0, 13.4], font=9.5, header_font=9.5, align_left_cols=(1,))
@@ -232,12 +232,12 @@ issues = pd.DataFrame({
     "编号": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
     "问题": ["奖牌两套口径", "体育大类名称漂移", "小项命名泛化", "姓名与 ID 不可靠", "历史特殊记录", "团体项目与并列奖牌"],
     "复核结果": [
-        "38,818 奖牌行；5,176 组“同届×同小项×同色”多行，涉及 26,542 行（68.4%）；2024 美国 131 金行、荷兰 67 金行",
+        "38,818 奖牌行；5,188 组“同届×同小项×同色”多行，涉及 26,554 行（68.4%，含 1906；剔除 1906 为 5,140 组 / 26,267 行）；2024 美国 131 金行、荷兰 67 金行",
         "76 个原始取值；2020 起新增/改写 24 个；89 行逗号拼接（全部 2024、全部无奖牌）；归一后 57 类",
         "泛化行 6,488（2.6%），2020 年占 20.1%、2024 年占 23.1%；泛化奖牌行 1,473",
         "player_id 235,903 个（1.071 行/ID）；52,544 个姓名对应多个 ID；12,883 个 ID 对应多个姓名；14,059 行姓名含括号；同名最大跨度 120 年",
         "1906 年 1,733 行/458 奖牌（1.18%）；1956 斯德哥尔摩 298 行；EOR 79 行/1 奖牌；ROC 561 行/149 奖牌；AIN 46 行/6 奖牌",
-        "重复组 5,176；34 个小项只颁发一种奖牌（1908 男子 400 米仅 1 金）；金/银/铜数量不等",
+        "重复组 5,188（含 1906；剔除 1906 为 5,140）；34 个小项只颁发一种奖牌（1908 男子 400 米仅 1 金）；金/银/铜数量不等",
     ],
     "本说明书处理": [
         "同时输出运动员行口径与小项口径（第四章）",
@@ -300,25 +300,32 @@ para(
 )
 para("该口径不用于任何“历史总奖牌榜”的对外表述；若要和官方数字对话，必须切换到口径 B。")
 
-doc.add_heading("4.3 口径 B：小项口径（对照口径）", level=2)
+doc.add_heading("4.3 口径 B：小项口径（strict / NOC-aware 两版）", level=2)
 para(
     "定义：以“届次 + 归一 Sport + 事件键 + 奖牌色”为唯一键去重，同一小项的同一颜色只计 1 枚。"
     "事件键的构造：fine 事件直接用 Event 原文；coarse（泛化）事件追加 Sex，避免男女合并。"
 )
 para(
-    "结果：含 1906 共 17,452 枚。2024 年得到 328 个有奖牌记录的小项（官方 329），其中 325 个有金牌记录，合计 969 枚奖牌；"
-    "美国 39 金、中国 40 金、荷兰 15 金（官方锚点为 40 / 40 / 15）。"
+    "strict 版把同色并列与拳击/柔道/摔跤/跆拳道的“双铜牌”压成 1 枚：含 1906 共 17,452 枚，剔除 1906 为 17,233 枚；2024 年为 969 个奖牌单位。"
 )
 para(
-    "已知偏差：同色并列与拳击/柔道/摔跤/跆拳道的“双铜牌”按 1 枚计，因此总奖牌数不能直接与官方比较；"
-    "2024 年铁人三项混合接力整项无奖牌记录，另有 3 个小项缺金牌行。"
+    "NOC-aware 版在键中再加入 NOC，每个获奖 NOC 各计 1 枚：含 1906 共 18,159 枚，剔除 1906 为 17,935 枚；2024 年为 1,027 个奖牌单位，其中金牌 325。"
+    "历史总榜、逐届榜与任务二对接一律使用 NOC-aware 表；strict 表保留作“每色计 1”的敏感性分析。"
+)
+para(
+    "两版的小项数一致：2024 年 328 个有奖牌记录的小项（官方 329）、325 个有金牌记录；美国 39 金、中国 40 金、荷兰 15 金（官方锚点为 40 / 40 / 15），"
+    "美国差 1 由女子公路赛金牌行缺失解释。"
+)
+para(
+    "已知偏差：2024 年铁人三项混合接力整项无奖牌记录，另有 3 个小项缺金牌行。任务二保守口径为 2,757，与 NOC-aware 表的 2,756 差 1，"
+    "差异来自任务二额外做了 Sport 归并；任务二、三引用总量时须注明该差 1。"
 )
 
 cmp24 = pd.read_csv(OUT / "caliber_2024_compare.csv")
 cmp24 = cmp24.rename(columns={"运动员行金牌": "运动员行金牌", "小项口径金牌": "小项口径金牌", "官方金牌(仅锚点)": "官方金牌（锚点）"})
 cmp24["官方金牌（锚点）"] = cmp24["官方金牌（锚点）"].fillna("—")
 add_table(cmp24, [2.4, 4.0, 4.0, 4.0], cap="表 4  2024 年双口径金牌对比（官方数字仅取赛题给定的三个锚点）")
-add_figure("fig1_caliber_2024.png", "图 1  2024 年双口径金牌对比：小项口径已能复原美国 40、中国 40、荷兰 15")
+add_figure("fig1_caliber_2024.png", "图 1  2024 年双口径金牌对比：中国、荷兰已复原；美国 39/40（女子公路赛金牌行缺失）")
 
 doc.add_heading("4.4 双口径的分年差异", level=2)
 cal = pd.read_csv(OUT / "caliber_by_year.csv")
@@ -337,9 +344,9 @@ add_figure("fig3_sport_ratio.png", "图 3  团体项目是“行数虚高”的�
 doc.add_heading("4.5 口径使用规则", level=2)
 rules = pd.DataFrame({
     "分析场景": ["历史总奖牌榜、逐届奖牌榜", "参赛人数、获奖人数、女性参与", "团体项目贡献、运动员故事", "2020 前后的连续对比", "与官方数字对话"],
-    "推荐口径": ["小项口径", "运动员行口径", "运动员行口径", "小项口径（项目层用归一 Sport）", "小项口径 + 差异清单"],
+    "推荐口径": ["小项口径（NOC-aware）", "运动员行口径", "运动员行口径", "小项口径（项目层用归一 Sport）", "小项口径（NOC-aware）+ 差异清单"],
     "原因": [
-        "与官方奖牌榜同粒度，可跨届比较",
+        "每个获奖 NOC 各计 1 枚，与官方榜、任务二口径对齐",
         "每个运动员一行，天然对应“人”",
         "团体项目每位成员都真实获得奖牌",
         "Sport 已归一，Event 需避免泛化断层",
@@ -460,9 +467,9 @@ add_table(qc, [1.1, 3.0, 3.6, 5.6, 3.3], font=7.5, header_font=8, cap="表 11  �
 doc.add_heading("九、清洗后数据集说明", level=1)
 doc.add_heading("9.1 输出文件", level=2)
 files = pd.DataFrame({
-    "文件": ["data/processed/olympics_clean.parquet", "task1-data/output/medals_athlete_row.csv", "task1-data/output/medals_event_level.csv", "task1-data/metrics/medal_table_athlete_noc.csv", "task1-data/metrics/medal_table_event_noc.csv", "task1-data/metrics/caliber_by_year.csv、caliber_2024_compare.csv", "task1-data/contracts/sport_map.csv", "task1-data/contracts/noc_map.csv", "task1-data/output/athlete_entities.csv、athlete_top_medals.csv", "task1-data/contracts/known_gaps.csv", "task1-data/contracts/quality_checks.csv"],
-    "内容": ["全量清洗数据（252,565 行，31 列）", "奖牌行口径明细（38,818 行）", "小项口径明细（17,452 行，含 has_gold / 粒度标记）", "行口径奖牌榜（剔除 1906）", "小项口径奖牌榜（剔除 1906，推荐）", "双口径分年差异与 2024 对比", "76 项 Sport 归一映射", "234 个 NOC 全量映射（20 个特殊规则）", "近似运动员实体（Name+Sex+NOC）与奖牌 Top30", "2024 年 4 项已知记录缺失清单", "11 项检查结果"],
-    "用途": ["后续所有分析的基础表", "运动员/团体层面的分析", "奖牌榜、跨届对比", "历史总榜（口径 A）", "历史总榜（口径 B，推荐）", "口径敏感性说明", "复现归一过程", "复现国家谱系/决定是否合并", "个体探索的近似方案（需声明）", "2024 图表必须标注的缺口", "质量结论索引"],
+    "文件": ["data/processed/olympics_clean.parquet", "task1-data/output/medals_athlete_row.csv", "task1-data/output/medals_event_level.csv", "task1-data/metrics/medal_table_athlete_noc.csv", "task1-data/metrics/medal_table_event_noc.csv", "task1-data/metrics/medal_table_event_noc_aware.csv", "task1-data/metrics/caliber_by_year.csv、caliber_2024_compare.csv", "task1-data/contracts/sport_map.csv", "task1-data/contracts/noc_map.csv", "task1-data/output/athlete_entities.csv、athlete_top_medals.csv", "task1-data/contracts/known_gaps.csv", "task1-data/contracts/quality_checks.csv"],
+    "内容": ["全量清洗数据（252,565 行，31 列）", "奖牌行口径明细（38,818 行）", "小项口径明细（17,452 行，含 has_gold / 粒度标记）", "行口径奖牌榜（剔除 1906）", "小项口径 strict 奖牌榜（剔除 1906）", "小项口径 NOC-aware 奖牌榜（剔除 1906，推荐总榜）", "双口径分年差异与 2024 对比", "76 项 Sport 归一映射", "234 个 NOC 全量映射（20 个特殊规则）", "近似运动员实体（Name+Sex+NOC）与奖牌 Top30", "2024 年 4 项已知记录缺失清单", "11 项检查结果"],
+    "用途": ["后续所有分析的基础表", "运动员/团体层面的分析", "奖牌榜、跨届对比", "历史总榜（口径 A）", "每色计 1 的敏感性分析", "历史总榜、与官方/任务二对齐（推荐）", "口径敏感性说明", "复现归一过程", "复现国家谱系/决定是否合并", "个体探索的近似方案（需声明）", "2024 图表必须标注的缺口", "质量结论索引"],
 })
 add_table(files, [6.4, 6.0, 4.0], font=7.8, cap="表 12  清洗产物清单（与仓库目录一致）", align_left_cols=(0, 1, 2))
 
@@ -476,9 +483,10 @@ add_table(fields, [5.4, 11.0], font=8, cap="表 13  字段字典（含跨任务�
 doc.add_heading("9.3 行数与守恒校验", level=2)
 bullet("全量行数保持 252,565，清洗只增列不删行（31 列），任何筛选都可逆。")
 bullet("奖牌行 38,818 = 金 13,002 + 银 12,746 + 铜 13,070，与原始文件一致。")
-bullet("小项口径 17,452；主口径（剔除 1906）奖牌行 38,360、小项 17,233。")
+bullet("小项口径 17,452（strict，含 1906）；主口径（剔除 1906）奖牌行 38,360、strict 小项 17,233。")
+bullet("NOC-aware 小项口径 18,159（含 1906）/ 17,935（剔除 1906）；2024 年为 1,027 个奖牌单位、325 金。")
 bullet("归一后 Sport 57 类；Event 1,041 个原始取值，其中 6,488 行为 coarse 粒度。")
-bullet("交付前 04_validate.py 共 18 项断言全部通过。")
+bullet("交付前 04_validate.py 共 21 项断言全部通过。")
 
 doc.add_heading("9.4 已知局限", level=2)
 limits = pd.DataFrame({

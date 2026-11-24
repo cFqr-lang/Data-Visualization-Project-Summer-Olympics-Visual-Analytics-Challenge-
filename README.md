@@ -60,8 +60,8 @@ data/raw/olympics_dataset.csv
 任务一是自包含目录：代码、契约、指标底表、说明书与答卷都在 `task1-data/`。运行方式、产物清单与口径速览见 [task1-data/README.md](task1-data/README.md)。
 
 - 清洗数据：`data/processed/olympics_clean.parquet`（不入库，走 Release/网盘）
-- 口径说明书：`task1-data/contracts/caliber_spec.md`（v1.1，冻结）
-- 共享指标：`task1-data/metrics/`
+- 口径说明书：`task1-data/contracts/caliber_spec.md`（v1.2，冻结）
+- 共享指标：`task1-data/metrics/`（历史总榜用 `medal_table_event_noc_aware.csv`；strict 版仅做“每色计 1”的敏感性）
 - 2024 缺口清单：`task1-data/contracts/known_gaps.csv`
 
 ### 2. Python 环境

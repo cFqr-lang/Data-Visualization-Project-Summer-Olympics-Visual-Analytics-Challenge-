@@ -16,7 +16,7 @@ python task1-data/quality/checks/run_checks.py
 | --- | --- | --- | --- |
 | Q1 | 结构与缺失值 | `pipeline/01_audit.py` | 252,565 × 11；缺失 0 |
 | Q2 | 字段取值域/编码 | `pipeline/01_audit.py` | Sex 2 值、Medal 4 值；姓名 0 行非 ASCII |
-| Q3 | 团体/并列重复 | `pipeline/01_audit.py` | 5,176 组、26,542 行（68.4%） |
+| Q3 | 团体/并列重复 | `pipeline/01_audit.py` | 5,188 组、26,554 行（68.4%，含 1906；剔除 1906 为 5,140 组 / 26,267 行） |
 | Q4 | 奖牌守恒 | `pipeline/01_audit.py` | 金 13,002 / 银 12,746 / 铜 13,070；34 个小项仅 1 种奖牌 |
 | Q5 | Sport 漂移/逗号 | `pipeline/02_clean.py` | 76 → 57；89 行逗号拼接 |
 | Q6 | Event 泛化 | `pipeline/02_clean.py` | 6,488 行（2.6%）；2020 20.1%、2024 23.1% |
@@ -26,4 +26,4 @@ python task1-data/quality/checks/run_checks.py
 | Q10 | 2024 小项数 | `pipeline/02_clean.py` | 328 个有奖牌记录、325 个有金牌 |
 | Q11 | 2024 记录完整性 | `pipeline/02_clean.py` | 4 项缺失，见 `task1-data/contracts/known_gaps.csv` |
 
-交付前断言：`python task1-data/pipeline/04_validate.py`（18 项，全部 PASS）。
+交付前断言：`python task1-data/pipeline/04_validate.py`（21 项，全部 PASS）。
