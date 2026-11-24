@@ -99,6 +99,8 @@ data/processed/*
 # 小型协作表允许提交
 !contracts/**/*.csv
 !shared/metrics/*.csv
+!task1-data/contracts/*.csv
+!task1-data/metrics/*.csv
 !task2-visual/exports/tables/*.csv
 
 # ---------------------------------------------------------------------------
