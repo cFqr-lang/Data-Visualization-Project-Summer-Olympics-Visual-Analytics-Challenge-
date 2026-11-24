@@ -115,7 +115,7 @@ export function raceOption(payload: A2Payload): EChartsOption {
         text: String(year),
         right: 12,
         top: 2,
-        textStyle: { color: '#1e3a2f', fontSize: 42, fontWeight: 700 },
+        textStyle: { color: '#D9D4C7', fontSize: 42, fontWeight: 700 },
       },
       grid: { left: 56, right: 56, top: 18, bottom: 62 },
       xAxis: {
@@ -164,7 +164,7 @@ export function raceOption(payload: A2Payload): EChartsOption {
       tooltip: {
         ...TOOLTIP,
         trigger: 'axis',
-        axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(79,209,165,0.06)' } },
+        axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(95,111,104,0.07)' } },
         formatter: (params: any) => {
           const list = params as { seriesName: string; dataIndex: number; marker: string }[];
           const name = list[0].seriesName;

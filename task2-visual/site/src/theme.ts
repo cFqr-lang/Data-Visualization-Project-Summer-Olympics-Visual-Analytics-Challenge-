@@ -1,14 +1,16 @@
-/** 深色站点统一视觉 token 与 ECharts 片段。 */
-export const INK = '#8aa79a';
-export const LINE = '#1e3a2f';
-export const LINE_SOFT = '#16281f';
-export const TEXT = '#e6efe9';
+/** 「成绩册」浅色站点统一视觉 token 与 ECharts 片段。
+ *  色板与导出图 print 主题一致：纸底 #FBFAF6 / 墨色 #12211C / 细线 #D9D4C7。
+ */
+export const INK = '#5F6F68';      // 轴标签、图例等次级文字
+export const LINE = '#D9D4C7';     // 主细线（同站点 --line）
+export const LINE_SOFT = '#E9E5DA';
+export const TEXT = '#12211C';     // 主文字（同站点 --ink）
 export const GOLD = '#d8a838';
 export const SILVER = '#b7c2c8';
 export const BRONZE = '#b1743f';
 export const ACCENT = '#4fd1a5';
 export const FLAME = '#e07a5f';
-export const PANEL = '#0f201a';
+export const PANEL = '#FFFFFF';    // 提示框底
 
 export const NOC_COLOR: Record<string, string> = {
   USA: '#4fd1a5', URS: '#6fa8ff', GBR: '#c77dff', GER: '#f2cc8f',
@@ -39,7 +41,7 @@ export const TOOLTIP = {
   borderColor: LINE,
   borderWidth: 1,
   textStyle: { color: TEXT, fontSize: 12 },
-  extraCssText: 'box-shadow:0 8px 24px rgba(0,0,0,.35);border-radius:8px;',
+  extraCssText: 'box-shadow:0 4px 18px rgba(31,42,37,.10);border-radius:6px;',
 } as const;
 
 export const AXIS_LABEL = { color: INK, fontSize: 11 } as const;

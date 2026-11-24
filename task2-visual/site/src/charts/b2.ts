@@ -28,7 +28,7 @@ export function buildOption(payload: B2Payload): EChartsOption {
     labelLayout: { hideOverlap: true },
     emphasis: {
       focus: 'self',
-      itemStyle: { borderColor: '#ffffff', borderWidth: 1.5 },
+      itemStyle: { borderColor: '#12211C', borderWidth: 1.5 },
     },
   };
 

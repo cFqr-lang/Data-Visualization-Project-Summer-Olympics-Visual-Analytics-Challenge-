@@ -1,4 +1,4 @@
-/** 报告图资产导出页：?chart=A1&renderer=canvas|svg&theme=print|dark */
+/** 报告图资产导出页：?chart=A1&renderer=canvas|svg（固定成绩册浅色主题） */
 import * as echarts from 'echarts';
 import type { EChartsOption } from 'echarts';
 import { barOption, slopeOption } from './charts/a1';
@@ -81,30 +81,6 @@ const CHARTS: Record<string, ChartCfg> = {
   },
 };
 
-const COLOR_MAP: Record<string, string> = {
-  '#e6efe9': '#12211C',
-  '#8aa79a': '#5F6F68',
-  '#1e3a2f': '#D9D4C7',
-  '#16281f': '#E5E0D2',
-  '#0f201a': '#FFFFFF',
-  '#08130f': '#FBFAF6',
-  '#142a22': '#EFEADD',
-  '#265a49': '#A9C4B2',
-};
-
-function remap(node: any): any {
-  if (typeof node === 'string') return COLOR_MAP[node] ?? node;
-  if (Array.isArray(node)) return node.map(remap);
-  if (node && typeof node === 'object') {
-    const out: Record<string, any> = {};
-    Object.entries(node).forEach(([key, value]) => {
-      out[key] = typeof value === 'function' ? value : remap(value);
-    });
-    return out;
-  }
-  return node;
-}
-
 function query(name: string, fallback: string): string {
   return new URLSearchParams(location.search).get(name) ?? fallback;
 }
@@ -112,16 +88,14 @@ function query(name: string, fallback: string): string {
 async function boot(): Promise<void> {
   const chartId = query('chart', 'A1').toUpperCase();
   const renderer = query('renderer', 'canvas') === 'svg' ? 'svg' : 'canvas';
-  const theme = query('theme', 'print');
   const cfg = CHARTS[chartId];
   if (!cfg) throw new Error(`未知图号：${chartId}`);
 
   const res = await fetch(`./data/figures/${cfg.file}`);
   const payload = await res.json();
-  const print = theme === 'print';
-  const bg = print ? '#FBFAF6' : '#08130f';
-  const ink = print ? '#12211C' : '#e6efe9';
-  const muted = print ? '#5F6F68' : '#8aa79a';
+  const bg = '#FBFAF6';
+  const ink = '#12211C';
+  const muted = '#5F6F68';
 
   const pad = 28;
   const top = 70;
@@ -175,7 +149,7 @@ async function boot(): Promise<void> {
     panelEls.push(el);
     positions.push({ x: panel.x + pad, y: panel.y + top, w: panel.w, h: panel.h });
 
-    const option = remap(panel.build(payload));
+    const option = panel.build(payload);
     if (chartId === 'A2' && panelIndex === 1) {
       const base = (option as any).baseOption;
       if (base?.timeline) {

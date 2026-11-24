@@ -29,7 +29,7 @@ export function buildOption(payload: C1Payload): EChartsOption {
       { left: 58, right: 66, top: 40, height: 206 },
       { left: 58, right: 66, top: 312, height: 132 },
     ],
-    axisPointer: { link: [{ xAxisIndex: 'all' }], label: { backgroundColor: '#0f201a', color: TEXT } },
+    axisPointer: { link: [{ xAxisIndex: 'all' }], label: { backgroundColor: '#FFFFFF', color: TEXT } },
     tooltip: {
       ...TOOLTIP,
       trigger: 'axis',
@@ -143,7 +143,7 @@ export function buildOption(payload: C1Payload): EChartsOption {
         markPoint: {
           symbol: 'circle',
           symbolSize: 7,
-          itemStyle: { color: GOLD, borderColor: '#08130f', borderWidth: 1 },
+          itemStyle: { color: GOLD, borderColor: '#FBFAF6', borderWidth: 1 },
           label: { show: false },
           data: markPoints,
         },

@@ -38,14 +38,14 @@ async function main() {
   const browser = await puppeteer.launch({
     executablePath: EDGE,
     headless: 'new',
-    args: ['--no-sandbox', '--disable-dev-shm-usage', '--force-device-scale-factor=4'],
+    args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--force-device-scale-factor=4'],
   });
 
   try {
     for (const [chart, name] of figures) {
       const page = await browser.newPage();
       await page.setViewport({ width: 1800, height: 1600, deviceScaleFactor: 4 });
-      const url = `${base}/export.html?chart=${chart}&renderer=canvas&theme=print`;
+      const url = `${base}/export.html?chart=${chart}&renderer=canvas`;
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
       await page.waitForFunction('window.__exportReady === true', { timeout: 60000 });
 
@@ -53,7 +53,7 @@ async function main() {
       if (!stage) throw new Error(`#stage 缺失：${chart}`);
       await stage.screenshot({ path: resolve(pngDir, `${name}_4x.png`) });
 
-      await page.goto(`${base}/export.html?chart=${chart}&renderer=svg&theme=print`, {
+      await page.goto(`${base}/export.html?chart=${chart}&renderer=svg`, {
         waitUntil: 'networkidle0',
         timeout: 60000,
       });

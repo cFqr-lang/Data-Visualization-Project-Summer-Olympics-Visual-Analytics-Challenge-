@@ -30,15 +30,27 @@ const app = document.getElementById('app');
 if (!app) throw new Error('#app 缺失');
 
 app.innerHTML = `
+  <div class="progress" id="progress"></div>
   <div class="shell">
+    <nav class="topbar" id="topbar">
+      <span class="topbar__brand">数说奥运<small>1896–2024 · 任务二</small></span>
+      <div class="topbar__nav">
+        <a href="#fig-A1"><em>A</em>奖牌格局</a>
+        <a href="#fig-B1"><em>B</em>国家模式</a>
+        <a href="#fig-C1"><em>C</em>性别进程</a>
+        <a href="#fig-D1"><em>D</em>项目变迁</a>
+        <a href="#fig-interface"><em>附</em>图资产</a>
+      </div>
+    </nav>
+
     <header class="hero">
-      <p class="hero__eyebrow">数说奥运 1896–2024 · 任务二</p>
+      <p class="hero__kicker">十幅图 · 四组追问 · 一套可复算的口径</p>
       <h1 class="hero__title">百年奥运，是一部扩张史，<br />也是一部集中史</h1>
       <p class="hero__lead">
         同一场比赛，换一种奖牌口径，榜首与名次就会改写。这里沿四组追问展开：奖牌格局如何膨胀，
         国家如何崛起与坠落，女性如何从 0 走到 49.1%，项目如何生灭更替。
       </p>
-      <div class="badges" id="badges"></div>
+      <div class="ledger" id="ledger"></div>
     </header>
 
     <section class="figure" id="fig-A1">
@@ -230,7 +242,7 @@ app.innerHTML = `
 
     <section class="figure" id="fig-interface">
       <div class="figure__head">
-        <span class="figure__id">接口</span>
+        <span class="figure__id">附 · 资产</span>
         <h2 class="figure__title">十图资产与全队复用</h2>
       </div>
       <p class="figure__sub">
@@ -245,20 +257,79 @@ app.innerHTML = `
   </div>
 `;
 
-function renderBadges(meta: MetaPayload): void {
+function renderLedger(meta: MetaPayload): void {
   const counts = meta.counts;
-  const badges = [
+  const cells = [
     ['参赛记录', fmt.format(Number(counts.rows))],
-    ['NOC', String(counts.noc_count)],
+    ['NOC 代表团', String(counts.noc_count)],
     ['奖牌行', fmt.format(Number(counts.medals))],
-    ['最后一届女性占比', `${(Number(counts.female_share_latest) * 100).toFixed(1)}%`],
+    ['2024 女性占比', `${(Number(counts.female_share_latest) * 100).toFixed(1)}%`],
     ['体育大类（归并后）', String(counts.sport_count)],
   ];
-  const el = document.getElementById('badges');
+  const el = document.getElementById('ledger');
   if (!el) return;
-  el.innerHTML = badges
-    .map(([label, value]) => `<span class="badge">${label} <strong>${value}</strong></span>`)
+  el.innerHTML = cells
+    .map(
+      ([label, value]) =>
+        `<div class="ledger__cell"><span class="ledger__value">${value}</span><span class="ledger__label">${label}</span></div>`
+    )
     .join('');
+}
+
+/** 滚动进度条 + 章节进场 + 导航高亮。 */
+function wireChrome(): void {
+  const progress = document.getElementById('progress');
+  const navLinks = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>('.topbar__nav a')
+  );
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('section.figure'));
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const onScroll = (): void => {
+    if (progress) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? window.scrollY / max : 0;
+      progress.style.width = `${(ratio * 100).toFixed(2)}%`;
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (reduced || !('IntersectionObserver' in window)) return;
+
+  sections.forEach((section) => section.classList.add('reveal'));
+  const revealer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          (entry.target as HTMLElement).classList.add('is-visible');
+          revealer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: '0px 0px -12% 0px' }
+  );
+  sections.forEach((section) => revealer.observe(section));
+
+  const activeByAnchor = new Map(
+    sections.map((section) => [`#${section.id}`, section])
+  );
+  const navWatcher = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const anchor = `#${(entry.target as HTMLElement).id}`;
+        const link = navLinks.find((item) => item.getAttribute('href') === anchor);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach((item) => item.classList.remove('is-active'));
+          link.classList.add('is-active');
+        }
+      });
+    },
+    { rootMargin: '-30% 0px -60% 0px' }
+  );
+  activeByAnchor.forEach((section) => navWatcher.observe(section));
 }
 
 function metaLine(meta: FigureMeta): string {
@@ -488,7 +559,7 @@ async function boot(): Promise<void> {
       getJSON<D2Payload>('./data/figures/fig-D2.json'),
     ]);
 
-    renderBadges(meta);
+    renderLedger(meta);
     renderA1Section(a1);
     renderA2Section(a2);
     renderB1Section(b1);
@@ -501,6 +572,7 @@ async function boot(): Promise<void> {
     renderD2Section(d2);
     renderAssets(index);
     renderFooter(meta, a1);
+    wireChrome();
   } catch (error) {
     app!.insertAdjacentHTML(
       'beforeend',

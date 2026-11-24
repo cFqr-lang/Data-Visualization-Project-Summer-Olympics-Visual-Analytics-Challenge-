@@ -62,14 +62,14 @@ export function buildOption(payload: X1Payload): EChartsOption {
       calculable: false,
       text: [`高 ${payload.max_lift}`, '低 0'],
       textStyle: { color: INK, fontSize: 10 },
-      inRange: { color: ['#142a22', '#265a49', '#4fd1a5', '#d8a838'] },
+      inRange: { color: ['#EFEADD', '#A9C4B2', '#4fd1a5', '#d8a838'] },
     },
     series: [
       {
         name: 'lift',
         type: 'heatmap',
         data,
-        itemStyle: { borderColor: '#08130f', borderWidth: 2, borderRadius: 3 },
+        itemStyle: { borderColor: '#FBFAF6', borderWidth: 2, borderRadius: 3 },
         label: {
           show: true,
           color: '#12211C',
@@ -81,7 +81,7 @@ export function buildOption(payload: X1Payload): EChartsOption {
           },
         },
         emphasis: {
-          itemStyle: { borderColor: '#e6efe9', borderWidth: 2 },
+          itemStyle: { borderColor: '#12211C', borderWidth: 2 },
         },
       },
     ],

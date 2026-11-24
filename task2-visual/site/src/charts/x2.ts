@@ -4,7 +4,7 @@ import type { X2Payload } from '../types';
 import { ACCENT, AXIS_LABEL, FLAME, INK, LINE, SPLIT_LINE, TOOLTIP } from '../theme';
 
 const MALE = '#6fa8ff';
-const GAP_LINE = 'rgba(138,167,154,0.45)';
+const GAP_LINE = 'rgba(95,111,104,0.45)';
 
 export function buildOption(payload: X2Payload): EChartsOption {
   const rows = payload.sports;
@@ -119,7 +119,7 @@ export function buildOption(payload: X2Payload): EChartsOption {
         symbolSize: 9,
         z: 3,
         data: female,
-        emphasis: { itemStyle: { borderColor: '#ffffff', borderWidth: 1.5 } },
+        emphasis: { itemStyle: { borderColor: '#12211C', borderWidth: 1.5 } },
         markLine: {
           silent: true,
           symbol: 'none',
@@ -134,7 +134,7 @@ export function buildOption(payload: X2Payload): EChartsOption {
         symbolSize: 9,
         z: 3,
         data: male,
-        emphasis: { itemStyle: { borderColor: '#ffffff', borderWidth: 1.5 } },
+        emphasis: { itemStyle: { borderColor: '#12211C', borderWidth: 1.5 } },
       },
     ],
   };

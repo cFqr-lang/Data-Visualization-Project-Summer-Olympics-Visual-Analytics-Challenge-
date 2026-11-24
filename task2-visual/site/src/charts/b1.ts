@@ -97,7 +97,7 @@ export function buildOption(payload: B1Payload): EChartsOption {
     yAxis: yAxes as any,
     axisPointer: {
       link: [{ xAxisIndex: 'all' }],
-      label: { backgroundColor: '#0f201a', color: TEXT },
+      label: { backgroundColor: '#FFFFFF', color: TEXT },
     },
     tooltip: {
       ...TOOLTIP,

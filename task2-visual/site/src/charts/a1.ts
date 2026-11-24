@@ -1,13 +1,7 @@
 import * as echarts from 'echarts';
 import type { BarSeriesOption, EChartsOption } from 'echarts';
 import type { A1Payload } from '../types';
-
-const INK = '#8aa79a';
-const LINE = '#1e3a2f';
-const TEXT = '#e6efe9';
-const GOLD = '#d8a838';
-const SILVER = '#b7c2c8';
-const BRONZE = '#b1743f';
+import { GOLD, INK, LINE, SILVER, TEXT } from '../theme';
 
 const SHORT_LABEL: Record<string, string> = {
   athlete_row_1906: '行口径\n含 1906',
@@ -43,7 +37,7 @@ export function barOption(payload: A1Payload): EChartsOption {
     data: items.map((item) => item[key]),
   });
 
-  const bronze = stack('铜牌', 'bronze', BRONZE);
+  const bronze = stack('铜牌', 'bronze', '#b1743f');
   bronze.label = {
     show: true,
     position: 'right',
@@ -65,8 +59,8 @@ export function barOption(payload: A1Payload): EChartsOption {
     },
     tooltip: {
       trigger: 'axis',
-      axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(79,209,165,0.06)' } },
-      backgroundColor: '#0f201a',
+      axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(95,111,104,0.07)' } },
+      backgroundColor: '#FFFFFF',
       borderColor: LINE,
       textStyle: { color: TEXT, fontSize: 12 },
       formatter: (params: any) => {
@@ -147,7 +141,7 @@ export function slopeOption(payload: A1Payload): EChartsOption {
     grid: { left: 46, right: 58, top: 34, bottom: 62 },
     tooltip: {
       trigger: 'axis',
-      backgroundColor: '#0f201a',
+      backgroundColor: '#FFFFFF',
       borderColor: LINE,
       textStyle: { color: TEXT, fontSize: 12 },
       formatter: (params: any) => {

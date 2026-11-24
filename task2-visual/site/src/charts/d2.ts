@@ -40,7 +40,7 @@ export function buildOption(payload: D2Payload): EChartsOption {
       axisLabel: { color: INK, fontSize: 10, formatter: '{yyyy}' },
       axisLine: { lineStyle: { color: LINE } },
       splitLine: SPLIT_LINE,
-      axisPointer: { label: { backgroundColor: '#0f201a', color: TEXT } },
+      axisPointer: { label: { backgroundColor: '#FFFFFF', color: TEXT } },
     },
     series: [
       {
