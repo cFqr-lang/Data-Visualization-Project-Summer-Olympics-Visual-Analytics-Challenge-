@@ -9,8 +9,11 @@ import { buildOption as c1Option } from './charts/c1';
 import { buildOption as c2Option } from './charts/c2';
 import { countOption, lifelineOption } from './charts/d1';
 import { buildOption as d2Option } from './charts/d2';
+import { buildOption as x1Option } from './charts/x1';
+import { buildOption as x2Option } from './charts/x2';
 import type {
   A1Payload, A2Payload, B1Payload, B2Payload, C1Payload, C2Payload, D1Payload, D2Payload,
+  X1Payload, X2Payload,
 } from './types';
 
 interface PanelCfg {
@@ -68,6 +71,14 @@ const CHARTS: Record<string, ChartCfg> = {
     file: 'fig-D2.json',
     panels: [{ x: 0, y: 0, w: 1000, h: 560, build: (payload: D2Payload) => d2Option(payload) }],
   },
+  X1: {
+    file: 'fig-X1.json',
+    panels: [{ x: 0, y: 0, w: 1000, h: 760, build: (payload: X1Payload) => x1Option(payload) }],
+  },
+  X2: {
+    file: 'fig-X2.json',
+    panels: [{ x: 0, y: 0, w: 1000, h: 1040, build: (payload: X2Payload) => x2Option(payload) }],
+  },
 };
 
 const COLOR_MAP: Record<string, string> = {
@@ -77,6 +88,8 @@ const COLOR_MAP: Record<string, string> = {
   '#16281f': '#E5E0D2',
   '#0f201a': '#FFFFFF',
   '#08130f': '#FBFAF6',
+  '#142a22': '#EFEADD',
+  '#265a49': '#A9C4B2',
 };
 
 function remap(node: any): any {

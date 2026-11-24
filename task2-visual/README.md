@@ -5,8 +5,8 @@
 ## 交付物
 
 - `pipeline/`：Python 预聚合，输出图表 JSON 与 `shared/metrics/`；
-- `site/`：Vite + TypeScript + Apache ECharts 数据故事站（8 图，含 B2 / D2）；
-- `exports/`：8 幅 PNG@4x 与 SVG，命名见 `contracts/figure_registry.csv`；
+- `site/`：Vite + TypeScript + Apache ECharts 数据故事站（10 图，含 B2 / D2 / X1 / X2）；
+- `exports/`：10 幅 PNG@4x 与 SVG，命名见 `contracts/figure_registry.csv`；
 - `offline/olympics-story.offline.html`：单文件离线包（约 1.1 MB，无网络可打开）；
 - `report/`：图注、≥100 字解读、复现命令；
 - `video/`：90 秒视频分镜；
@@ -16,7 +16,7 @@
 
 - P0：A1 双口径总榜、A2 逐届演变、B1 九国矩阵、C1 女性双弧线、C2 参与≠产出、D1 项目生命线；
 - P1：B2 国家效率前沿、D2 项目结构变迁；
-- P2：X1 国家×项目矩阵、X2 项目性别差哑铃。
+- P2：X1 国家×项目矩阵、X2 项目性别差哑铃（均已完成）。
 
 ## 常用命令
 
@@ -25,7 +25,7 @@ python -m pipeline.build            # 生成图表 JSON + 底表，并自动自�
 python -m pipeline.build --check-only
 cd site && npm install && npm run dev
 npm run build                       # tsc + vite
-npm run export:figures              # 需先运行 dev；导出 8 幅 PNG@4x + SVG
+npm run export:figures              # 需先运行 dev；导出 10 幅 PNG@4x + SVG
 npm run build:offline               # 生成 offline/olympics-story.offline.html
 npm run export:figures -- A2 D1     # 只重导指定图
 ```
@@ -41,7 +41,7 @@ npm run export:figures -- A2 D1     # 只重导指定图
 
 每份 `fig-*.json` 的 `meta` 字段固定：`figure_id`、`chart_id`、`title`、`caliber`、`caliber_label`、`denominator`、`includes_1906`、`data_version`、`generated_at`、`source`、`event_key_source`、`notes`。
 
-数据段按图：A1 `totals_top20` / `definitions` / `rank_changes`；A2 `series` / `bar_race` / `snapshots`；B1 `panels`；B2 `points`；C1 `series` / `milestones`；C2 `views`；D1 `sports` / `event_counts` / `highlights`；D2 `categories` / `river` / `totals`。
+数据段按图：A1 `totals_top20` / `definitions` / `rank_changes`；A2 `series` / `bar_race` / `snapshots`；B1 `panels`；B2 `points`；C1 `series` / `milestones`；C2 `views`；D1 `sports` / `event_counts` / `highlights`；D2 `categories` / `river` / `totals`；X1 `nocs` / `sports` / `cells`；X2 `sports`。
 
 底表列：`metric, scope, year, noc, value, unit, caliber, includes_1906, data_version, notes`。
 报告正文数字请先查底表，避免各图表口径打架。

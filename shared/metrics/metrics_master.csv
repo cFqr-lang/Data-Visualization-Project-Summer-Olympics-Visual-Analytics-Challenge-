@@ -657,3 +657,276 @@ medal_rows_total,NOC 历史累计,,CPV,1,rows,athlete_row,False,v1.0-fallback,�
 conservative_medals_total,NOC 历史累计,,EOR,1,medals,conservative_event,False,v1.0-fallback,rank=157
 gold_total,NOC 历史累计,,EOR,0,medals,conservative_event,False,v1.0-fallback,
 medal_rows_total,NOC 历史累计,,EOR,1,rows,athlete_row,False,v1.0-fallback,与 conservative 的差额即团体膨胀
+specialization_lift,NOC×Sport,,USA,1.72,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=854
+specialization_lift,NOC×Sport,,USA,2.09,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=606
+specialization_lift,NOC×Sport,,USA,0.66,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=144
+specialization_lift,NOC×Sport,,USA,0.73,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=118
+specialization_lift,NOC×Sport,,USA,0.8,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=128
+specialization_lift,NOC×Sport,,USA,0.87,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=121
+specialization_lift,NOC×Sport,,USA,0.49,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=64
+specialization_lift,NOC×Sport,,USA,0.7,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=91
+specialization_lift,NOC×Sport,,USA,0.16,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=19
+specialization_lift,NOC×Sport,,USA,0.42,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=46
+specialization_lift,NOC×Sport,,URS,1.07,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=193
+specialization_lift,NOC×Sport,,URS,0.56,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=59
+specialization_lift,NOC×Sport,,URS,1.45,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=116
+specialization_lift,NOC×Sport,,URS,0.87,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=51
+specialization_lift,NOC×Sport,,URS,3.05,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=179
+specialization_lift,NOC×Sport,,URS,0.96,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=49
+specialization_lift,NOC×Sport,,URS,0.5,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=24
+specialization_lift,NOC×Sport,,URS,0.88,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=42
+specialization_lift,NOC×Sport,,URS,1.17,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=51
+specialization_lift,NOC×Sport,,URS,1.56,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=62
+specialization_lift,NOC×Sport,,GBR,1.22,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=219
+specialization_lift,NOC×Sport,,GBR,0.83,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=87
+specialization_lift,NOC×Sport,,GBR,0.21,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=17
+specialization_lift,NOC×Sport,,GBR,1.08,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=63
+specialization_lift,NOC×Sport,,GBR,0.31,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=18
+specialization_lift,NOC×Sport,,GBR,0.97,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=49
+specialization_lift,NOC×Sport,,GBR,2.34,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=110
+specialization_lift,NOC×Sport,,GBR,1.66,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=78
+specialization_lift,NOC×Sport,,GBR,0.53,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=23
+specialization_lift,NOC×Sport,,GBR,0.23,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=9
+specialization_lift,NOC×Sport,,GER,0.78,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=117
+specialization_lift,NOC×Sport,,GER,0.89,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=78
+specialization_lift,NOC×Sport,,GER,0.57,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=38
+specialization_lift,NOC×Sport,,GER,0.62,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=30
+specialization_lift,NOC×Sport,,GER,0.84,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=41
+specialization_lift,NOC×Sport,,GER,0.62,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=26
+specialization_lift,NOC×Sport,,GER,1.42,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=56
+specialization_lift,NOC×Sport,,GER,1.6,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=63
+specialization_lift,NOC×Sport,,GER,2.61,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=94
+specialization_lift,NOC×Sport,,GER,0.67,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=22
+specialization_lift,NOC×Sport,,FRA,0.48,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=71
+specialization_lift,NOC×Sport,,FRA,0.59,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=51
+specialization_lift,NOC×Sport,,FRA,0.26,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=17
+specialization_lift,NOC×Sport,,FRA,0.58,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=28
+specialization_lift,NOC×Sport,,FRA,0.43,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=21
+specialization_lift,NOC×Sport,,FRA,0.74,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=31
+specialization_lift,NOC×Sport,,FRA,2.6,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=102
+specialization_lift,NOC×Sport,,FRA,0.92,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=36
+specialization_lift,NOC×Sport,,FRA,1.09,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=39
+specialization_lift,NOC×Sport,,FRA,0.46,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=15
+specialization_lift,NOC×Sport,,CHN,0.28,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=36
+specialization_lift,NOC×Sport,,CHN,0.81,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=61
+specialization_lift,NOC×Sport,,CHN,0.33,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=19
+specialization_lift,NOC×Sport,,CHN,0.45,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=19
+specialization_lift,NOC×Sport,,CHN,1.85,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=78
+specialization_lift,NOC×Sport,,CHN,2.11,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=77
+specialization_lift,NOC×Sport,,CHN,0.26,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=9
+specialization_lift,NOC×Sport,,CHN,0.35,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=12
+specialization_lift,NOC×Sport,,CHN,0.22,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=7
+specialization_lift,NOC×Sport,,CHN,2.45,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=70
+specialization_lift,NOC×Sport,,ITA,0.57,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=68
+specialization_lift,NOC×Sport,,ITA,0.46,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=32
+specialization_lift,NOC×Sport,,ITA,0.41,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=22
+specialization_lift,NOC×Sport,,ITA,1.23,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=48
+specialization_lift,NOC×Sport,,ITA,0.82,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=32
+specialization_lift,NOC×Sport,,ITA,1.39,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=47
+specialization_lift,NOC×Sport,,ITA,2.09,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=66
+specialization_lift,NOC×Sport,,ITA,1.36,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=43
+specialization_lift,NOC×Sport,,ITA,0.66,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=19
+specialization_lift,NOC×Sport,,ITA,0.68,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=18
+specialization_lift,NOC×Sport,,AUS,0.78,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=84
+specialization_lift,NOC×Sport,,AUS,3.66,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=231
+specialization_lift,NOC×Sport,,AUS,0.06,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=3
+specialization_lift,NOC×Sport,,AUS,0.2,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=7
+specialization_lift,NOC×Sport,,AUS,0.4,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=12
+specialization_lift,NOC×Sport,,AUS,2.18,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=62
+specialization_lift,NOC×Sport,,AUS,1.58,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=45
+specialization_lift,NOC×Sport,,AUS,1.23,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=32
+specialization_lift,NOC×Sport,,AUS,0.17,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=4
+specialization_lift,NOC×Sport,,JPN,0.29,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=28
+specialization_lift,NOC×Sport,,JPN,1.47,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=84
+specialization_lift,NOC×Sport,,JPN,2.02,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=87
+specialization_lift,NOC×Sport,,JPN,0.25,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=8
+specialization_lift,NOC×Sport,,JPN,3.25,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=103
+specialization_lift,NOC×Sport,,JPN,0.22,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=6
+specialization_lift,NOC×Sport,,JPN,0.2,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=5
+specialization_lift,NOC×Sport,,JPN,0.04,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=1
+specialization_lift,NOC×Sport,,JPN,0.7,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=15
+specialization_lift,NOC×Sport,,HUN,0.43,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=41
+specialization_lift,NOC×Sport,,HUN,1.43,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=80
+specialization_lift,NOC×Sport,,HUN,1.32,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=56
+specialization_lift,NOC×Sport,,HUN,0.64,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=20
+specialization_lift,NOC×Sport,,HUN,1.26,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=39
+specialization_lift,NOC×Sport,,HUN,0.67,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=18
+specialization_lift,NOC×Sport,,HUN,0.12,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=3
+specialization_lift,NOC×Sport,,HUN,4.04,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=93
+specialization_lift,NOC×Sport,,HUN,0.95,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=20
+specialization_lift,NOC×Sport,,SWE,0.91,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=85
+specialization_lift,NOC×Sport,,SWE,0.75,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=41
+specialization_lift,NOC×Sport,,SWE,2.08,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=86
+specialization_lift,NOC×Sport,,SWE,0.36,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=11
+specialization_lift,NOC×Sport,,SWE,0.26,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=8
+specialization_lift,NOC×Sport,,SWE,2.21,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=58
+specialization_lift,NOC×Sport,,SWE,0.73,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=18
+specialization_lift,NOC×Sport,,SWE,0.08,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=2
+specialization_lift,NOC×Sport,,SWE,1.34,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=30
+specialization_lift,NOC×Sport,,SWE,0.19,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=4
+specialization_lift,NOC×Sport,,RUS,0.93,lift,conservative_event,False,v1.0-fallback,sport=Athletics; medals=77
+specialization_lift,NOC×Sport,,RUS,0.48,lift,conservative_event,False,v1.0-fallback,sport=Swimming; medals=23
+specialization_lift,NOC×Sport,,RUS,1.64,lift,conservative_event,False,v1.0-fallback,sport=Wrestling; medals=60
+specialization_lift,NOC×Sport,,RUS,1.12,lift,conservative_event,False,v1.0-fallback,sport=Boxing; medals=30
+specialization_lift,NOC×Sport,,RUS,1.64,lift,conservative_event,False,v1.0-fallback,sport=Gymnastics; medals=44
+specialization_lift,NOC×Sport,,RUS,1.42,lift,conservative_event,False,v1.0-fallback,sport=Shooting; medals=33
+specialization_lift,NOC×Sport,,RUS,0.87,lift,conservative_event,False,v1.0-fallback,sport=Cycling; medals=19
+specialization_lift,NOC×Sport,,RUS,0.18,lift,conservative_event,False,v1.0-fallback,sport=Rowing; medals=4
+specialization_lift,NOC×Sport,,RUS,0.65,lift,conservative_event,False,v1.0-fallback,sport=Canoeing; medals=13
+specialization_lift,NOC×Sport,,RUS,1.43,lift,conservative_event,False,v1.0-fallback,sport=Weightlifting; medals=26
+female_participation_share,Sport 2024,2024,,1.0,ratio,athlete_row,False,v1.0-fallback,"sport=Artistic Swimming; female=106, male=0"
+male_participation_share,Sport 2024,2024,,0.0,ratio,athlete_row,False,v1.0-fallback,"sport=Artistic Swimming; female=106, male=0"
+gender_gap_pp,Sport 2024,2024,,100.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Artistic Swimming; female=106, male=0"
+female_medal_share,Sport 2024,2024,,1.0,ratio,athlete_row,False,v1.0-fallback,"sport=Artistic Swimming; female=106, male=0"
+female_participation_share,Sport 2024,2024,,1.0,ratio,athlete_row,False,v1.0-fallback,"sport=Rhythmic Gymnastics; female=94, male=0"
+male_participation_share,Sport 2024,2024,,0.0,ratio,athlete_row,False,v1.0-fallback,"sport=Rhythmic Gymnastics; female=94, male=0"
+gender_gap_pp,Sport 2024,2024,,100.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Rhythmic Gymnastics; female=94, male=0"
+female_medal_share,Sport 2024,2024,,1.0,ratio,athlete_row,False,v1.0-fallback,"sport=Rhythmic Gymnastics; female=94, male=0"
+female_participation_share,Sport 2024,2024,,0.5233,ratio,athlete_row,False,v1.0-fallback,"sport=Handball; female=202, male=184"
+male_participation_share,Sport 2024,2024,,0.4767,ratio,athlete_row,False,v1.0-fallback,"sport=Handball; female=202, male=184"
+gender_gap_pp,Sport 2024,2024,,4.7,percentage_points,athlete_row,False,v1.0-fallback,"sport=Handball; female=202, male=184"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Handball; female=202, male=184"
+female_participation_share,Sport 2024,2024,,0.5152,ratio,athlete_row,False,v1.0-fallback,"sport=Breaking; female=17, male=16"
+male_participation_share,Sport 2024,2024,,0.4848,ratio,athlete_row,False,v1.0-fallback,"sport=Breaking; female=17, male=16"
+gender_gap_pp,Sport 2024,2024,,3.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Breaking; female=17, male=16"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Breaking; female=17, male=16"
+female_participation_share,Sport 2024,2024,,0.5077,ratio,athlete_row,False,v1.0-fallback,"sport=3x3 Basketball; female=33, male=32"
+male_participation_share,Sport 2024,2024,,0.4923,ratio,athlete_row,False,v1.0-fallback,"sport=3x3 Basketball; female=33, male=32"
+gender_gap_pp,Sport 2024,2024,,1.5,percentage_points,athlete_row,False,v1.0-fallback,"sport=3x3 Basketball; female=33, male=32"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=3x3 Basketball; female=33, male=32"
+female_participation_share,Sport 2024,2024,,0.5037,ratio,athlete_row,False,v1.0-fallback,"sport=Diving; female=68, male=67"
+male_participation_share,Sport 2024,2024,,0.4963,ratio,athlete_row,False,v1.0-fallback,"sport=Diving; female=68, male=67"
+gender_gap_pp,Sport 2024,2024,,0.7,percentage_points,athlete_row,False,v1.0-fallback,"sport=Diving; female=68, male=67"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Diving; female=68, male=67"
+female_participation_share,Sport 2024,2024,,0.5029,ratio,athlete_row,False,v1.0-fallback,"sport=Table Tennis; female=88, male=87"
+male_participation_share,Sport 2024,2024,,0.4971,ratio,athlete_row,False,v1.0-fallback,"sport=Table Tennis; female=88, male=87"
+gender_gap_pp,Sport 2024,2024,,0.6,percentage_points,athlete_row,False,v1.0-fallback,"sport=Table Tennis; female=88, male=87"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Table Tennis; female=88, male=87"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Archery; female=64, male=64"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Archery; female=64, male=64"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Archery; female=64, male=64"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Archery; female=64, male=64"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Beach Volleyball; female=48, male=48"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Beach Volleyball; female=48, male=48"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Beach Volleyball; female=48, male=48"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Beach Volleyball; female=48, male=48"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Boxing; female=124, male=124"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Boxing; female=124, male=124"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Boxing; female=124, male=124"
+female_medal_share,Sport 2024,2024,,0.4615,ratio,athlete_row,False,v1.0-fallback,"sport=Boxing; female=124, male=124"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Fencing; female=130, male=130"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Fencing; female=130, male=130"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Fencing; female=130, male=130"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Fencing; female=130, male=130"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Golf; female=60, male=60"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Golf; female=60, male=60"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Golf; female=60, male=60"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Golf; female=60, male=60"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Modern Pentathlon; female=36, male=36"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Modern Pentathlon; female=36, male=36"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Modern Pentathlon; female=36, male=36"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Modern Pentathlon; female=36, male=36"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Sailing; female=165, male=165"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Sailing; female=165, male=165"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Sailing; female=165, male=165"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Sailing; female=165, male=165"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Shooting; female=171, male=171"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Shooting; female=171, male=171"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Shooting; female=171, male=171"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Shooting; female=171, male=171"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Skateboarding; female=44, male=44"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Skateboarding; female=44, male=44"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Skateboarding; female=44, male=44"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Skateboarding; female=44, male=44"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Sport Climbing; female=34, male=34"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Sport Climbing; female=34, male=34"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Sport Climbing; female=34, male=34"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Sport Climbing; female=34, male=34"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Surfing; female=24, male=24"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Surfing; female=24, male=24"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Surfing; female=24, male=24"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Surfing; female=24, male=24"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Trampoline Gymnastics; female=16, male=16"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Trampoline Gymnastics; female=16, male=16"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Trampoline Gymnastics; female=16, male=16"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Trampoline Gymnastics; female=16, male=16"
+female_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Weightlifting; female=61, male=61"
+male_participation_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Weightlifting; female=61, male=61"
+gender_gap_pp,Sport 2024,2024,,0.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Weightlifting; female=61, male=61"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Weightlifting; female=61, male=61"
+female_participation_share,Sport 2024,2024,,0.4985,ratio,athlete_row,False,v1.0-fallback,"sport=Canoeing; female=161, male=162"
+male_participation_share,Sport 2024,2024,,0.5015,ratio,athlete_row,False,v1.0-fallback,"sport=Canoeing; female=161, male=162"
+gender_gap_pp,Sport 2024,2024,,-0.3,percentage_points,athlete_row,False,v1.0-fallback,"sport=Canoeing; female=161, male=162"
+female_medal_share,Sport 2024,2024,,0.5125,ratio,athlete_row,False,v1.0-fallback,"sport=Canoeing; female=161, male=162"
+female_participation_share,Sport 2024,2024,,0.4984,ratio,athlete_row,False,v1.0-fallback,"sport=Rugby Sevens; female=158, male=159"
+male_participation_share,Sport 2024,2024,,0.5016,ratio,athlete_row,False,v1.0-fallback,"sport=Rugby Sevens; female=158, male=159"
+gender_gap_pp,Sport 2024,2024,,-0.3,percentage_points,athlete_row,False,v1.0-fallback,"sport=Rugby Sevens; female=158, male=159"
+female_medal_share,Sport 2024,2024,,0.4872,ratio,athlete_row,False,v1.0-fallback,"sport=Rugby Sevens; female=158, male=159"
+female_participation_share,Sport 2024,2024,,0.4984,ratio,athlete_row,False,v1.0-fallback,"sport=Volleyball; female=155, male=156"
+male_participation_share,Sport 2024,2024,,0.5016,ratio,athlete_row,False,v1.0-fallback,"sport=Volleyball; female=155, male=156"
+gender_gap_pp,Sport 2024,2024,,-0.3,percentage_points,athlete_row,False,v1.0-fallback,"sport=Volleyball; female=155, male=156"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Volleyball; female=155, male=156"
+female_participation_share,Sport 2024,2024,,0.4983,ratio,athlete_row,False,v1.0-fallback,"sport=Basketball; female=143, male=144"
+male_participation_share,Sport 2024,2024,,0.5017,ratio,athlete_row,False,v1.0-fallback,"sport=Basketball; female=143, male=144"
+gender_gap_pp,Sport 2024,2024,,-0.3,percentage_points,athlete_row,False,v1.0-fallback,"sport=Basketball; female=143, male=144"
+female_medal_share,Sport 2024,2024,,0.493,ratio,athlete_row,False,v1.0-fallback,"sport=Basketball; female=143, male=144"
+female_participation_share,Sport 2024,2024,,0.4971,ratio,athlete_row,False,v1.0-fallback,"sport=Badminton; female=87, male=88"
+male_participation_share,Sport 2024,2024,,0.5029,ratio,athlete_row,False,v1.0-fallback,"sport=Badminton; female=87, male=88"
+gender_gap_pp,Sport 2024,2024,,-0.6,percentage_points,athlete_row,False,v1.0-fallback,"sport=Badminton; female=87, male=88"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Badminton; female=87, male=88"
+female_participation_share,Sport 2024,2024,,0.4949,ratio,athlete_row,False,v1.0-fallback,"sport=Rowing; female=244, male=249"
+male_participation_share,Sport 2024,2024,,0.5051,ratio,athlete_row,False,v1.0-fallback,"sport=Rowing; female=244, male=249"
+gender_gap_pp,Sport 2024,2024,,-1.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Rowing; female=244, male=249"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Rowing; female=244, male=249"
+female_participation_share,Sport 2024,2024,,0.4947,ratio,athlete_row,False,v1.0-fallback,"sport=Gymnastics; female=94, male=96"
+male_participation_share,Sport 2024,2024,,0.5053,ratio,athlete_row,False,v1.0-fallback,"sport=Gymnastics; female=94, male=96"
+gender_gap_pp,Sport 2024,2024,,-1.1,percentage_points,athlete_row,False,v1.0-fallback,"sport=Gymnastics; female=94, male=96"
+female_medal_share,Sport 2024,2024,,0.4478,ratio,athlete_row,False,v1.0-fallback,"sport=Gymnastics; female=94, male=96"
+female_participation_share,Sport 2024,2024,,0.4943,ratio,athlete_row,False,v1.0-fallback,"sport=Tennis; female=87, male=89"
+male_participation_share,Sport 2024,2024,,0.5057,ratio,athlete_row,False,v1.0-fallback,"sport=Tennis; female=87, male=89"
+gender_gap_pp,Sport 2024,2024,,-1.1,percentage_points,athlete_row,False,v1.0-fallback,"sport=Tennis; female=87, male=89"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Tennis; female=87, male=89"
+female_participation_share,Sport 2024,2024,,0.4939,ratio,athlete_row,False,v1.0-fallback,"sport=Cycling; female=282, male=289"
+male_participation_share,Sport 2024,2024,,0.5061,ratio,athlete_row,False,v1.0-fallback,"sport=Cycling; female=282, male=289"
+gender_gap_pp,Sport 2024,2024,,-1.2,percentage_points,athlete_row,False,v1.0-fallback,"sport=Cycling; female=282, male=289"
+female_medal_share,Sport 2024,2024,,0.5094,ratio,athlete_row,False,v1.0-fallback,"sport=Cycling; female=282, male=289"
+female_participation_share,Sport 2024,2024,,0.4921,ratio,athlete_row,False,v1.0-fallback,"sport=Judo; female=186, male=192"
+male_participation_share,Sport 2024,2024,,0.5079,ratio,athlete_row,False,v1.0-fallback,"sport=Judo; female=186, male=192"
+gender_gap_pp,Sport 2024,2024,,-1.6,percentage_points,athlete_row,False,v1.0-fallback,"sport=Judo; female=186, male=192"
+female_medal_share,Sport 2024,2024,,0.4952,ratio,athlete_row,False,v1.0-fallback,"sport=Judo; female=186, male=192"
+female_participation_share,Sport 2024,2024,,0.4892,ratio,athlete_row,False,v1.0-fallback,"sport=Hockey; female=203, male=212"
+male_participation_share,Sport 2024,2024,,0.5108,ratio,athlete_row,False,v1.0-fallback,"sport=Hockey; female=203, male=212"
+gender_gap_pp,Sport 2024,2024,,-2.2,percentage_points,athlete_row,False,v1.0-fallback,"sport=Hockey; female=203, male=212"
+female_medal_share,Sport 2024,2024,,0.4902,ratio,athlete_row,False,v1.0-fallback,"sport=Hockey; female=203, male=212"
+female_participation_share,Sport 2024,2024,,0.4865,ratio,athlete_row,False,v1.0-fallback,"sport=Triathlon; female=54, male=57"
+male_participation_share,Sport 2024,2024,,0.5135,ratio,athlete_row,False,v1.0-fallback,"sport=Triathlon; female=54, male=57"
+gender_gap_pp,Sport 2024,2024,,-2.7,percentage_points,athlete_row,False,v1.0-fallback,"sport=Triathlon; female=54, male=57"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Triathlon; female=54, male=57"
+female_participation_share,Sport 2024,2024,,0.4861,ratio,athlete_row,False,v1.0-fallback,"sport=Athletics; female=982, male=1038"
+male_participation_share,Sport 2024,2024,,0.5139,ratio,athlete_row,False,v1.0-fallback,"sport=Athletics; female=982, male=1038"
+gender_gap_pp,Sport 2024,2024,,-2.8,percentage_points,athlete_row,False,v1.0-fallback,"sport=Athletics; female=982, male=1038"
+female_medal_share,Sport 2024,2024,,0.513,ratio,athlete_row,False,v1.0-fallback,"sport=Athletics; female=982, male=1038"
+female_participation_share,Sport 2024,2024,,0.4851,ratio,athlete_row,False,v1.0-fallback,"sport=Taekwondo; female=65, male=69"
+male_participation_share,Sport 2024,2024,,0.5149,ratio,athlete_row,False,v1.0-fallback,"sport=Taekwondo; female=65, male=69"
+gender_gap_pp,Sport 2024,2024,,-3.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Taekwondo; female=65, male=69"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Taekwondo; female=65, male=69"
+female_participation_share,Sport 2024,2024,,0.4602,ratio,athlete_row,False,v1.0-fallback,"sport=Swimming; female=410, male=481"
+male_participation_share,Sport 2024,2024,,0.5398,ratio,athlete_row,False,v1.0-fallback,"sport=Swimming; female=410, male=481"
+gender_gap_pp,Sport 2024,2024,,-8.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Swimming; female=410, male=481"
+female_medal_share,Sport 2024,2024,,0.5185,ratio,athlete_row,False,v1.0-fallback,"sport=Swimming; female=410, male=481"
+female_participation_share,Sport 2024,2024,,0.4545,ratio,athlete_row,False,v1.0-fallback,"sport=Water Polo; female=130, male=156"
+male_participation_share,Sport 2024,2024,,0.5455,ratio,athlete_row,False,v1.0-fallback,"sport=Water Polo; female=130, male=156"
+gender_gap_pp,Sport 2024,2024,,-9.1,percentage_points,athlete_row,False,v1.0-fallback,"sport=Water Polo; female=130, male=156"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Water Polo; female=130, male=156"
+female_participation_share,Sport 2024,2024,,0.434,ratio,athlete_row,False,v1.0-fallback,"sport=Football; female=240, male=313"
+male_participation_share,Sport 2024,2024,,0.566,ratio,athlete_row,False,v1.0-fallback,"sport=Football; female=240, male=313"
+gender_gap_pp,Sport 2024,2024,,-13.2,percentage_points,athlete_row,False,v1.0-fallback,"sport=Football; female=240, male=313"
+female_medal_share,Sport 2024,2024,,0.5,ratio,athlete_row,False,v1.0-fallback,"sport=Football; female=240, male=313"
+female_participation_share,Sport 2024,2024,,0.3827,ratio,athlete_row,False,v1.0-fallback,"sport=Equestrian; female=93, male=150"
+male_participation_share,Sport 2024,2024,,0.6173,ratio,athlete_row,False,v1.0-fallback,"sport=Equestrian; female=93, male=150"
+gender_gap_pp,Sport 2024,2024,,-23.5,percentage_points,athlete_row,False,v1.0-fallback,"sport=Equestrian; female=93, male=150"
+female_medal_share,Sport 2024,2024,,0.3333,ratio,athlete_row,False,v1.0-fallback,"sport=Equestrian; female=93, male=150"
+female_participation_share,Sport 2024,2024,,0.3299,ratio,athlete_row,False,v1.0-fallback,"sport=Wrestling; female=96, male=195"
+male_participation_share,Sport 2024,2024,,0.6701,ratio,athlete_row,False,v1.0-fallback,"sport=Wrestling; female=96, male=195"
+gender_gap_pp,Sport 2024,2024,,-34.0,percentage_points,athlete_row,False,v1.0-fallback,"sport=Wrestling; female=96, male=195"
+female_medal_share,Sport 2024,2024,,0.3333,ratio,athlete_row,False,v1.0-fallback,"sport=Wrestling; female=96, male=195"

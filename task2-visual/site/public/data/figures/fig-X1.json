@@ -1,0 +1,835 @@
+{
+ "meta": {
+  "figure_id": "Fig.2-9",
+  "chart_id": "X1",
+  "title": "传统优势写在项目里：国家 × 项目 lift",
+  "caliber": "conservative_event",
+  "caliber_label": "保守小项口径（团体项目每国每小项每色计 1 枚，2020+ 取下界）",
+  "denominator": "Top 12 NOC × Top 10 项目",
+  "includes_1906": false,
+  "data_version": "v1.0-fallback",
+  "generated_at": "2026-11-24T20:41:15+08:00",
+  "source": "data/raw/olympics_dataset.csv",
+  "event_key_source": "task2_fallback",
+  "notes": [
+   "lift = (该国该项目奖牌 / 该国全部奖牌) ÷ (该项目全部奖牌 / 全球奖牌)",
+   "lift = 1 表示与全局结构一致，> 1 为相对专长，0 表示该项目无奖牌",
+   "仅用赛题数据；Top 12 NOC 与 Top 10 项目均按保守小项奖牌数选取"
+  ]
+ },
+ "nocs": [
+  {
+   "noc": "USA",
+   "medals": 2757
+  },
+  {
+   "noc": "URS",
+   "medals": 1005
+  },
+  {
+   "noc": "GBR",
+   "medals": 995
+  },
+  {
+   "noc": "GER",
+   "medals": 832
+  },
+  {
+   "noc": "FRA",
+   "medals": 828
+  },
+  {
+   "noc": "CHN",
+   "medals": 721
+  },
+  {
+   "noc": "ITA",
+   "medals": 668
+  },
+  {
+   "noc": "AUS",
+   "medals": 601
+  },
+  {
+   "noc": "JPN",
+   "medals": 542
+  },
+  {
+   "noc": "HUN",
+   "medals": 532
+  },
+  {
+   "noc": "SWE",
+   "medals": 519
+  },
+  {
+   "noc": "RUS",
+   "medals": 460
+  }
+ ],
+ "sports": [
+  {
+   "sport": "Athletics",
+   "medals": 3228
+  },
+  {
+   "sport": "Swimming",
+   "medals": 1886
+  },
+  {
+   "sport": "Wrestling",
+   "medals": 1428
+  },
+  {
+   "sport": "Boxing",
+   "medals": 1048
+  },
+  {
+   "sport": "Gymnastics",
+   "medals": 1048
+  },
+  {
+   "sport": "Shooting",
+   "medals": 907
+  },
+  {
+   "sport": "Cycling",
+   "medals": 849
+  },
+  {
+   "sport": "Rowing",
+   "medals": 849
+  },
+  {
+   "sport": "Canoeing",
+   "medals": 776
+  },
+  {
+   "sport": "Weightlifting",
+   "medals": 710
+  }
+ ],
+ "cells": [
+  {
+   "noc": "USA",
+   "sport": "Athletics",
+   "medals": 854,
+   "lift": 1.72
+  },
+  {
+   "noc": "USA",
+   "sport": "Swimming",
+   "medals": 606,
+   "lift": 2.09
+  },
+  {
+   "noc": "USA",
+   "sport": "Wrestling",
+   "medals": 144,
+   "lift": 0.66
+  },
+  {
+   "noc": "USA",
+   "sport": "Boxing",
+   "medals": 118,
+   "lift": 0.73
+  },
+  {
+   "noc": "USA",
+   "sport": "Gymnastics",
+   "medals": 128,
+   "lift": 0.8
+  },
+  {
+   "noc": "USA",
+   "sport": "Shooting",
+   "medals": 121,
+   "lift": 0.87
+  },
+  {
+   "noc": "USA",
+   "sport": "Cycling",
+   "medals": 64,
+   "lift": 0.49
+  },
+  {
+   "noc": "USA",
+   "sport": "Rowing",
+   "medals": 91,
+   "lift": 0.7
+  },
+  {
+   "noc": "USA",
+   "sport": "Canoeing",
+   "medals": 19,
+   "lift": 0.16
+  },
+  {
+   "noc": "USA",
+   "sport": "Weightlifting",
+   "medals": 46,
+   "lift": 0.42
+  },
+  {
+   "noc": "URS",
+   "sport": "Athletics",
+   "medals": 193,
+   "lift": 1.07
+  },
+  {
+   "noc": "URS",
+   "sport": "Swimming",
+   "medals": 59,
+   "lift": 0.56
+  },
+  {
+   "noc": "URS",
+   "sport": "Wrestling",
+   "medals": 116,
+   "lift": 1.45
+  },
+  {
+   "noc": "URS",
+   "sport": "Boxing",
+   "medals": 51,
+   "lift": 0.87
+  },
+  {
+   "noc": "URS",
+   "sport": "Gymnastics",
+   "medals": 179,
+   "lift": 3.05
+  },
+  {
+   "noc": "URS",
+   "sport": "Shooting",
+   "medals": 49,
+   "lift": 0.96
+  },
+  {
+   "noc": "URS",
+   "sport": "Cycling",
+   "medals": 24,
+   "lift": 0.5
+  },
+  {
+   "noc": "URS",
+   "sport": "Rowing",
+   "medals": 42,
+   "lift": 0.88
+  },
+  {
+   "noc": "URS",
+   "sport": "Canoeing",
+   "medals": 51,
+   "lift": 1.17
+  },
+  {
+   "noc": "URS",
+   "sport": "Weightlifting",
+   "medals": 62,
+   "lift": 1.56
+  },
+  {
+   "noc": "GBR",
+   "sport": "Athletics",
+   "medals": 219,
+   "lift": 1.22
+  },
+  {
+   "noc": "GBR",
+   "sport": "Swimming",
+   "medals": 87,
+   "lift": 0.83
+  },
+  {
+   "noc": "GBR",
+   "sport": "Wrestling",
+   "medals": 17,
+   "lift": 0.21
+  },
+  {
+   "noc": "GBR",
+   "sport": "Boxing",
+   "medals": 63,
+   "lift": 1.08
+  },
+  {
+   "noc": "GBR",
+   "sport": "Gymnastics",
+   "medals": 18,
+   "lift": 0.31
+  },
+  {
+   "noc": "GBR",
+   "sport": "Shooting",
+   "medals": 49,
+   "lift": 0.97
+  },
+  {
+   "noc": "GBR",
+   "sport": "Cycling",
+   "medals": 110,
+   "lift": 2.34
+  },
+  {
+   "noc": "GBR",
+   "sport": "Rowing",
+   "medals": 78,
+   "lift": 1.66
+  },
+  {
+   "noc": "GBR",
+   "sport": "Canoeing",
+   "medals": 23,
+   "lift": 0.53
+  },
+  {
+   "noc": "GBR",
+   "sport": "Weightlifting",
+   "medals": 9,
+   "lift": 0.23
+  },
+  {
+   "noc": "GER",
+   "sport": "Athletics",
+   "medals": 117,
+   "lift": 0.78
+  },
+  {
+   "noc": "GER",
+   "sport": "Swimming",
+   "medals": 78,
+   "lift": 0.89
+  },
+  {
+   "noc": "GER",
+   "sport": "Wrestling",
+   "medals": 38,
+   "lift": 0.57
+  },
+  {
+   "noc": "GER",
+   "sport": "Boxing",
+   "medals": 30,
+   "lift": 0.62
+  },
+  {
+   "noc": "GER",
+   "sport": "Gymnastics",
+   "medals": 41,
+   "lift": 0.84
+  },
+  {
+   "noc": "GER",
+   "sport": "Shooting",
+   "medals": 26,
+   "lift": 0.62
+  },
+  {
+   "noc": "GER",
+   "sport": "Cycling",
+   "medals": 56,
+   "lift": 1.42
+  },
+  {
+   "noc": "GER",
+   "sport": "Rowing",
+   "medals": 63,
+   "lift": 1.6
+  },
+  {
+   "noc": "GER",
+   "sport": "Canoeing",
+   "medals": 94,
+   "lift": 2.61
+  },
+  {
+   "noc": "GER",
+   "sport": "Weightlifting",
+   "medals": 22,
+   "lift": 0.67
+  },
+  {
+   "noc": "FRA",
+   "sport": "Athletics",
+   "medals": 71,
+   "lift": 0.48
+  },
+  {
+   "noc": "FRA",
+   "sport": "Swimming",
+   "medals": 51,
+   "lift": 0.59
+  },
+  {
+   "noc": "FRA",
+   "sport": "Wrestling",
+   "medals": 17,
+   "lift": 0.26
+  },
+  {
+   "noc": "FRA",
+   "sport": "Boxing",
+   "medals": 28,
+   "lift": 0.58
+  },
+  {
+   "noc": "FRA",
+   "sport": "Gymnastics",
+   "medals": 21,
+   "lift": 0.43
+  },
+  {
+   "noc": "FRA",
+   "sport": "Shooting",
+   "medals": 31,
+   "lift": 0.74
+  },
+  {
+   "noc": "FRA",
+   "sport": "Cycling",
+   "medals": 102,
+   "lift": 2.6
+  },
+  {
+   "noc": "FRA",
+   "sport": "Rowing",
+   "medals": 36,
+   "lift": 0.92
+  },
+  {
+   "noc": "FRA",
+   "sport": "Canoeing",
+   "medals": 39,
+   "lift": 1.09
+  },
+  {
+   "noc": "FRA",
+   "sport": "Weightlifting",
+   "medals": 15,
+   "lift": 0.46
+  },
+  {
+   "noc": "CHN",
+   "sport": "Athletics",
+   "medals": 36,
+   "lift": 0.28
+  },
+  {
+   "noc": "CHN",
+   "sport": "Swimming",
+   "medals": 61,
+   "lift": 0.81
+  },
+  {
+   "noc": "CHN",
+   "sport": "Wrestling",
+   "medals": 19,
+   "lift": 0.33
+  },
+  {
+   "noc": "CHN",
+   "sport": "Boxing",
+   "medals": 19,
+   "lift": 0.45
+  },
+  {
+   "noc": "CHN",
+   "sport": "Gymnastics",
+   "medals": 78,
+   "lift": 1.85
+  },
+  {
+   "noc": "CHN",
+   "sport": "Shooting",
+   "medals": 77,
+   "lift": 2.11
+  },
+  {
+   "noc": "CHN",
+   "sport": "Cycling",
+   "medals": 9,
+   "lift": 0.26
+  },
+  {
+   "noc": "CHN",
+   "sport": "Rowing",
+   "medals": 12,
+   "lift": 0.35
+  },
+  {
+   "noc": "CHN",
+   "sport": "Canoeing",
+   "medals": 7,
+   "lift": 0.22
+  },
+  {
+   "noc": "CHN",
+   "sport": "Weightlifting",
+   "medals": 70,
+   "lift": 2.45
+  },
+  {
+   "noc": "ITA",
+   "sport": "Athletics",
+   "medals": 68,
+   "lift": 0.57
+  },
+  {
+   "noc": "ITA",
+   "sport": "Swimming",
+   "medals": 32,
+   "lift": 0.46
+  },
+  {
+   "noc": "ITA",
+   "sport": "Wrestling",
+   "medals": 22,
+   "lift": 0.41
+  },
+  {
+   "noc": "ITA",
+   "sport": "Boxing",
+   "medals": 48,
+   "lift": 1.23
+  },
+  {
+   "noc": "ITA",
+   "sport": "Gymnastics",
+   "medals": 32,
+   "lift": 0.82
+  },
+  {
+   "noc": "ITA",
+   "sport": "Shooting",
+   "medals": 47,
+   "lift": 1.39
+  },
+  {
+   "noc": "ITA",
+   "sport": "Cycling",
+   "medals": 66,
+   "lift": 2.09
+  },
+  {
+   "noc": "ITA",
+   "sport": "Rowing",
+   "medals": 43,
+   "lift": 1.36
+  },
+  {
+   "noc": "ITA",
+   "sport": "Canoeing",
+   "medals": 19,
+   "lift": 0.66
+  },
+  {
+   "noc": "ITA",
+   "sport": "Weightlifting",
+   "medals": 18,
+   "lift": 0.68
+  },
+  {
+   "noc": "AUS",
+   "sport": "Athletics",
+   "medals": 84,
+   "lift": 0.78
+  },
+  {
+   "noc": "AUS",
+   "sport": "Swimming",
+   "medals": 231,
+   "lift": 3.66
+  },
+  {
+   "noc": "AUS",
+   "sport": "Wrestling",
+   "medals": 3,
+   "lift": 0.06
+  },
+  {
+   "noc": "AUS",
+   "sport": "Boxing",
+   "medals": 7,
+   "lift": 0.2
+  },
+  {
+   "noc": "AUS",
+   "sport": "Gymnastics",
+   "medals": 0,
+   "lift": 0.0
+  },
+  {
+   "noc": "AUS",
+   "sport": "Shooting",
+   "medals": 12,
+   "lift": 0.4
+  },
+  {
+   "noc": "AUS",
+   "sport": "Cycling",
+   "medals": 62,
+   "lift": 2.18
+  },
+  {
+   "noc": "AUS",
+   "sport": "Rowing",
+   "medals": 45,
+   "lift": 1.58
+  },
+  {
+   "noc": "AUS",
+   "sport": "Canoeing",
+   "medals": 32,
+   "lift": 1.23
+  },
+  {
+   "noc": "AUS",
+   "sport": "Weightlifting",
+   "medals": 4,
+   "lift": 0.17
+  },
+  {
+   "noc": "JPN",
+   "sport": "Athletics",
+   "medals": 28,
+   "lift": 0.29
+  },
+  {
+   "noc": "JPN",
+   "sport": "Swimming",
+   "medals": 84,
+   "lift": 1.47
+  },
+  {
+   "noc": "JPN",
+   "sport": "Wrestling",
+   "medals": 87,
+   "lift": 2.02
+  },
+  {
+   "noc": "JPN",
+   "sport": "Boxing",
+   "medals": 8,
+   "lift": 0.25
+  },
+  {
+   "noc": "JPN",
+   "sport": "Gymnastics",
+   "medals": 103,
+   "lift": 3.25
+  },
+  {
+   "noc": "JPN",
+   "sport": "Shooting",
+   "medals": 6,
+   "lift": 0.22
+  },
+  {
+   "noc": "JPN",
+   "sport": "Cycling",
+   "medals": 5,
+   "lift": 0.2
+  },
+  {
+   "noc": "JPN",
+   "sport": "Rowing",
+   "medals": 0,
+   "lift": 0.0
+  },
+  {
+   "noc": "JPN",
+   "sport": "Canoeing",
+   "medals": 1,
+   "lift": 0.04
+  },
+  {
+   "noc": "JPN",
+   "sport": "Weightlifting",
+   "medals": 15,
+   "lift": 0.7
+  },
+  {
+   "noc": "HUN",
+   "sport": "Athletics",
+   "medals": 41,
+   "lift": 0.43
+  },
+  {
+   "noc": "HUN",
+   "sport": "Swimming",
+   "medals": 80,
+   "lift": 1.43
+  },
+  {
+   "noc": "HUN",
+   "sport": "Wrestling",
+   "medals": 56,
+   "lift": 1.32
+  },
+  {
+   "noc": "HUN",
+   "sport": "Boxing",
+   "medals": 20,
+   "lift": 0.64
+  },
+  {
+   "noc": "HUN",
+   "sport": "Gymnastics",
+   "medals": 39,
+   "lift": 1.26
+  },
+  {
+   "noc": "HUN",
+   "sport": "Shooting",
+   "medals": 18,
+   "lift": 0.67
+  },
+  {
+   "noc": "HUN",
+   "sport": "Cycling",
+   "medals": 0,
+   "lift": 0.0
+  },
+  {
+   "noc": "HUN",
+   "sport": "Rowing",
+   "medals": 3,
+   "lift": 0.12
+  },
+  {
+   "noc": "HUN",
+   "sport": "Canoeing",
+   "medals": 93,
+   "lift": 4.04
+  },
+  {
+   "noc": "HUN",
+   "sport": "Weightlifting",
+   "medals": 20,
+   "lift": 0.95
+  },
+  {
+   "noc": "SWE",
+   "sport": "Athletics",
+   "medals": 85,
+   "lift": 0.91
+  },
+  {
+   "noc": "SWE",
+   "sport": "Swimming",
+   "medals": 41,
+   "lift": 0.75
+  },
+  {
+   "noc": "SWE",
+   "sport": "Wrestling",
+   "medals": 86,
+   "lift": 2.08
+  },
+  {
+   "noc": "SWE",
+   "sport": "Boxing",
+   "medals": 11,
+   "lift": 0.36
+  },
+  {
+   "noc": "SWE",
+   "sport": "Gymnastics",
+   "medals": 8,
+   "lift": 0.26
+  },
+  {
+   "noc": "SWE",
+   "sport": "Shooting",
+   "medals": 58,
+   "lift": 2.21
+  },
+  {
+   "noc": "SWE",
+   "sport": "Cycling",
+   "medals": 18,
+   "lift": 0.73
+  },
+  {
+   "noc": "SWE",
+   "sport": "Rowing",
+   "medals": 2,
+   "lift": 0.08
+  },
+  {
+   "noc": "SWE",
+   "sport": "Canoeing",
+   "medals": 30,
+   "lift": 1.34
+  },
+  {
+   "noc": "SWE",
+   "sport": "Weightlifting",
+   "medals": 4,
+   "lift": 0.19
+  },
+  {
+   "noc": "RUS",
+   "sport": "Athletics",
+   "medals": 77,
+   "lift": 0.93
+  },
+  {
+   "noc": "RUS",
+   "sport": "Swimming",
+   "medals": 23,
+   "lift": 0.48
+  },
+  {
+   "noc": "RUS",
+   "sport": "Wrestling",
+   "medals": 60,
+   "lift": 1.64
+  },
+  {
+   "noc": "RUS",
+   "sport": "Boxing",
+   "medals": 30,
+   "lift": 1.12
+  },
+  {
+   "noc": "RUS",
+   "sport": "Gymnastics",
+   "medals": 44,
+   "lift": 1.64
+  },
+  {
+   "noc": "RUS",
+   "sport": "Shooting",
+   "medals": 33,
+   "lift": 1.42
+  },
+  {
+   "noc": "RUS",
+   "sport": "Cycling",
+   "medals": 19,
+   "lift": 0.87
+  },
+  {
+   "noc": "RUS",
+   "sport": "Rowing",
+   "medals": 4,
+   "lift": 0.18
+  },
+  {
+   "noc": "RUS",
+   "sport": "Canoeing",
+   "medals": 13,
+   "lift": 0.65
+  },
+  {
+   "noc": "RUS",
+   "sport": "Weightlifting",
+   "medals": 26,
+   "lift": 1.43
+  }
+ ],
+ "max_lift": 4.1
+}

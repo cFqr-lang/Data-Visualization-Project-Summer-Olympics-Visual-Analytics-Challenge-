@@ -7,5 +7,5 @@ Fig.2-5,C2,参与不等于产出,C,P0,athlete_row,该国该届记录,false,mixed
 Fig.2-6,D1,项目生命线,D,P0,event_level,每届,false,Sport×Sex proxy + uncertainty band,official 339/329,task2,done
 Fig.2-7,B2,国家效率前沿,B,P1,conservative_event,场均参赛人数,false,lower bound,n/a,task2,done
 Fig.2-8,D2,项目结构变迁,D,P1,event_level,份额,false,proxy,6-8 categories + Other,task2,done
-Fig.2-9,X1,国家项目优势矩阵,B,P2,conservative_event,国家×项目,false,lower bound,lift,task2,optional
-Fig.2-10,X2,项目性别差哑铃,C,P2,event_level,2024,false,Sport×Sex,2024 only,task2,optional
+Fig.2-9,X1,国家项目优势矩阵,B,P2,conservative_event,国家×项目,false,lower bound,lift,task2,done
+Fig.2-10,X2,项目性别差哑铃,C,P2,athlete_row,2024 去重运动员,false,player_id dedupe,±4 pp outlier labels,task2,done

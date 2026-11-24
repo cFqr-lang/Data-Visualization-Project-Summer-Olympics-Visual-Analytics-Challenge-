@@ -1,4 +1,4 @@
-/** 从运行中的 Vite 站点导出 8 幅图的 PNG@4x 与 SVG。
+/** 从运行中的 Vite 站点导出 10 幅图的 PNG@4x 与 SVG。
  *  用法：先 npm run dev，再 npm run export:figures
  */
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -22,6 +22,8 @@ const FIGURES = [
   ['D1', 'Fig2-6_D1_sport-lifeline'],
   ['B2', 'Fig2-7_B2_efficiency-frontier'],
   ['D2', 'Fig2-8_D2_structure-river'],
+  ['X1', 'Fig2-9_X1_strength-matrix'],
+  ['X2', 'Fig2-10_X2_gender-gap'],
 ];
 
 async function main() {

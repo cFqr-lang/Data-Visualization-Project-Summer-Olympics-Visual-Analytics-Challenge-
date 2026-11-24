@@ -24,6 +24,7 @@ from .metrics import (
     event_series_by_year,
     latest_medal_year,
     medal_rows_by_year,
+    medals_by_noc_sport,
     participation_by_year,
     sport_lifeline,
 )
@@ -477,9 +478,111 @@ def build_d2(records):
 
 
 # --------------------------------------------------------------------------- #
+# X1 国家 × 项目优势矩阵（lift）
+# --------------------------------------------------------------------------- #
+def build_x1(records):
+    counts = medals_by_noc_sport(records)
+    noc_totals: dict = {}
+    sport_totals: dict = {}
+    for (noc, sport), value in counts.items():
+        noc_totals[noc] = noc_totals.get(noc, 0) + value
+        sport_totals[sport] = sport_totals.get(sport, 0) + value
+
+    grand = sum(counts.values())
+    nocs = sorted(noc_totals, key=lambda noc: (-noc_totals[noc], noc))[:12]
+    sports = sorted(sport_totals, key=lambda sport: (-sport_totals[sport], sport))[:10]
+
+    cells = []
+    max_lift = 0.0
+    for noc in nocs:
+        for sport in sports:
+            medals = counts.get((noc, sport), 0)
+            expected = noc_totals[noc] * sport_totals[sport] / grand if grand else 0
+            lift = medals / expected if expected else 0.0
+            max_lift = max(max_lift, lift)
+            cells.append({
+                "noc": noc, "sport": sport, "medals": medals,
+                "lift": _round(lift, 2),
+            })
+
+    return {
+        "meta": _meta(
+            "Fig.2-9", "X1", "传统优势写在项目里：国家 × 项目 lift",
+            "conservative_event", "Top 12 NOC × Top 10 项目", False,
+            ["lift = (该国该项目奖牌 / 该国全部奖牌) ÷ (该项目全部奖牌 / 全球奖牌)",
+             "lift = 1 表示与全局结构一致，> 1 为相对专长，0 表示该项目无奖牌",
+             "仅用赛题数据；Top 12 NOC 与 Top 10 项目均按保守小项奖牌数选取"],
+        ),
+        "nocs": [{"noc": noc, "medals": noc_totals[noc]} for noc in nocs],
+        "sports": [{"sport": sport, "medals": sport_totals[sport]} for sport in sports],
+        "cells": cells,
+        "max_lift": _round(max_lift + 0.05, 1),
+    }
+
+
+# --------------------------------------------------------------------------- #
+# X2 项目性别差哑铃
+# --------------------------------------------------------------------------- #
+def build_x2(records):
+    latest = max(r.year for r in records)
+    view = [r for r in records if r.year == latest]
+
+    female: dict = {}
+    male: dict = {}
+    medal_rows: dict = {}
+    female_medals: dict = {}
+    for rec in view:
+        target = female if rec.sex == "F" else male
+        target.setdefault(rec.sport_key, set()).add(rec.player_id)
+        if rec.medal in MEDAL_ORDER:
+            medal_rows[rec.sport_key] = medal_rows.get(rec.sport_key, 0) + 1
+            if rec.sex == "F":
+                female_medals[rec.sport_key] = female_medals.get(rec.sport_key, 0) + 1
+
+    sports = []
+    for sport in set(female) | set(male):
+        women = len(female.get(sport, ()))
+        men = len(male.get(sport, ()))
+        if women + men < 10:
+            continue
+        female_share = women / (women + men)
+        total_medals = medal_rows.get(sport, 0)
+        sports.append({
+            "sport": sport,
+            "female_athletes": women,
+            "male_athletes": men,
+            "athletes": women + men,
+            "female_share": _round(female_share),
+            "male_share": _round(1 - female_share),
+            "gap_pp": _round((2 * female_share - 1) * 100, 1),
+            "medal_rows": total_medals,
+            "female_medal_share": (
+                _round(female_medals.get(sport, 0) / total_medals)
+                if total_medals else None
+            ),
+        })
+    sports.sort(key=lambda row: (-row["female_share"], row["sport"]))
+    for index, row in enumerate(sports, start=1):
+        row["rank"] = index
+
+    return {
+        "meta": _meta(
+            "Fig.2-10", "X2", "性别差集中在少数项目，多数项目已接近 50:50",
+            "athlete_row", f"{latest} 去重运动员", False,
+            [f"两端为 {latest} 各项目女性 / 男性去重参赛人数占比，连线长度 = 差距（百分点）",
+             "仅保留男女合计 ≥ 10 人的项目；Artistic Swimming、Rhythmic Gymnastics 为女子专属，呈 100% / 0%",
+             "女子奖牌占比按运动员行统计（含混合项目），只在 tooltip 中作产出参考，不参与排序",
+             "2020+ 小项名不可还原，故本图用人均参赛结构而非小项数衡量性别差"],
+        ),
+        "year": latest,
+        "sports": sports,
+    }
+
+
+# --------------------------------------------------------------------------- #
 # 统一底表
 # --------------------------------------------------------------------------- #
-def write_metrics_master(records, agg_cons, agg_rows, actual):
+def write_metrics_master(records, agg_cons, agg_rows, actual, x1, x2):
     part = participation_by_year(records)
     events = event_series_by_year(records)
     cons_totals = _noc_totals(agg_cons)
@@ -525,6 +628,25 @@ def write_metrics_master(records, agg_cons, agg_rows, actual):
         add("medal_rows_total", "NOC 历史累计",
             row_totals.get(row["noc"], {}).get("total", 0),
             "rows", "athlete_row", noc=row["noc"], notes="与 conservative 的差额即团体膨胀")
+
+    for row in x1["cells"]:
+        if row["medals"] <= 0:
+            continue
+        add("specialization_lift", "NOC×Sport", row["lift"], "lift",
+            "conservative_event", noc=row["noc"],
+            notes=f"sport={row['sport']}; medals={row['medals']}")
+
+    for row in x2["sports"]:
+        notes = f"sport={row['sport']}; female={row['female_athletes']}, male={row['male_athletes']}"
+        add("female_participation_share", "Sport 2024", row["female_share"],
+            "ratio", "athlete_row", year=x2["year"], notes=notes)
+        add("male_participation_share", "Sport 2024", row["male_share"],
+            "ratio", "athlete_row", year=x2["year"], notes=notes)
+        add("gender_gap_pp", "Sport 2024", row["gap_pp"],
+            "percentage_points", "athlete_row", year=x2["year"], notes=notes)
+        if row["female_medal_share"] is not None:
+            add("female_medal_share", "Sport 2024", row["female_medal_share"],
+                "ratio", "athlete_row", year=x2["year"], notes=notes)
 
     path = SHARED_METRICS_DIR / "metrics_master.csv"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -607,6 +729,8 @@ def main(argv=None):
     agg_cons = aggregate_medals(records, "conservative_event")
     agg_rows = aggregate_medals(records, "athlete_row")
 
+    x1 = build_x1(records)
+    x2 = build_x2(records)
     figures = {
         "fig-A1.json": build_a1(records),
         "fig-A2.json": build_a2(records, agg_cons),
@@ -616,6 +740,8 @@ def main(argv=None):
         "fig-D1.json": build_d1(records),
         "fig-B2.json": build_b2(records, agg_cons),
         "fig-D2.json": build_d2(records),
+        "fig-X1.json": x1,
+        "fig-X2.json": x2,
     }
     for name, payload in figures.items():
         _write_json(OUT_FIG_DIR / name, payload)
@@ -645,7 +771,7 @@ def main(argv=None):
         "figures": meta["figures"],
     })
 
-    metrics_path, metric_rows = write_metrics_master(records, agg_cons, agg_rows, actual)
+    metrics_path, metric_rows = write_metrics_master(records, agg_cons, agg_rows, actual, x1, x2)
     print(f"\n写出 {len(figures)} 个图表 JSON → {OUT_FIG_DIR}")
     print(f"写出 {metric_rows} 行底表 → {metrics_path}")
     print(f"最后一届 {latest_medal_year(records)}；自检失败 {len(failed)} 项")

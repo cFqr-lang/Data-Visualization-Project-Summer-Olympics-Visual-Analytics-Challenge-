@@ -1,6 +1,7 @@
 import './styles.css';
 import type {
-  A1Payload, A2Payload, B1Payload, B2Payload, C1Payload, C2Payload, D1Payload, D2Payload, FigureMeta, MetaPayload,
+  A1Payload, A2Payload, B1Payload, B2Payload, C1Payload, C2Payload, D1Payload, D2Payload,
+  FigureMeta, IndexPayload, MetaPayload, X1Payload, X2Payload,
 } from './types';
 import { renderA1 } from './charts/a1';
 import { renderA2 } from './charts/a2';
@@ -10,6 +11,8 @@ import { renderC1 } from './charts/c1';
 import { renderC2 } from './charts/c2';
 import { renderD1 } from './charts/d1';
 import { renderD2 } from './charts/d2';
+import { renderX1 } from './charts/x1';
+import { renderX2 } from './charts/x2';
 
 const fmt = new Intl.NumberFormat('zh-CN');
 
@@ -120,6 +123,22 @@ app.innerHTML = `
       <ul class="notes" id="b2-notes"></ul>
     </section>
 
+    <section class="figure" id="fig-X1">
+      <div class="figure__head">
+        <span class="figure__id">Fig.2-9 · X1</span>
+        <h2 class="figure__title">传统优势写在项目里：国家 × 项目 lift</h2>
+      </div>
+      <p class="figure__sub" id="x1-sub"></p>
+      <div class="panel">
+        <div class="panel__cap">
+          <span>Top 12 NOC × Top 10 项目 · lift 热力图</span>
+          <span>lift = 1 与全局结构一致 · 金色为相对专长</span>
+        </div>
+        <div class="chart chart--mid" id="chart-x1"></div>
+      </div>
+      <ul class="notes" id="x1-notes"></ul>
+    </section>
+
     <section class="figure" id="fig-C1">
       <div class="figure__head">
         <span class="figure__id">Fig.2-4 · C1</span>
@@ -151,6 +170,22 @@ app.innerHTML = `
         <div class="chart chart--mid" id="chart-c2"></div>
       </div>
       <ul class="notes" id="c2-notes"></ul>
+    </section>
+
+    <section class="figure" id="fig-X2">
+      <div class="figure__head">
+        <span class="figure__id">Fig.2-10 · X2</span>
+        <h2 class="figure__title">性别差集中在少数项目，多数项目已接近 50:50</h2>
+      </div>
+      <p class="figure__sub" id="x2-sub"></p>
+      <div class="panel">
+        <div class="panel__cap">
+          <span>2024 各项目女性 / 男性参赛占比 · 连线为差距</span>
+          <span>橙色线 = 差距 ≥ 4 pp · 虚线为 50:50</span>
+        </div>
+        <div class="chart chart--taller" id="chart-x2"></div>
+      </div>
+      <ul class="notes" id="x2-notes"></ul>
     </section>
 
     <section class="figure" id="fig-D1">
@@ -196,13 +231,14 @@ app.innerHTML = `
     <section class="figure" id="fig-interface">
       <div class="figure__head">
         <span class="figure__id">接口</span>
-        <h2 class="figure__title">P1 / P2 图表与全队复用</h2>
+        <h2 class="figure__title">十图资产与全队复用</h2>
       </div>
       <p class="figure__sub">
         管线输出固定 JSON 结构（<code>meta</code> + 数据段），任务三可直接引用指标，
-        任务四可直接复用图表组件与离线包。
+        任务四可直接复用图表组件与离线包。10 幅图均已登记到
+        <code>contracts/figure_registry.csv</code>。
       </p>
-      <div class="pending" id="pending"></div>
+      <div class="pending" id="assets"></div>
     </section>
 
     <footer id="footer"></footer>
@@ -296,6 +332,18 @@ function renderB2Section(b2: B2Payload): void {
   renderB2(document.getElementById('chart-b2') as HTMLElement, b2);
 }
 
+function renderX1Section(x1: X1Payload): void {
+  setText('x1-sub', metaLine(x1.meta));
+  const top = [...x1.cells].sort((a, b) => b.lift - a.lift).slice(0, 3);
+  const zeros = x1.cells.filter((cell) => cell.medals === 0);
+  setNotes('x1-notes', [
+    ...x1.meta.notes,
+    `最高 lift：${top.map((cell) => `${cell.noc}×${cell.sport} ${cell.lift.toFixed(2)}`).join(' · ')}`,
+    `零奖牌格：${zeros.map((cell) => `${cell.noc}×${cell.sport}`).join('、')}；强项覆盖并非可以无限横向复制`,
+  ]);
+  renderX1(document.getElementById('chart-x1') as HTMLElement, x1);
+}
+
 function renderC1Section(c1: C1Payload): void {
   setText('c1-sub', metaLine(c1.meta));
   setNotes('c1-notes', c1.meta.notes);
@@ -348,6 +396,20 @@ function renderC2Section(c2: C2Payload): void {
   });
 }
 
+function renderX2Section(x2: X2Payload): void {
+  setText('x2-sub', metaLine(x2.meta));
+  const outliers = x2.sports.filter((row) => Math.abs(row.gap_pp) >= 4);
+  const near = x2.sports.filter((row) => Math.abs(row.gap_pp) < 4).length;
+  setNotes('x2-notes', [
+    ...x2.meta.notes,
+    `差距 ≥ 4 pp 的项目：${outliers
+      .map((row) => `${row.sport} ${row.gap_pp > 0 ? '+' : ''}${row.gap_pp.toFixed(1)}`)
+      .join(' · ')}`,
+    `${near} / ${x2.sports.length} 个项目落在 ±4 pp 内，性别差是局部问题而非普遍现象`,
+  ]);
+  renderX2(document.getElementById('chart-x2') as HTMLElement, x2);
+}
+
 function renderD1Section(d1: D1Payload): void {
   setText('d1-sub', metaLine(d1.meta));
   setNotes('d1-notes', d1.meta.notes);
@@ -383,20 +445,16 @@ function renderD2Section(d2: D2Payload): void {
   renderD2(document.getElementById('chart-d2') as HTMLElement, d2);
 }
 
-function renderPending(): void {
-  const el = document.getElementById('pending');
+function renderAssets(index: IndexPayload): void {
+  const el = document.getElementById('assets');
   if (!el) return;
-  const items = [
-    ['Fig.2-9 · X1', '国家项目优势矩阵', 'P2', 'Top NOC × Top 项目的 lift 热力图，用于路径依赖分析'],
-    ['Fig.2-10 · X2', '项目性别差哑铃', 'P2', '2024 各项目男女小项占比的哑铃差，作为 C 视角补充'],
-  ];
-  el.innerHTML = items
+  el.innerHTML = index.figures
     .map(
-      ([id, title, priority, desc]) => `
+      (figure) => `
       <article class="pending__card">
-        <span class="figure__id">${id}</span>
-        <h3>${title} <span class="tag">${priority}</span></h3>
-        <p>${desc}</p>
+        <span class="figure__id">${figure.figure_id} · ${figure.chart_id}</span>
+        <h3>${figure.title} <span class="tag">已交付</span></h3>
+        <p>${figure.caliber}<br />${figure.path}</p>
       </article>`
     )
     .join('');
@@ -415,14 +473,17 @@ function renderFooter(meta: MetaPayload, a1: A1Payload): void {
 
 async function boot(): Promise<void> {
   try {
-    const [meta, a1, a2, b1, b2, c1, c2, d1, d2] = await Promise.all([
+    const [meta, index, a1, a2, b1, b2, x1, c1, c2, x2, d1, d2] = await Promise.all([
       getJSON<MetaPayload>('./data/meta.json'),
+      getJSON<IndexPayload>('./data/index.json'),
       getJSON<A1Payload>('./data/figures/fig-A1.json'),
       getJSON<A2Payload>('./data/figures/fig-A2.json'),
       getJSON<B1Payload>('./data/figures/fig-B1.json'),
       getJSON<B2Payload>('./data/figures/fig-B2.json'),
+      getJSON<X1Payload>('./data/figures/fig-X1.json'),
       getJSON<C1Payload>('./data/figures/fig-C1.json'),
       getJSON<C2Payload>('./data/figures/fig-C2.json'),
+      getJSON<X2Payload>('./data/figures/fig-X2.json'),
       getJSON<D1Payload>('./data/figures/fig-D1.json'),
       getJSON<D2Payload>('./data/figures/fig-D2.json'),
     ]);
@@ -432,11 +493,13 @@ async function boot(): Promise<void> {
     renderA2Section(a2);
     renderB1Section(b1);
     renderB2Section(b2);
+    renderX1Section(x1);
     renderC1Section(c1);
     renderC2Section(c2);
+    renderX2Section(x2);
     renderD1Section(d1);
     renderD2Section(d2);
-    renderPending();
+    renderAssets(index);
     renderFooter(meta, a1);
   } catch (error) {
     app!.insertAdjacentHTML(

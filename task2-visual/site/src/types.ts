@@ -166,6 +166,40 @@ export interface D2Payload {
   totals: { name: string; medals: number }[];
 }
 
+export interface X1Cell {
+  noc: string;
+  sport: string;
+  medals: number;
+  lift: number;
+}
+
+export interface X1Payload {
+  meta: FigureMeta;
+  nocs: { noc: string; medals: number }[];
+  sports: { sport: string; medals: number }[];
+  cells: X1Cell[];
+  max_lift: number;
+}
+
+export interface X2Sport {
+  sport: string;
+  female_athletes: number;
+  male_athletes: number;
+  athletes: number;
+  female_share: number;
+  male_share: number;
+  gap_pp: number;
+  medal_rows: number;
+  female_medal_share: number | null;
+  rank: number;
+}
+
+export interface X2Payload {
+  meta: FigureMeta;
+  year: number;
+  sports: X2Sport[];
+}
+
 export interface IndexPayload {
   schema: string;
   data_version: string;

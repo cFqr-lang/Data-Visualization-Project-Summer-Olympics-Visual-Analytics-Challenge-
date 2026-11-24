@@ -184,6 +184,21 @@ def sport_lifeline(records: list[Record]) -> list[dict]:
     return rows
 
 
+def medals_by_noc_sport(records: list[Record]) -> dict:
+    """保守小项口径下，各 NOC × Sport 的去重奖牌数。{(noc, sport): count}"""
+    seen: set = set()
+    out: Counter = Counter()
+    for rec in records:
+        if rec.medal not in MEDAL_ORDER:
+            continue
+        key = _unit_key(rec)
+        if key in seen:
+            continue
+        seen.add(key)
+        out[(rec.noc, rec.sport_key)] += 1
+    return dict(out)
+
+
 def event_medals_by_year_sport(records: list[Record]) -> dict:
     """保守小项口径下，每届各 Sport 的去重奖牌数。{(year, sport): count}"""
     seen: set = set()

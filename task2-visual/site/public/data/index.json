@@ -1,7 +1,7 @@
 {
  "schema": "task2-figure-v1",
  "data_version": "v1.0-fallback",
- "generated_at": "2026-11-23T22:40:32+08:00",
+ "generated_at": "2026-11-24T20:41:15+08:00",
  "figures": [
   {
    "figure_id": "Fig.2-1",
@@ -58,6 +58,20 @@
    "title": "核心大类份额稳定，新兴类在边缘上升",
    "path": "figures/fig-D2.json",
    "caliber": "conservative_event"
+  },
+  {
+   "figure_id": "Fig.2-9",
+   "chart_id": "X1",
+   "title": "传统优势写在项目里：国家 × 项目 lift",
+   "path": "figures/fig-X1.json",
+   "caliber": "conservative_event"
+  },
+  {
+   "figure_id": "Fig.2-10",
+   "chart_id": "X2",
+   "title": "性别差集中在少数项目，多数项目已接近 50:50",
+   "path": "figures/fig-X2.json",
+   "caliber": "athlete_row"
   }
  ]
 }
