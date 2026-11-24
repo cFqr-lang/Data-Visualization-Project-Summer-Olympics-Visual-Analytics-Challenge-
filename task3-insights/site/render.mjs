@@ -1,9 +1,9 @@
 /** 任务三 ECharts 渲染：读取 data/*.json，输出 exports/ 的 PNG@4x 与 SVG。 */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { createRequire } from 'node:module';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import puppeteer from 'puppeteer-core';
 import { init as echartsInit, use as echartsUse } from 'echarts/core';
 import { BarChart, LineChart, ScatterChart } from 'echarts/charts';
 import {
@@ -19,15 +19,12 @@ echartsUse([
   SVGRenderer,
 ]);
 
-const require = createRequire(
-  'C:/Users/11851/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/'
-);
-
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 const dataDir = resolve(root, 'data');
 const outDir = resolve(root, 'exports');
-const EDGE = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
+const EDGE = process.env.EDGE_PATH
+  ?? 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
 const ECHARTS_DIST = resolve(here, 'node_modules', 'echarts', 'dist', 'echarts.min.js');
 
 const C = {
@@ -473,29 +470,25 @@ async function main() {
     console.log(`[SVG] ${id} ${cfg.file.replace('_4x.png', '.svg')}`);
   }
 
-  // 2) PNG@4x via Edge
-  const { chromium } = require('playwright');
-  const browser = await chromium.launch({
+  // 2) PNG@4x via Edge（puppeteer-core，路径可用 EDGE_PATH 环境变量覆盖）
+  const browser = await puppeteer.launch({
     executablePath: EDGE, headless: true,
     args: ['--no-sandbox', '--disable-dev-shm-usage'],
   });
-  const context = await browser.newContext({
-    viewport: { width: 1700, height: 1000 },
-    deviceScaleFactor: 4,
-  });
   try {
     for (const [id, cfg] of Object.entries(charts)) {
-      const page = await context.newPage();
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1700, height: 1000, deviceScaleFactor: 4 });
       await page.setContent(buildHtml(id, cfg.option, cfg.w, cfg.h), { waitUntil: 'load' });
       await page.waitForFunction('window.__ready === true', { timeout: 30000 });
-      await page.waitForTimeout(250);
-      const el = page.locator('#stage');
+      await new Promise((r) => setTimeout(r, 250));
+      const el = await page.$('#stage');
+      if (!el) throw new Error(`#stage 缺失：${id}`);
       await el.screenshot({ path: resolve(outDir, cfg.file) });
       console.log(`[PNG] ${id} ${cfg.file}`);
       await page.close();
     }
   } finally {
-    await context.close();
     await browser.close();
   }
 }
