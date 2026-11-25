@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>数说奥运 1896–2024 · 数据可视分析报告</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --paper: #FBFAF6;
+    --ink: #12211C;
+    --muted: #6E7A74;
+    --line: #D9D4C7;
+    --gold: #C8A24A;
+    --silver: #9AA3A8;
+    --bronze: #B07A4A;
+    --accent: #1F6F5C;
+  }
+  html, body {
+    background: #E8E6DF;
+    color: var(--ink);
+    font-family: "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm 18mm 14mm;
+    background: var(--paper);
+    margin: 0 auto;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+  .page::after {
+    content: attr(data-page);
+    position: absolute;
+    right: 18mm;
+    bottom: 7mm;
+    font-size: 8.5pt;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .rh {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 2.2mm;
+    margin-bottom: 5mm;
+    border-bottom: 0.4pt solid var(--line);
+    font-size: 8pt;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .rh b { color: var(--ink); font-weight: 600; letter-spacing: 0.08em; }
+  h1, h2, h3 { font-family: "Source Han Serif SC", "SimSun", serif; font-weight: 700; }
+  h2 {
+    font-size: 17pt;
+    line-height: 1.3;
+    margin-bottom: 1.5mm;
+  }
+  h2 .num {
+    color: var(--gold);
+    font-size: 11pt;
+    margin-right: 2.5mm;
+    font-family: "Source Han Sans SC", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .sub {
+    font-size: 9pt;
+    color: var(--muted);
+    margin-bottom: 4mm;
+    line-height: 1.6;
+  }
+  p {
+    font-size: 9.6pt;
+    line-height: 1.78;
+    text-align: justify;
+    margin-bottom: 2.6mm;
+  }
+  .lead {
+    font-size: 10.4pt;
+    line-height: 1.8;
+    padding-left: 4mm;
+    border-left: 1.6pt solid var(--gold);
+    margin-bottom: 3.5mm;
+  }
+  strong { font-weight: 600; color: #0B1512; }
+  em { font-style: normal; color: var(--accent); font-weight: 600; }
+
+  .figure { margin: 2mm 0 3mm; }
+  .figure img { display: block; width: 100%; height: auto; max-height: 92mm; object-fit: contain; }
+  .figure.half img { max-height: 78mm; }
+  .figure.tall img { max-height: 120mm; }
+  figcaption {
+    font-size: 7.8pt;
+    line-height: 1.55;
+    color: var(--muted);
+    padding-left: 2.5mm;
+    border-left: 1.2pt solid var(--bronze);
+    margin-top: 1.6mm;
+  }
+  figcaption b { color: var(--ink); font-weight: 600; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.4pt;
+    margin: 2.5mm 0 3mm;
+  }
+  th, td {
+    padding: 1.6mm 2.2mm;
+    border-bottom: 0.4pt solid var(--line);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  th {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 7.8pt;
+    letter-spacing: 0.04em;
+    border-bottom: 0.8pt solid var(--ink);
+  }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .callout {
+    background: #F3F1E9;
+    border-left: 2pt solid var(--accent);
+    padding: 3mm 4mm;
+    font-size: 8.8pt;
+    line-height: 1.72;
+    margin: 3mm 0;
+  }
+  .callout b { color: var(--accent); }
+
+  ul.tight { margin: 0 0 3mm 4.5mm; }
+  ul.tight li { font-size: 9.4pt; line-height: 1.72; margin-bottom: 1.2mm; }
+
+  /* 封面 */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24mm 20mm 16mm;
+  }
+  .cover .kicker {
+    font-size: 8.6pt;
+    letter-spacing: 0.28em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .cover h1 {
+    font-size: 34pt;
+    line-height: 1.18;
+    margin: 6mm 0 4mm;
+    letter-spacing: 0.02em;
+  }
+  .cover .en {
+    font-size: 10pt;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10mm;
+  }
+  .cover .rule { display: flex; height: 2.2mm; width: 46mm; margin-bottom: 8mm; }
+  .cover .rule i { flex: 1; }
+  .cover .rule i:nth-child(1) { background: var(--gold); }
+  .cover .rule i:nth-child(2) { background: var(--silver); }
+  .cover .rule i:nth-child(3) { background: var(--bronze); }
+  .cover .abstract {
+    font-size: 10pt;
+    line-height: 1.85;
+    max-width: 150mm;
+    text-align: justify;
+  }
+  .cover .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 0.6pt solid var(--ink);
+    border-bottom: 0.6pt solid var(--ink);
+    margin: 8mm 0;
+  }
+  .cover .kpis div {
+    padding: 4mm 3mm;
+    border-right: 0.4pt solid var(--line);
+  }
+  .cover .kpis div:last-child { border-right: none; }
+  .cover .kpis .v {
+    font-family: "Source Han Serif SC", "SimSun", serif;
+    font-size: 19pt;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .cover .kpis .k { font-size: 7.6pt; color: var(--muted); margin-top: 1.6mm; letter-spacing: 0.03em; }
+  .cover .meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.4pt;
+    color: var(--muted);
+    border-top: 0.4pt solid var(--line);
+    padding-top: 4mm;
+  }
+  .cover .nav {
+    display: flex;
+    gap: 9mm;
+    margin-top: 12mm;
+    font-size: 8.6pt;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+  .cover .nav span { padding-left: 3mm; border-left: 2pt solid var(--gold); line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<!-- ============ P1 封面 ============ -->
+<div class="page cover" data-page="1">
+  <div>
+    <div class="kicker">数据可视分析挑战赛 · 夏季奥运会 1896–2024</div>
+    <h1>数说奥运<br>百年圣火的四条曲线</h1>
+    <div class="en">A Century of the Games in Four Curves</div>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="abstract">
+      本作品以 1896–2024 年夏季奥运会 <strong>252,565 行</strong>参赛记录为底本，先解决数据本身的六类缺陷，再回答三个问题：奖牌榜在什么口径下才可信、百年格局如何演变、主场优势究竟是脉冲还是台阶。
+      审计发现两处足以改变结论的口径陷阱：2020 年起 Event 字段泛化会让小项口径少算 <strong>702 个奖牌单位</strong>，而按运动员行计数会把团体项目奖牌放大 <strong>2,840 枚</strong>。我们据此给出 strict 与 NOC-aware 两套口径，并让全篇结论同时接受两者检验。
+      在可信口径上，女性参赛占比用 124 年从 1.7% 走到 49.1%，但"接近半数"在项目层并不成立；东道主加成真实存在——20 届中 19 届高于基准、中位增量 <strong>+13.3 枚</strong>——却在下一届即蒸发大半，指数从 163 回落到 112，本质是"多派人"而非"多夺牌"的一次性脉冲。全部图表由开源管线从原始 CSV 一键生成，无外部数据。
+    </div>
+    <div class="nav">
+      <span>01 数据体检</span><span>02 百年全景</span><span>03 专题深挖</span><span>04 结论</span>
+    </div>
+  </div>
+  <div>
+    <div class="kpis">
+      <div><div class="v">17,935</div><div class="k">奖牌单位 · NOC-aware</div></div>
+      <div><div class="v">234</div><div class="k">参赛国家 / 地区</div></div>
+      <div><div class="v">49.1%</div><div class="k">2024 女性参赛占比</div></div>
+      <div><div class="v">163→112</div><div class="k">东道主指数 T→T+1</div></div>
+    </div>
+    <div class="meta">
+      <span>数据来源：Kaggle Summer Olympics Medals (1896–2024)，CC BY-NC-SA 4.0</span>
+      <span>数据版本 v1.2</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ P2 数据体检（一） ============ -->
+<div class="page" data-page="2">
+  <div class="rh"><span><b>01 数据体检</b> · 口径定义</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">01</span>数据不是拿来就用的</h2>
+  <div class="sub">在画第一张图之前，我们花了整段时间只做一件事：证明这 252,565 行数据到底能信到什么程度。</div>
+
+  <p class="lead">这份数据不是"脏"，而是<em>表面干净、内部错位</em>：字段齐全、没有空行，但六类缺陷会顺着统计口径一路传导，直接改变结论。</p>
+
+  <table>
+    <tr><th style="width:16%">编号</th><th style="width:34%">问题</th><th>如果不处理，会发生什么</th></tr>
+    <tr><td>Q1</td><td>团体项目一行一人</td><td>按行加总会把同一枚奖牌重复计算，奖牌数被放大 2,840 枚</td></tr>
+    <tr><td>Q2</td><td>Sport 名称漂移 + 逗号拼接</td><td>同一大项被拆成四五条，项目排行与份额全部失真；89 行含逗号拼接</td></tr>
+    <tr><td>Q3</td><td>2020 年起 Event 泛化为 Men/Women</td><td>小项口径把整届数成一个项目，少算 702 个奖牌单位</td></tr>
+    <tr><td>Q4</td><td>性别字段与项目名不一致</td><td>混合项目被判成单一性别，性别弧线出现假拐点</td></tr>
+    <tr><td>Q5</td><td>1906 届、1956 双城、NOC 政体变迁</td><td>历史总榜名次与国别叙事错位（URS→EUN→RUS→ROC→AIN）</td></tr>
+    <tr><td>Q6</td><td>同一小项同色并列、双铜牌</td><td>strict 与 NOC-aware 两种计法相差 702 个单位，口径不声明则不可比</td></tr>
+  </table>
+
+  <div class="figure half">
+    <img src="../task1-data/figures/fig5_generic_event.png" alt="2020 起 Event 泛化对小项口径的影响">
+    <figcaption><b>图 1</b>　Q3 的直接影响：2020 年起被泛化为 "Men/Women" 的 Event 占比从 0% 跃升到 20.1%、23.1%。不是奥运项目缩水，而是记录粒度变了。</figcaption>
+  </div>
+
+  <div class="callout">
+    <b>处理原则：</b>所有缺陷不"修补"，而是显式建模——能归一的归一（Sport 映射表），不能归一的保留原样并加注（1956 双城、政体变迁），口径分歧则同时给出两套数字，交由读者判断。
+  </div>
+</div>
+
+<!-- ============ P3 数据体检（二）双口径 ============ -->
+<div class="page" data-page="3">
+  <div class="rh"><span><b>01 数据体检</b> · 双口径</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">01</span>榜首不是事实，是分母的函数</h2>
+  <div class="sub">同一份数据、同一届奥运会，换一种计法，名次就会变。我们把这条原则贯彻到全篇。</div>
+
+  <div class="figure">
+    <img src="../task1-data/figures/fig1_caliber_2024.png" alt="2024 年 运动员行口径与小项口径对比">
+    <figcaption><b>图 2</b>　2024 年<strong>金牌数</strong>的双口径对比。深色为运动员行口径（每人每枚计 1，团体项目按人数放大），浅色为小项口径（每小项每色计 1）。美国 131→39、中国 71→40、荷兰 67→15，差额即团体项目的重复计数。</figcaption>
+  </div>
+
+  <p>我们把口径压缩成两个可复现的定义：<strong>strict</strong>（同色并列、双铜牌只计 1）与 <strong>NOC-aware</strong>（每个获奖 NOC 各计 1）。两者对历史总量的影响如下：</p>
+
+  <table>
+    <tr><th>指标</th><th class="num">strict</th><th class="num">NOC-aware（本报告主口径）</th><th class="num">差</th></tr>
+    <tr><td>历史奖牌单位（含 1906）</td><td class="num">17,452</td><td class="num">18,159</td><td class="num">+707</td></tr>
+    <tr><td>历史奖牌单位（不含 1906）</td><td class="num">17,233</td><td class="num">17,935</td><td class="num">+702</td></tr>
+    <tr><td>2024 奖牌单位</td><td class="num">1,034</td><td class="num">1,027</td><td class="num">−7</td></tr>
+    <tr><td>2024 金牌</td><td class="num">—</td><td class="num">325</td><td class="num">—</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>为什么差 702：</b>主要来自同色并列与双铜牌——strict 把它们合并成 1 个单位，NOC-aware 给每个获奖 NOC 各记 1 次。2024 反而少 7，是因为该届 Event 泛化后 strict 取下界、NOC-aware 逐 NOC 拆分，两股方向相反的力量在近年相互抵消。<br>
+    <b>本报告约定：</b>正文一律用 NOC-aware；引用任务二的图时，图注保留该图原口径并注明差异。
+  </div>
+
+  <p>这条原则会在后文反复出现：同一个"第一"，在行口径、strict、NOC-aware 下可能分别是美国、美国、美国，但中国与法国的名次会互换；同一句"女性参与接近半数"，放到项目层就会立刻破裂。</p>
+</div>
+<!-- ============ P4 A 奖牌格局（上） ============ -->
+<div class="page" data-page="4">
+  <div class="rh"><span><b>02 百年全景</b> · A 奖牌格局</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">02</span>同一座榜首，四种分母</h2>
+  <div class="sub">A 视角要回答的不是"谁最多"，而是"在什么计法下谁最多"。</div>
+
+  <div class="figure">
+    <img src="../task2-visual/exports/png/Fig2-1_A1_dual-caliber_4x.png" alt="双口径总榜与排名敏感性">
+    <figcaption><b>图 3</b>　左：历史累计奖牌 Top 20，金银铜堆叠；右：Top 10 在运动员行、strict、NOC-aware、宽松四种口径下的名次连线。<br>口径：NOC-aware 小项 · 不含 1906 · 数据 v1.2</figcaption>
+  </div>
+
+  <p>NOC-aware 口径下，美国以 <strong>2,756 枚</strong>居首，苏联 1,005、英国 995、德国 830、法国 826，中国以 721 枚居第 6。换回运动员行口径，美国立刻膨胀到 <strong>5,597 枚</strong>——多出的 2,841 枚几乎全部来自篮球、游泳接力、体操团体这类项目的人头重复。</p>
+
+  <p>比总量更有意思的是名次：中国按金牌排序在 NOC-aware 下第 4、按总量第 6，而换到运动员行口径跌到第 7——说明其优势集中在可去重的个人小项；法国在宽松上界口径下升到第 3，则暴露了团体项目上界对榜单的抬升。<em>榜首不是事实，是分母的函数。</em></p>
+
+  <div class="callout">
+    <b>口径自觉：</b>本报告在任何排名出现前先声明分母；后文排名结论均标注其来自行口径还是小项口径。
+  </div>
+
+  <h3 style="font-size:11pt;margin:4mm 0 2mm;">两种口径下的头部国家（含金/银/铜）</h3>
+  <table>
+    <tr><th>国家</th><th class="num">NOC-aware 金·银·铜</th><th class="num">NOC-aware 合计</th><th class="num">运动员行合计</th><th class="num">膨胀倍数</th></tr>
+    <tr><td>美国</td><td class="num">1,101 · 880 · 775</td><td class="num">2,756</td><td class="num">5,597</td><td class="num">2.03×</td></tr>
+    <tr><td>苏联</td><td class="num">394 · 317 · 294</td><td class="num">1,005</td><td class="num">2,063</td><td class="num">2.05×</td></tr>
+    <tr><td>英国</td><td class="num">305 · 347 · 343</td><td class="num">995</td><td class="num">2,243</td><td class="num">2.25×</td></tr>
+    <tr><td>德国</td><td class="num">250 · 278 · 302</td><td class="num">830</td><td class="num">1,938</td><td class="num">2.33×</td></tr>
+    <tr><td>法国</td><td class="num">244 · 283 · 299</td><td class="num">826</td><td class="num">1,891</td><td class="num">2.29×</td></tr>
+    <tr><td>中国</td><td class="num">305 · 221 · 195</td><td class="num">721</td><td class="num">—</td><td class="num">—</td></tr>
+  </table>
+  <p style="margin-top:2mm;">膨胀倍数本身就是指标：德法高于美国，说明其奖牌更集中在赛艇、马术这类多人项目。中国金牌与英国持平、银铜少 274 枚，于是"金优先"第 4、"总量"第 6——同一组数字，两种排序。</p>
+</div>
+
+<!-- ============ P5 A 奖牌格局（下） ============ -->
+<div class="page" data-page="5">
+  <div class="rh"><span><b>02 百年全景</b> · A 奖牌格局</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">02</span>奖牌在膨胀，头部却没怎么动</h2>
+  <div class="sub">128 年里参赛规模涨了近 30 倍，奖牌数的"通胀"其实是小项扩容，而不是某国突然变强。</div>
+
+  <div class="figure">
+    <img src="../task2-visual/exports/png/Fig2-2_A2_medal-race_4x.png" alt="逐届演变与膨胀指数">
+    <figcaption><b>图 4</b>　左：以 1896 年为 100，奖牌、代表团、参赛人数、小项数的膨胀指数；右：逐届奖牌 Top 10 的时间轴条形赛。<br>口径：NOC-aware 小项 · 每届 · 不含 1906</figcaption>
+  </div>
+
+  <p>1896 年只有 12 个代表团、380 条参赛记录、120 个去重奖牌单位；到 2024 年，这三个数字变成 <strong>206、11,113、1,027</strong>，参赛规模约为 1896 年的 29 倍。与此同时，榜首美国的单届奖牌从 11 枚涨到 126 枚——增幅远小于参赛规模的膨胀。</p>
+
+  <p>把三个指数画在一起就能看出：奖牌曲线几乎与"小项数 + 参赛人数"同步，而不是与任何单一国家的产出同步。这意味着<em>"奖牌总数破百"这件事本身没有跨届可比性</em>，必须换成每人次或每小项口径，才能谈"变强"。后文所有逐届比较，都建立在这个前提上。</p>
+</div>
+
+<!-- ============ P6 B 国家兴衰 ============ -->
+<div class="page" data-page="6">
+  <div class="rh"><span><b>02 百年全景</b> · B 国家兴衰</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">02</span>九个国家，四种形状</h2>
+  <div class="sub">用一条总榜看"国家兴衰"会掩盖断点。九宫格把百年拆成四种可比较的形状。</div>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-3_B1_nine-nations_4x.png" alt="九国命运矩阵">
+    <figcaption><b>图 5</b>　九个国家/谱系的逐届奖牌（实线）与金牌（虚线）；苏联、德国按 NOC 原样呈现，谱系只在注释层说明。<br>口径：NOC-aware 小项 · 每届 · 不含 1906</figcaption>
+  </div>
+
+  <p>四种形状分别是：<strong>长盛型</strong>（美国，除 1980 抵制届外全程在线）、<strong>骤起骤落型</strong>（苏联谱系，1988 见顶后经独联体、俄罗斯、ROC 到 AIN 逐步回落）、<strong>断裂重组型</strong>（德国，1968–1988 两德分立、1992 后统一）、<strong>主场脉冲型</strong>（日本 1964、韩国 1988 在主办后跃升）。中国自 1984 年恢复参赛后持续爬坡，2008 主场到达峰值。</p>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-7_B2_efficiency-frontier_4x.png" alt="国家效率前沿">
+    <figcaption><b>图 6</b>　双 log 散点：每届平均去重运动员数 × 每届平均小项奖牌数，点大小为参赛届数。<br>口径：NOC-aware 小项 · 参赛 ≥5 届且奖牌 ≥10 枚 · 不含 1906</figcaption>
+  </div>
+
+  <p>效率前沿与总量前沿并不重合：苏联场均 111.7 枚、每百人 <strong>0.217 枚</strong>，东德 0.194，美国 0.168；而阿塞拜疆、埃塞俄比亚这类小体量代表团效率也超过 0.13，绝对数却只有个位数。大国靠规模与项目覆盖，小国靠少数优势项目——这是两种完全不同的生存策略。</p>
+</div>
+
+<!-- ============ P7 C 她的奥运 ============ -->
+<div class="page" data-page="7">
+  <div class="rh"><span><b>02 百年全景</b> · C 她的奥运</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">02</span>从 1.7% 到 49.1%，但"半数"只在总量上成立</h2>
+  <div class="sub">124 年的女性参与弧线不是匀速上升，而是三次跃迁；到项目层，均衡立刻破裂。</div>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-4_C1_women-arc_4x.png" alt="女性参与百年弧线">
+    <figcaption><b>图 7</b>　上：男女参赛记录堆叠面积；下：女性占比折线，金色圆点标记六个里程碑。<br>口径：运动员行 · 全部参赛记录 · 不含 1906</figcaption>
+  </div>
+
+  <p>1900 年女性只占 1.7%，1928 年 8.1%，1960 年 17.7%，1984 年 25.9%，2012 年首次达到 45.0%，2024 年为 <strong>49.1%</strong>（7,312 条女性记录对 7,580 条男性记录）。三个跃迁点分别对应：1928 年田径与体操向女子开放、1960 年代规模扩张、1984 与 2012 年的项目扩容。</p>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-5_C2_participation-output_4x.png" alt="参与不等于产出">
+    <figcaption><b>图 8</b>　横轴女性参赛占比、纵轴女性奖牌占比，虚线为 y = x；四象限标注参与与产出的组合。<br>口径：运动员行 · 2024 单届 · 不含 1906</figcaption>
+  </div>
+
+  <p>但"接近半数"是总量结论。<strong>牙买加</strong>女性参赛 55.6%、女性奖牌只占 16.7%，<strong>印度</strong> 44.2% 对 5.0%，双双落在"高参与、低产出"象限；荷兰 57.7% 对 58.9%、美国 52.8% 对 56.4% 才贴近对角线。派出多少女运动员，与拿到多少女性奖牌，是两件事。</p>
+</div>
+
+<!-- ============ P8 D 项目演化 ============ -->
+<div class="page" data-page="8">
+  <div class="rh"><span><b>02 百年全景</b> · D 项目演化</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">02</span>稳定核心，轮换边缘</h2>
+  <div class="sub">57 个大类里，六个贯穿 128 年，其余大多只活过一两届。奥运项目史比总量增长更能解释集中与扩张。</div>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-6_D1_sport-lifeline_4x.png" alt="项目生命线">
+    <figcaption><b>图 9</b>　上：每届小项数，2020/2024 叠加官方 339、329 校准点；下：57 个大类生命线，绿色为 2024 仍在，橙色为已退出。<br>口径：小项级 · 每届 · 不含 1906</figcaption>
+  </div>
+
+  <p>Athletics、Cycling、Fencing、Gymnastics、Rowing、Swimming 六个大类贯穿 128 年；Basque Pelota、Croquet 只在 1900 年出现一次，Polo、Rugby、Tug-Of-War 在二战前退出，3×3 篮球、运动攀岩、冲浪、霹雳舞则在 2020 年代进入。小项数从代理口径的 43 增至 336（官方校准 329），趋势可靠、绝对值略高估。</p>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-8_D2_structure-river_4x.png" alt="项目结构变迁河流图">
+    <figcaption><b>图 10</b>　themeRiver 河流图：七个主干大类 + Other，宽度为当届小项奖牌数。<br>口径：NOC-aware 小项 · 份额 · 不含 1906</figcaption>
+  </div>
+
+  <p>历史累计 Athletics 3,228 枚、Swimming 1,886、Wrestling 1,428、Gymnastics 1,048，四个大类构成稳定主干；但 <strong>Other 合计 7,555 枚</strong>，说明边缘项目的总量并不小，只是分散。河流图显示主干份额在百年尺度上缓慢收缩，1980 年代后新兴与边缘类持续加宽。</p>
+</div>
+
+<!-- ============ P9 X 优势结构与性别差 ============ -->
+<div class="page" data-page="9">
+  <div class="rh"><span><b>02 百年全景</b> · 附 X 交叉视角</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">02</span>强国的超额优势，集中在少数路径上</h2>
+  <div class="sub">两个可选视角：国家 × 项目优势矩阵，以及 2024 年项目层的性别差。</div>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-9_X1_strength-matrix_4x.png" alt="国家项目优势矩阵">
+    <figcaption><b>图 11</b>　行为 Top 12 NOC、列为 Top 10 大类；颜色为 lift（该国该项目份额 ÷ 该项目全球份额），仅标注 lift ≥ 1.5 的强专长格。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>匈牙利皮划艇 lift 高达 <strong>4.04</strong>（93 枚），澳大利亚游泳 3.66（231 枚），日本体操 3.25（103 枚），苏联体操 3.05（179 枚），法国自行车 2.60，中国举重 2.45。120 个格子里只有 3 格完全没有奖牌——强国覆盖已相当完整，真正的超额优势仍集中在少数路径依赖型项目。</p>
+
+  <div class="figure half">
+    <img src="../task2-visual/exports/png/Fig2-10_X2_gender-gap_4x.png" alt="项目性别差哑铃图">
+    <figcaption><b>图 12</b>　哑铃图：绿点为女性参赛占比、蓝点为男性，连线长度即性别差；橙色标注差距 ≥4 pp 的项目，虚线为 50:50。<br>口径：运动员行 · 2024 去重运动员 · 男女合计 ≥10 人</figcaption>
+  </div>
+
+  <p>39 个入图项目中 <strong>31 个</strong>落在 ±4 pp 内，说明 2024 年的性别差是局部问题而非普遍现象。差距最大的是摔跤 <strong>−34.0 pp</strong>（女 96 人、男 195 人），其后是马术 −23.5、足球 −13.2、水球 −9.1。艺术游泳与韵律体操仍是女子专属。产出也不总与参与同向：足球女性参赛 43.4%，女性奖牌行却占 50.0%。</p>
+</div>
+
+<!-- ============ P10 S1 东道主（现象） ============ -->
+<div class="page" data-page="10">
+  <div class="rh"><span><b>03 专题深挖</b> · S1 东道主效应</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">03</span>主场加成是一场脉冲，不是一级台阶</h2>
+  <div class="sub">主办国确实变强了，但强大只维持一届。这是三个专题里最反直觉、也最经得起检验的一条。</div>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-1_host-pulse_4x.png" alt="东道主效应脉冲">
+    <figcaption><b>图 13</b>　20 个现代东道主按主办届增量排序；橙为正向、蓝灰为负向。左：小项口径，右：运动员行口径。<br>口径：NOC-aware 小项（左）＋运动员行（右）· 相对前后两届均值 · 不含 1906</figcaption>
+  </div>
+
+  <p>1948 年以来 20 个东道主，<strong>19 个</strong>在主办届高于前后基准，增量中位数 <strong>+13.3 枚</strong>、均值 +21.7 枚。苏联 1980（+106.3）与美国 1984（+99.0）领跑，但这两届恰逢互相抵制的"缺席红利"；剔除抵制届后均值降到 +12.7。法国 2024（+27.0）、中国 2008（+30.3）是近年最干净的脉冲；唯一负向的是加拿大 1976（−2.5）。</p>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-2_persistence_4x.png" alt="主场加成持续性">
+    <figcaption><b>图 14</b>　以东道主前后两届均值为 100 的奖牌指数；红线为中位数，彩线为六个代表国家。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>把时间轴拉开看：主办届指数中位数冲到 <strong>163</strong>，下一届即回落到 <strong>112</strong>、再下一届约 116——脉冲的大部分在一届之内蒸发。原因有两层：全项目参赛资格与主场投入是一次性的，下届即被收回；而东道主往往本就是上升期国家，T−1 指数只有 91，残留的 12–16 个百分点更多是趋势而非台阶。</p>
+</div>
+
+<!-- ============ P11 S1 机制 ============ -->
+<div class="page" data-page="11">
+  <div class="rh"><span><b>03 专题深挖</b> · S1 机制与显著性</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">03</span>多派人，而不是更会拿牌</h2>
+  <div class="sub">加成的来源被拆成两个乘数：参赛规模与夺牌效率。结果与直觉相反。</div>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-3_decomposition_4x.png" alt="主场加成分解">
+    <figcaption><b>图 15</b>　横轴参赛规模比、纵轴夺牌效率比（主办届 ÷ 基准），虚线分四象限；已剔除基线不足 5 枚的 MEX 1968。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>中位参赛规模比 <strong>1.60</strong>、中位夺牌效率比 <strong>0.90</strong>：东道主平均多派 60% 的运动员，但每千条参赛记录的夺牌率反而下降 10%。增量主体是"量的扩张"——全项目资格让主办国塞进大量边际选手，稀释了整体效率。真正提效的只有两类：抵制届（竞争被抽空）与西班牙 1992（小体量东道主靠优势项目集中爆发）。</p>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-4_effect-size_4x.png" alt="东道主效应分布位置">
+    <figcaption><b>图 16</b>　灰：全部非东道国（届次 × 国家）的对称窗口增量分布（n = 6,970）；红线：20 个现代东道主的增量。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>显著性检验给出同样的结论：一般国家的波动均值约 0、标准差 5.9 枚；东道主增量均值 +21.7 枚，约合 <strong>3.7 个标准差</strong>，20 个里有 17 个高于全部国家波动的第 98 分位。但"显著"不等于"必然中奖"：加拿大 1976 落在第 5 分位，巴西 2016 只到第 88 分位。正确的表述是——<em>主办国大概率获得一个显著但幅度不定的脉冲</em>。</p>
+</div>
+
+<!-- ============ P12 S3 地缘政治 ============ -->
+<div class="page" data-page="12">
+  <div class="rh"><span><b>03 专题深挖</b> · S3 地缘政治</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">03</span>奖牌榜也是一张政治地图</h2>
+  <div class="sub">抵制潮、苏联谱系、两德分立——三条线索说明：有些"主场大胜"根本不是主场。</div>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-5_geopolitics-boycott_4x.png" alt="抵制潮塌陷">
+    <figcaption><b>图 17</b>　左：每届代表团数，标注 1976/1980/1984 三次抵制；右：美苏 1948–1992 奖牌曲线，叉号为其缺席届。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>代表团数在 1972 年的 121 个之后连续塌陷：1976 年 92（非洲抵制）、1980 年 80（美国阵营抵制）、1984 年回升到 140 但苏联阵营整体缺席。奖牌曲线被政治切割得更明显——美国缺席 1980，苏联打出 <strong>195 枚</strong>峰值；苏联缺席 1984，美国打出 <strong>173 枚</strong>。这两次"主场大胜"的真实来源是对手集体缺席。</p>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-6_ussr-lineage_4x.png" alt="苏联谱系兴衰">
+    <figcaption><b>图 18</b>　URS（1952–1988）→ EUN（1992）→ RUS（1996–2016）→ ROC（2020）→ AIN（2024）的奖牌数。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>苏联一脉的曲线是最直白的证据：1980 年 195 枚见顶，1988 年仍有 131 枚；1992 年以独联体名义拿 112 枚；此后俄罗斯在 63–91 之间波动，只有鼎盛期的一半；2020 年以 ROC 名义 71 枚，2024 年只剩中立运动员的 <strong>5 枚</strong>。这种衰减幅度远超任何自然竞技周期，是政治实体兴衰的直接投影。</p>
+</div>
+
+<!-- ============ P13 S5 奖牌通胀 ============ -->
+<div class="page" data-page="13">
+  <div class="rh"><span><b>03 专题深挖</b> · S5 奖牌通胀</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">03</span>奖牌在通胀，拿牌却没变容易</h2>
+  <div class="sub">总量涨了 8.6 倍，但每个运动员、每个代表团的平均夺牌机会反而缩水了七成以上。</div>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-8_inflation-unit_4x.png" alt="单位参赛奖牌缩水">
+    <figcaption><b>图 19</b>　左：每届奖牌总数；右：每千条参赛记录奖牌、每代表团奖牌（以 1896 年为 100 的指数）。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>奖牌总数从 120 涨到 1,034（8.6 倍），代表团从 12 涨到 206（17 倍），参赛记录从 380 涨到 14,892（39 倍）——分母比分子涨得更快。于是每千条参赛记录的奖牌从 <strong>315.8 跌到 69.4</strong>（只剩 22%），每代表团平均奖牌从 10 枚减半到 5 枚。所谓"奖牌通胀"并不等于"拿牌变容易"。</p>
+
+  <div class="figure half">
+    <img src="../task3-insights/exports/Fig3-10_inflation-dilution_4x.png" alt="头部稀释">
+    <figcaption><b>图 20</b>　绿线：每届获奖 NOC 数（左轴）；红虚线：Top5 份额，灰点线：Top10 份额（右轴）。<br>口径：NOC-aware 小项 · 不含 1906</figcaption>
+  </div>
+
+  <p>膨胀的果实被更多国家分走了：获奖国家从 10 个涨到 92 个，<strong>Top5 奖牌份额从 80.8% 跌到 38.1%</strong>，Top10 从 100% 跌到 55.7%。结构上，最大来源不是新项目——1984 年后才出现的运动在 2024 年只贡献 13.5%，而 1896 年就存在的核心大项靠内部增设小项（尤其女子小项）从 120 枚长到 549 枚，占 53%。</p>
+</div>
+
+<!-- ============ P14 结论 ============ -->
+<div class="page" data-page="14">
+  <div class="rh"><span><b>04</b> 结论</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">04</span>三条经得起双口径检验的结论</h2>
+  <div class="sub">以下每一条都同时在小项口径与运动员行口径下成立；任何一条被推翻，本报告的叙事都会改写。</div>
+
+  <table>
+    <tr><th style="width:22%">结论</th><th style="width:30%">直觉是什么</th><th>数据显示</th></tr>
+    <tr>
+      <td><strong>一、榜首是分母的函数</strong></td>
+      <td>美国最多、中国第二，是"事实"</td>
+      <td>NOC-aware 下美国 2,756、中国第 4；行口径下中国跌到第 7、法国升到第 3。名次随口径互换，因此任何排名都必须先声明分母。</td>
+    </tr>
+    <tr>
+      <td><strong>二、主场是脉冲不是台阶</strong></td>
+      <td>主办一次，国家实力就上了一个台阶</td>
+      <td>19/20 届高于基准、中位 +13.3 枚，但指数 163 → T+1 112 → T+2 116；增量来自"多派 60% 的人"，而不是夺牌效率（反而 −10%）。</td>
+    </tr>
+    <tr>
+      <td><strong>三、总量平等，结构不平等</strong></td>
+      <td>女性占比 49.1%，已经接近男女平等</td>
+      <td>总量确实接近半数，但摔跤 −34.0 pp、马术 −23.5、足球 −13.2；牙买加女性参与 55.6%、产出仅 16.7%。"接近半数"必须落到项目层才成立。</td>
+    </tr>
+  </table>
+
+  <h3 style="font-size:11.5pt;margin:5mm 0 2.5mm;">给后来者的三条方法建议</h3>
+  <ul class="tight">
+    <li><strong>先证伪再证明</strong>：我们花了近三成时间在数据体检上，把所有口径分歧显式建模，才敢画第一张图。省掉这一步，后面每张图都是沙上建塔。</li>
+    <li><strong>让结论同时接受两套口径</strong>：凡只在一个口径下成立的结论，一律降级为"敏感性观察"，不写进结论。</li>
+    <li><strong>把反例写进正文</strong>：加拿大 1976、巴西 2016、苏联 1980 的抵制红利——这些"不听话"的点，恰恰是让结论可信的部分。</li>
+  </ul>
+
+  <h3 style="font-size:11.5pt;margin:5mm 0 2.5mm;">全文关键数字索引</h3>
+  <table>
+    <tr><th class="num" style="width:118px">数字</th><th>含义与出现位置</th></tr>
+    <tr><td class="num">17,935</td><td>历史奖牌单位（NOC-aware，不含 1906）· P3 / P4 / P15</td></tr>
+    <tr><td class="num">702</td><td>strict 与 NOC-aware 的历史总量差 · P3 / P15</td></tr>
+    <tr><td class="num">2,841</td><td>团体项目在行口径下被重复计数的奖牌数 · P1 / P4</td></tr>
+    <tr><td class="num">49.1%</td><td>2024 年女性参赛占比 · P1 / P7</td></tr>
+    <tr><td class="num">−34.0 pp</td><td>2024 年摔跤项目的男女参赛差 · P7 / P9</td></tr>
+    <tr><td class="num">+13.3 枚</td><td>东道主主办届相对基准的增量中位数 · P1 / P10</td></tr>
+    <tr><td class="num">163 → 112</td><td>东道主奖牌指数：主办届 → 下一届 · P10</td></tr>
+    <tr><td class="num">6,970</td><td>置换检验的零分布样本量 · P11</td></tr>
+    <tr><td class="num">80.8% → 38.1%</td><td>Top5 国家奖牌份额的百年变化 · P13</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>一句话：</b>奥运数据的价值不在"谁第一"，而在它同时记录了竞技、性别、政治与项目制度四条相互纠缠的历史。口径是入口，洞察是出口。
+  </div>
+</div>
+
+<!-- ============ P15 局限 ============ -->
+<div class="page" data-page="15">
+  <div class="rh"><span><b>05</b> 局限与口径差异</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">05</span>我们没能回答的问题</h2>
+  <div class="sub">以下四条是主动声明的边界，不是等评委来问的漏洞。</div>
+
+  <table>
+    <tr><th style="width:24%">局限</th><th>具体说明</th><th style="width:26%">影响范围</th></tr>
+    <tr><td>无外部变量，不能谈因果</td><td>未引入 GDP、人口、体育投入等数据。所谓"效率"仅指奖牌 ÷ 参赛人数，只能回答投入产出比，不能回答"为什么强"。</td><td>Fig.2-7、S1 机制章节</td></tr>
+    <tr><td>2020+ 泛化取下界</td><td>2020/2024 的 Event 被泛化，NOC-aware 口径逐 NOC 拆分后仍可能低估近年奖牌；运动员行口径作为上界并置检验。</td><td>所有近年数字</td></tr>
+    <tr><td>巴黎 2024 无 T+1</td><td>东道主持久性只能观察到主办届与 T−1/T−2，2028 洛杉矶后才能回填 T+1/T+2 验证。</td><td>Fig.3-2 末端</td></tr>
+    <tr><td>strict 与 NOC-aware 差 702</td><td>同色并列与双铜牌的计法差异。本报告正文统一用 NOC-aware，引用任务二图表时保留原口径并在图注注明。</td><td>历史总量、国别累计</td></tr>
+  </table>
+
+  <h3 style="font-size:11.5pt;margin:6mm 0 2.5mm;">口径对照（供核查）</h3>
+  <table>
+    <tr><th>指标</th><th class="num">strict</th><th class="num">NOC-aware</th><th class="num">运动员行</th><th>本报告采用</th></tr>
+    <tr><td>历史奖牌单位（不含 1906）</td><td class="num">17,233</td><td class="num">17,935</td><td class="num">38,818</td><td>NOC-aware</td></tr>
+    <tr><td>2024 奖牌单位 / 金牌</td><td class="num">1,034 / —</td><td class="num">1,027 / 325</td><td class="num">— / 131</td><td>NOC-aware</td></tr>
+    <tr><td>美国历史累计</td><td class="num">2,757</td><td class="num">2,756</td><td class="num">5,597</td><td>NOC-aware</td></tr>
+  </table>
+
+  <p style="margin-top:4mm;">这张表是本报告所有数字的唯一入口：正文中出现的任何一个"第一""增量""份额"，都可以在这里找到它的分母。若与图注数字不一致，以图注标注的口径为准，并在正文中已注明差异来源。</p>
+
+  <div class="callout">
+    <b>可复现性承诺：</b>全部数字由 <code style="font-family:Consolas,monospace;font-size:8.4pt;">scripts/run_all.ps1</code> 从原始 CSV 一键重建；不存在手工修改的中间结果。
+  </div>
+</div>
+
+<!-- ============ P16 方法 ============ -->
+<div class="page" data-page="16">
+  <div class="rh"><span><b>06</b> 方法与复现</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">06</span>从一份 CSV 到 20 张图</h2>
+  <div class="sub">整条管线无外部数据、无手工中间结果，任何一台装了 Python 与 Node 的机器都能重建全部图表。</div>
+
+  <h3 style="font-size:11.5pt;margin:2mm 0 3mm;">管线结构</h3>
+  <table>
+    <tr><th style="width:22%">阶段</th><th style="width:30%">入口</th><th>产出</th></tr>
+    <tr><td>① 数据体检</td><td><code>task1-data/pipeline/01→04</code></td><td>清洗表、两套奖牌底表、21 项校验、质量说明书</td></tr>
+    <tr><td>② 百年全景</td><td><code>task2-visual/pipeline</code></td><td>10 幅图 JSON、指标总表、交互站点、离线单文件</td></tr>
+    <tr><td>③ 专题深挖</td><td><code>task3-insights/pipeline</code></td><td>东道主 / 地缘 / 通胀三组结论 + 10 幅图</td></tr>
+    <tr><td>④ 加分作品</td><td><code>task4-bonus/build_dashboard.py</code></td><td>单文件交互仪表盘（内联 Plotly，离线可开）</td></tr>
+  </table>
+
+  <h3 style="font-size:11.5pt;margin:5mm 0 2.5mm;">一键复现</h3>
+  <p style="font-size:9pt;background:#F3F1E9;padding:3mm 4mm;border-left:2pt solid var(--accent);font-family:Consolas,monospace;line-height:1.9;">
+    powershell -ExecutionPolicy Bypass -File scripts\run_all.ps1<br>
+    <span style="color:var(--muted);font-family:inherit;"># 可选：-SkipTask1 跳过体检 / -SkipExports 只出 JSON / -Open 自动打开站点</span>
+  </p>
+
+  <h3 style="font-size:11.5pt;margin:5mm 0 2.5mm;">技术栈与资产</h3>
+  <table>
+    <tr><th style="width:26%">类别</th><th>选型</th></tr>
+    <tr><td>数据处理</td><td>Python 3.12 + pandas 3.0（任务一）、纯标准库管线（任务二/三）</td></tr>
+    <tr><td>图表渲染</td><td>Apache ECharts 5.5（站内 SVG/Canvas）、Plotly 5.24（加分仪表盘）</td></tr>
+    <tr><td>图片导出</td><td>Edge headless + puppeteer-core，PNG 4 倍分辨率 + SVG</td></tr>
+    <tr><td>图资产</td><td>任务二 10 组、任务三 10 组，共 20 组 PNG@4x + SVG，全部登记于 <code>contracts/figure_registry.csv</code></td></tr>
+  </table>
+
+  <p style="margin-top:3mm;">每张图的口径、分母、是否含 1906、数据版本，都写在 <code style="font-family:Consolas,monospace;font-size:8.4pt;">contracts/figure_registry.csv</code> 与 <code style="font-family:Consolas,monospace;font-size:8.4pt;">figure_caliber_matrix.csv</code> 中，可与本报告图注逐条对照。</p>
+</div>
+
+<!-- ============ P17 参考 ============ -->
+<div class="page" data-page="17">
+  <div class="rh"><span><b>07</b> 参考资料与作品索引</span><span>数说奥运 1896–2024</span></div>
+  <h2><span class="num">07</span>数据、工具与作品索引</h2>
+
+  <h3 style="font-size:11.5pt;margin:2mm 0 2.5mm;">数据来源</h3>
+  <table>
+    <tr><th style="width:30%">来源</th><th>说明</th></tr>
+    <tr><td>Kaggle · Summer Olympics Medals (1896–2024)</td><td>主数据，252,565 行参赛记录，含两个上游数据集（运动员信息与奖牌明细）</td></tr>
+    <tr><td>许可</td><td>CC BY-NC-SA 4.0（署名—非商业性—相同方式共享）；衍生清洗版本以同等许可开放</td></tr>
+    <tr><td>外部数据</td><td><strong>未使用</strong>任何人口、GDP、经济指标；文中所有"效率"均为奖牌 / 参赛人数</td></tr>
+  </table>
+
+  <h3 style="font-size:11.5pt;margin:5mm 0 2.5mm;">参考文献与方法</h3>
+  <ul class="tight">
+    <li>IOC. <em>Olympic Games Official Reports</em>（用于 2020/2024 小项数校准：339、329）。</li>
+    <li>Kaggle 数据集说明页与两个上游数据集的字段字典。</li>
+    <li>置换检验与效应量表述参考常见统计实践（n = 6,970 的零分布构造见任务三管线）。</li>
+  </ul>
+
+  <h3 style="font-size:11.5pt;margin:5mm 0 2.5mm;">作品索引</h3>
+  <table>
+    <tr><th style="width:30%">作品</th><th>形式与位置</th></tr>
+    <tr><td>交互故事站</td><td>单文件离线版（1.16 MB），双击即开；开发版 <code>npm run dev</code> 于 5273 端口</td></tr>
+    <tr><td>交互仪表盘（加分）</td><td>单文件 HTML（4.93 MB，内联 Plotly），11 图 / 5 标签页</td></tr>
+    <tr><td>图资产</td><td>20 组 PNG@4x + SVG，目录 <code>task2-visual/exports</code>、<code>task3-insights/exports</code></td></tr>
+    <tr><td>数据底表</td><td><code>shared/metrics/metrics_master.csv</code>、<code>task1-data/metrics/</code></td></tr>
+  </table>
+
+  <div class="callout" style="margin-top:6mm;">
+    <b>团队分工：</b>任务一 数据体检与口径（shengmy-git）· 任务二 百年全景与站点（本报告主笔）· 任务三 专题深挖（chuhaowang）· 任务四 加分仪表盘（Somoggyzz）。
+  </div>
+</div>
+
+</body>
+</html>
