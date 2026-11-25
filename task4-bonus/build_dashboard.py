@@ -11,14 +11,18 @@ from plotly.offline import get_plotlyjs   # P1-1 内联 Plotly.js
 from pathlib import Path
 import json, os
 
-# ============ 0. 路径配置（P0-1 修复：可移植） ============
-# 找 olympics_dataset.csv：优先数据目录，其次 Downloads，最后脚本同目录
+# ============ 0. 路径配置（P0-1 修复：可移植·无硬编码·严格报错） ============
+# 找 olympics_dataset.csv：只在仓库 data/raw 和脚本同目录查找
 CANDIDATE_PATHS = [
     Path(__file__).resolve().parents[1] / "data" / "raw" / "olympics_dataset.csv",
-    Path.home() / "Downloads" / "olympics_dataset.csv",
     Path(__file__).resolve().parent / "olympics_dataset.csv",
 ]
-DATA_CSV = next((p for p in CANDIDATE_PATHS if p.exists()), CANDIDATE_PATHS[1])
+DATA_CSV = next((p for p in CANDIDATE_PATHS if p.exists()), None)
+if DATA_CSV is None:
+    raise FileNotFoundError(
+        f"未找到 olympics_dataset.csv。已搜索：\n"
+        + "\n".join(f"  - {p}" for p in CANDIDATE_PATHS)
+    )
 OUT_HTML = Path(__file__).resolve().parent / "olympics_dashboard.html"
 
 # ============ 1. 加载 + 数据清洗 ============
@@ -99,6 +103,8 @@ HOST_MAP = {
     2016: 'BRA', 2020: 'JPN', 2024: 'FRA', 2028: 'USA', 2032: 'AUS',
 }
 df['IsHost'] = df.apply(lambda r: HOST_MAP.get(r['Year']) == r['NOC'], axis=1)
+# 小项口径数据同步主办国标记（供 Tab E 东道主效应对齐任务三口径使用）
+df_event['IsHost'] = df_event['Year'].map(HOST_MAP) == df_event['NOC']
 
 print("Data cleaned. Building charts...")
 
@@ -280,8 +286,8 @@ print("  Tab D done")
 
 # ------- Tab E: 专题深挖 -------
 # E1: 东道主效应热力图
-g_host = df[df['HasMedal']].groupby(['Year','IsHost']).agg(奖牌=('HasMedal','sum')).reset_index()
-g_host_noc = df[df['HasMedal']].groupby(['Year','NOC','IsHost']).agg(奖牌=('HasMedal','sum')).reset_index()
+# E1 口径对齐任务三：东道主效应统一用"小项口径"（df_event，已按 Year+NOC+Sport+Event+Medal 去重、排除 1906）
+g_host_noc = df_event.groupby(['Year','NOC','IsHost']).size().reset_index(name='奖牌')
 # 只保留主办国行
 host_rows = g_host_noc[g_host_noc['IsHost']].copy()
 host_rows['Host'] = host_rows['NOC']
@@ -306,7 +312,7 @@ for _, row in host_rows.iterrows():
 host_effect = pd.DataFrame(host_effect_rows)
 host_effect = host_effect[host_effect['增益倍率'].notna() & (host_effect['增益倍率'] < 20)]
 
-fig_e = make_subplots(rows=1, cols=2, subplot_titles=('东道主奖牌行数 vs 前一届', '东道主增益倍率'))
+fig_e = make_subplots(rows=1, cols=2, subplot_titles=('东道主奖牌小项数 vs 前一届（小项口径）', '东道主增益倍率（小项口径）'))
 fig_e.add_trace(go.Bar(x=[f"{r.Year}<br>{r.NOC}" for _, r in host_effect.iterrows()],
     y=host_effect.HostMedals, name='主办年', marker_color='#E74C3C'), row=1, col=1)
 fig_e.add_trace(go.Bar(x=[f"{r.Year}<br>{r.NOC}" for _, r in host_effect.iterrows()],
@@ -497,13 +503,14 @@ HTML_BODY = f"""
 </div>
 
 <div id="tab-e" class="hide">
-  <div class="panel"><h3>东道主效应：主办国到底能"主场爆棚"吗？</h3>{html_divs['tab_e1_host_effect']}</div>
+  <div class="panel"><h3>东道主效应：主办国到底能"主场爆棚"吗？（小项口径，与任务三一致）</h3>{html_divs['tab_e1_host_effect']}</div>
   
   <div class="insight">
-    <strong>关键发现：</strong> 增益倍率 = 主办年奖牌行数 / 前一届非主办年。<br>
-    • <strong>最大效应：</strong>中国 2008（4.9x）、英国 2012（1.6x）、日本 1964（2.0x）。<br>
-    • <strong>无明显效应甚至下降：</strong>美国 1996（1.0x）、加拿大 1976（0.5x——史上最尴尬东道主，当年仅 11 金）、巴西 2016（1.1x）。<br>
-    • <strong>持续效应：</strong>中国 2008 登顶后至今保持 Top 2，英国 2012 后稳居 Top 5——<strong>真正的东道主效应是长期备战体系的建立，而非主场哨</strong>。
+    <strong>关键发现：</strong> 增益倍率 = 主办年奖牌<b>小项数</b> / <b>前一届</b>非主办年小项数（小项口径 NOC-aware，与任务三 Fig.3-1~3-4 同口径；任务三基准为前后两届均值，此处为前一届，故绝对倍数略有差异）。1948 年以来可比样本 18 届。<br>
+    • <strong>最大效应：</strong>墨西哥 1968（9.0x，9 vs 1）、西班牙 1992（5.5x，22 vs 4）、澳大利亚 1956（3.2x，35 vs 11）——均发生在参赛基数极小的国家。<br>
+    • <strong>无明显效应甚至下降：</strong>美国 1996（0.94x）、芬兰 1952（1.00x）、巴西 2016（1.12x）。<br>
+    • <strong>整体规律：</strong>16/18 届主办国高于前一届，中位倍率 1.55x，增量中位数 +14 枚小项奖牌；加拿大 1976 倍率 2.2x（11 vs 5），但绝对量仅 11 枚，为 1948 以来主办国最低。<br>
+    • <strong>持续效应：</strong>中国 2008（1.59x，100 枚）后长期居前，英国 2012（1.35x）后稳居前列——<strong>真正的东道主效应是长期备战体系的建立，而非主场哨</strong>。
   </div>
   
   <div class="panel"><h3>小代表团的大突破（专题：小而精 vs 全面上阵）</h3>{html_divs['tab_e2_small_nocs']}</div>
@@ -521,7 +528,7 @@ HTML_BODY = f"""
     <b>两套奖牌口径：</b><br>
     &nbsp;&nbsp;① <b>运动员行口径</b>：原始数据一行 = 一名运动员 × 一个小项。男子足球冠军队 18 名球员 = 18 行金牌记录。<br>
     &nbsp;&nbsp;② <b>小项口径</b>（官方口径）：按 Year+NOC+Sport+Event+Medal 去重后，每个小项冠军 = 1 行。与 IOC 官方奖牌榜一致。<br>
-    &nbsp;&nbsp;本次 Dashboard 大部分 Tab 采用 <b>运动员行口径</b>，图 A1 双口径并排对比。
+    &nbsp;&nbsp;本次 Dashboard 大部分 Tab 采用 <b>运动员行口径</b>；图 A1 双口径并排对比；<b>Tab E 东道主效应统一采用小项口径</b>（与任务三 Fig.3-1~3-4 对齐，数字可直接对照）。
   </div>
   
   <h3>已知数据质量问题处理</h3>
