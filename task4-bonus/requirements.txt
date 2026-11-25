@@ -1,0 +1,5 @@
+# P1-2 固定版本：与 CDN plotly.js 2.35.x 对应
+# 用 get_plotlyjs() 内联后版本自由，但钉死 plotly.py 版本保证稳定
+pandas>=2.0
+numpy
+plotly>=5.24.0,<6.0.0
