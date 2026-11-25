@@ -117,7 +117,7 @@ export function raceOption(payload: A2Payload): EChartsOption {
         top: 2,
         textStyle: { color: '#D9D4C7', fontSize: 42, fontWeight: 700 },
       },
-      grid: { left: 56, right: 56, top: 18, bottom: 62 },
+      grid: { left: 56, right: 56, top: 52, bottom: 62 },
       xAxis: {
         type: 'value',
         max: yMax,
@@ -180,7 +180,7 @@ export function raceOption(payload: A2Payload): EChartsOption {
         },
       },
       legend: {
-        top: 0, right: 90, itemWidth: 10, itemHeight: 8,
+        top: 0, left: 12, itemWidth: 10, itemHeight: 8,
         textStyle: { color: INK, fontSize: 11 },
       },
     },

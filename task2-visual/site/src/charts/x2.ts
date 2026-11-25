@@ -10,7 +10,7 @@ export function buildOption(payload: X2Payload): EChartsOption {
   const rows = payload.sports;
   const sports = rows.map((row) => row.sport);
 
-  const female = rows.map((row) => {
+  const female = rows.map((row, index) => {
     const pct = Number((row.female_share * 100).toFixed(1));
     const single = row.female_share >= 0.999 || row.male_share >= 0.999;
     const notable = !single && Math.abs(row.gap_pp) >= 4;
@@ -23,12 +23,16 @@ export function buildOption(payload: X2Payload): EChartsOption {
       itemStyle: { color: ACCENT },
       label: {
         show: single || notable,
-        position: single
-          ? (row.female_share > 0.5 ? ('left' as const) : ('right' as const))
-          : ('top' as const),
+        // 最顶行的单性别项目标签改到点下方，避免溢出到图例区
+        position: single && index === 0 ? ('bottom' as const) : ('top' as const),
+        // 单性别点固定在 100% 处，向左让出文字宽度，防止越出画布
+        offset: single ? [-30, index === 0 ? 4 : -4] : [0, -10],
         distance: 6,
         fontSize: 10,
         color: FLAME,
+        backgroundColor: 'rgba(251,250,246,0.92)',
+        padding: [2, 3],
+        borderRadius: 2,
         formatter: label,
       },
     };

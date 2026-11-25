@@ -101,7 +101,7 @@ export function lifelineOption(payload: D1Payload): EChartsOption {
   return {
     backgroundColor: 'transparent',
     animationDuration: 800,
-    grid: { left: 128, right: 36, top: 24, bottom: 58 },
+    grid: { left: 164, right: 36, top: 24, bottom: 58 },
     tooltip: {
       ...TOOLTIP,
       trigger: 'item',
@@ -132,7 +132,7 @@ export function lifelineOption(payload: D1Payload): EChartsOption {
       data: names,
       axisTick: { show: false },
       axisLine: { lineStyle: { color: LINE } },
-      axisLabel: { color: TEXT, fontSize: 9, interval: 0 },
+      axisLabel: { color: TEXT, fontSize: 9, interval: 0, width: 148, overflow: 'truncate' },
     },
     dataZoom: [
       { type: 'inside', xAxisIndex: 0, filterMode: 'weakFilter' },
@@ -146,12 +146,17 @@ export function lifelineOption(payload: D1Payload): EChartsOption {
           const start = api.coord([api.value(1), index]);
           const end = api.coord([api.value(2), index]);
           const rowHeight = api.size([0, 1])[1] * 0.56;
+          // dataZoom 放大后 start 会落到坐标系之外，钳制在绘图区内，避免条形压住纵轴标签
+          const gridLeft = params.coordSys.x as number;
+          const gridRight = gridLeft + (params.coordSys.width as number);
+          const x0 = Math.min(Math.max(start[0], gridLeft), gridRight);
+          const x1 = Math.min(Math.max(end[0], gridLeft), gridRight);
           return {
             type: 'rect',
             shape: {
-              x: start[0],
+              x: x0,
               y: start[1] - rowHeight / 2,
-              width: Math.max(end[0] - start[0], 3),
+              width: Math.max(x1 - x0, x1 > x0 ? 3 : 0),
               height: rowHeight,
               r: 2,
             },
@@ -162,6 +167,7 @@ export function lifelineOption(payload: D1Payload): EChartsOption {
           };
         },
         encode: { x: [1, 2], y: 0 },
+        clip: true,
         data,
       },
     ],

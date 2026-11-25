@@ -13,8 +13,12 @@ const outDir = resolve(root, 'offline');
 
 async function collectData() {
   const map = {};
-  const meta = await readFile(resolve(dataDir, 'meta.json'), 'utf8');
-  map['./data/meta.json'] = JSON.parse(meta);
+  // data 目录下的所有顶层 JSON（meta.json、index.json 等），新增文件不会被漏掉
+  const tops = await readdir(dataDir);
+  for (const file of tops.filter((name) => name.endsWith('.json'))) {
+    const raw = await readFile(resolve(dataDir, file), 'utf8');
+    map[`./data/${file}`] = JSON.parse(raw);
+  }
   const figures = await readdir(resolve(dataDir, 'figures'));
   for (const file of figures.filter((name) => name.endsWith('.json'))) {
     const raw = await readFile(resolve(dataDir, 'figures', file), 'utf8');

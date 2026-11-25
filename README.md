@@ -85,12 +85,31 @@ npm run dev
 
 ### 4. 生成图表数据与报告图
 
-```bash
-python -m task2-visual.pipeline.build --caliber conservative_event --exclude-1906
-npm run --prefix task2-visual/site export:figures
+任务二管线使用相对导入，必须在 `task2-visual/` 目录下运行：
+
+```powershell
+cd task2-visual
+python -m pipeline.build              # 生成 10 幅图 JSON + shared/metrics，并自检
+cd site
+npm install
+npm run dev                           # 导出图需要 dev server 运行中（端口 5273）
+npm run export:figures                # 10 组 PNG@4x + SVG
+npm run build:offline                 # 单文件离线故事站
 ```
 
 具体命令以 `task2-visual/README.md` 为准。
+
+### 5. 一键跑通（推荐）
+
+任务一 / 二 / 三可一条命令串起来跑，产出全部图表与站点：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_all.ps1
+powershell -ExecutionPolicy Bypass -File scripts\run_all.ps1 -Open           # 跑完自动打开离线故事站
+powershell -ExecutionPolicy Bypass -File scripts\run_all.ps1 -SkipTask1      # 跳过任务一（约 85 秒）
+```
+
+脚本会依次执行任务一 7 步管线、任务二指标与 10 图、PNG/SVG 导出、离线站点构建、任务三 3 个专题与 10 图渲染，并在结尾打印产物清单。任务四不在其中（独立运行 `python task4-bonus/build_dashboard.py`）。
 
 ## 协作流程
 
