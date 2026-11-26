@@ -288,14 +288,14 @@ print("  Tab D done")
 # E1: 东道主效应热力图
 # E1 口径对齐任务三：东道主效应统一用"小项口径"（df_event，已按 Year+NOC+Sport+Event+Medal 去重、排除 1906）
 g_host_noc = df_event.groupby(['Year','NOC','IsHost']).size().reset_index(name='奖牌')
-# 只保留主办国行
-host_rows = g_host_noc[g_host_noc['IsHost']].copy()
-host_rows['Host'] = host_rows['NOC']
-host_rows['增益倍率'] = 0  # 下面算
+# 只保留主办国行（数据源已限定为小项口径 df_event）
+host_rows_event = g_host_noc[g_host_noc['IsHost']].copy()
+host_rows_event['Host'] = host_rows_event['NOC']
+host_rows_event['增益倍率'] = 0  # 下面算
 
 # 算东道主增益：主办年 vs 前一届非主办年的奖牌比
 host_effect_rows = []
-for _, row in host_rows.iterrows():
+for _, row in host_rows_event.iterrows():
     y = row['Year']
     noc = row['NOC']
     host_medals = row['奖牌']
