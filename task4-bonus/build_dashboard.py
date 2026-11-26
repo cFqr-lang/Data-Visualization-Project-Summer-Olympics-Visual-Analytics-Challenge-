@@ -543,7 +543,7 @@ HTML_BODY = f"""
     &nbsp;&nbsp;• 逗号拼接跨项（如 Cycling Road, Triathlon）→ 取第一个出现的主项<br><br>
     <b>Q3 Event 泛化：</b>2020 年起 ~22-23% 的 Event 字段为 Men/Women/Men Team/Relay Only Athlete 泛化值。本 Dashboard 接受降维到"大类 × 性别"粒度，不尝试还原具体小项。<br><br>
     <b>Q4 姓名与 ID 不可靠：</b>player_id 和 Name 均不可作为运动员唯一标识。本 Dashboard 规避个体粒度分析（任务三 S6 专题建议额外解决），聚焦国家级汇总。<br><br>
-    <b>Q5 历史特殊记录：</b>1906 届（IOC 不承认）<b>已排除</b>，所有奖牌统计卡与"小项口径"图表均不含此届；1956 年双城（墨尔本+斯德哥尔摩马术）保留原样；政体变迁（URS→EUN→RUS→ROC→AIN；FRG/GDR→GER；YUG→SCG→…）用 NOC_Group 字段归类展示脉络。<br><br>
+    <b>Q5 历史特殊记录：</b>1906 届（IOC 不承认）在<b>小项口径</b>统计中已排除（奖牌小项数 17,935 不含此届，与任务一/二一致）；<b>运动员行口径</b>的「奖牌行数」与「届数（31 届）」按原始数据保留此届，已在标签中注明。1956 年双城（墨尔本+斯德哥尔摩马术）保留原样；政体变迁（URS→EUN→RUS→ROC→AIN；FRG/GDR→GER；YUG→SCG→…）用 NOC_Group 字段归类展示脉络。<br><br>
     <b>Q6 团体项目与并列：</b>同届×同小项×同奖牌的多行记录不做特殊处理——运动员行口径下这正是团体项目的真实表达。
   </div>
   

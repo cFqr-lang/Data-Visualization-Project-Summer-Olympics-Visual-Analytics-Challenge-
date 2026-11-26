@@ -19,3 +19,14 @@ Fig.3-7,S3,两德分立与统一,S3,P0,conservative_event,两德各届奖牌,fal
 Fig.3-8,S5,奖牌总量涨而单位量跌,S5,P0,conservative_event,每届总量 / 单位量指数,false,lower bound,n/a,task3,done
 Fig.3-9,S5,增长的结构性来源,S5,P0,conservative_event,每届奖牌池结构,false,lower bound,n/a,task3,done
 Fig.3-10,S5,膨胀的受益者是更多国家,S5,P0,conservative_event,每届获奖 NOC 与头部份额,false,lower bound,n/a,task3,done
+Fig.4-1,A1,双口径逐届对比,A,P0,athlete_row+conservative_event,每届,true,NOC-aware dedupe,团体重复计数规模,task4,done
+Fig.4-2,A2,历史总奖牌榜 Top 20,A,P1,athlete_row,NOC×全部,true,原始行计数,行口径 vs 保守口径名次差,task4,done
+Fig.4-3,A3,奖牌膨胀规模扩张,A,P1,athlete_row,每届,true,原始行计数,规模扩张来源拆解,task4,done
+Fig.4-4,B1,12 国逐届轨迹,B,P0,athlete_row,每届×NOC,true,原始行计数,抵制/政体断点标注,task4,done
+Fig.4-5,B2,政体变迁谱系,B,P0,conservative_event,每届×政体组,false,NOC-aware dedupe,NOC_Group 映射敏感性,task4,done
+Fig.4-6,C1,她的奥运双弧线,C,P0,athlete_row,每届,true,原始行计数,Sport×Sex 缺口,task4,done
+Fig.4-7,C2,女性奖牌 Top 15,C,P1,athlete_row,NOC×全部,true,原始行计数,女子项目集中度,task4,done
+Fig.4-8,D1,项目演化规模,D,P0,event_level,每届,true,原始 Sport×Event 去重,与官方小项数校准,task4,done
+Fig.4-9,D2,消失 vs 新增项目,D,P1,event_level,项目,true,末次≤1972 / 首次≥2000,阈值敏感性,task4,done
+Fig.4-10,E1,东道主效应脉冲,E,P0,conservative_event,东道主届 vs 前一届,false,NOC-aware dedupe,基准选择（前一届/前后均值）,task4,done
+Fig.4-11,E2,小代表团大突破,B,P2,athlete_row,NOC×参赛届数,true,原始行计数,门槛 1–99 枚,task4,done
