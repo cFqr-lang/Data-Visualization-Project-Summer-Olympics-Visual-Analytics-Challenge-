@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 奥运百年可视化 Dashboard - 任务四
 生成单文件 HTML，浏览器打开即可交互
@@ -131,16 +131,15 @@ ge_year = df_event.groupby('Year').agg(
 g_year = g_year.merge(ge_year, on='Year', how='outer').fillna(0)
 
 fig_a = make_subplots(rows=1, cols=2, subplot_titles=('逐届奖牌数（运动员行口径）', '逐届奖牌数（小项口径）'))
-fig_a.add_trace(go.Bar(x=g_year.Year.astype(str), y=g_year.金牌行, name='金', marker_color='#FFD700'), row=1, col=1)
-fig_a.add_trace(go.Bar(x=g_year.Year.astype(str), y=g_year.银牌行, name='银', marker_color='#C0C0C0'), row=1, col=1)
-fig_a.add_trace(go.Bar(x=g_year.Year.astype(str), y=g_year.铜牌行, name='铜', marker_color='#CD7F32'), row=1, col=1)
-fig_a.add_trace(go.Bar(x=g_year.Year.astype(str), y=g_year.金牌小项, name='金', marker_color='#FFD700', showlegend=False), row=1, col=2)
-fig_a.add_trace(go.Bar(x=g_year.Year.astype(str), y=g_year.银牌小项, name='银', marker_color='#C0C0C0', showlegend=False), row=1, col=2)
-fig_a.add_trace(go.Bar(x=g_year.Year.astype(str), y=g_year.铜牌小项, name='铜', marker_color='#CD7F32', showlegend=False), row=1, col=2)
+fig_a.add_trace(go.Bar(x=g_year.Year, y=g_year.金牌行, name='金', marker_color='#FFD700'), row=1, col=1)
+fig_a.add_trace(go.Bar(x=g_year.Year, y=g_year.银牌行, name='银', marker_color='#C0C0C0'), row=1, col=1)
+fig_a.add_trace(go.Bar(x=g_year.Year, y=g_year.铜牌行, name='铜', marker_color='#CD7F32'), row=1, col=1)
+fig_a.add_trace(go.Bar(x=g_year.Year, y=g_year.金牌小项, name='金', marker_color='#FFD700', showlegend=False), row=1, col=2)
+fig_a.add_trace(go.Bar(x=g_year.Year, y=g_year.银牌小项, name='银', marker_color='#C0C0C0', showlegend=False), row=1, col=2)
+fig_a.add_trace(go.Bar(x=g_year.Year, y=g_year.铜牌小项, name='铜', marker_color='#CD7F32', showlegend=False), row=1, col=2)
 fig_a.update_layout(barmode='stack', template='plotly_white', height=420, width=1200,
-    title=dict(text='A. 百年奥运奖牌格局（双口径对比）', x=0.5),
-    legend=dict(orientation='h', y=1.05))
-fig_a.update_xaxes(tickangle=-45)
+    title=dict(text='A. 百年奥运奖牌格局（双口径对比）', x=0.5))
+fig_a.update_xaxes(type='linear', dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True)
 
 # A2: 历史总奖牌榜 Top20
 g_total = df[df['HasMedal']].groupby('NOC').agg(
@@ -161,16 +160,22 @@ g_scale = df.groupby('Year').agg(
     代表团数=('NOC', 'nunique'), 参赛运动员=('player_id', 'nunique'),
     奖牌行=('HasMedal', 'sum')
 ).reset_index()
-fig_a3 = make_subplots(specs=[[{"secondary_y": True}]])
-fig_a3.add_trace(go.Bar(x=g_scale.Year.astype(str), y=g_scale.奖牌行, name='奖牌行', marker_color='#4A90D9'), secondary_y=False)
-fig_a3.add_trace(go.Scatter(x=g_scale.Year.astype(str), y=g_scale.代表团数, name='代表团数', mode='lines+markers', line=dict(color='#E74C3C', width=2)), secondary_y=True)
-fig_a3.add_trace(go.Scatter(x=g_scale.Year.astype(str), y=g_scale.参赛运动员, name='参赛运动员', mode='lines+markers', line=dict(color='#27AE60', width=2)), secondary_y=True)
+# 三条序列量级差最大 70 倍：左 panel 奖牌行 + 参赛运动员（双轴），右 panel 代表团数独立刻度
+fig_a3 = make_subplots(rows=1, cols=2, column_widths=[0.58, 0.42],
+    subplot_titles=('奖牌行（左轴）与参赛运动员（右轴）', '代表团数（独立刻度）'),
+    specs=[[{"secondary_y": True}, {}]])
+fig_a3.add_trace(go.Bar(x=g_scale.Year, y=g_scale.奖牌行, name='奖牌行', marker_color='#4A90D9'),
+    row=1, col=1, secondary_y=False)
+fig_a3.add_trace(go.Scatter(x=g_scale.Year, y=g_scale.参赛运动员, name='参赛运动员', mode='lines+markers',
+    line=dict(color='#27AE60', width=2)), row=1, col=1, secondary_y=True)
+fig_a3.add_trace(go.Scatter(x=g_scale.Year, y=g_scale.代表团数, name='代表团数', mode='lines+markers',
+    line=dict(color='#E74C3C', width=2)), row=1, col=2)
 fig_a3.update_layout(template='plotly_white', height=420, width=1200,
-    title=dict(text='奖牌的通货膨胀：规模扩张曲线', x=0.5), barmode='group',
-    legend=dict(orientation='h', y=1.08))
-fig_a3.update_yaxes(title_text='奖牌行数', secondary_y=False)
-fig_a3.update_yaxes(title_text='代表团数 / 运动员数', secondary_y=True)
-fig_a3.update_xaxes(tickangle=-45)
+    title=dict(text='奖牌的通货膨胀：规模扩张曲线', x=0.5))
+fig_a3.update_yaxes(title_text='奖牌行数', rangemode='tozero', row=1, col=1, secondary_y=False)
+fig_a3.update_yaxes(title_text='参赛运动员数', rangemode='tozero', row=1, col=1, secondary_y=True)
+fig_a3.update_yaxes(title_text='代表团数', rangemode='tozero', row=1, col=2)
+fig_a3.update_xaxes(type='linear', range=[1893, 2027], dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True)
 
 print("  Tab A done")
 
@@ -185,17 +190,19 @@ fig_b = go.Figure()
 colors = ['#E74C3C', '#FFD700', '#9B59B6', '#3498DB', '#2ECC71', '#E67E22', '#1ABC9C', '#F39C12', '#95A5A6', '#34495E', '#16A085', '#8E44AD']
 for i, c in enumerate(countries_of_interest):
     sub = g_ctry[g_ctry.NOC == c]
-    fig_b.add_trace(go.Scatter(x=sub.Year.astype(str), y=sub.总奖牌, name=c,
+    fig_b.add_trace(go.Scatter(x=sub.Year, y=sub.总奖牌, name=c,
         mode='lines+markers', line=dict(width=2), marker_size=5,
         line_color=colors[i % len(colors)]))
-# 标注冷战时期
-fig_b.add_vrect(x0='1952', x1='1988', fillcolor='#F8B500', opacity=0.1, line_width=0, annotation_text='冷战')
-fig_b.add_vrect(x0='1980', x1='1984', fillcolor='#E74C3C', opacity=0.15, line_width=0, annotation_text='抵制潮')
+# 标注冷战时期（数值轴：用具体年份区间，不能用类别字符串；两侧错开避免文字叠印）
+fig_b.add_vrect(x0=1952, x1=1988, fillcolor='#F8B500', opacity=0.1, line_width=0,
+                annotation_text='冷战', annotation_position='top left')
+fig_b.add_vrect(x0=1980, x1=1984, fillcolor='#E74C3C', opacity=0.15, line_width=0,
+                annotation_text='抵制潮', annotation_position='top right')
 fig_b.update_layout(template='plotly_white', height=500, width=1200,
     title=dict(text='B. 国家兴衰：12 国逐届总奖牌行', x=0.5),
     xaxis=dict(title='年份'), yaxis=dict(title='奖牌行总数'),
-    legend=dict(orientation='h', y=1.08, font=dict(size=11)))
-fig_b.update_xaxes(tickangle=-45)
+    legend=dict(font=dict(size=11)))
+fig_b.update_xaxes(type='linear', dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True)
 
 # B2: 政体变迁脉络 — 苏联谱系
 g_bloc = df[df['NOC_Group'] != '独立参赛'].groupby(['Year','NOC_Group']).agg(
@@ -204,11 +211,11 @@ g_bloc = df[df['NOC_Group'] != '独立参赛'].groupby(['Year','NOC_Group']).agg
 fig_b2 = go.Figure()
 for grp in g_bloc.NOC_Group.unique():
     sub = g_bloc[g_bloc.NOC_Group == grp]
-    fig_b2.add_trace(go.Bar(x=sub.Year.astype(str), y=sub.总奖牌, name=grp))
+    fig_b2.add_trace(go.Bar(x=sub.Year, y=sub.总奖牌, name=grp))
 fig_b2.update_layout(template='plotly_white', height=400, width=1200, barmode='stack',
     title=dict(text='地缘政治的投影：政体变迁脉络', x=0.5),
     xaxis=dict(title='年份'), yaxis=dict(title='奖牌行'))
-fig_b2.update_xaxes(tickangle=-45)
+fig_b2.update_xaxes(type='linear', dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True)
 
 print("  Tab B done")
 
@@ -226,15 +233,16 @@ g_sex['女性奖牌'] = g_sex['女性奖牌'].fillna(0).astype(int)
 g_sex['女性奖牌占比'] = g_sex['女性奖牌'] / g_sex['总奖牌行'] * 100
 
 fig_c = make_subplots(rows=1, cols=2, subplot_titles=('女性参赛占比', '女性奖牌占比'))
-fig_c.add_trace(go.Scatter(x=g_sex.Year.astype(str), y=g_sex['女性占比'], mode='lines+markers',
+fig_c.add_trace(go.Scatter(x=g_sex.Year, y=g_sex['女性占比'], mode='lines+markers',
     fill='tozeroy', line=dict(color='#E91E63', width=3), marker_size=7, name='参赛占比',
     text=g_sex['女性占比'].round(1).astype(str)+'%', textposition='top center'), row=1, col=1)
-fig_c.add_trace(go.Scatter(x=g_sex.Year.astype(str), y=g_sex['女性奖牌占比'], mode='lines+markers',
+fig_c.add_trace(go.Scatter(x=g_sex.Year, y=g_sex['女性奖牌占比'], mode='lines+markers',
     fill='tozeroy', line=dict(color='#9C27B0', width=3), marker_size=7, name='奖牌占比',
     text=g_sex['女性奖牌占比'].round(1).astype(str)+'%', textposition='top center'), row=1, col=2)
 fig_c.update_layout(template='plotly_white', height=450, width=1200, showlegend=False,
     title=dict(text='C. 她的奥运：从 0% 到 49.1% 的百年弧线', x=0.5))
 fig_c.add_hline(y=49.1, line_dash='dash', line_color='#E91E63', annotation_text='2024: 49.1%', row=1, col=1)
+fig_c.update_xaxes(type='linear', dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True)
 
 # C2: 各国女性获奖榜
 g_fcountry = df[(df['HasMedal']) & (df['Sex']=='F')].groupby('NOC').agg(
@@ -255,15 +263,14 @@ g_event = df.groupby('Year').agg(
     参赛小项数=('Event', 'nunique'), 参赛大类数=('Sport_Norm', 'nunique')
 ).reset_index()
 fig_d = make_subplots(specs=[[{"secondary_y": True}]])
-fig_d.add_trace(go.Bar(x=g_event.Year.astype(str), y=g_event.参赛小项数, name='小项数', marker_color='#3498DB'), secondary_y=False)
-fig_d.add_trace(go.Scatter(x=g_event.Year.astype(str), y=g_event.参赛大类数, name='大类数',
+fig_d.add_trace(go.Bar(x=g_event.Year, y=g_event.参赛小项数, name='小项数', marker_color='#3498DB'), secondary_y=False)
+fig_d.add_trace(go.Scatter(x=g_event.Year, y=g_event.参赛大类数, name='大类数',
     mode='lines+markers', line=dict(color='#E74C3C', width=2)), secondary_y=True)
 fig_d.update_layout(template='plotly_white', height=400, width=1200,
-    title=dict(text='D. 项目演化：规模膨胀曲线', x=0.5),
-    legend=dict(orientation='h', y=1.08))
-fig_d.update_yaxes(title_text='小项数', secondary_y=False)
-fig_d.update_yaxes(title_text='大类数', secondary_y=True)
-fig_d.update_xaxes(tickangle=-45)
+    title=dict(text='D. 项目演化：规模膨胀曲线', x=0.5))
+fig_d.update_yaxes(title_text='小项数', rangemode='tozero', secondary_y=False)
+fig_d.update_yaxes(title_text='大类数', rangemode='tozero', dtick=10, secondary_y=True)
+fig_d.update_xaxes(type='linear', dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True)
 
 # D2: 消失 vs 新增项目（按首次/末次出现年份）
 sport_year = df.groupby('Sport_Norm')['Year'].agg(['min','max','nunique']).reset_index()
@@ -281,6 +288,9 @@ if len(added) > 0:
         text=added.First, textposition='outside', marker_color='#27AE60'), row=1, col=2)
 fig_d2.update_layout(template='plotly_white', height=500, width=1200, showlegend=False,
     title=dict(text='D. 消失与新增的运动', x=0.5))
+# x 是年份：从 0 起画会让所有横条几乎等长，必须限定各自的年份窗口
+fig_d2.update_xaxes(range=[1880, 1980], dtick=20, tickfont=dict(size=10), automargin=True, row=1, col=1)
+fig_d2.update_xaxes(range=[1995, 2030], dtick=10, tickfont=dict(size=10), automargin=True, row=1, col=2)
 
 print("  Tab D done")
 
@@ -313,19 +323,22 @@ host_effect = pd.DataFrame(host_effect_rows)
 host_effect = host_effect[host_effect['增益倍率'].notna() & (host_effect['增益倍率'] < 20)]
 
 fig_e = make_subplots(rows=1, cols=2, subplot_titles=('东道主奖牌小项数 vs 前一届（小项口径）', '东道主增益倍率（小项口径）'))
-fig_e.add_trace(go.Bar(x=[f"{r.Year}<br>{r.NOC}" for _, r in host_effect.iterrows()],
-    y=host_effect.HostMedals, name='主办年', marker_color='#E74C3C'), row=1, col=1)
-fig_e.add_trace(go.Bar(x=[f"{r.Year}<br>{r.NOC}" for _, r in host_effect.iterrows()],
-    y=host_effect.PrevMedals, name='前一届', marker_color='#BDC3C7'), row=1, col=1)
-fig_e.add_trace(go.Scatter(x=[f"{r.Year}<br>{r.NOC}" for _, r in host_effect.iterrows()],
-    y=host_effect['增益倍率'], mode='lines+markers+text', name='增益倍率',
-    text=host_effect['增益倍率'].round(1), textposition='top center',
+# x 只放年份（单行可读），国家名进 hover，避免「年份<br>国家」双行标签互相覆盖
+host_noc = host_effect['NOC'].tolist()
+fig_e.add_trace(go.Bar(x=host_effect.Year, y=host_effect.HostMedals, name='主办年',
+    marker_color='#E74C3C', customdata=host_noc,
+    hovertemplate='%{x} %{customdata}<br>主办年奖牌小项 %{y}<extra></extra>'), row=1, col=1)
+fig_e.add_trace(go.Bar(x=host_effect.Year, y=host_effect.PrevMedals, name='前一届',
+    marker_color='#BDC3C7', customdata=host_noc,
+    hovertemplate='%{x} %{customdata}<br>前一届奖牌小项 %{y}<extra></extra>'), row=1, col=1)
+fig_e.add_trace(go.Scatter(x=host_effect.Year, y=host_effect['增益倍率'], mode='lines+markers+text',
+    name='增益倍率', text=host_effect['增益倍率'].round(1), textposition='top center',
+    customdata=host_noc, hovertemplate='%{x} %{customdata}<br>增益倍率 %{y:.2f}x<extra></extra>',
     line=dict(color='#F39C12', width=3), marker_size=8), row=1, col=2)
 fig_e.update_layout(template='plotly_white', height=500, width=1400, barmode='group',
-    title=dict(text='E. 专题深挖：东道主效应', x=0.5),
-    legend=dict(orientation='h', y=1.08))
-fig_e.update_xaxes(tickangle=-45, row=1, col=1)
-fig_e.update_xaxes(tickangle=-45, row=1, col=2)
+    title=dict(text='E. 专题深挖：东道主效应', x=0.5))
+fig_e.update_xaxes(type='linear', range=[1893, 2027], dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True, row=1, col=1)
+fig_e.update_xaxes(type='linear', range=[1893, 2027], dtick=8, tickangle=-45, tickfont=dict(size=10), automargin=True, row=1, col=2)
 
 # E2: 小代表团的大突破
 # 取从未成为主办国且历史总奖牌 < 50 的小代表团，按最近届奖牌排名
@@ -339,7 +352,7 @@ fig_e2 = go.Figure()
 fig_e2.add_trace(go.Scatter(y=small_nocs.NOC, x=small_nocs.总奖牌, mode='markers+text',
     text=small_nocs.总奖牌, textposition='middle right',
     marker=dict(size=small_nocs.参赛届数*3, color=small_nocs.末金年, colorscale='YlOrRd', showscale=True,
-        colorbar=dict(title='末金年')),
+        colorbar=dict(title='末金年', tickmode='array', tickvals=[2024], ticktext=['2024'])),
     textfont=dict(size=11)))
 fig_e2.update_layout(template='plotly_white', height=550, width=1200,
     title=dict(text='小代表团的大突破（气泡大小=参赛届数，颜色=末金年）', x=0.5),
@@ -349,6 +362,15 @@ print("  Tab E done")
 
 # ============ 3. 生成 HTML ============
 print("Generating HTML...")
+
+# 统一布局：标题 / 图例 / 边距做垂直分层，避免导出时图例被压回标题同一水平带
+EXPORT_LAYOUT = dict(
+    margin=dict(t=110, r=40, b=80, l=70),
+    title=dict(y=0.98, yanchor='top'),
+    legend=dict(orientation='h', y=1.12, yanchor='bottom', x=0),
+)
+for _fig in (fig_a, fig_a2, fig_a3, fig_b, fig_b2, fig_c, fig_c2, fig_d, fig_d2, fig_e, fig_e2):
+    _fig.update_layout(**EXPORT_LAYOUT)
 
 figs = {
     'tab_a1_medal_structure': fig_a,
