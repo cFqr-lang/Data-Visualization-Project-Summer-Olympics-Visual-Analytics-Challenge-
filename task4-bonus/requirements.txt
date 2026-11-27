@@ -1,5 +1,5 @@
-# P1-2 固定版本：与 CDN plotly.js 2.35.x 对应
-# 用 get_plotlyjs() 内联后版本自由，但钉死 plotly.py 版本保证稳定
-pandas>=2.0
-numpy
-plotly>=5.24.0,<6.0.0
+# 生成 olympics_dashboard.html 与 exports/ 图资产所用的实测环境
+# 注意：HTML 内联的是 plotly.py 7.1.0 附带的 plotly.js v4.1.1
+pandas==3.0.1
+numpy==2.3.5
+plotly==7.1.0
